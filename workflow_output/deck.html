@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>戰火下的路線分歧：1914–1945 歐亞社會主義流派與地方勢力的崛起比較</title>
+  <style>
+    :root {
+      --bg: #f3efe6;
+      --frame: #16202a;
+      --surface: #ffffff;
+      --surface-alt: #f9f7f2;
+      --ink: #141c24;
+      --ink-muted: #465362;
+      --border: #dcd4c6;
+      --red: #b23a2c;
+      --red-soft: #fdf2f0;
+      --blue: #1f5382;
+      --blue-soft: #eef5fb;
+      --amber: #b46d12;
+      --amber-soft: #fef7ea;
+      --teal: #1d6b57;
+      --teal-soft: #edf8f4;
+      --shadow: 0 18px 48px rgba(20, 28, 36, 0.12);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: radial-gradient(circle at top right, #ebe4d5 0%, var(--bg) 55%, #e7dfd0 100%);
+      color: var(--ink);
+      font-family: system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 外部頂部導覽與進度條（位於 <section class="slide"> 之外） */
+    .topbar {
+      background: var(--frame);
+      color: #f8fafc;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .topbar-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #e2e8f0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .topbar-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .slide-counter {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 4px 12px;
+      border-radius: 999px;
+      color: #ffffff;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 4px;
+      background: #2b3846;
+      flex-shrink: 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 8.33%;
+      background: linear-gradient(90deg, #d97706, #e0533c);
+      transition: width 0.25s ease;
+    }
+
+    /* 主簡報舞台 */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 24px 12px;
+      min-height: 0;
+    }
+
+    section.slide {
+      display: none;
+      width: 100%;
+      max-width: 1080px;
+      min-height: 540px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 34px 42px 26px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section.slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--red) 0%, var(--amber) 35%, var(--blue) 70%, var(--teal) 100%);
+    }
+
+    section.slide.active {
+      display: flex;
+      animation: fadeSlide 0.22s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-body {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    h1, h2 {
+      font-size: clamp(1.55rem, 2.5vw, 2.05rem);
+      line-height: 1.28;
+      color: var(--ink);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .takeaway {
+      background: var(--frame);
+      color: #f8fafc;
+      padding: 13px 18px;
+      border-radius: 10px;
+      font-size: clamp(1rem, 1.35vw, 1.12rem);
+      line-height: 1.55;
+      font-weight: 500;
+      border-left: 5px solid var(--amber);
+    }
+
+    /* 卡片網格系統 */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .stack {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 18px;
+      border-left: 5px solid var(--blue);
+    }
+
+    .card.red { background: var(--red-soft); border-left-color: var(--red); }
+    .card.blue { background: var(--blue-soft); border-left-color: var(--blue); }
+    .card.amber { background: var(--amber-soft); border-left-color: var(--amber); }
+    .card.teal { background: var(--teal-soft); border-left-color: var(--teal); }
+    .card.dark { background: #eef1f5; border-left-color: var(--frame); }
+
+    .card h3 {
+      font-size: 1.04rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+      color: var(--ink);
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: #25303b;
+    }
+
+    .full-span {
+      grid-column: 1 / -1;
+    }
+
+    /* 英雄封面與特定排版增強 */
+    .hero-panel {
+      background: linear-gradient(135deg, #fdfcf9 0%, #f4efe4 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+
+    .flow-card {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--teal);
+      border-radius: 12px;
+      padding: 14px 18px;
+    }
+
+    .flow-card strong {
+      flex-shrink: 0;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+
+    .flow-card span {
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: #25303b;
+    }
+
+    .gap-alert {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-left: 5px solid #d97706;
+      border-radius: 10px;
+      padding: 11px 16px;
+      font-size: 0.93rem;
+      line-height: 1.5;
+      color: #78350f;
+      font-weight: 600;
+    }
+
+    .timeline-turn {
+      background: #1e293b;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    .timeline-turn strong {
+      color: #fbbf24;
+      margin-right: 6px;
+    }
+
+    footer.slide-source {
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--ink-muted);
+      word-break: break-word;
+    }
+
+    /* 底部控制列（位於 <section class="slide"> 之外） */
+    .controls {
+      padding: 10px 24px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1128px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    button.nav-btn {
+      background: var(--frame);
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, opacity 0.15s ease;
+    }
+
+    button.nav-btn:hover:not(:disabled) {
+      background: #273747;
+    }
+
+    button.nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button.dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      border: 1px solid #c7beb0;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button.dot.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: #ffffff;
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 820px) {
+      .stage { padding: 12px; }
+      section.slide { padding: 24px 20px 18px; min-height: auto; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .controls { flex-direction: column; }
+      .hint { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-title">1914–1945 歐亞社會主義流派與地方勢力的崛起比較（初學者教學簡報）</div>
+    <div class="topbar-meta">
+      <span class="slide-counter" id="slideCounter">01 / 12</span>
+    </div>
+  </header>
+  <div class="progress-track" aria-hidden="true">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <main class="stage">
+    <!-- Slide 01 -->
+    <section class="slide active" data-index="0">
+      <div class="slide-body">
+        <h1>戰火下的路線分歧（1914–1945）</h1>
+        <p class="takeaway">大戰摧毀舊帝國與中央政府，迫使歐亞左翼與地方武裝在「如何奪權、靠誰作戰」上走向分歧。</p>
+        <div class="hero-panel">
+          <h3>五大舞台</h3>
+          <p>俄國、德國、西班牙、中國、南斯拉夫，橫跨一戰餘波到二戰結束。</p>
+        </div>
+        <div class="grid-2">
+          <div class="card red">
+            <h3>主軸一（左翼分裂）</h3>
+            <p>一黨專政、議會改良、無政府自治或抗戰統戰，為何常彼此互打？</p>
+          </div>
+          <div class="card blue">
+            <h3>主軸二（地方崛起）</h3>
+            <p>議會、軍閥與游擊隊如何填補真空、跨區串聯並決定成敗結局？</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, 導言]; [04_warlord_era_china.md, 導言]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, 導言]</footer>
+    </section>
+
+    <!-- Slide 02 -->
+    <section class="slide" data-index="1">
+      <div class="slide-body">
+        <h2>舊秩序垮台：誰填補權力真空？</h2>
+        <p class="takeaway">帝國敗亡、政變或遭瓜分使中央癱瘓，基層議會與地方武裝隨即崛起。</p>
+        <div class="grid-2">
+          <div class="card red">
+            <h3>1917 俄國</h3>
+            <p>沙皇退位，臨時政府與工農兵「蘇維埃」（soviets）並立。</p>
+          </div>
+          <div class="card blue">
+            <h3>1918 德國</h3>
+            <p>水兵抗命引爆工兵委員會接管城鎮、結束帝制。</p>
+          </div>
+          <div class="card amber">
+            <h3>1916 中國</h3>
+            <p>袁世凱（Yuan Shikai）死後北洋軍分裂割據。</p>
+          </div>
+          <div class="card teal">
+            <h3>1936 西／1941 南</h3>
+            <p>西班牙發槍工人抗政變；軸心國（Axis powers）瓜分南國。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Outcome]; [04_warlord_era_china.md, 導言]; [06_yugoslav_partisans.md, Background and origins]</footer>
+    </section>
+
+    <!-- Slide 03 -->
+    <section class="slide" data-index="2">
+      <div class="slide-body">
+        <h2>左翼光譜：為何分成四派？</h2>
+        <p class="takeaway">奪權方式與國家觀念分歧，使左翼彼此抗衡。</p>
+        <div class="grid-2">
+          <div class="card red">
+            <h3>1. 一黨集權</h3>
+            <p>俄布爾什維克（Bolsheviks）、西 PCE 主張集中黨國。</p>
+          </div>
+          <div class="card blue">
+            <h3>2. 議會改良</h3>
+            <p>德 SPD、俄孟什維克（Mensheviks）走憲政代議。</p>
+          </div>
+          <div class="card amber">
+            <h3>3. 無政府／極左</h3>
+            <p>俄烏黑軍、西 CNT-FAI 與 POUM、德 KPD。</p>
+          </div>
+          <div class="card teal">
+            <h3>4. 抗戰游擊</h3>
+            <p>中共與南共 KPJ 轉向農村與統戰。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Background]; [02_german_revolution_1918_1919.md, Aftermath]; [03_spanish_civil_war.md, Republicans]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, Objectives]</footer>
+    </section>
+
+    <!-- Slide 04 -->
+    <section class="slide" data-index="3">
+      <div class="slide-body">
+        <h2>俄國：蘇維埃如何變成一黨專政？</h2>
+        <p class="takeaway">列寧（Vladimir Lenin）贏得四方混戰，卻透過解散議會與派系禁令固定一黨體制。</p>
+        <div class="grid-2">
+          <div class="card red">
+            <h3>紅軍（Red Army）</h3>
+            <p>強徵農民、起用 83% 沙俄軍官並設督戰隊（barrier troops）贏內戰。</p>
+          </div>
+          <div class="card dark">
+            <h3>白軍（White Army）</h3>
+            <p>前沙俄保守派主張「統一俄國」，戰敗流亡。</p>
+          </div>
+          <div class="card amber full-span">
+            <h3>黑軍與綠軍</h3>
+            <p>黑軍馬赫諾（Makhno）兩度助紅卻遭圍剿；綠軍農民反徵糧抗紅白兩軍。</p>
+          </div>
+        </div>
+        <div class="timeline-turn">
+          <strong>1918 → 1921</strong>1918 解散立憲會議；1921 鎮壓喀琅施塔得（Kronstadt）後禁黨內派系，改推新經濟政策（New Economic Policy, NEP）。
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Background; Warfare]</footer>
+    </section>
+
+    <!-- Slide 05 -->
+    <section class="slide" data-index="4">
+      <div class="slide-body">
+        <h2>德國：工兵委員會為何主動交權？</h2>
+        <p class="takeaway">社民黨（SPD）恐懼俄式內戰而與舊軍方、資方妥協，靠自由軍團鎮壓極左保住議會制。</p>
+        <div class="stack">
+          <div class="card blue">
+            <h3>軍資妥協</h3>
+            <p>布勞恩（Otto Braun）反對刺刀革命；艾伯特－格勒納密約（Ebert–Groener pact）保留舊軍，資方讓步八小時工時而擱置國有化。</p>
+          </div>
+          <div class="card amber">
+            <h3>議會交權</h3>
+            <p>1918 年 12 月大會以 344 對 98 票決定召開國民議會；聖誕危機後獨立社民黨（USPD）退閣。</p>
+          </div>
+          <div class="card red">
+            <h3>武裝鎮壓</h3>
+            <p>1919 年自由軍團（Freikorps）殺害李卜克內西（Karl Liebknecht）與盧森堡（Rosa Luxemburg），覆滅地方蘇維埃與 1920 魯爾紅軍（Ruhr Red Army）。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, Impact of the Russian Revolution; The councils; Turn to violence; Aftermath]</footer>
+    </section>
+
+    <!-- Slide 06 -->
+    <section class="slide" data-index="5">
+      <div class="slide-body">
+        <h2>中國：軍閥割據、民間會社與黨軍移植</h2>
+        <p class="takeaway">缺乏強大工業政黨的中國陷入軍閥混戰，直到 1923 年跨國引入列寧式組織改組國民黨。</p>
+        <div class="stack">
+          <div class="card dark">
+            <h3>軍閥均勢</h3>
+            <p>北洋皖直奉爭北京與海關走私軍火；閻錫山（Yan Xishan）融十派思想、馮玉祥（Feng Yuxiang）左傾兼收鴉片稅。</p>
+          </div>
+          <div class="card amber">
+            <h3>農民自衛</h3>
+            <p>抗拒兵災催生紅槍會（Red Spear Society）、孝衣會，及全女性鐵門會／花籃會。</p>
+          </div>
+          <div class="card red">
+            <h3>1923 列寧式改組</h3>
+            <p>孫中山（Sun Yat-sen）藉蘇援依民主集中制（democratic centralism）創黃埔聯共北伐；1927 寧漢分裂，1928 後舊軍閥仍被整批收編。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[04_warlord_era_china.md, 導言; Warlord relations; Warlord profiles; Armaments; Other forces; South; Aftermath]</footer>
+    </section>
+
+    <!-- Slide 07 -->
+    <section class="slide" data-index="6">
+      <div class="slide-body">
+        <h2>西班牙內戰：社會革命與左翼內鬨（1936–1939）</h2>
+        <p class="takeaway">共和派內部卡在「先搞自治革命」或「集權靠蘇援贏戰」，終在內耗中敗給德義力挺的佛朗哥。</p>
+        <div class="grid-2">
+          <div class="card amber">
+            <h3>革命派（CNT-FAI／POUM）</h3>
+            <p>1936 年推行農工業集體化與卡特爾（cartels），抗拒民兵正規化。</p>
+          </div>
+          <div class="card red">
+            <h3>贏戰派（PCE 等）</h3>
+            <p>憑蘇聯軍援（Operation X）反剝奪財產；1937 年五月事件（May Days）後取締 POUM、殺害寧（Nin）。</p>
+          </div>
+          <div class="card blue full-span">
+            <h3>外援落差</h3>
+            <p>27 國禁運重傷共和國並引發三位數通膨；德禿鷹軍團與義 CTV 助佛朗哥（Franco）整合國民軍取勝。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, 導言; Spanish Revolution; Combatants; Foreign involvement; Course of the war &gt; 1937; Financing]</footer>
+    </section>
+
+    <!-- Slide 08 -->
+    <section class="slide" data-index="7">
+      <div class="slide-body">
+        <h2>二戰敵後：中共與南國游擊隊崛起</h2>
+        <p class="takeaway">中南共黨分靠「貧農減稅分地」與「跨族團結」在敵後由弱轉強。</p>
+        <div class="grid-2">
+          <div class="card red">
+            <h3>中共統戰</h3>
+            <p>1936 西安事變促成國共合作，毛澤東主「獨立自主」對抗王明。</p>
+          </div>
+          <div class="card teal">
+            <h3>南國起義</h3>
+            <p>德軍百人質殺戮與烏斯塔沙（Ustaše）清洗引發全民反抗。</p>
+          </div>
+          <div class="card red">
+            <h3>中共土改</h3>
+            <p>1941 皖南事變破裂後推貧農土改減稅，終在 1949 年掌權。</p>
+          </div>
+          <div class="card teal">
+            <h3>南國擴軍</h3>
+            <p>狄托（Tito）淡化共產、高喊「兄弟情誼」擴軍 80 萬（含 10 萬女戰士），完勝通敵切特尼克（Chetniks）。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[05_second_united_front.md, Background; Cooperation during the Second Sino-Japanese War; Breakdown and aftermath]; [06_yugoslav_partisans.md, 導言; Objectives; Allied support; Women]</footer>
+    </section>
+
+    <!-- Slide 09 -->
+    <section class="slide" data-index="8">
+      <div class="slide-body">
+        <h2>歐亞跨區流動網</h2>
+        <p class="takeaway">人員與軍火跨國流動改寫戰局。</p>
+        <div class="stack">
+          <div class="flow-card">
+            <strong>白俄與坦克</strong>
+            <span>海參崴 FT-17 坦克與白俄入東北，150–170 人赴西班牙。</span>
+          </div>
+          <div class="flow-card">
+            <strong>老兵與契卡</strong>
+            <span>逾千國際縱隊（International Brigades）南國老兵返鄉抗敵；「契卡」（Cheka）外溢為 <em>checas</em>。</span>
+          </div>
+          <div class="flow-card">
+            <strong>蘇聯槓桿</strong>
+            <span>逼蔣停火，1947–1948 年遭狄托決裂。</span>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Aftermath]; [03_spanish_civil_war.md, Foreign involvement; Atrocities]; [04_warlord_era_china.md, Armaments]; [05_second_united_front.md, Background]; [06_yugoslav_partisans.md, Operations; Post-war]</footer>
+    </section>
+
+    <!-- Slide 10 -->
+    <section class="slide" data-index="9">
+      <div class="slide-body">
+        <h2>結局分岔與後方治理</h2>
+        <p class="takeaway">後方治安與跨群體正當性決定存亡。</p>
+        <div class="grid-2">
+          <div class="card dark">
+            <h3>覆滅整編</h3>
+            <p>俄黑綠、巴斯馬奇（Basmachi）、德委員會、西民兵、切特尼克瓦解。</p>
+          </div>
+          <div class="card teal">
+            <h3>獨立執政</h3>
+            <p>芬蘭波羅的海獨立；中共、南國游擊隊執政。</p>
+          </div>
+          <div class="card amber full-span">
+            <h3>塞德曼（Michael Seidman）</h3>
+            <p>佛朗哥清理（limpieza）穩後方；俄白軍與國府失控。</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution; Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, After 1945]; [06_yugoslav_partisans.md, Post-war]</footer>
+    </section>
+
+    <!-- Slide 11 -->
+    <section class="slide" data-index="10">
+      <div class="slide-body">
+        <h2>史觀交鋒與研究邊界</h2>
+        <p class="takeaway">同一鎮壓史家看法相反，且須揭示史料盲區。</p>
+        <div class="grid-2">
+          <div class="card red">
+            <h3>俄</h3>
+            <p>利布曼防衛 vs. 張伯倫專政；紅恐估 5 萬至 200 萬。</p>
+          </div>
+          <div class="card blue">
+            <h3>德</h3>
+            <p>SPD 護民主 vs. 背叛工人／過度妥協。</p>
+          </div>
+          <div class="card amber">
+            <h3>西</h3>
+            <p>失序論 vs. 半組織「契卡」執法。</p>
+          </div>
+          <div class="card teal">
+            <h3>中南</h3>
+            <p>皖南互控先開火；南國 8–10 萬清洗修正爭論。</p>
+          </div>
+        </div>
+        <div class="gap-alert">[資料不足／不確定：未載德無政府派、中共蘇區與八路軍人數]</div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Aftermath]; [02_german_revolution_1918_1919.md, Historical research]; [03_spanish_civil_war.md, Atrocities]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
+    </section>
+
+    <!-- Slide 12 -->
+    <section class="slide" data-index="11">
+      <div class="slide-body">
+        <h2>總結：帶走三個提問</h2>
+        <p class="takeaway">兩次大戰是決定「民主或集權、地方如何化為政權」的連鎖實驗。</p>
+        <div class="grid-3">
+          <div class="card red">
+            <h3>提問 1：路線兩難</h3>
+            <p>生存危機下，基層自治為何常輸給高度集權？</p>
+          </div>
+          <div class="card teal">
+            <h3>提問 2：崛起公式</h3>
+            <p>武器外援外，土改、跨族統戰與治安為何更關鍵？</p>
+          </div>
+          <div class="card blue">
+            <h3>提問 3：史料自覺</h3>
+            <p>遇史觀衝突與空白時，如何保持雙重溯源與誠實不知？</p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="簡報導覽控制">
+    <div class="btn-group">
+      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+    </div>
+    <div class="dots" id="dotsNav"></div>
+    <span class="hint">支援 ← / → / 空白鍵 切換投影片</span>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll("section.slide"));
+      const counter = document.getElementById("slideCounter");
+      const fill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const dotsNav = document.getElementById("dotsNav");
+      const total = slides.length;
+      let current = 0;
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.textContent = String(idx + 1).padStart(2, "0");
+        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
+        dot.addEventListener("click", () => goTo(idx));
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+
+      function goTo(index) {
+        if (index < 0 || index >= total) return;
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = index;
+        slides[current].classList.add("active");
+        dots[current].classList.add("active");
+        counter.textContent = String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        fill.style.width = ((current + 1) / total * 100).toFixed(2) + "%";
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1));
+      nextBtn.addEventListener("click", () => goTo(current + 1));
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === "ArrowDown" || e.code === "Space" || e.key === " ") {
+          e.preventDefault();
+          goTo(current + 1);
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp" || e.key === "ArrowUp") {
+          e.preventDefault();
+          goTo(current - 1);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(total - 1);
+        }
+      });
+
+      goTo(0);
+    })();
+  </script>
+</body>
+</html>
