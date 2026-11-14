@@ -130,14 +130,14 @@
       display: none;
       width: 100%;
       max-width: 1100px;
-      min-height: 560px;
+      min-height: 500px;
       background: var(--paper);
       border: 1px solid var(--hairline);
       box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
-      padding: 34px 44px 24px;
+      padding: 26px 40px 18px;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       position: relative;
     }
 
@@ -165,13 +165,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
       font-weight: 700;
       color: var(--red);
       font-variant-numeric: tabular-nums;
@@ -181,9 +180,14 @@
       color: #E2C799;
     }
 
+    .kicker + h1,
+    .kicker + h2 {
+      margin-top: -8px;
+    }
+
     h1, h2 {
       font-family: var(--serif);
-      line-height: 1.28;
+      line-height: 1.24;
       font-weight: 800;
       color: var(--ink);
     }
@@ -194,9 +198,9 @@
     }
 
     h2 {
-      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 10px;
+      font-size: clamp(1.5rem, 2.4vw, 1.98rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
 
     .cover-subtitle {
@@ -251,8 +255,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      border-top: 1px solid var(--hairline);
-      padding-top: 14px;
+      padding-top: 4px;
     }
 
     .story-stack p {
@@ -284,59 +287,75 @@
       line-height: 1.45;
     }
 
-    /* Slide 3：轉折焦點版 */
-    .quote-lead {
-      font-family: var(--serif);
-      font-size: 1.14rem;
-      line-height: 1.68;
-      color: var(--ink);
-      padding: 14px 20px;
-      background: var(--paper-alt);
-      border-top: 2px solid var(--red);
-      border-bottom: 1px solid var(--hairline);
-    }
-
-    .chronology-rows {
-      border-top: 1px solid var(--ink);
-    }
-
-    .chronology-row {
+    /* Slide 3：雜誌左引文右短文版型 */
+    .magazine-split {
       display: grid;
-      grid-template-columns: 140px minmax(0, 1fr);
-      gap: 18px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--hairline);
-      align-items: baseline;
+      grid-template-columns: minmax(0, 0.36fr) minmax(0, 0.64fr);
+      gap: 28px;
+      align-items: start;
+      padding: 6px 0;
     }
 
-    .chronology-date {
+    .magazine-lead {
+      padding-top: 2px;
+    }
+
+    .lead-quote {
       font-family: var(--serif);
+      font-size: 1.48rem;
       font-weight: 800;
-      font-size: 0.98rem;
-      color: var(--red);
-      font-variant-numeric: tabular-nums;
+      line-height: 1.42;
+      color: var(--ink);
+      margin-bottom: 12px;
     }
 
-    .chronology-text {
-      font-size: 0.97rem;
+    .lead-quote::before {
+      content: "“";
+      color: var(--red);
+      margin-right: 2px;
+    }
+
+    .lead-caption {
+      font-size: 0.9rem;
       line-height: 1.62;
+      color: var(--ink-muted);
+    }
+
+    .magazine-prose {
+      border-left: 1px solid var(--hairline);
+      padding-left: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .prose-block h3 {
+      font-family: var(--serif);
+      font-size: 1.04rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 5px;
+    }
+
+    .prose-block p {
+      font-size: 0.96rem;
+      line-height: 1.66;
       color: var(--ink);
     }
 
-    /* Slide 4：四方角力圖解版 */
+    /* Slide 4：無外框純細線垂直分隔雙欄 */
     .editorial-split {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
+      padding: 4px 0;
     }
 
     .editorial-col {
-      padding: 13px 20px 13px 0;
+      padding: 4px 24px 4px 0;
     }
 
     .editorial-col + .editorial-col {
-      padding: 13px 0 13px 20px;
+      padding: 4px 0 4px 24px;
       border-left: 1px solid var(--hairline);
     }
 
@@ -350,30 +369,29 @@
     .stats-strip {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      border-bottom: 1px solid var(--hairline);
-      padding-bottom: 14px;
+      gap: 28px;
+      padding: 4px 0 10px;
     }
 
     .stat-cell {
-      border-top: 2px solid var(--red);
-      padding-top: 8px;
+      padding-top: 2px;
       font-variant-numeric: tabular-nums;
     }
 
     .stat-num {
       font-family: var(--serif);
-      font-size: 1.65rem;
+      font-size: 2rem;
+      line-height: 1.05;
       font-weight: 800;
       color: var(--red);
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .stat-desc {
-      font-size: 0.88rem;
+      font-size: 0.89rem;
       color: var(--ink-muted);
-      line-height: 1.5;
+      line-height: 1.52;
     }
 
     .col-label {
@@ -391,9 +409,7 @@
     /* Slide 6：史觀交鋒與跨簡報連動 */
     .spillover-band {
       background: var(--paper-alt);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
-      padding: 11px 16px;
+      padding: 12px 18px;
       font-size: 0.93rem;
       line-height: 1.6;
       color: var(--ink);
@@ -521,11 +537,12 @@
         padding: 24px 22px 18px;
       }
       .split-media,
+      .magazine-split,
       .editorial-split,
-      .stats-strip,
-      .chronology-row {
+      .stats-strip {
         grid-template-columns: minmax(0, 1fr);
       }
+      .magazine-prose,
       .editorial-col + .editorial-col {
         border-left: none;
         border-top: 1px solid var(--hairline);
@@ -538,7 +555,7 @@
   <header class="series-topbar">
     <nav class="series-nav" aria-label="全系列簡報導覽列">
       <div class="series-links">
-        <a href="index.html">策展總覽 index.html</a>
+        <a href="index.html">策展總覽</a>
         <a href="deck_00_framework.html">00 總論</a>
         <a href="deck_01_russia.html" class="is-current">01 俄國</a>
         <a href="deck_02_germany.html">02 德國</a>
@@ -560,10 +577,10 @@
     <!-- Slide 1：全版面深色封面 -->
     <section class="slide slide--cover" id="slide-1">
       <div class="slide-body">
-        <span class="kicker">DECK 01 · RUSSIA 1917–1921</span>
+        <span class="kicker">俄國篇・1917–1921</span>
         <h1>從民選蘇維埃到一黨專政：1917–1921 俄國的革命與內戰</h1>
         <p class="cover-subtitle">
-          沙皇垮台後，基層工農兵蘇維埃一度展現多元民主；但在解散國會與四方內戰的存亡壓力下，布爾什維克（Bolsheviks）靠強徵與舊軍官贏得政權，卻也鎖死了黨內民主。
+          沙皇垮台後，基層工農兵<strong>蘇維埃</strong>一度展現多元民主；但在解散國會與四方內戰的存亡壓力下，<strong>布爾什維克（Bolsheviks）</strong>靠強徵與舊軍官贏得政權，卻也鎖死了黨內民主。
         </p>
         <div class="cover-tags">
           <span class="cover-tag">1917 二月與十月革命</span>
@@ -594,19 +611,19 @@
     <!-- Slide 2：文圖雙欄檔案版 -->
     <section class="slide" id="slide-2">
       <div class="slide-body">
-        <span class="kicker">01 · DUAL POWER &amp; OCTOBER</span>
+        <span class="kicker">俄國篇・雙重政權與十月</span>
         <h2>1917 年沙皇退位後，俄國陷入雙重政權並爆發十月奪權</h2>
 
         <div class="split-media">
           <div class="story-stack">
             <p>
-              1914 年俄國加入協約國（Triple Entente）參戰，戰火引發 1917 年二月革命（February Revolution）與尼古拉二世（Nicholas II）退位。
+              1914 年俄國加入協約國（Triple Entente）參戰，戰火引發 1917 年<strong>二月革命（February Revolution）</strong>與<strong>尼古拉二世（Nicholas II）</strong>退位。
             </p>
             <p>
-              全國湧現民選工農兵「蘇維埃」（soviets），與中間派俄國臨時政府（Russian Provisional Government）形成「雙重政權」（dual power）。
+              全國湧現民選工農兵<strong>「蘇維埃」（soviets）</strong>，與中間派俄國臨時政府（Russian Provisional Government）形成<strong>「雙重政權」（dual power）</strong>。
             </p>
             <p>
-              9 月科爾尼洛夫（Lavr Kornilov）政變破產後，列寧（Vladimir Lenin）領導布爾什維克以「一切權力歸蘇維埃」於 10 月奪權。
+              9 月<strong>科爾尼洛夫（Lavr Kornilov）</strong>政變破產後，<strong>列寧（Vladimir Lenin）</strong>領導布爾什維克以「一切權力歸蘇維埃」於 10 月奪權。
             </p>
           </div>
           <figure class="archival-fig">
@@ -618,28 +635,33 @@
       <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Warfare]</footer>
     </section>
 
-    <!-- Slide 3：轉折焦點版 -->
+    <!-- Slide 3：雜誌左引文右敘事版 -->
     <section class="slide" id="slide-3">
       <div class="slide-body">
-        <span class="kicker">02 · ONE-PARTY CONSOLIDATION</span>
+        <span class="kicker">俄國篇・體制轉折</span>
         <h2>1918 年敗選後解散立憲會議，接連排除左翼盟友走向一黨制</h2>
 
-        <p class="quote-lead">
-          全俄立憲會議（Russian Constituent Assembly）選舉敗給右翼社會革命黨（Right SRs）後，列寧宣稱形式民主（formal democracy）已無可能。
-        </p>
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <p class="lead-quote">形式民主已無可能。</p>
+            <p class="lead-caption">
+              全俄立憲會議（Russian Constituent Assembly）選舉敗給<strong>右翼社會革命黨（Right SRs）</strong>後，<strong>列寧</strong>宣稱形式民主（formal democracy）已不適用。
+            </p>
+          </div>
 
-        <div class="chronology-rows">
-          <div class="chronology-row">
-            <span class="chronology-date">1918 年 1 月</span>
-            <span class="chronology-text">布爾什維克強行解散立憲會議，右翼社會革命黨與孟什維克（Mensheviks）發起「民主反革命」（democratic counter-revolution）。</span>
-          </div>
-          <div class="chronology-row">
-            <span class="chronology-date">1918 年 6 月</span>
-            <span class="chronology-text">將右翼 SR 與孟什維克逐出蘇維埃政府，對方轉赴薩馬拉設憲法會議議員委員會（Komuch）政權。</span>
-          </div>
-          <div class="chronology-row">
-            <span class="chronology-date">1918 年 7–8 月</span>
-            <span class="chronology-text">左翼 SR（Left SRs）因反《布列斯特條約》起義遭肅清；列寧遇襲後，契卡（Cheka）啟動「紅色恐怖」（Red Terror）。</span>
+          <div class="magazine-prose">
+            <div class="prose-block">
+              <h3>1918 年 1–6 月｜解散國會與排除議會派</h3>
+              <p>
+                1 月強行解散立憲會議；6 月將<strong>右翼社會革命黨</strong>與<strong>孟什維克（Mensheviks）</strong>逐出蘇維埃政府，對方在薩馬拉成立<strong>憲法會議議員委員會（Komuch）</strong>，發起<strong>「民主反革命」（democratic counter-revolution）</strong>。
+              </p>
+            </div>
+            <div class="prose-block">
+              <h3>1918 年 7–8 月｜肅清左翼盟友與紅色恐怖</h3>
+              <p>
+                <strong>左翼 SR（Left SRs）</strong>因反對《布列斯特條約》起義遭徹底肅清；8 月列寧遇襲後，秘密警察<strong>契卡（Cheka）</strong>全面啟動<strong>「紅色恐怖」（Red Terror）</strong>。
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -649,7 +671,7 @@
     <!-- Slide 4：全幅圖解版（四方內戰） -->
     <section class="slide" id="slide-4">
       <div class="slide-body">
-        <span class="kicker">03 · FOUR-WAY CIVIL WAR</span>
+        <span class="kicker">俄國篇・四方內戰</span>
         <h2>1918–1921 四方內戰：靠強制徵兵與 83% 舊軍官贏得政權</h2>
 
         <div class="svg-frame">
@@ -684,12 +706,12 @@
         <div class="editorial-split">
           <div class="editorial-col">
             <p>
-              托洛茨基（Leon Trotsky）憑農村強制徵兵、督戰隊（barrier troops）與佔師級指揮官 83% 的前沙俄「軍事專家」（military specialists）建成紅軍，戰役損失 939,755 人。
+              <strong>托洛茨基（Leon Trotsky）</strong>憑農村強制徵兵、督戰隊（barrier troops）與佔師級指揮官 <strong>83%</strong> 的前沙俄<strong>「軍事專家」（military specialists）</strong>建成紅軍，戰役損失 939,755 人。
             </p>
           </div>
           <div class="editorial-col">
             <p>
-              紅軍擊退白軍與坦波夫農民起義後，於 1920 年 11 月白軍撤出克里米亞隨即撕毀盟約，藉契卡暗殺與圍剿肅清馬赫諾（Nestor Makhno）黑軍。
+              紅軍擊退白軍與<strong>坦波夫農民起義</strong>後，於 1920 年 11 月白軍撤出克里米亞隨即撕毀盟約，藉契卡暗殺與圍剿肅清<strong>馬赫諾（Nestor Makhno）黑軍</strong>。
             </p>
           </div>
         </div>
@@ -700,7 +722,7 @@
     <!-- Slide 5：1921 喀琅施塔得與 NEP -->
     <section class="slide" id="slide-5">
       <div class="slide-body">
-        <span class="kicker">04 · KRONSTADT &amp; NEP</span>
+        <span class="kicker">俄國篇・危機與定型</span>
         <h2>1921 年喀琅施塔得起義遭鎮壓，派系禁令與新經濟政策定型蘇俄</h2>
 
         <div class="stats-strip">
@@ -722,13 +744,13 @@
           <div class="editorial-col">
             <div class="col-label">水兵與農民抗議</div>
             <p>
-              1921 年 3 月彼得格勒工人與喀琅施塔得（Kronstadt）水兵聯合起義，要求重選蘇維埃並給農工經濟自由，遭紅軍武力鎮壓。
+              1921 年 3 月彼得格勒工人與<strong>喀琅施塔得（Kronstadt）</strong>水兵聯合起義，要求重選蘇維埃並給農工經濟自由，遭紅軍武力鎮壓。
             </p>
           </div>
           <div class="editorial-col">
             <div class="col-label col-label--blue">十大禁令與路線轉向</div>
             <p>
-              俄共第十次代表大會頒布禁止黨內派系（ban on factions）令並實施「新經濟政策」（New Economic Policy, NEP）安撫農民，全面取締反對黨轉向「一國社會主義」。
+              俄共第十次代表大會頒布<strong>禁止黨內派系（ban on factions）</strong>令並實施<strong>「新經濟政策」（New Economic Policy, NEP）</strong>安撫農民，全面取締反對黨轉向<strong>「一國社會主義」</strong>。
             </p>
           </div>
         </div>
@@ -739,26 +761,26 @@
     <!-- Slide 6：史觀交鋒與跨國餘波 -->
     <section class="slide" id="slide-6">
       <div class="slide-body">
-        <span class="kicker">05 · DEBATE &amp; TRANSNATIONAL SPILLOVER</span>
+        <span class="kicker">俄國篇・史觀交鋒與外溢</span>
         <h2>史觀交鋒：戰時防衛或一黨專政？以及俄國內戰的跨國餘波</h2>
 
         <div class="editorial-split">
           <div class="editorial-col">
             <div class="col-label">觀點 A｜戰時防衛論</div>
             <p>
-              利布曼（Marcel Liebman）主張查禁反對黨源於對手起兵叛亂與巴庫英軍處決布爾什維克，性質不同於後來史達林鎮壓。
+              <strong>利布曼（Marcel Liebman）</strong>主張查禁反對黨源於對手起兵叛亂與巴庫英軍處決布爾什維克，性質不同於後來史達林鎮壓。
             </p>
           </div>
           <div class="editorial-col">
             <div class="col-label col-label--blue">觀點 B｜一黨專政論</div>
             <p>
-              張伯倫（William Henry Chamberlin）指 1918 年 7 月後即成「純粹共產黨專政」（紅恐處決多估約 10 萬、白恐約 30 萬）。
+              <strong>張伯倫（William Henry Chamberlin）</strong>指 1918 年 7 月後即成「純粹共產黨專政」（紅恐處決多估約 10 萬、白恐約 30 萬）。
             </p>
           </div>
         </div>
 
         <div class="spillover-band">
-          <strong>跨國餘波：</strong>白軍戰敗後 100 至 200 萬「白俄流亡者」（White émigrés）及軍火流向中國東北與西班牙，秘密警察「契卡」（Cheka）名號亦外溢至西班牙。
+          <strong>跨國餘波：</strong>白軍戰敗後 <strong>100 至 200 萬「白俄流亡者」（White émigrés）</strong>及軍火流向中國東北與西班牙，秘密警察<strong>「契卡」（Cheka）</strong>名號亦外溢至西班牙。
         </div>
 
         <div class="cross-pills">

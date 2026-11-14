@@ -130,14 +130,14 @@
       display: none;
       width: 100%;
       max-width: 1100px;
-      min-height: 560px;
+      min-height: 500px;
       background: var(--paper);
       border: 1px solid var(--hairline);
       box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
-      padding: 34px 44px 24px;
+      padding: 26px 40px 18px;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       position: relative;
     }
 
@@ -165,13 +165,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
       font-weight: 700;
       color: var(--red);
       font-variant-numeric: tabular-nums;
@@ -181,9 +180,14 @@
       color: #E2C799;
     }
 
+    .kicker + h1,
+    .kicker + h2 {
+      margin-top: -8px;
+    }
+
     h1, h2 {
       font-family: var(--serif);
-      line-height: 1.28;
+      line-height: 1.24;
       font-weight: 800;
       color: var(--ink);
     }
@@ -194,9 +198,9 @@
     }
 
     h2 {
-      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 10px;
+      font-size: clamp(1.5rem, 2.4vw, 1.98rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
 
     .cover-subtitle {
@@ -251,8 +255,7 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      border-top: 1px solid var(--hairline);
-      padding-top: 14px;
+      padding-top: 4px;
     }
 
     .story-stack p {
@@ -285,31 +288,68 @@
       line-height: 1.45;
     }
 
-    /* 細線引言、時間序列與雙欄排版 */
-    .quote-lead {
+    /* 雜誌左引文／關鍵詞右短文與純細線雙欄排版 */
+    .magazine-split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.35fr) minmax(0, 0.65fr);
+      gap: 28px;
+      align-items: start;
+      padding: 4px 0;
+    }
+
+    .magazine-lead {
+      padding-top: 2px;
+    }
+
+    .lead-quote {
       font-family: var(--serif);
-      font-size: 1.1rem;
-      line-height: 1.66;
+      font-size: 1.44rem;
+      font-weight: 800;
+      line-height: 1.38;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    .lead-caption {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink-muted);
+    }
+
+    .magazine-prose {
+      border-left: 1px solid var(--hairline);
+      padding-left: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .prose-block h3 {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      font-weight: 800;
       color: var(--ink);
-      padding: 13px 20px;
-      background: var(--paper-alt);
-      border-top: 2px solid var(--red);
-      border-bottom: 1px solid var(--hairline);
+      margin-bottom: 4px;
+    }
+
+    .prose-block p {
+      font-size: 0.95rem;
+      line-height: 1.64;
+      color: var(--ink);
     }
 
     .editorial-split {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
+      padding: 4px 0;
     }
 
     .editorial-col {
-      padding: 13px 20px 13px 0;
+      padding: 4px 24px 4px 0;
     }
 
     .editorial-col + .editorial-col {
-      padding: 13px 0 13px 20px;
+      padding: 4px 0 4px 24px;
       border-left: 1px solid var(--hairline);
     }
 
@@ -331,38 +371,9 @@
       color: var(--blue);
     }
 
-    .chronology-rows {
-      border-top: 1px solid var(--ink);
-    }
-
-    .chronology-row {
-      display: grid;
-      grid-template-columns: 145px minmax(0, 1fr);
-      gap: 18px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--hairline);
-      align-items: baseline;
-    }
-
-    .chronology-date {
-      font-family: var(--serif);
-      font-weight: 800;
-      font-size: 0.96rem;
-      color: var(--red);
-      font-variant-numeric: tabular-nums;
-    }
-
-    .chronology-text {
-      font-size: 0.96rem;
-      line-height: 1.62;
-      color: var(--ink);
-    }
-
     .spillover-band {
       background: var(--paper-alt);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
-      padding: 11px 16px;
+      padding: 12px 18px;
       font-size: 0.93rem;
       line-height: 1.6;
       color: var(--ink);
@@ -372,34 +383,42 @@
       color: var(--blue);
     }
 
-    /* Slide 7：三欄公式焦點 */
+    /* Slide 7：無頂線雜誌三欄公式焦點 */
     .stats-strip {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      border-bottom: 1px solid var(--hairline);
-      padding-bottom: 16px;
+      gap: 30px;
+      padding: 6px 0 8px;
     }
 
     .stat-cell {
-      border-top: 2px solid var(--red);
-      padding-top: 10px;
+      padding-top: 2px;
       font-variant-numeric: tabular-nums;
+    }
+
+    .stat-index {
+      font-family: var(--serif);
+      font-size: 2.15rem;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--red);
+      display: block;
+      margin-bottom: 8px;
     }
 
     .stat-num {
       font-family: var(--serif);
-      font-size: 1.48rem;
+      font-size: 1.12rem;
       font-weight: 800;
-      color: var(--red);
+      color: var(--ink);
       display: block;
       margin-bottom: 6px;
     }
 
     .stat-desc {
-      font-size: 0.92rem;
+      font-size: 0.93rem;
       color: var(--ink);
-      line-height: 1.58;
+      line-height: 1.6;
     }
 
     .cross-pills {
@@ -534,11 +553,12 @@
         padding: 24px 22px 18px;
       }
       .split-media,
+      .magazine-split,
       .editorial-split,
-      .stats-strip,
-      .chronology-row {
+      .stats-strip {
         grid-template-columns: minmax(0, 1fr);
       }
+      .magazine-prose,
       .editorial-col + .editorial-col {
         border-left: none;
         border-top: 1px solid var(--hairline);
@@ -551,7 +571,7 @@
   <header class="series-topbar">
     <nav class="series-nav" aria-label="全系列簡報導覽列">
       <div class="series-links">
-        <a href="index.html">策展總覽 index.html</a>
+        <a href="index.html">策展總覽</a>
         <a href="deck_00_framework.html">00 總論</a>
         <a href="deck_01_russia.html">01 俄國</a>
         <a href="deck_02_germany.html">02 德國</a>
@@ -573,10 +593,10 @@
     <!-- Slide 1：全版面深色封面 -->
     <section class="slide slide--cover" id="slide-1">
       <div class="slide-body">
-        <span class="kicker">DECK 03 · CHINA 1916–1949</span>
+        <span class="kicker">中國篇・1916–1949</span>
         <h1>從軍閥割據到敵後土改：1916–1949 中國的裂解與地方崛起</h1>
         <p class="cover-subtitle">
-          袁世凱（Yuan Shikai）逝世後中央威權瓦解，中國歷經北洋軍閥混戰、蘇援列寧式改組與整批收編困局，最終中共藉抗戰敵後貧農土改改寫全國版圖。
+          <strong>袁世凱（Yuan Shikai）</strong>逝世後中央威權瓦解，中國歷經北洋軍閥混戰、蘇援<strong>列寧式改組</strong>與整批收編困局，最終<strong>中共</strong>藉抗戰敵後貧農土改改寫全國版圖。
         </p>
         <div class="cover-tags">
           <span class="cover-tag">1916 北洋裂解</span>
@@ -610,16 +630,16 @@
     <!-- Slide 2：文圖雙欄檔案版 -->
     <section class="slide" id="slide-2">
       <div class="slide-body">
-        <span class="kicker">01 · BEIYANG CLIQUES &amp; ALIGNMENT POLITICS</span>
+        <span class="kicker">中國篇・北洋均勢混戰</span>
         <h2>1916 年袁世凱死後，北洋三大派系展開殘酷均勢混戰</h2>
 
         <div class="split-media">
           <div class="story-stack">
             <p>
-              1916 年 6 月袁世凱逝世後，北洋軍（Beiyang Army）分裂為皖系、直系與奉系（Fengtian clique），為爭奪北京中央承認與列強掌管的中國海關總稅務司（China Maritime Customs Service）權柄反覆交鋒。
+              1916 年 6 月袁世凱逝世後，<strong>北洋軍（Beiyang Army）</strong>分裂為皖系、直系與奉系（Fengtian clique），為爭奪北京中央承認與列強掌管的<strong>中國海關總稅務司（China Maritime Customs Service）</strong>權柄反覆交鋒。
             </p>
             <p>
-              威爾伯（C. Martin Wilbur）與白魯恂（Lucian Pye）指出多數軍閥缺乏意識形態，僅靠均勢聯手防止一家獨大；惟山西閻錫山（Yan Xishan）融會十種思想並設太原兵工廠自保，馮玉祥則結合基督教與民族主義且一度獲蘇援。
+              <strong>威爾伯（C. Martin Wilbur）</strong>與<strong>白魯恂（Lucian Pye）</strong>指出多數軍閥缺乏意識形態，僅靠均勢聯手防止一家獨大；惟山西<strong>閻錫山（Yan Xishan）</strong>融會十種思想並設太原兵工廠自保，<strong>馮玉祥</strong>則結合基督教與民族主義且一度獲蘇援。
             </p>
           </div>
           <figure class="archival-fig">
@@ -634,30 +654,35 @@
     <!-- Slide 3：兵災下的農村自衛 -->
     <section class="slide" id="slide-3">
       <div class="slide-body">
-        <span class="kicker">02 · PEASANT SELF-DEFENSE SOCIETIES</span>
+        <span class="kicker">中國篇・鄉土自衛與走私</span>
         <h2>兵災與武器禁運下，無槍農民以會社武裝守衛鄉土</h2>
 
-        <p class="quote-lead">
-          面對軍閥兵災劫掠與性暴力，缺乏購槍資金的農村組成融合武術、大刀長矛與千禧年主義（millenarian）信仰的自衛會社，盼恢復正義統治。
-        </p>
-
-        <div class="editorial-split">
-          <div class="editorial-col">
-            <div class="col-label">紅槍會與孝衣會</div>
-            <p>
-              紅槍會（Red Spear Society）塗紅土導「氣」作戰；孝衣會（Mourning Clothes Society）則於交戰前叩首嚎哭壯膽，以「刀槍不入」儀式抵禦劫掠。
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <p class="lead-quote">以大刀長矛守衛鄉土</p>
+            <p class="lead-caption">
+              面對軍閥兵災劫掠與性暴力，缺乏購槍資金的農村組成融合武術與<strong>千禧年主義（millenarian）</strong>信仰的自衛會社，盼恢復正義統治。
             </p>
           </div>
-          <div class="editorial-col">
-            <div class="col-label col-label--blue">全女性自衛會社</div>
-            <p>
-              全女性的鐵門會（Iron Gate Society）著白衣揮扇擋彈，花籃會（Flower Basket Society）持劍與法籃抗暴（來源未載明各會省份與領袖姓名）。
-            </p>
+
+          <div class="magazine-prose">
+            <div class="prose-block">
+              <h3>紅槍會與孝衣會</h3>
+              <p>
+                <strong>紅槍會（Red Spear Society）</strong>塗紅土導「氣」作戰；<strong>孝衣會（Mourning Clothes Society）</strong>於交戰前叩首嚎哭壯膽，以「刀槍不入」儀式抵禦劫掠。
+              </p>
+            </div>
+            <div class="prose-block">
+              <h3>全女性自衛會社</h3>
+              <p>
+                全女性的<strong>鐵門會（Iron Gate Society）</strong>著白衣揮扇擋彈，<strong>花籃會（Flower Basket Society）</strong>持劍與法籃抗暴（來源未載明各會省份與領袖姓名）。
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="spillover-band">
-          <strong>禁運破局：</strong>1919 年英美日等對華武器禁運遭普遍無視，如 1921–1924 年義大利偽報「日本玩具」走私七萬支維特利步槍予直系曹錕與吳佩孚。
+          <strong>禁運破局：</strong>1919 年英美日等對華武器禁運遭普遍無視，如 1921–1924 年義大利偽報「日本玩具」走私七萬支維特利步槍予直系<strong>曹錕</strong>與<strong>吳佩孚</strong>。
         </div>
       </div>
       <footer class="slide-source">來源：[04_warlord_era_china.md, Warlord armies; Armaments; Other forces]</footer>
@@ -666,7 +691,7 @@
     <!-- Slide 4：跨國連動圖解版 -->
     <section class="slide" id="slide-4">
       <div class="slide-body">
-        <span class="kicker">03 · TRANSNATIONAL REORGANIZATION &amp; ÉMIGRÉS</span>
+        <span class="kicker">中國篇・黨軍移植與白俄</span>
         <h2>1923 年跨國轉折：列寧式改組國民黨與白俄軍火坦克入華</h2>
 
         <div class="svg-frame">
@@ -711,12 +736,12 @@
         <div class="editorial-split">
           <div class="editorial-col">
             <p>
-              屢遭陳炯明等逐出後，孫中山（Sun Yat-sen）於 1923 年依列寧式「民主集中制」（democratic centralism）改組國民黨並聯俄容共建立獨立黨軍。
+              屢遭陳炯明等逐出後，<strong>孫中山（Sun Yat-sen）</strong>於 1923 年依列寧式<strong>「民主集中制」（democratic centralism）</strong>改組國民黨並聯俄容共建立獨立黨軍。
             </p>
           </div>
           <div class="editorial-col">
             <p>
-              張作霖則自海參崴取得法製雷諾 FT-17（Renault FT-17）坦克並接收吉林白軍槍砲；白俄將領涅恰耶夫（K. P. Nechaev）率外籍軍團於上海阻擊北伐。
+              <strong>張作霖</strong>自海參崴取得法製<strong>雷諾 FT-17（Renault FT-17）坦克</strong>並接收吉林白軍槍砲；白俄將領<strong>涅恰耶夫（K. P. Nechaev）</strong>率外籍軍團於上海阻擊北伐。
             </p>
           </div>
         </div>
@@ -731,21 +756,30 @@
     <!-- Slide 5：北伐、寧漢分裂與整批收編 -->
     <section class="slide" id="slide-5">
       <div class="slide-body">
-        <span class="kicker">04 · EXPEDITION, SPLIT &amp; EN BLOC INCORPORATION</span>
+        <span class="kicker">中國篇・北伐與收編困局</span>
         <h2>北伐、寧漢分裂與「整批收編」舊軍閥埋下的統治隱患</h2>
 
-        <div class="chronology-rows">
-          <div class="chronology-row">
-            <span class="chronology-date">1926–1927 北伐分流</span>
-            <span class="chronology-text">蔣介石（Chiang Kai-shek）北伐擊潰直皖兩系後，於 1927 年 4 月發動上海清黨（Shanghai massacre）另立南京政府，引發與汪精衛武漢政府的「寧漢分裂」，終致首次合作結束。</span>
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <p class="lead-quote">「整批收編」</p>
+            <p class="lead-caption">
+              1928 年表面統一的背後，多數省級首腦實為舊軍閥；<strong>塞德曼</strong>指容忍貪腐與後方土匪如同俄國白軍，嚴重侵蝕政權正當性。
+            </p>
           </div>
-          <div class="chronology-row">
-            <span class="chronology-date">1928–1930 收編與再戰</span>
-            <span class="chronology-text">1928 年底張學良（Zhang Xueliang）歸順完成形式統一，但多數省級首腦實為「整批收編」的舊軍閥；1929–1930 年隨即引爆馮玉祥、閻錫山與李宗仁聯手反蔣的中原大戰（Central Plains War）。</span>
-          </div>
-          <div class="chronology-row">
-            <span class="chronology-date">結構性腐敗困局</span>
-            <span class="chronology-text">蔣氏雖痛恨腐敗將民眾推向中共，卻須容忍貪腐軍閥維持表面統一且無力遏止後方土匪（塞德曼指其如俄國白軍般嚴重侵蝕政權正當性）。</span>
+
+          <div class="magazine-prose">
+            <div class="prose-block">
+              <h3>1926–1928｜北伐、上海清黨與寧漢分裂</h3>
+              <p>
+                <strong>蔣介石（Chiang Kai-shek）</strong>北伐擊潰直皖兩系後，於 1927 年 4 月發動<strong>上海清黨（Shanghai massacre）</strong>另立南京政府，與<strong>汪精衛</strong>武漢政府形成「<strong>寧漢分裂</strong>」；1928 年底<strong>張學良（Zhang Xueliang）</strong>歸順完成形式統一。
+              </p>
+            </div>
+            <div class="prose-block">
+              <h3>1929–1930｜中原大戰與腐敗困局</h3>
+              <p>
+                收編張力迅速引爆<strong>馮玉祥</strong>、<strong>閻錫山</strong>與<strong>李宗仁</strong>聯手反蔣的<strong>中原大戰（Central Plains War）</strong>；蔣氏雖痛恨腐敗將民眾推向中共，卻須容忍貪腐軍閥維繫表面統一。
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -755,18 +789,18 @@
     <!-- Slide 6：西安事變與皖南事變爭議 -->
     <section class="slide" id="slide-6">
       <div class="slide-body">
-        <span class="kicker">05 · SECOND UNITED FRONT &amp; WANNAN CONTROVERSY</span>
+        <span class="kicker">中國篇・西安與皖南爭議</span>
         <h2>1936 西安事變促成合作，1941 皖南事變爆發史料對立</h2>
 
         <div class="spillover-band">
-          <strong>第二次合作轉折：</strong>1936 年 12 月張學良、楊虎城（Yang Hucheng）發動西安事變（Xi'an Incident）扣押蔣介石迫成停戰，紅軍改編八路軍與新四軍；但中共內部仍陷毛澤東「獨立自主」與王明「一切經過統一戰線」之爭。
+          <strong>第二次合作轉折：</strong>1936 年 12 月<strong>張學良</strong>、<strong>楊虎城（Yang Hucheng）</strong>發動<strong>西安事變（Xi'an Incident）</strong>扣押蔣介石迫成停戰，紅軍改編八路軍與新四軍；但中共內部仍陷<strong>毛澤東</strong>「獨立自主」與<strong>王明</strong>「一切經過統一戰線」之爭。
         </div>
 
         <div class="editorial-split">
           <div class="editorial-col">
             <div class="col-label">事件破裂｜1941 年皖南事變</div>
             <p>
-              1938 年武漢會戰後摩擦急升，毛澤東主張「以空間換時間」。1941 年 1 月新四軍奉命撤離安徽時在皖南遭國軍伏擊擊敗，終結國共合作。
+              1938 年武漢會戰後摩擦急升，毛澤東主張<strong>「以空間換時間」</strong>。1941 年 1 月新四軍奉命撤離安徽時在<strong>皖南</strong>遭國軍伏擊擊敗，終結國共合作。
             </p>
           </div>
           <div class="editorial-col">
@@ -783,26 +817,29 @@
     <!-- Slide 7：結局與下章導引 -->
     <section class="slide" id="slide-7">
       <div class="slide-body">
-        <span class="kicker">06 · LAND REFORM FORMULA &amp; 1949 VICTORY</span>
+        <span class="kicker">中國篇・敵後土改翻盤</span>
         <h2>敵後貧農土改減稅與 1945 東北日械接收的奪權公式</h2>
 
         <div class="stats-strip">
           <div class="stat-cell">
+            <span class="stat-index">01</span>
             <span class="stat-num">偏重貧農土改</span>
             <p class="stat-desc">
-              1941 年後中共在敵後全面推動農村群眾組織、行政改革與偏重貧農的土地減稅政策，紮穩地方根基。
+              1941 年後<strong>中共</strong>在敵後全面推動農村群眾組織、行政改革與偏重貧農的土地減稅政策，紮穩地方根基。
             </p>
           </div>
           <div class="stat-cell">
+            <span class="stat-index">02</span>
             <span class="stat-num">收編敵後空間</span>
             <p class="stat-desc">
-              將正面消耗留給國軍，中共趁隙於敵後消滅或吸收國府民團與游擊空間，迫使對方抽師封鎖。
+              將正面消耗留給<strong>國軍</strong>，中共趁隙於敵後消滅或吸收國府民團與游擊空間，迫使對方抽師封鎖。
             </p>
           </div>
           <div class="stat-cell">
+            <span class="stat-index">03</span>
             <span class="stat-num">1945 東北日械</span>
             <p class="stat-desc">
-              戰後和談破局，中共獲蘇聯默許接收東北繳獲日軍武器，配合原軍閥（如盧漢）1949 年倒戈建國。
+              戰後和談破局，中共獲<strong>蘇聯</strong>默許接收東北繳獲日軍武器，配合原軍閥（如<strong>盧漢</strong>）1949 年倒戈建國。
             </p>
           </div>
         </div>

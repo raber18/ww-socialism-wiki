@@ -130,14 +130,14 @@
       display: none;
       width: 100%;
       max-width: 1100px;
-      min-height: 560px;
+      min-height: 500px;
       background: var(--paper);
       border: 1px solid var(--hairline);
       box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
-      padding: 34px 44px 24px;
+      padding: 26px 40px 18px;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       position: relative;
     }
 
@@ -165,13 +165,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
       font-weight: 700;
       color: var(--blue);
       font-variant-numeric: tabular-nums;
@@ -181,9 +180,14 @@
       color: #E2C799;
     }
 
+    .kicker + h1,
+    .kicker + h2 {
+      margin-top: -8px;
+    }
+
     h1, h2 {
       font-family: var(--serif);
-      line-height: 1.28;
+      line-height: 1.24;
       font-weight: 800;
       color: var(--ink);
     }
@@ -194,9 +198,9 @@
     }
 
     h2 {
-      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 10px;
+      font-size: clamp(1.5rem, 2.4vw, 1.98rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
 
     .cover-subtitle {
@@ -274,8 +278,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
-      border-top: 1px solid var(--hairline);
-      padding-top: 14px;
+      padding-top: 4px;
     }
 
     .story-stack p {
@@ -318,79 +321,79 @@
       color: var(--paper);
     }
 
-    /* Slide 4：數據焦點版 */
-    .vote-layout {
+    /* Slide 4 & Slide 5：雜誌左關鍵數字右短文版型 */
+    .magazine-split {
       display: grid;
-      grid-template-columns: 240px minmax(0, 1fr);
+      grid-template-columns: minmax(0, 0.34fr) minmax(0, 0.66fr);
       gap: 28px;
-      align-items: center;
+      align-items: start;
+      padding: 6px 0;
     }
 
-    .vote-hero {
-      border-top: 3px solid var(--blue);
-      border-bottom: 1px solid var(--hairline);
-      padding: 18px 0;
-      text-align: left;
+    .magazine-lead {
+      padding-top: 2px;
       font-variant-numeric: tabular-nums;
     }
 
-    .vote-ratio {
+    .lead-stat {
       font-family: var(--serif);
-      font-size: 2.85rem;
+      font-size: clamp(2rem, 3vw, 2.75rem);
       font-weight: 800;
+      line-height: 1.08;
       color: var(--blue);
-      line-height: 1.1;
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    .vote-caption {
+    .lead-stat--red {
+      color: var(--red);
+    }
+
+    .lead-caption {
       font-size: 0.9rem;
       color: var(--ink-muted);
-      line-height: 1.5;
+      line-height: 1.58;
     }
 
-    .chronology-rows {
-      border-top: 1px solid var(--ink);
+    .magazine-prose {
+      border-left: 1px solid var(--hairline);
+      padding-left: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
-    .chronology-row {
-      display: grid;
-      grid-template-columns: 120px minmax(0, 1fr);
-      gap: 14px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--hairline);
-      align-items: baseline;
-    }
-
-    .chronology-date {
+    .prose-block h3 {
       font-family: var(--serif);
+      font-size: 1.03rem;
       font-weight: 800;
-      font-size: 0.95rem;
       color: var(--red);
-      font-variant-numeric: tabular-nums;
+      margin-bottom: 4px;
     }
 
-    .chronology-text {
+    .prose-block--blue h3 {
+      color: var(--blue);
+    }
+
+    .prose-block p {
       font-size: 0.96rem;
-      line-height: 1.62;
+      line-height: 1.65;
       color: var(--ink);
     }
 
-    /* Slide 6：三欄史觀對照 */
+    /* Slide 6：無外框純細線垂直分隔三欄史觀對照 */
     .debate-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      border-top: 1px solid var(--ink);
-      border-bottom: 1px solid var(--hairline);
+      padding: 6px 0;
     }
 
     .debate-col {
-      padding: 15px 18px 15px 0;
+      padding: 4px 20px 4px 0;
     }
 
     .debate-col + .debate-col {
-      padding: 15px 18px;
+      padding: 4px 20px;
       border-left: 1px solid var(--hairline);
     }
 
@@ -521,15 +524,15 @@
       }
       .split-media-left,
       .triangle-layout,
-      .vote-layout,
-      .debate-grid,
-      .chronology-row {
+      .magazine-split,
+      .debate-grid {
         grid-template-columns: minmax(0, 1fr);
       }
+      .magazine-prose,
       .debate-col + .debate-col {
         border-left: none;
         border-top: 1px solid var(--hairline);
-        padding: 12px 0;
+        padding: 12px 0 0;
       }
     }
   </style>
@@ -538,7 +541,7 @@
   <header class="series-topbar">
     <nav class="series-nav" aria-label="全系列簡報導覽列">
       <div class="series-links">
-        <a href="index.html">策展總覽 index.html</a>
+        <a href="index.html">策展總覽</a>
         <a href="deck_00_framework.html">00 總論</a>
         <a href="deck_01_russia.html">01 俄國</a>
         <a href="deck_02_germany.html" class="is-current">02 德國</a>
@@ -560,10 +563,10 @@
     <!-- Slide 1：全版面深色封面 -->
     <section class="slide slide--cover" id="slide-1">
       <div class="slide-body">
-        <span class="kicker">DECK 02 · GERMANY 1918–1919</span>
+        <span class="kicker">德國篇・1918–1919</span>
         <h1>工兵委員會為何主動讓權：1918–1919 德國革命的分岔</h1>
         <p class="cover-subtitle">
-          1918 年水兵起義迅速推翻四百年帝制，但溫和社民黨（SPD）因懼怕重演俄式內戰，選擇與舊軍方及資方妥協並鎮壓極左，讓共和國保住議會卻埋下威瑪隱患。
+          1918 年<strong>水兵起義</strong>迅速推翻四百年帝制，但溫和<strong>社民黨（SPD）</strong>因懼怕重演俄式內戰，選擇與<strong>舊軍方及資方</strong>妥協並鎮壓極左，讓共和國保住議會卻埋下威瑪隱患。
         </p>
         <div class="cover-tags">
           <span class="cover-tag">1918.11 水兵起義與雙重共和</span>
@@ -594,7 +597,7 @@
     <!-- Slide 2：左圖右文檔案版 -->
     <section class="slide" id="slide-2">
       <div class="slide-body">
-        <span class="kicker">01 · NOVEMBER REVOLUTION</span>
+        <span class="kicker">德國篇・十一月革命</span>
         <h2>1918 年 11 月基爾水兵起義，柏林同日宣告兩個共和國</h2>
 
         <div class="split-media-left">
@@ -604,10 +607,10 @@
           </figure>
           <div class="story-stack">
             <p>
-              1918 年 11 月 3 至 4 日基爾（Kiel）水兵抗命起義席捲全德，各地工兵委員會（workers' and soldiers' councils）接管城鎮，各邦君主未流血退位。
+              1918 年 11 月 3 至 4 日<strong>基爾（Kiel）水兵抗命起義</strong>席捲全德，各地<strong>工兵委員會（workers' and soldiers' councils）</strong>接管城鎮，各邦君主未流血退位。
             </p>
             <p>
-              11 月 9 日柏林同日出現兩場宣告：SPD 菲利普·謝德曼（Philipp Scheidemann）宣告「共和國」，斯巴達克同盟李卜克內西（Karl Liebknecht）宣告「社會主義共和國」，次日威廉二世（Wilhelm II）流亡荷蘭。
+              11 月 9 日柏林同日出現兩場宣告：SPD <strong>菲利普·謝德曼（Philipp Scheidemann）</strong>宣告「共和國」，斯巴達克同盟<strong>李卜克內西（Karl Liebknecht）</strong>宣告「社會主義共和國」，次日<strong>威廉二世（Wilhelm II）</strong>流亡荷蘭。
             </p>
           </div>
         </div>
@@ -618,7 +621,7 @@
     <!-- Slide 3：跨國對照結構版（威瑪妥協三角） -->
     <section class="slide" id="slide-3">
       <div class="slide-body">
-        <span class="kicker">02 · COMPROMISE TO AVOID CIVIL WAR</span>
+        <span class="kicker">德國篇・雙重妥協</span>
         <h2>懼怕俄式內戰，SPD 與舊軍方及資方簽下雙重妥協</h2>
 
         <div class="triangle-layout">
@@ -648,10 +651,10 @@
 
           <div class="story-stack">
             <p>
-              俄國內戰爆發後，SPD 領袖奧托·布勞恩（Otto Braun）撰文宣稱「社會主義不能建立在刺刀與機槍上」。
+              俄國內戰爆發後，SPD 領袖<strong>奧托·布勞恩（Otto Braun）</strong>撰文宣稱「社會主義不能建立在刺刀與機槍上」。
             </p>
             <p>
-              11 月 10 日「艾伯特－格勒納密約」（Ebert–Groener pact）保留舊軍官團換取效忠；15 日《施廷內斯－萊吉恩協定》（Stinnes–Legien Agreement）以八小時工時與集體談判權換取承認私營企業，使國有化與文官改革止步。
+              11 月 10 日<strong>「艾伯特－格勒納密約」（Ebert–Groener pact）</strong>保留舊軍官團換取效忠；15 日《<strong>施廷內斯－萊吉恩協定（Stinnes–Legien Agreement）</strong>》以八小時工時與集體談判權換取承認私營企業，使國有化與文官改革止步。
             </p>
             <div class="cross-pills">
               <a class="cross-pill" href="deck_01_russia.html#slide-4">對照 01 俄國：四方血腥內戰 ↗</a>
@@ -665,27 +668,27 @@
     <!-- Slide 4：數據焦點版 -->
     <section class="slide" id="slide-4">
       <div class="slide-body">
-        <span class="kicker">03 · COUNCIL CONGRESS HANDOVER</span>
+        <span class="kicker">德國篇・交權議會</span>
         <h2>344 對 98 票：全德工兵委員會主動交權給國民議會</h2>
 
-        <div class="vote-layout">
-          <div class="vote-hero">
-            <span class="vote-ratio">344 : 98</span>
-            <p class="vote-caption">全德工兵委員會代表大會表決支持儘速召開國民議會</p>
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <span class="lead-stat">344 : 98</span>
+            <p class="lead-caption">全德工兵委員會代表大會表決支持儘速召開國民議會，溫和多數主動結束委員會憲政實驗。</p>
           </div>
 
-          <div class="chronology-rows">
-            <div class="chronology-row">
-              <span class="chronology-date">溫和多數</span>
-              <span class="chronology-text">全德各地工兵委員會由溫和的 SPD 與主張延後選舉的獨立社民黨（USPD）主導，僅維持糧食與復員治安，幾乎不沒收私產。</span>
+          <div class="magazine-prose">
+            <div class="prose-block prose-block--blue">
+              <h3>溫和多數與 12 月表決交權</h3>
+              <p>
+                各地委員會由溫和的 <strong>SPD</strong> 與主張延後選舉的<strong>獨立社民黨（USPD）</strong>主導，幾乎不沒收私產；12 月全德大會雖通過軍隊民主化《<strong>漢堡要點（Hamburg Points）</strong>》，仍遭軍方抵制落空。
+              </p>
             </div>
-            <div class="chronology-row">
-              <span class="chronology-date">1918 年 12 月</span>
-              <span class="chronology-text">全德代表大會以 344 票對 98 票否決委員會憲政體制；雖通過軍隊民主化《漢堡要點》（Hamburg Points），卻遭軍方抵制落空。</span>
-            </div>
-            <div class="chronology-row">
-              <span class="chronology-date">聖誕危機</span>
-              <span class="chronology-text">政府軍進攻「人民海軍師」（Volksmarinedivision）反遭擊退，USPD 於 29 日退閣，諾斯克（Gustav Noske）擴編自由軍團。</span>
+            <div class="prose-block prose-block--blue">
+              <h3>聖誕危機與自由軍團擴編</h3>
+              <p>
+                政府軍進攻<strong>「人民海軍師」（Volksmarinedivision）</strong>反遭擊退，USPD 於 12 月 29 日退閣，<strong>諾斯克（Gustav Noske）</strong>隨即擴編右翼自由軍團。
+              </p>
             </div>
           </div>
         </div>
@@ -696,21 +699,30 @@
     <!-- Slide 5：1919 自由軍團鎮壓極左 -->
     <section class="slide" id="slide-5">
       <div class="slide-body">
-        <span class="kicker">04 · FREIKORPS CRACKDOWN</span>
+        <span class="kicker">德國篇・自由軍團鎮壓</span>
         <h2>自由軍團血腥鎮壓斯巴達克與地方蘇維埃，左翼永久撕裂</h2>
 
-        <div class="chronology-rows">
-          <div class="chronology-row">
-            <span class="chronology-date">1919 年 1 月</span>
-            <span class="chronology-text">斯巴達克派組建德國共產黨（KPD）並反對盧森堡（Rosa Luxemburg）參選綱領；警察局長免職引爆「斯巴達克起義」（約 156 死），自由軍團（Freikorps）平亂並於 15 日殺害李卜克內西與盧森堡。</span>
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <span class="lead-stat lead-stat--red">1,200+ 死</span>
+            <p class="lead-caption">
+              1919 年柏林三月戰鬥至少 1,200 死；斯巴達克起義約 <strong>156 死</strong>、巴伐利亞約 <strong>600 死</strong>，1920 年 <strong>5 萬人</strong>魯爾紅軍亦遭平亂。
+            </p>
           </div>
-          <div class="chronology-row">
-            <span class="chronology-date">1919–1920 年</span>
-            <span class="chronology-text">柏林三月戰鬥（至少 1,200 死）、不來梅與巴伐利亞（約 600 死）蘇維埃共和國，及 1920 年 5 萬人組成的「魯爾紅軍」（Ruhr Red Army）接連遭鎮壓。</span>
-          </div>
-          <div class="chronology-row">
-            <span class="chronology-date">威瑪隱患</span>
-            <span class="chronology-text">SPD 與 KPD 永久分裂削弱 1933 年抗納粹力量，《威瑪憲法》（Weimar Constitution）第 48 條日後成為希特勒（Adolf Hitler）掌權墊腳石。</span>
+
+          <div class="magazine-prose">
+            <div class="prose-block">
+              <h3>1919–1920｜起義連環遭自由軍團平亂</h3>
+              <p>
+                斯巴達克派組建<strong>德國共產黨（KPD）</strong>並反對<strong>盧森堡（Rosa Luxemburg）</strong>參選綱領；「<strong>斯巴達克起義</strong>」遭<strong>自由軍團（Freikorps）</strong>鎮壓，1 月 15 日殺害<strong>李卜克內西</strong>與<strong>盧森堡</strong>，隨後不來梅、巴伐利亞蘇維埃與<strong>魯爾紅軍（Ruhr Red Army）</strong>接連覆滅。
+              </p>
+            </div>
+            <div class="prose-block">
+              <h3>結構遺緒｜左翼分裂與第 48 條隱患</h3>
+              <p>
+                <strong>SPD 與 KPD 永久分裂</strong>削弱 1933 年抗納粹力量，《<strong>威瑪憲法（Weimar Constitution）</strong>》第 48 條日後成為<strong>希特勒（Adolf Hitler）</strong>掌權的墊腳石。
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -720,26 +732,26 @@
     <!-- Slide 6：史觀爭議與下章導引 -->
     <section class="slide" id="slide-6">
       <div class="slide-body">
-        <span class="kicker">05 · HISTORIOGRAPHY &amp; LEGACY</span>
+        <span class="kicker">德國篇・史觀爭辯與遺緒</span>
         <h2>史觀交鋒：保住議會民主，抑或過度妥協錯失改革？</h2>
 
         <div class="debate-grid">
           <div class="debate-col">
             <div class="col-label">觀點 A｜護民主防衛論</div>
             <p>
-              1950 年代西德史家埃德曼（Karl Dietrich Erdmann）界定當時面臨「專政或議會」抉擇，為 SPD 聯軍捍衛民主辯護。
+              1950 年代西德史家<strong>埃德曼（Karl Dietrich Erdmann）</strong>界定當時面臨「專政或議會」抉擇，為 SPD 聯軍捍衛民主辯護。
             </p>
           </div>
           <div class="debate-col">
             <div class="col-label col-label--red">觀點 B｜背叛工人論</div>
             <p>
-              圖霍爾斯基（Kurt Tucholsky）與東德（GDR）史學批 SPD 宛如「想當高級文官的人」，背叛工人階級與社會改革契機。
+              <strong>圖霍爾斯基（Kurt Tucholsky）</strong>與東德（GDR）史學批 SPD 宛如「想當高級文官的人」，背叛工人階級與社會改革契機。
             </p>
           </div>
           <div class="debate-col">
             <div class="col-label">觀點 C｜修正派妥協論</div>
             <p>
-              1960 年代西德修正派（科爾布 Eberhard Kolb、溫克勒 Heinrich August Winkler）指極左威脅被高估，過度保留舊菁英留下結構危機。
+              1960 年代西德修正派（<strong>科爾布</strong> Eberhard Kolb、<strong>溫克勒</strong> Heinrich August Winkler）指極左威脅被高估，過度保留舊菁英留下結構危機。
             </p>
           </div>
         </div>

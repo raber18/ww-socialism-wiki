@@ -130,14 +130,14 @@
       display: none;
       width: 100%;
       max-width: 1100px;
-      min-height: 560px;
+      min-height: 500px;
       background: var(--paper);
       border: 1px solid var(--hairline);
       box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
-      padding: 34px 44px 24px;
+      padding: 26px 40px 18px;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       position: relative;
     }
 
@@ -165,13 +165,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
       font-weight: 700;
       color: var(--red);
       font-variant-numeric: tabular-nums;
@@ -188,15 +187,18 @@
       color: var(--ink);
     }
 
+    .kicker + h1,
+    .kicker + h2 {
+      margin-top: -8px;
+    }
+
     h1 {
       font-size: clamp(1.9rem, 3.3vw, 2.6rem);
       color: var(--paper);
     }
 
     h2 {
-      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 10px;
+      font-size: clamp(1.5rem, 2.4vw, 1.98rem);
     }
 
     .cover-subtitle {
@@ -275,8 +277,6 @@
       display: flex;
       flex-direction: column;
       gap: 13px;
-      border-top: 1px solid var(--hairline);
-      padding-top: 14px;
     }
 
     .story-stack p {
@@ -285,20 +285,24 @@
       color: var(--ink);
     }
 
-    /* 細線雙欄與時間序列 */
+    .story-stack strong,
+    .editorial-col strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* 無框垂直細線雙欄與雜誌不對稱版型 */
     .editorial-split {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
     }
 
     .editorial-col {
-      padding: 13px 20px 13px 0;
+      padding: 6px 24px 6px 0;
     }
 
     .editorial-col + .editorial-col {
-      padding: 13px 0 13px 20px;
+      padding: 6px 0 6px 24px;
       border-left: 1px solid var(--hairline);
     }
 
@@ -320,38 +324,66 @@
       color: var(--blue);
     }
 
-    .chronology-rows {
-      border-top: 1px solid var(--ink);
-    }
-
-    .chronology-row {
+    .magazine-split {
       display: grid;
-      grid-template-columns: 145px minmax(0, 1fr);
-      gap: 18px;
-      padding: 11px 0;
-      border-bottom: 1px solid var(--hairline);
-      align-items: baseline;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      padding-top: 4px;
     }
 
-    .chronology-date {
+    .magazine-lead {
+      border-left: 3px solid var(--red);
+      padding: 4px 0 4px 16px;
+    }
+
+    .lead-stat {
       font-family: var(--serif);
+      font-size: 2.15rem;
       font-weight: 800;
-      font-size: 0.95rem;
+      line-height: 1.08;
       color: var(--red);
       font-variant-numeric: tabular-nums;
     }
 
-    .chronology-text {
-      font-size: 0.95rem;
-      line-height: 1.6;
+    .lead-stat-sub {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 800;
       color: var(--ink);
+      margin-top: 8px;
+    }
+
+    .lead-caption {
+      font-size: 0.9rem;
+      line-height: 1.58;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .magazine-prose {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-left: 1px solid var(--hairline);
+      padding-left: 24px;
+    }
+
+    .prose-block p {
+      font-size: 0.95rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    .prose-block strong {
+      color: var(--ink);
+      font-weight: 700;
     }
 
     .spillover-band {
       background: var(--paper-alt);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
-      padding: 11px 16px;
+      border-left: 3px solid var(--blue);
+      padding: 10px 16px;
       font-size: 0.93rem;
       line-height: 1.58;
       color: var(--ink);
@@ -490,17 +522,23 @@
 
     @media (max-width: 860px) {
       section.slide {
-        padding: 24px 22px 18px;
+        padding: 22px 20px 18px;
       }
       .split-media-left,
       .editorial-split,
-      .chronology-row {
+      .magazine-split {
         grid-template-columns: minmax(0, 1fr);
       }
       .editorial-col + .editorial-col {
         border-left: none;
         border-top: 1px solid var(--hairline);
         padding: 12px 0 0;
+      }
+      .magazine-prose {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding-left: 0;
+        padding-top: 12px;
       }
     }
   </style>
@@ -509,7 +547,7 @@
   <header class="series-topbar">
     <nav class="series-nav" aria-label="全系列簡報導覽列">
       <div class="series-links">
-        <a href="index.html">策展總覽 index.html</a>
+        <a href="index.html">策展總覽</a>
         <a href="deck_00_framework.html">00 總論</a>
         <a href="deck_01_russia.html">01 俄國</a>
         <a href="deck_02_germany.html">02 德國</a>
@@ -531,7 +569,7 @@
     <!-- Slide 1：全版面深色封面 -->
     <section class="slide slide--cover" id="slide-1">
       <div class="slide-body">
-        <span class="kicker">DECK 04 · SPAIN 1936–1939</span>
+        <span class="kicker">西班牙篇・1936–1939</span>
         <h1>社會革命與左翼內鬨：1936–1939 西班牙共和國為何敗亡？</h1>
         <p class="cover-subtitle">
           七月政變癱瘓中央後，無政府工團率先展開集體化；但共和派深陷「先革命或先勝戰」的血腥分裂，加上 27 國禁運與德義重兵介入，使這場左翼實驗悲劇落幕。
@@ -565,7 +603,7 @@
     <!-- Slide 2：左圖右文檔案版 -->
     <section class="slide" id="slide-2">
       <div class="slide-body">
-        <span class="kicker">01 · JULY REVOLUTION &amp; WORKERS' MILITIAS</span>
+        <span class="kicker">西班牙篇・七月起義與公社</span>
         <h2>1936 年七月軍人政變，工人開倉發槍掀開社會革命</h2>
 
         <div class="split-media-left">
@@ -575,10 +613,10 @@
           </figure>
           <div class="story-stack">
             <p>
-              1936 年 7 月軍人政變爆發後，無政府工團主義 CNT-FAI 與社會主義工會 UGT 號召總罷工，新總理希拉爾（José Giral）下令開倉向工人發槍，在馬德里、巴塞隆納與瓦倫西亞擊退叛軍。
+              1936 年 7 月軍人政變爆發後，無政府工團主義 <strong>CNT-FAI</strong> 與社會主義工會 <strong>UGT</strong> 號召總罷工，新總理<strong>希拉爾</strong>（José Giral）下令開倉向工人發槍，在馬德里、巴塞隆納與瓦倫西亞擊退叛軍。
             </p>
             <p>
-              中央一度癱瘓，亞拉岡（Aragon）與加泰隆尼亞轉由平行地方委員會掌權並推動農業集體化與「工業社會化」（裁併小廠為工人民主卡特爾），吸引歐威爾（George Orwell）等約 3,000 名外籍志願者投入 CNT 與 POUM 民兵。
+              中央一度癱瘓，亞拉岡（Aragon）與加泰隆尼亞轉由平行地方委員會掌權並推動農業集體化與<strong>「工業社會化」</strong>（裁併小廠為工人民主卡特爾），吸引<strong>歐威爾</strong>（George Orwell）等約 3,000 名外籍志願者投入 CNT 與 POUM 民兵。
             </p>
           </div>
         </div>
@@ -589,7 +627,7 @@
     <!-- Slide 3：雙路線對決圖解版 -->
     <section class="slide" id="slide-3">
       <div class="slide-body">
-        <span class="kicker">02 · COLLECTIVIZATION VS. CENTRALIZATION</span>
+        <span class="kicker">西班牙篇・革命與集權衝突</span>
         <h2>共和派內部死結：先自治集體化，還是先集中權力贏得戰爭？</h2>
 
         <div class="svg-frame">
@@ -619,12 +657,12 @@
         <div class="editorial-split">
           <div class="editorial-col">
             <p>
-              CNT-FAI 與反史達林派馬克思主義統一工人黨（POUM，安德烈斯·寧 Andrés Nin 領導）力護基層公社，拒絕民兵被納入常備軍指揮體系。
+              <strong>CNT-FAI</strong> 與反史達林派馬克思主義統一工人黨（<strong>POUM</strong>，<strong>安德烈斯·寧</strong> Andrés Nin 領導）力護基層公社，拒絕民兵被納入常備軍指揮體系。
             </p>
           </div>
           <div class="editorial-col">
             <p>
-              西班牙共產黨（PCE）則藉蘇援壯大權力，反對激進沒收財產以維繫中產與英法好感，與巴斯克民族主義黨（PNV）及自治區張力俱增。
+              <strong>西班牙共產黨（PCE）</strong>則藉蘇援壯大權力，反對激進沒收財產以維繫中產與英法好感，與<strong>巴斯克民族主義黨（PNV）</strong>及自治區張力俱增。
             </p>
           </div>
         </div>
@@ -632,24 +670,33 @@
       <footer class="slide-source">來源：[03_spanish_civil_war.md, Spanish Revolution; Combatants; Course of the war; Friction between Republican leadership and Catalonia]</footer>
     </section>
 
-    <!-- Slide 4：跨國連動版 -->
+    <!-- Slide 4：雜誌不對稱主次版（蘇援、五月事件與契卡外溢） -->
     <section class="slide" id="slide-4">
       <div class="slide-body">
-        <span class="kicker">03 · MAY DAYS, OPERATION X &amp; CHECAS SPILLOVER</span>
+        <span class="kicker">西班牙篇・五月事件與蘇援</span>
         <h2>1937 五月事件、蘇聯黃金買軍火與 NKVD／契卡機制外溢</h2>
 
-        <div class="chronology-rows">
-          <div class="chronology-row">
-            <span class="chronology-date">蘇聯「X 行動」</span>
-            <span class="chronology-text">西方拒絕售武之際，蘇聯秘密「X 行動」（Operation X）運來 634–806 架戰機與 331–362 輛坦克，但須以共和國黃金儲備償付，急劇放大蘇聯與 PCE 話語權。</span>
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <div class="lead-stat">634–806 架戰機</div>
+            <div class="lead-stat-sub">331–362 輛坦克 · X 行動</div>
+            <p class="lead-caption">
+              西方拒售軍火之際，蘇聯秘密<strong>「X 行動」</strong>（Operation X）運抵戰機與坦克，但須以共和國<strong>黃金儲備</strong>償付，大幅放大蘇聯與 <strong>PCE</strong> 在內閣的話語權。
+            </p>
           </div>
-          <div class="chronology-row">
-            <span class="chronology-date">1937.5 巴塞隆納</span>
-            <span class="chronology-text">數千名無政府派與共產黨士兵在五月事件（May Days）街頭交火；POUM 隨後遭誣為「法西斯工具」取締，蘇聯 NKVD 協助謀殺寧並整肅兩派（如歐威爾所紀實）。</span>
-          </div>
-          <div class="chronology-row">
-            <span class="chronology-date">契卡與老兵連鎖</span>
-            <span class="chronology-text">俄國「契卡」（Cheka）名號外溢成共和區法外審查委員會（<em>checas</em>）；53 國約 3.2–4 萬人組國際縱隊雖遭馬蒂（André Marty）整肅約 500 人，卻鍛鍊出逾千名南斯拉夫返國骨幹。</span>
+          <div class="magazine-prose">
+            <div class="prose-block">
+              <div class="col-label">1937.5 巴塞隆納街頭交火與整肅</div>
+              <p>
+                數千名無政府派與共產黨士兵在<strong>五月事件</strong>（May Days）開火；<strong>POUM</strong> 隨後遭誣為「法西斯工具」取締，蘇聯 <strong>NKVD</strong> 協助謀殺寧並整肅兩派（如<strong>歐威爾</strong>所紀實）。
+              </p>
+            </div>
+            <div class="prose-block">
+              <div class="col-label col-label--blue">契卡機制與國際縱隊老兵連鎖</div>
+              <p>
+                俄國<strong>「契卡」</strong>（Cheka）名號外溢成共和區法外審查委員會（<em>checas</em>）；53 國約 3.2–4 萬人組國際縱隊雖遭<strong>馬蒂</strong>（André Marty）整肅約 500 人，卻鍛鍊出逾千名南斯拉夫返國骨幹。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -664,20 +711,20 @@
     <!-- Slide 5：不對稱外援對比版 -->
     <section class="slide" id="slide-5">
       <div class="slide-body">
-        <span class="kicker">04 · EMBARGO, AXIS SUPPORT &amp; LIMPIEZA</span>
+        <span class="kicker">西班牙篇・禁運與後方清理</span>
         <h2>27 國禁運重傷共和國，德義武力與高壓「清理」助佛朗哥勝出</h2>
 
         <div class="editorial-split">
           <div class="editorial-col">
             <div class="col-label">共和區｜禁運與三位數通膨</div>
             <p>
-              英法主導 27 國不干涉禁運形同虛設卻重傷共和國（被迫高價向波蘭購劣械並引爆三位數惡性通膨，僅獲墨西哥兩百萬美元與蘇聯售武），1939 年 3 月卡薩多政變更在馬德里引發最後內鬨。
+              英法主導 <strong>27 國不干涉禁運</strong>形同虛設卻重傷共和國（被迫高價向波蘭購劣械並引爆<strong>三位數惡性通膨</strong>，僅獲墨西哥兩百萬美元與蘇聯售武），1939 年 3 月<strong>卡薩多政變</strong>更在馬德里引發最後內鬨。
             </p>
           </div>
           <div class="editorial-col">
             <div class="col-label col-label--blue">國民軍｜德義奧援與後方清理</div>
             <p>
-              義大利派出 5 萬「志願軍團」（CTV）、納粹德國派「禿鷹軍團」（Condor Legion，累計 1.6 萬人並轟炸格爾尼卡）加 150–170 名白俄助戰；佛朗哥強併右翼為 FET y de las JONS，靠紀律「清理」（<em>limpieza</em>）與糧控穩住 41% 溫和通膨及後方治安。
+              義大利派出 5 萬<strong>「志願軍團」</strong>（CTV）、納粹德國派<strong>「禿鷹軍團」</strong>（Condor Legion，累計 1.6 萬人並轟炸格爾尼卡）加 150–170 名白俄助戰；<strong>佛朗哥</strong>強併右翼為 FET y de las JONS，靠紀律<strong>「清理」</strong>（<em>limpieza</em>）與糧控穩住 41% 溫和通膨及後方治安。
             </p>
           </div>
         </div>
@@ -693,7 +740,7 @@
     <!-- Slide 6：史觀爭議與下章導引 -->
     <section class="slide" id="slide-6">
       <div class="slide-body">
-        <span class="kicker">05 · HISTORIOGRAPHY ON TERROR &amp; NEXT DECK</span>
+        <span class="kicker">西班牙篇・史觀交鋒與餘波</span>
         <h2>史觀交鋒：共和區暴力是無政府失序，或左翼半組織化執行？</h2>
 
         <div class="spillover-band">
@@ -704,13 +751,13 @@
           <div class="editorial-col">
             <div class="col-label">觀點 A｜國家瓦解失序論</div>
             <p>
-              格雷厄姆（Helen Graham）、普雷斯頓（Paul Preston）與比弗主張國民軍屬有紀律的「清理」，共和區多數殺戮源於國家崩潰與無政府失序（多數史家亦視本戰為二戰第一回合）。
+              <strong>格雷厄姆</strong>（Helen Graham）、<strong>普雷斯頓</strong>（Paul Preston）與<strong>比弗</strong>主張國民軍屬有紀律的「清理」，共和區多數殺戮源於國家崩潰與<strong>無政府失序</strong>（多數史家亦視本戰為二戰第一回合）。
             </p>
           </div>
           <div class="editorial-col">
             <div class="col-label col-label--blue">觀點 B｜半組織 <em>checas</em> 執行論</div>
             <p>
-              佩恩（Stanley Payne）與魯伊斯（Julius Ruiz）反駁，除巴斯克派外多數左翼派系部分成員皆藉 <em>paseos</em> 暗殺隊與 <em>checas</em> 進行「半組織化活動」，佩恩並稱此戰實為一戰危機的終章。
+              <strong>佩恩</strong>（Stanley Payne）與<strong>魯伊斯</strong>（Julius Ruiz）反駁，除巴斯克派外多數左翼派系部分成員皆藉 <em>paseos</em> 暗殺隊與 <em>checas</em> 進行<strong>「半組織化活動」</strong>，佩恩並稱此戰實為一戰危機的終章。
             </p>
           </div>
         </div>

@@ -130,14 +130,14 @@
       display: none;
       width: 100%;
       max-width: 1100px;
-      min-height: 560px;
+      min-height: 500px;
       background: var(--paper);
       border: 1px solid var(--hairline);
       box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
-      padding: 34px 44px 24px;
+      padding: 26px 40px 18px;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       position: relative;
     }
 
@@ -165,13 +165,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
       font-weight: 700;
       color: var(--red);
       font-variant-numeric: tabular-nums;
@@ -188,15 +187,18 @@
       color: var(--ink);
     }
 
+    .kicker + h1,
+    .kicker + h2 {
+      margin-top: -8px;
+    }
+
     h1 {
       font-size: clamp(1.9rem, 3.3vw, 2.6rem);
       color: var(--paper);
     }
 
     h2 {
-      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 10px;
+      font-size: clamp(1.5rem, 2.4vw, 1.98rem);
     }
 
     .cover-subtitle {
@@ -251,14 +253,19 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      border-top: 1px solid var(--hairline);
-      padding-top: 14px;
     }
 
     .story-stack p {
       font-size: 0.97rem;
       line-height: 1.68;
       color: var(--ink);
+    }
+
+    .story-stack strong,
+    .editorial-col strong,
+    .takeaway-desc strong {
+      color: var(--ink);
+      font-weight: 700;
     }
 
     figure.archival-fig {
@@ -284,47 +291,73 @@
       line-height: 1.45;
     }
 
-    /* 細線時間軸列與對照雙欄 */
-    .chronology-rows {
-      border-top: 1px solid var(--ink);
-    }
-
-    .chronology-row {
+    /* 雜誌不對稱主次欄與無框細線雙欄 */
+    .magazine-split {
       display: grid;
-      grid-template-columns: 145px minmax(0, 1fr);
-      gap: 18px;
-      padding: 11px 0;
-      border-bottom: 1px solid var(--hairline);
-      align-items: baseline;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      padding-top: 4px;
     }
 
-    .chronology-date {
+    .magazine-lead {
+      border-left: 3px solid var(--red);
+      padding: 4px 0 4px 16px;
+    }
+
+    .lead-quote {
       font-family: var(--serif);
+      font-size: 1.65rem;
       font-weight: 800;
-      font-size: 0.95rem;
+      line-height: 1.2;
       color: var(--red);
-      font-variant-numeric: tabular-nums;
     }
 
-    .chronology-text {
-      font-size: 0.95rem;
-      line-height: 1.6;
+    .lead-stat-sub {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 800;
       color: var(--ink);
+      margin-top: 8px;
+    }
+
+    .lead-caption {
+      font-size: 0.9rem;
+      line-height: 1.58;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .magazine-prose {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-left: 1px solid var(--hairline);
+      padding-left: 24px;
+    }
+
+    .prose-block p {
+      font-size: 0.95rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    .prose-block strong {
+      color: var(--ink);
+      font-weight: 700;
     }
 
     .editorial-split {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
     }
 
     .editorial-col {
-      padding: 12px 20px 12px 0;
+      padding: 6px 24px 6px 0;
     }
 
     .editorial-col + .editorial-col {
-      padding: 12px 0 12px 20px;
+      padding: 6px 0 6px 24px;
       border-left: 1px solid var(--hairline);
     }
 
@@ -348,43 +381,49 @@
 
     .spillover-band {
       background: var(--paper-alt);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
-      padding: 11px 16px;
+      border-left: 3px solid var(--blue);
+      padding: 10px 16px;
       font-size: 0.93rem;
       line-height: 1.58;
       color: var(--ink);
     }
 
     .spillover-band strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .spillover-band strong:first-child {
       color: var(--blue);
     }
 
-    /* Slide 6：三欄收官總結 */
+    /* Slide 6：無外框雜誌三欄收官總結 */
     .takeaways-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      border-bottom: 1px solid var(--hairline);
-      padding-bottom: 16px;
+      gap: 26px;
+      padding: 6px 0 8px;
     }
 
-    .takeaway-cell {
-      border-top: 2px solid var(--red);
-      padding-top: 10px;
+    .takeaway-cell + .takeaway-cell {
+      border-left: 1px solid var(--hairline);
+      padding-left: 24px;
     }
 
-    .takeaway-cell:nth-child(2) {
-      border-top-color: var(--blue);
-    }
-
-    .takeaway-cell:nth-child(3) {
-      border-top-color: var(--ochre);
+    .takeaway-num {
+      font-family: var(--serif);
+      font-size: 2.15rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--red);
+      display: block;
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
     }
 
     .takeaway-title {
       font-family: var(--serif);
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 800;
       color: var(--ink);
       display: block;
@@ -526,18 +565,25 @@
 
     @media (max-width: 860px) {
       section.slide {
-        padding: 24px 22px 18px;
+        padding: 22px 20px 18px;
       }
       .split-media,
       .editorial-split,
       .takeaways-grid,
-      .chronology-row {
+      .magazine-split {
         grid-template-columns: minmax(0, 1fr);
       }
-      .editorial-col + .editorial-col {
+      .editorial-col + .editorial-col,
+      .takeaway-cell + .takeaway-cell {
         border-left: none;
         border-top: 1px solid var(--hairline);
         padding: 12px 0 0;
+      }
+      .magazine-prose {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding-left: 0;
+        padding-top: 12px;
       }
     }
   </style>
@@ -546,7 +592,7 @@
   <header class="series-topbar">
     <nav class="series-nav" aria-label="全系列簡報導覽列">
       <div class="series-links">
-        <a href="index.html">策展總覽 index.html</a>
+        <a href="index.html">策展總覽</a>
         <a href="deck_00_framework.html">00 總論</a>
         <a href="deck_01_russia.html">01 俄國</a>
         <a href="deck_02_germany.html">02 德國</a>
@@ -568,7 +614,7 @@
     <!-- Slide 1：全版面深色封面 -->
     <section class="slide slide--cover" id="slide-1">
       <div class="slide-body">
-        <span class="kicker">DECK 05 · YUGOSLAVIA 1941–1948</span>
+        <span class="kicker">南斯拉夫篇・1941–1948</span>
         <h1>跨民族游擊隊的自主崛起：1941–1948 南斯拉夫如何自己建國？</h1>
         <p class="cover-subtitle">
           1941 年軸心國肢解南國並發動百人質屠殺與清洗；狄托（Josip Broz Tito）淡化共產口號，憑「兄弟情誼與團結」人民陣線與西班牙老兵從游擊成長為逾 80 萬大軍，自主解放並抗衡蘇聯。
@@ -602,16 +648,16 @@
     <!-- Slide 2：文圖雙欄檔案版 -->
     <section class="slide" id="slide-2">
       <div class="slide-body">
-        <span class="kicker">01 · AXIS PARTITION &amp; TERROR MOBILIZATION</span>
+        <span class="kicker">南斯拉夫篇・瓜分與反抗</span>
         <h2>1941 年軸心國肢解南斯拉夫，百人質報復與清洗逼出反抗</h2>
 
         <div class="split-media">
           <div class="story-stack">
             <p>
-              1941 年 4 月軸心國（Axis powers）閃電肢解南斯拉夫王國：納粹德國在塞爾維亞設歐陸唯一純軍事政權，執行「每殺一德兵處決 100 名平民、傷一兵殺 50 人」之嚴厲報復（克拉列沃 2,000 死、克拉古耶瓦茨 3,000 死）。
+              1941 年 4 月軸心國（Axis powers）閃電肢解南斯拉夫王國：納粹德國在塞爾維亞設歐陸唯一純軍事政權，執行<strong>「每殺一德兵處決 100 名平民、傷一兵殺 50 人」</strong>之嚴厲報復（克拉列沃 2,000 死、克拉古耶瓦茨 3,000 死）。
             </p>
             <p>
-              德國主導的「克羅埃西亞獨立國」（NDH）執政者烏斯塔沙（Ustaše）對塞族展開種族滅絕，卻又割讓北達爾馬提亞給義大利；佔領與清洗暴行迫使各族平民把抵抗當成求生出路，大量克族亦轉投游擊隊。
+              德國主導的「克羅埃西亞獨立國」（<strong>NDH</strong>）執政者<strong>烏斯塔沙</strong>（Ustaše）對塞族展開種族滅絕，卻又割讓北達爾馬提亞給義大利；佔領與清洗暴行迫使各族平民把抵抗當成求生出路，大量克族亦轉投游擊隊。
             </p>
           </div>
           <figure class="archival-fig">
@@ -623,24 +669,33 @@
       <footer class="slide-source">來源：[06_yugoslav_partisans.md, Background and origins; Operations; Overview by post-war republic; Composition]</footer>
     </section>
 
-    <!-- Slide 3：跨國連動版 -->
+    <!-- Slide 3：雜誌不對稱主次版 -->
     <section class="slide" id="slide-3">
       <div class="slide-body">
-        <span class="kicker">02 · POPULAR FRONT &amp; SPANISH VETERANS</span>
+        <span class="kicker">南斯拉夫篇・人民陣線</span>
         <h2>狄托淡化共產口號高喊「兄弟情誼」，西班牙老兵返鄉扛骨幹</h2>
 
-        <div class="chronology-rows">
-          <div class="chronology-row">
-            <span class="chronology-date">6 月 22 日轉折</span>
-            <span class="chronology-text">1941 年 4–6 月南共（KPJ）受《德蘇互不侵犯條約》約束先囤槍未動；德軍發動「巴巴羅薩行動」當天即於錫薩克起義，7 月全面展開武裝反抗。</span>
+        <div class="magazine-split">
+          <div class="magazine-lead">
+            <div class="lead-quote">「淡化共產主義」</div>
+            <div class="lead-stat-sub">兄弟情誼與團結 · UNOF ／ AVNOJ</div>
+            <p class="lead-caption">
+              <strong>狄托</strong>宣傳刻意 <em>played down communism</em>，藉聯合陣線與代議機構以<strong>「兄弟情誼與團結」</strong>（brotherhood and unity）跨越族群（惟戰初塞族仍佔多數並偶有磨擦）。
+            </p>
           </div>
-          <div class="chronology-row">
-            <span class="chronology-date">淡化共產口號</span>
-            <span class="chronology-text">宣傳刻意「淡化共產主義」（played down communism），藉由聯合陣線 UNOF 與最高代議機構 AVNOJ 高舉「兄弟情誼與團結」（brotherhood and unity）跨越族群藩籬（惟戰初塞族仍佔多數並偶有排外磨擦）。</span>
-          </div>
-          <div class="chronology-row">
-            <span class="chronology-date">西班牙老兵優勢</span>
-            <span class="chronology-text">逾千名曾參與西班牙國際縱隊的南斯拉夫老兵返鄉入列（如斯洛維尼亞前線），帶來境內獨一無二的現代游擊戰經驗與指揮骨幹，成擴軍關鍵。</span>
+          <div class="magazine-prose">
+            <div class="prose-block">
+              <div class="col-label">1941.6.22 巴巴羅薩轉折</div>
+              <p>
+                1941 年 4–6 月<strong>南共（KPJ）</strong>受《德蘇互不侵犯條約》約束先囤槍未動；德軍發動「巴巴羅薩行動」當天即於<strong>錫薩克</strong>起義，7 月全面展開武裝反抗。
+              </p>
+            </div>
+            <div class="prose-block">
+              <div class="col-label col-label--blue">逾千名西班牙國際縱隊老兵骨幹</div>
+              <p>
+                逾千名曾參與西班牙國際縱隊的南斯拉夫老兵返鄉入列（如斯洛維尼亞前線），帶來境內獨一無二的<strong>現代游擊戰經驗</strong>與指揮骨幹，成擴軍關鍵。
+              </p>
+            </div>
           </div>
         </div>
 
@@ -655,7 +710,7 @@
     <!-- Slide 4：對手比較圖解版 -->
     <section class="slide" id="slide-4">
       <div class="slide-body">
-        <span class="kicker">03 · PARTISANS VS. CHETNIKS</span>
+        <span class="kicker">南國篇・雙線對決</span>
         <h2>全民動員擴軍逾 80 萬並建海空軍 vs. 保皇切特尼克排他通敵</h2>
 
         <div class="svg-frame">
@@ -687,12 +742,12 @@
         <div class="editorial-split">
           <div class="editorial-col">
             <p>
-              200 萬女性加入反法西斯婦女陣線（AFŽ）且約 10 萬女戰士（<em>partizanke</em>）上火線；達爾馬提亞漁船組成 3,000 人海軍，1942 年獲駕機投誠建成歐陸罕見抵抗空軍。
+              200 萬女性加入<strong>反法西斯婦女陣線（AFŽ）</strong>且約 10 萬<strong>女戰士</strong>（<em>partizanke</em>）上火線；達爾馬提亞漁船組成 3,000 人海軍，1942 年獲駕機投誠建成歐陸罕見抵抗空軍。
             </p>
           </div>
           <div class="editorial-col">
             <p>
-              切特尼克因大塞族清洗失去非塞族兵源，1943 年英軍目擊德軍搭火車通過其防區加上 ULTRA 截密，促使盟國於德黑蘭會議將軍援全數轉予狄托。
+              <strong>切特尼克</strong>因大塞族清洗失去非塞族兵源，1943 年英軍目擊德軍搭火車通過其防區與 <strong>ULTRA</strong> 截密，促使盟國於<strong>德黑蘭會議</strong>將軍援全轉<strong>狄托</strong>。
             </p>
           </div>
         </div>
@@ -703,24 +758,24 @@
     <!-- Slide 5：戰後與跨國決裂版 -->
     <section class="slide" id="slide-5">
       <div class="slide-body">
-        <span class="kicker">04 · SELF-LIBERATION, PURGES &amp; TITO-STALIN SPLIT</span>
+        <span class="kicker">南國篇・解放與分裂</span>
         <h2>1945 自主光復、戰後大清洗爭議與 1947–1948 狄托－史達林分裂</h2>
 
         <div class="spillover-band">
-          <strong>歐陸唯二自主解放國家：</strong>南斯拉夫軍民戰時犧牲 90–115 萬人，最終靠自身主導光復全境（僅貝爾格勒獲蘇英協同且戰後無外軍駐留），使狄托擁有在 1947–1948 年拒絕對蘇屈服、開創冷戰不結盟外交的底氣。
+          <strong>歐陸唯二自主解放：</strong>南國軍民戰時犧牲 90–115 萬人，終靠自身光復全境（僅貝爾格勒獲蘇英協同且無外軍駐留），使<strong>狄托</strong>得以在 1947–1948 年拒對蘇屈服並開創<strong>不結盟外交</strong>。
         </div>
 
         <div class="editorial-split">
           <div class="editorial-col">
             <div class="col-label">布萊堡清洗與反法西斯記憶</div>
             <p>
-              1944–1945 年游擊隊於布萊堡（Bleiburg）等地無差別處決撤退 NDH、切特尼克及平民，坦納（Marcus Tanner）估約 8 至 10 萬人遇害；戰後 SUBNOR 與左翼持續捍衛反法西斯功績。
+              1944–1945 年游擊隊於<strong>布萊堡</strong>（Bleiburg）等地無差別處決撤退 NDH、切特尼克及平民，<strong>坦納</strong>（Marcus Tanner）估約 8 至 10 萬人遇害；戰後 SUBNOR 與左翼捍衛反法西斯功績。
             </p>
           </div>
           <div class="editorial-col">
             <div class="col-label col-label--blue">官方禁忌與解體後修正反彈</div>
             <p>
-              官方直到 1980 年代末皆將清洗列為禁忌；南斯拉夫解體後長期沉默引爆數據操弄與全面否定游擊隊的歷史修正主義反彈（另 1942 年兵力亦有 23.6 萬與 13.5 萬統計落差）。
+              官方至 1980 年代末皆將清洗列為禁忌；南國解體後長期沉默引爆數據操弄與否定游擊隊的<strong>歷史修正主義反彈</strong>（另 1942 年兵力存 23.6 萬與 13.5 萬統計落差）。
             </p>
           </div>
         </div>
@@ -733,36 +788,39 @@
       <footer class="slide-source">來源：[06_yugoslav_partisans.md, 導言; Composition; Post-war; Partisan legacy]</footer>
     </section>
 
-    <!-- Slide 6：全系列收官總結 -->
+    <!-- Slide 6：全系列收官雜誌三欄版 -->
     <section class="slide" id="slide-6">
       <div class="slide-body">
-        <span class="kicker">05 · SERIES SYNTHESIS · 1914–1945</span>
-        <h2>全系列收官：帶給五國比較歷史的三個核心洞見</h2>
+        <span class="kicker">南斯拉夫篇・系列總結</span>
+        <h2>全系列收官：五國比較歷史的三個核心洞見</h2>
 
         <div class="takeaways-grid">
           <div class="takeaway-cell">
-            <span class="takeaway-title">01｜戰火製造真空</span>
+            <span class="takeaway-num">01</span>
+            <span class="takeaway-title">戰火製造真空</span>
             <p class="takeaway-desc">
-              兩次大戰與內戰打碎舊中央後（俄國蘇維埃、德國委員會、中國土自衛與黨軍、西班牙公社、南國解放陣線），地方力量才有機會接管秩序並爭奪全國前途。
+              兩次大戰與內戰打碎舊中央後（俄國<strong>蘇維埃</strong>、德國<strong>委員會</strong>、中國土自衛與<strong>黨軍</strong>、西班牙<strong>公社</strong>、南國<strong>解放陣線</strong>），地方力量才有機會接管秩序並爭奪全國前途。
             </p>
           </div>
           <div class="takeaway-cell">
-            <span class="takeaway-title">02｜治理勝過空喊</span>
+            <span class="takeaway-num">02</span>
+            <span class="takeaway-title">治理勝過空喊</span>
             <p class="takeaway-desc">
-              單靠革命理想卻缺紀律整合常敗（如馬赫諾與西班牙工團）；反之如俄紅軍起用舊軍官、中共敵後土改減稅或南共跨民族聯合陣線，將基層動員化為實權。
+              單靠革命理想卻缺紀律整合常敗（如<strong>馬赫諾</strong>與<strong>西班牙工團</strong>）；反之如俄紅軍起用舊軍官、中共敵後<strong>土改減稅</strong>或南共跨民族<strong>聯合陣線</strong>，將基層動員化為實權。
             </p>
           </div>
           <div class="takeaway-cell">
-            <span class="takeaway-title">03｜跨國連鎖與史觀</span>
+            <span class="takeaway-num">03</span>
+            <span class="takeaway-title">跨國連鎖與史觀</span>
             <p class="takeaway-desc">
-              白俄坦克、契卡與西班牙老兵證明歐亞戰場彼此相連；面對紅白恐怖、皖南開火與戰後清洗，須並陳史家對立並誠實面對史料空白。
+              白俄坦克、<strong>契卡</strong>與<strong>西班牙老兵</strong>證明歐亞戰場彼此相連；面對紅白恐怖、<strong>皖南開火</strong>與戰後清洗，須並陳史家對立並誠實面對史料空白。
             </p>
           </div>
         </div>
 
         <div class="cta-bar">
           <a class="cross-pill" href="deck_00_framework.html#slide-5">回顧地方成敗與塞德曼公式 ↗</a>
-          <a class="cta-btn" href="index.html">返回系列策展總覽 index.html ↺</a>
+          <a class="cta-btn" href="index.html">返回系列策展總覽 ↺</a>
         </div>
       </div>
       <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
