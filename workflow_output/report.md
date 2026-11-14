@@ -1,138 +1,250 @@
 # 教學簡報審查與自動化驗收報告（`report.md`）
 
-## 一、執行摘要
+## 一、重構演進與最終執行摘要
 
 - **教學主題**：戰火下的路線分歧：1914–1945 歐亞社會主義流派與地方勢力的崛起比較
 - **目標受眾**：沒有歷史背景的初學者
-- **最終總頁數**：**12 頁**（`<section class="slide">` 共 12 張，符合 10～14 頁規範）
-- **覆蓋地理區域（5 區 >= 3）**：俄國（含前帝國邊疆與中亞）、德國、西班牙、中國、南斯拉夫
-- **引用原始來源（6 篇 >= 4）**：
-  1. `01_russian_civil_war.md`
-  2. `02_german_revolution_1918_1919.md`
-  3. `03_spanish_civil_war.md`
-  4. `04_warlord_era_china.md`
-  5. `05_second_united_front.md`
-  6. `06_yugoslav_partisans.md`
-- **交付成果檔案**：
-  - 展示入口：[index.html](../index.html)
-  - 工作流備份：[deck.html](deck.html)（經雜湊比對兩檔完全一致）
-  - 上游產物：[sources.md](sources.md)、[cards.md](cards.md)、[outline.md](outline.md)、[drafts.md](drafts.md)
-- **最終驗收狀態**：**PASS（Exit Code 0）**——第 2 輪 `python scripts/verify_slides.py` 四項硬性指標及全部 12 頁投影片皆通過；`raw/` 保持唯讀零異動。
+- **架構重構決策**：由最初「單一 12 頁純文字條列簡報（`v1`）」及過度階段的 15 頁單檔大綱，**退回重構為「`1` 份策展總入口（[index.html](../index.html)）＋ `6` 份按總論與國家獨立拆分之圖文策展簡報（[deck_00_framework.html](../deck_00_framework.html) 至 [deck_05_yugoslavia.html](../deck_05_yugoslavia.html)）」**，徹底解決跨國時間軸跳躍問題，讓每個戰區擁有完整、順時序的獨立故事線並以超連結跨檔互通。
+- **總規模統計**：
+  - 策展總入口：`1` 頁（[index.html](../index.html)，內嵌歐亞五大戰區連動 SVG 圖與 6 張策展導覽卡）
+  - 獨立簡報：`6` 份（每份 6～7 頁，共 **37 頁** `<section class="slide">`，均符合每份 5～8 頁規範）
+  - 本機歷史影像：`5` 張 Wikimedia Commons 核驗圖檔置於 `assets/`（授權與來源見 [assets/credits.md](../assets/credits.md)），總入口全部展示 5 張、國別簡報第 2 頁各展示對應戰區 1 張
+  - 覆蓋地區與來源：`5` 大地理區域（俄國、德國、中國、西班牙、南斯拉夫），`6` 篇 `raw/` 原始來源與 `28` 張證據卡（[cards.md](cards.md)）
+- **最終驗收狀態**：**PASS（Exit Code 0）**——執行 `python scripts/verify_slides.py` 對全系列「1 總入口 ＋ 6 份獨立簡報（共 37 頁）」完成全數結構、字數（`<= 260` 中文字）、`<footer>` 來源、`assets/` 本機圖片與全網跨簡報 `#slide-N` 錨點檢查，全數項目一次通過；`raw/` 全程維持唯讀零異動。
 
 ---
 
-## 二、Node 1～3 檢索與人工確認摘記
+## 二、視覺與互動規格檢核（歷史雜誌策展風）
 
-1. **Node 1（檢索與檢查關卡 1）**：於 [sources.md](sources.md) 精選 52 篇 `wiki/` 頁面（`syntheses/` 2 頁、`ideologies/` 14 頁、`factions/` 22 頁、`events/` 14 頁），涵蓋 5 個地理區域與全部 6 篇 `raw/` 原始來源，通過檢查關卡 1（`5 >= 3`、`6 >= 4`），並預先彙整 6 項資料邊界。
-2. **Node 2（證據卡萃取）**：於 [cards.md](cards.md) 萃取 28 張原子化證據卡（`CARD-01`～`CARD-28`），全數雙重綁定 `[wiki/分類/檔名.md]` 與 `[來源檔名, 段落標題]`，並列所有史觀衝突與 `[資料不足／不確定：...]` 缺口。
-3. **Node 3（初學者大綱與人工確認關卡）**：設計 12 頁教學大綱（[outline.md](outline.md)）後立即暫停。使用者於 **2026-11-14** 明確認可通過 12 頁大綱，並特別提示：**第 8 頁與第 11 頁涵蓋案例較多，須為初學者將專有名詞轉化為白話短句，並嚴控單頁純文字在 380 字以內**。
-
----
-
-## 三、Node 4 逐頁 AI 忠實度審查結果表（檢查關卡 2）
-
-逐頁核對 [drafts.md](drafts.md) 與 [cards.md](cards.md)：確認零外部腦補、年份／數據／專有名詞原文附註精確、史觀衝突雙邊並列、資料空白處採 `[資料不足／不確定：...]` 誠實標記，且每頁底部皆綁定明確來源標記。
-
-| 頁碼 | 投影片標題 | 綁定卡片 | 審查輪次與局部調整歷程 | 忠實度與字數狀態 |
-| :--- | :--- | :--- | :--- | :--- |
-| **Slide 01** | 戰火下的路線分歧（1914–1945） | `CARD-01`～`03` | 第 1 輪一次通過（五年份、五舞台、雙主軸與 6 篇導言吻合）。 | **PASS**（未觸發退回） |
-| **Slide 02** | 舊秩序垮台：誰填補權力真空？ | `CARD-01`, `02` | 第 1 輪將 1916 中國補充 `(Yuan Shikai)` 首次原文附註後通過。 | **PASS**（1 輪微調即定稿） |
-| **Slide 03** | 左翼光譜：為何分成四派？ | `CARD-03` | 第 1 輪一次通過（四大派別對比精簡清晰）。 | **PASS**（未觸發退回） |
-| **Slide 04** | 俄國：蘇維埃如何變成一黨專政？ | `CARD-04`～`06` | Node 4 第 2 輪補全 `(Vladimir Lenin)` 與 `(New Economic Policy, NEP)`；Node 5 第 1 輪因頁底細目過長超字，退回 Node 4 收斂為 `[01_russian_civil_war.md, 導言; Background; Warfare]`。 | **PASS**（精準收斂來源層級） |
-| **Slide 05** | 德國：工兵委員會為何主動交權？ | `CARD-01`, `08`～`10` | Node 4 第 2 輪補全 `(Karl Liebknecht)`、`(Rosa Luxemburg)`、`(Ruhr Red Army)`，維持 `8 小時`、`344 對 98 票`、`1918–1920` 史實無誤。 | **PASS**（剛好 380/380 通過） |
-| **Slide 06** | 中國：軍閥割據、民間會社與黨軍移植 | `CARD-12`～`14` | Node 4 第 2 輪補齊 `(Yan Xishan)`、`(Feng Yuxiang)`、`(Red Spear Society)` 原文附註。 | **PASS**（未觸發 Node 5 退回） |
-| **Slide 07** | 西班牙內戰：社會革命與左翼內鬨（1936–1939） | `CARD-17`～`19` | 第 1 輪一次通過（革命派／贏戰派／27 國禁運／三位數通膨／德義援佛朗哥均吻合）。 | **PASS**（未觸發退回） |
-| **Slide 08** | 二戰敵後：中共與南國游擊隊崛起 | `CARD-15`, `16`, `21`～`23` | 第 1 輪即依使用者提醒拆成「中共統戰／中共土改／南國起義／南國擴軍」4 張白話短卡（370 字，安全過關）。 | **PASS**（一次通過） |
-| **Slide 09** | 歐亞跨區流動網 | `CARD-14`～`16`, `24`～`26` | Node 4 第 2 輪修正白俄赴西為 `150–170 名`、蘇南分裂為 `1947–1948 年`；Node 5 第 1 輪超字後退回精簡引導句並以 `[04_warlord_era_china.md, Armaments]`、`[01_russian_civil_war.md, Background; Aftermath]` 統整對應節次。 | **PASS**（退回精簡 69 字） |
-| **Slide 10** | 結局分岔與後方治理 | `CARD-19`, `22`, `24`, `27` | Node 4 第 2 輪將塞德曼對俄白軍／國府評語還原為「未壓制叛亂、縱容貪腐」；Node 5 第 1 輪達 456 字超字後，退回簡化結語與 `[05_second_united_front.md, After 1945]` 等精簡章節名，降為 370 字。 | **PASS**（退回精簡 86 字） |
-| **Slide 11** | 史觀交鋒與研究邊界 | `CARD-07`, `11`, `16`, `20`, `24`, `28` | Node 4 第 2 輪將 `5–200 萬` 明確寫為 `5 萬至 200 萬`、改「八路軍編制」為符合 `CARD-28` 的「八路軍人數」；Node 5 第 1 輪僅多 6 字（386/380），退回刪減 14 字冗詞後降為 372 字。 | **PASS**（退回精簡 14 字） |
-| **Slide 12** | 總結：帶走三個提問 | `CARD-03`, `25`～`28` | 第 1 輪一次通過（涵蓋三大思辨提問與全 6 篇核心來源）。 | **PASS**（未觸發退回） |
+1. **色彩、字體與排版紀律**：全系列內頁採米白紙色（`#F7F4EB`）、深炭墨文字（`#1C1917`）、暗紅（`#991B1B`）與深藍（`#1E3A5F`）；主標題與引文採襯線體（`"Noto Serif TC", "Source Han Serif TC", Georgia, serif`），內文採無襯線體，以 `1px solid #D6CFC2` 細線與留白區隔，徹底揚棄左側粗色條圓角方框網格；各國第 1 頁皆採全版面深色典藏封面（`<section class="slide slide--cover">`）。
+2. **固定頂部系列導覽列與離線互動**：7 份 HTML 頂部皆配置一致的相對路徑導覽列（`index.html`、`00 總論`～`05 南斯拉夫`）；6 份簡報依序設定 `id="slide-1"`～`id="slide-N"`，以 Vanilla JS 支援 `ArrowLeft`/`ArrowRight`/`Space`/`PageUp`/`PageDown`/`Home`/`End` 切換、頁碼點、進度條，並支援解析 `location.hash` 與監聽 `hashchange` 直達指定投影片。
+3. **100% 溯源與硬性紅線**：正文（排除 `<footer>` 與標籤）嚴控在 `109～253` 個中文字（低於 `260` 字硬性上限），拒絕電報式縮寫；每頁底部 `<footer>` 均實標來源檔名與 `raw/` 實際 H2 標題；史觀對立雙／三方並列，資料缺漏皆依 [cards.md](cards.md) 誠實揭示。
 
 ---
 
-## 四、Node 5 每一輪自動化腳本驗收數據與修正紀錄（檢查關卡 3）
+## 三、全系列逐冊逐頁自動化驗收數據明細
 
-### 第 1 輪執行：`python scripts/verify_slides.py`（未通過，Exit Code 1）
+依據 `python scripts/verify_slides.py`（[scripts/verify_slides.py](../scripts/verify_slides.py)）於根目錄 `c:\Users\raber\Desktop\ww-socialism-wiki` 實測結果彙整：
 
-- **檢查發現**：HTML 結構（`<!DOCTYPE html>`、`<html>`、`</html>`、無 `<img>`）與總頁數（12 頁）皆 **PASS**，每頁均含明確資料來源標註；唯 **Slide 04、09、10、11** 因包含多國來源路徑或卡片副標使純文字超過 380 字上限。
-- **第 1 輪逐頁實測明細**：
-  - Slide 01：`359/380` (PASS)｜Slide 02：`370/380` (PASS)｜Slide 03：`351/380` (PASS)
-  - Slide 04：**`420/380` (OVER，+40 字)**
-  - Slide 05：`380/380` (PASS)｜Slide 06：`357/380` (PASS)｜Slide 07：`349/380` (PASS)｜Slide 08：`370/380` (PASS)
-  - Slide 09：**`441/380` (OVER，+61 字)**
-  - Slide 10：**`456/380` (OVER，+76 字)**
-  - Slide 11：**`386/380` (OVER，+6 字)**
-  - Slide 12：`364/380` (PASS)
+### 1. 總入口頁面（[index.html](../index.html)）
+
+| 檢查項目 | 實測結果 | 明細說明 |
+| :--- | :--- | :--- |
+| HTML 結構與路徑規範 | **PASS** | 全數使用相對路徑，無 `/` 絕對路徑 |
+| 本機 `assets/` 圖片（5 張） | **PASS** | `assets/01_russia.jpg`、`assets/02_germany.jpg`、`assets/03_china_warlords.png`、`assets/04_spain.jpg`、`assets/05_yugoslavia.jpg` |
+| 6 份簡報入口與跨連結（15 條） | **PASS** | 頂部導覽、主按鈕、`#series-map` 與 6 張策展卡已完整涵蓋 `deck_00`～`deck_05` |
+
+### 2. 逐冊簡報逐頁中文字數與元件統計（共 6 份，37 頁）
+
+| 簡報檔名 | 頁數 | 本機 `<img>` | 跨簡報連結數 | 逐頁正文 CJK 中文字數（上限 `<= 260`，括號為可視字元） | `<footer>` 來源 | 驗收狀態 |
+| :--- | :---: | :---: | :---: | :--- | :---: | :---: |
+| [deck_00_framework.html](../deck_00_framework.html) | 6 | 0 | 13（PASS） | `#1`: `109`(221)、`#2`: `202`(369)、`#3`: `169`(317)、`#4`: `213`(394)、`#5`: `206`(301)、`#6`: `177`(220) | 6/6 OK | **PASS** |
+| [deck_01_russia.html](../deck_01_russia.html) | 6 | 1 (`assets/01_russia.jpg`) | 10（PASS） | `#1`: `125`(216)、`#2`: `123`(315)、`#3`: `153`(351)、`#4`: `146`(317)、`#5`: `168`(304)、`#6`: `180`(320) | 6/6 OK | **PASS** |
+| [deck_02_germany.html](../deck_02_germany.html) | 6 | 1 (`assets/02_germany.jpg`) | 10（PASS） | `#1`: `121`(221)、`#2`: `119`(274)、`#3`: `158`(294)、`#4`: `162`(288)、`#5`: `161`(324)、`#6`: `163`(303) | 6/6 OK | **PASS** |
+| [deck_03_china.html](../deck_03_china.html) | 7 | 1 (`assets/03_china_warlords.png`) | 10（PASS） | `#1`: `113`(207)、`#2`: `156`(323)、`#3`: `209`(366)、`#4`: `215`(356)、`#5`: `198`(359)、`#6`: `203`(320)、`#7`: `168`(235) | 7/7 OK | **PASS** |
+| [deck_04_spain.html](../deck_04_spain.html) | 6 | 1 (`assets/04_spain.jpg`) | 13（PASS） | `#1`: `123`(218)、`#2`: `163`(292)、`#3`: `191`(311)、`#4`: `204`(377)、`#5`: `207`(332)、`#6`: `226`(386) | 6/6 OK | **PASS** |
+| [deck_05_yugoslavia.html](../deck_05_yugoslavia.html) | 6 | 1 (`assets/05_yugoslavia.jpg`) | 13（PASS） | `#1`: `136`(241)、`#2`: `180`(285)、`#3`: `224`(353)、`#4`: `249`(394)、`#5`: `253`(409)、`#6`: `235`(304) | 6/6 OK | **PASS** |
+| **系列合計** | **37** | **5** | **69＋15** | 全系列範圍 **`109`～`253` / `260`** | **37/37 OK** | **PASS** |
+
+---
+
+## 四、跨簡報錨點連動網檢查結果
+
+除每份 HTML 固定頂部 7 條系列導覽列連結（共 `7 × 7 = 49` 條）及 `index.html` 內頁導覽連結（含 `#series-map` 與 6 張策展卡）外，簡報正文頁共設置 **20 條具語意連動與章節導引功能之跨檔連結**，全部指向真實目標檔案與對應 `#slide-N` 頁面：
+
+| 來源頁面 | 目標錨點（實際驗證頁數） | 跨國連動／策展脈絡 | 檢查狀態 |
+| :--- | :--- | :--- | :---: |
+| `deck_00_framework.html#slide-4` | `deck_01_russia.html#slide-6`（6/6） | 白俄大流亡與契卡機制源頭 | **PASS** |
+| `deck_00_framework.html#slide-4` | `deck_03_china.html#slide-4`（4/7） | 1923 蘇援改組、FT-17 坦克與白俄傭兵入華 | **PASS** |
+| `deck_00_framework.html#slide-4` | `deck_04_spain.html#slide-4`（4/6） | 蘇聯 X 行動、*checas* 外溢與國際縱隊 | **PASS** |
+| `deck_00_framework.html#slide-4` | `deck_05_yugoslavia.html#slide-3`（3/6） | 西班牙國際縱隊老兵返南國任骨幹 | **PASS** |
+| `deck_00_framework.html#slide-6` | `index.html`、`deck_01_russia.html` | 返回策展總覽、進入第一章俄國篇 | **PASS** |
+| `deck_01_russia.html#slide-6` | `deck_02_germany.html#slide-3`（3/6） | 德國 SPD 恐懼俄式內戰促成雙重妥協 | **PASS** |
+| `deck_01_russia.html#slide-6` | `deck_03_china.html#slide-4`（4/7） | 白俄軍火與列寧式黨軍改組東傳中國 | **PASS** |
+| `deck_01_russia.html#slide-6` | `deck_04_spain.html#slide-4`（4/6） | 契卡名號與白俄流亡者遠赴西班牙 | **PASS** |
+| `deck_02_germany.html#slide-3` | `deck_01_russia.html#slide-4`（4/6） | 對照布勞恩引為警戒的俄國四方內戰 | **PASS** |
+| `deck_02_germany.html#slide-6` | `deck_04_spain.html#slide-5`（5/6） | 威瑪崩潰後德軍（禿鷹軍團）介入西班牙 | **PASS** |
+| `deck_02_germany.html#slide-6` | `deck_03_china.html#slide-1`（1/7） | 章節導引：進入第三章中國篇 | **PASS** |
+| `deck_03_china.html#slide-4` | `deck_01_russia.html#slide-6`（6/6） | 追溯白俄流亡與海參崴軍火起點 | **PASS** |
+| `deck_03_china.html#slide-7` | `deck_00_framework.html#slide-5`（5/6）、`deck_04_spain.html#slide-1`（1/6） | 回顧地方成敗公式、進入第四章西班牙篇 | **PASS** |
+| `deck_04_spain.html#slide-4` | `deck_01_russia.html#slide-3`（3/6）、`deck_05_yugoslavia.html#slide-3`（3/6） | 追溯契卡清洗源頭、銜接南斯拉夫老兵骨幹 | **PASS** |
+| `deck_04_spain.html#slide-5` | `deck_02_germany.html#slide-6`（6/6）、`deck_00_framework.html#slide-5`（5/6） | 對照德國後續干預與塞德曼後方治安公式 | **PASS** |
+| `deck_04_spain.html#slide-6` | `deck_00_framework.html#slide-3`（3/6）、`deck_05_yugoslavia.html#slide-1`（1/6） | 對照左翼四派路線、進入第五章南斯拉夫篇 | **PASS** |
+| `deck_05_yugoslavia.html#slide-3` | `deck_04_spain.html#slide-4`（4/6）、`deck_00_framework.html#slide-4`（4/6） | 回望西班牙國際縱隊與歐亞六大連動鏈 | **PASS** |
+| `deck_05_yugoslavia.html#slide-5` | `deck_01_russia.html#slide-6`（6/6）、`deck_00_framework.html#slide-5`（5/6） | 對比蘇聯模板分歧與五國結局路徑 | **PASS** |
+| `deck_05_yugoslavia.html#slide-6` | `deck_00_framework.html#slide-5`（5/6）、`index.html` | 系列收官回望公式並返回策展總覽 | **PASS** |
+
+---
+
+## 五、全系列自動化總驗收完整輸出（Exit Code 0）
+
+以下為執行 `python scripts/verify_slides.py`（無參數，對整個系列執行完整驗證）之未截斷實測輸出：
 
 ```text
-=== 教學簡報自動化驗收報告 ===
-檢查目標：index.html
-[條件 4] HTML 結構檢查：<!DOCTYPE html>=PASS, <html>=PASS, </html>=PASS, 無 <img>=PASS
-[條件 1] 投影片總頁數（<section class="slide">）：12 頁（標準：10～14 頁）-> PASS
+============================================================
+教學簡報系列自動化驗收報告（1 總入口 ＋ 6 份跨連結獨立簡報）
+檢查目錄：C:\Users\raber\Desktop\ww-socialism-wiki
+============================================================
 
---- 逐頁檢查明細（條件 2：資料來源標註｜條件 3：純文字字數 <= 380）---
-  Slide 01 [PASS] | 字數: 359/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言]; [02_german_revolution_1…) | 標題: 戰火下的路線分歧（1914–1945）
-  Slide 02 [PASS] | 字數: 370/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, Background]; [02_german_revo…) | 標題: 舊秩序垮台：誰填補權力真空？
-  Slide 03 [PASS] | 字數: 351/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言; Background]; [02_german_…) | 標題: 左翼光譜：為何分成四派？
-  Slide 04 [FAIL] | 字數: 420/380 (OVER) | 來源標註: OK ([01_russian_civil_war.md, 導言; Formation of the Red Arm…) | 標題: 俄國：蘇維埃如何變成一黨專政？
-  Slide 05 [PASS] | 字數: 380/380 (OK) | 來源標註: OK ([02_german_revolution_1918_1919.md, Impact of the Russ…) | 標題: 德國：工兵委員會為何主動交權？
-  Slide 06 [PASS] | 字數: 357/380 (OK) | 來源標註: OK ([04_warlord_era_china.md, 導言; Warlord relations; Warlo…) | 標題: 中國：軍閥割據、民間會社與黨軍移植
-  Slide 07 [PASS] | 字數: 349/380 (OK) | 來源標註: OK ([03_spanish_civil_war.md, 導言; Spanish Revolution; Comb…) | 標題: 西班牙內戰：社會革命與左翼內鬨（1936–1939）
-  Slide 08 [PASS] | 字數: 370/380 (OK) | 來源標註: OK ([05_second_united_front.md, Background; Cooperation du…) | 標題: 二戰敵後：中共與南國游擊隊崛起
-  Slide 09 [FAIL] | 字數: 441/380 (OVER) | 來源標註: OK ([01_russian_civil_war.md, Evacuations; Repression]; [0…) | 標題: 歐亞跨區流動網
-  Slide 10 [FAIL] | 字數: 456/380 (OVER) | 來源標註: OK ([01_russian_civil_war.md, 導言; Aftermath]; [02_german_r…) | 標題: 結局分岔與後方治理對比
-  Slide 11 [FAIL] | 字數: 386/380 (OVER) | 來源標註: OK ([01_russian_civil_war.md, Background; Aftermath]; [02_…) | 標題: 史觀交鋒與研究邊界
-  Slide 12 [PASS] | 字數: 364/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言]; [02_german_revolution_1…) | 標題: 總結：帶走三個提問
+=== 總入口驗收：index.html ===
+  HTML 結構=PASS | <img> 本機 assets/=PASS（5 張） | 6 份簡報入口連結=PASS（已涵蓋 6/6 份）
+    Image 01 [PASS] | 投影片外全域區 -> assets/01_russia.jpg
+    Image 02 [PASS] | 投影片外全域區 -> assets/02_germany.jpg
+    Image 03 [PASS] | 投影片外全域區 -> assets/03_china_warlords.png
+    Image 04 [PASS] | 投影片外全域區 -> assets/04_spain.jpg
+    Image 05 [PASS] | 投影片外全域區 -> assets/05_yugoslavia.jpg
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  09 [PASS] | 投影片外區域 -> #series-map
+    Link  10 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  11 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  12 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  13 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  14 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  15 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
 
-=== 總結 ===
-結果：FAIL（共 4 項未通過）
-  1. 第 4 頁（俄國：蘇維埃如何變成一黨專政？）扣除 HTML 標籤後純文字為 420 字，超過上限 380 字。
-  2. 第 9 頁（歐亞跨區流動網）扣除 HTML 標籤後純文字為 441 字，超過上限 380 字。
-  3. 第 10 頁（結局分岔與後方治理對比）扣除 HTML 標籤後純文字為 456 字，超過上限 380 字。
-  4. 第 11 頁（史觀交鋒與研究邊界）扣除 HTML 標籤後純文字為 386 字，超過上限 380 字。
+=== 獨立簡報驗收：deck_00_framework.html ===
+  HTML 結構=PASS | 頁數=6 頁（標準 5～8）->PASS | <img>=PASS（0 張） | 跨簡報連結=PASS（13 條）
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 第 4 頁 -> deck_01_russia.html#slide-6（第 6/6 頁）
+    Link  09 [PASS] | 第 4 頁 -> deck_03_china.html#slide-4（第 4/7 頁）
+    Link  10 [PASS] | 第 4 頁 -> deck_04_spain.html#slide-4（第 4/6 頁）
+    Link  11 [PASS] | 第 4 頁 -> deck_05_yugoslavia.html#slide-3（第 3/6 頁）
+    Link  12 [PASS] | 第 6 頁 -> index.html
+    Link  13 [PASS] | 第 6 頁 -> deck_01_russia.html
+    Slide 01 [PASS] | 中文字: 109/260 (OK, 可視字元:221) | <footer>來源: OK ([01_russian_civil_war.md, 導言]; [02_german_re…) | 標題: 大戰打碎舊帝國後，誰能從亂世蛻變為全國政權？
+    Slide 02 [PASS] | 中文字: 202/260 (OK, 可視字元:369) | <footer>來源: OK ([01_russian_civil_war.md, Background]; [02_g…) | 標題: 兩次大戰打碎舊中央，在歐亞五大戰場留下權力真空
+    Slide 03 [PASS] | 中文字: 169/260 (OK, 可視字元:317) | <footer>來源: OK ([01_russian_civil_war.md, 導言]; [02_german_re…) | 標題: 同喊社會主義，四條奪權路線的衝突讓左翼經常互打
+    Slide 04 [PASS] | 中文字: 213/260 (OK, 可視字元:394) | <footer>來源: OK ([01_russian_civil_war.md, Aftermath]; [03_sp…) | 標題: 從海參崴坦克到西班牙老兵，六條跨國鏈改寫五國戰局
+    Slide 05 [PASS] | 中文字: 206/260 (OK, 可視字元:301) | <footer>來源: OK ([01_russian_civil_war.md, 導言; Aftermath]; [0…) | 標題: 地方勢力能否掌權，取決於土改、統戰與後方治安
+    Slide 06 [PASS] | 中文字: 177/260 (OK, 可視字元:220) | <footer>來源: OK ([01_russian_civil_war.md, 導言]; [02_german_re…) | 標題: 帶著三個分析工具，走進歐亞五國的現場時間軸
+
+=== 獨立簡報驗收：deck_01_russia.html ===
+  HTML 結構=PASS | 頁數=6 頁（標準 5～8）->PASS | <img>=PASS（1 張） | 跨簡報連結=PASS（10 條）
+    Image 01 [PASS] | 第 2 頁 -> assets/01_russia.jpg
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 第 6 頁 -> deck_02_germany.html#slide-3（第 3/6 頁）
+    Link  09 [PASS] | 第 6 頁 -> deck_03_china.html#slide-4（第 4/7 頁）
+    Link  10 [PASS] | 第 6 頁 -> deck_04_spain.html#slide-4（第 4/6 頁）
+    Slide 01 [PASS] | 中文字: 125/260 (OK, 可視字元:216) | <footer>來源: OK ([01_russian_civil_war.md, 導言; Geography and …) | 標題: 從民選蘇維埃到一黨專政：1917–1921 俄國的…
+    Slide 02 [PASS] | 中文字: 123/260 (OK, 可視字元:315) | <footer>來源: OK ([01_russian_civil_war.md, Background; Warfar…) | 標題: 1917 年沙皇退位後，俄國陷入雙重政權並爆發十月…
+    Slide 03 [PASS] | 中文字: 153/260 (OK, 可視字元:351) | <footer>來源: OK ([01_russian_civil_war.md, Background; Warfar…) | 標題: 1918 年敗選後解散立憲會議，接連排除左翼盟友走…
+    Slide 04 [PASS] | 中文字: 146/260 (OK, 可視字元:317) | <footer>來源: OK ([01_russian_civil_war.md, 導言; Background; Wa…) | 標題: 1918–1921 四方內戰：靠強制徵兵與 83%…
+    Slide 05 [PASS] | 中文字: 168/260 (OK, 可視字元:304) | <footer>來源: OK ([01_russian_civil_war.md, Background; Warfar…) | 標題: 1921 年喀琅施塔得起義遭鎮壓，派系禁令與新經濟…
+    Slide 06 [PASS] | 中文字: 180/260 (OK, 可視字元:320) | <footer>來源: OK ([01_russian_civil_war.md, 導言; Background; Wa…) | 標題: 史觀交鋒：戰時防衛或一黨專政？以及俄國內戰的跨國餘波
+
+=== 獨立簡報驗收：deck_02_germany.html ===
+  HTML 結構=PASS | 頁數=6 頁（標準 5～8）->PASS | <img>=PASS（1 張） | 跨簡報連結=PASS（10 條）
+    Image 01 [PASS] | 第 2 頁 -> assets/02_germany.jpg
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 第 3 頁 -> deck_01_russia.html#slide-4（第 4/6 頁）
+    Link  09 [PASS] | 第 6 頁 -> deck_04_spain.html#slide-5（第 5/6 頁）
+    Link  10 [PASS] | 第 6 頁 -> deck_03_china.html#slide-1（第 1/7 頁）
+    Slide 01 [PASS] | 中文字: 121/260 (OK, 可視字元:221) | <footer>來源: OK ([02_german_revolution_1918_1919.md, 導言; Revo…) | 標題: 工兵委員會為何主動讓權：1918–1919 德國革…
+    Slide 02 [PASS] | 中文字: 119/260 (OK, 可視字元:274) | <footer>來源: OK ([02_german_revolution_1918_1919.md, Revoluti…) | 標題: 1918 年 11 月基爾水兵起義，柏林同日宣告兩…
+    Slide 03 [PASS] | 中文字: 158/260 (OK, 可視字元:294) | <footer>來源: OK ([02_german_revolution_1918_1919.md, Backgrou…) | 標題: 懼怕俄式內戰，SPD 與舊軍方及資方簽下雙重妥協
+    Slide 04 [PASS] | 中文字: 162/260 (OK, 可視字元:288) | <footer>來源: OK ([02_german_revolution_1918_1919.md, Revoluti…) | 標題: 344 對 98 票：全德工兵委員會主動交權給國民…
+    Slide 05 [PASS] | 中文字: 161/260 (OK, 可視字元:324) | <footer>來源: OK ([02_german_revolution_1918_1919.md, 導言; Revo…) | 標題: 自由軍團血腥鎮壓斯巴達克與地方蘇維埃，左翼永久撕裂
+    Slide 06 [PASS] | 中文字: 163/260 (OK, 可視字元:303) | <footer>來源: OK ([02_german_revolution_1918_1919.md, 導言; Impa…) | 標題: 史觀交鋒：保住議會民主，抑或過度妥協錯失改革？
+
+=== 獨立簡報驗收：deck_03_china.html ===
+  HTML 結構=PASS | 頁數=7 頁（標準 5～8）->PASS | <img>=PASS（1 張） | 跨簡報連結=PASS（10 條）
+    Image 01 [PASS] | 第 2 頁 -> assets/03_china_warlords.png
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 第 4 頁 -> deck_01_russia.html#slide-6（第 6/6 頁）
+    Link  09 [PASS] | 第 7 頁 -> deck_00_framework.html#slide-5（第 5/6 頁）
+    Link  10 [PASS] | 第 7 頁 -> deck_04_spain.html#slide-1（第 1/6 頁）
+    Slide 01 [PASS] | 中文字: 113/260 (OK, 可視字元:207) | <footer>來源: OK ([04_warlord_era_china.md, 導言; Aftermath]; [0…) | 標題: 從軍閥割據到敵後土改：1916–1949 中國的裂…
+    Slide 02 [PASS] | 中文字: 156/260 (OK, 可視字元:323) | <footer>來源: OK ([04_warlord_era_china.md, 導言; Warlord relati…) | 標題: 1916 年袁世凱死後，北洋三大派系展開殘酷均勢混戰
+    Slide 03 [PASS] | 中文字: 209/260 (OK, 可視字元:366) | <footer>來源: OK ([04_warlord_era_china.md, Warlord armies; Ar…) | 標題: 兵災與武器禁運下，無槍農民以會社武裝守衛鄉土
+    Slide 04 [PASS] | 中文字: 215/260 (OK, 可視字元:356) | <footer>來源: OK ([04_warlord_era_china.md, Infrastructure; Ar…) | 標題: 1923 年跨國轉折：列寧式改組國民黨與白俄軍火坦…
+    Slide 05 [PASS] | 中文字: 198/260 (OK, 可視字元:359) | <footer>來源: OK ([04_warlord_era_china.md, 導言; South; Reunifi…) | 標題: 北伐、寧漢分裂與「整批收編」舊軍閥埋下的統治隱患
+    Slide 06 [PASS] | 中文字: 203/260 (OK, 可視字元:320) | <footer>來源: OK ([05_second_united_front.md, Background; Coop…) | 標題: 1936 西安事變促成合作，1941 皖南事變爆發…
+    Slide 07 [PASS] | 中文字: 168/260 (OK, 可視字元:235) | <footer>來源: OK ([05_second_united_front.md, Breakdown and af…) | 標題: 敵後貧農土改減稅與 1945 東北日械接收的奪權公式
+
+=== 獨立簡報驗收：deck_04_spain.html ===
+  HTML 結構=PASS | 頁數=6 頁（標準 5～8）->PASS | <img>=PASS（1 張） | 跨簡報連結=PASS（13 條）
+    Image 01 [PASS] | 第 2 頁 -> assets/04_spain.jpg
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 第 4 頁 -> deck_01_russia.html#slide-3（第 3/6 頁）
+    Link  09 [PASS] | 第 4 頁 -> deck_05_yugoslavia.html#slide-3（第 3/6 頁）
+    Link  10 [PASS] | 第 5 頁 -> deck_02_germany.html#slide-6（第 6/6 頁）
+    Link  11 [PASS] | 第 5 頁 -> deck_00_framework.html#slide-5（第 5/6 頁）
+    Link  12 [PASS] | 第 6 頁 -> deck_00_framework.html#slide-3（第 3/6 頁）
+    Link  13 [PASS] | 第 6 頁 -> deck_05_yugoslavia.html#slide-1（第 1/6 頁）
+    Slide 01 [PASS] | 中文字: 123/260 (OK, 可視字元:218) | <footer>來源: OK ([03_spanish_civil_war.md, 導言; Military coup;…) | 標題: 社會革命與左翼內鬨：1936–1939 西班牙共和…
+    Slide 02 [PASS] | 中文字: 163/260 (OK, 可視字元:292) | <footer>來源: OK ([03_spanish_civil_war.md, Military coup; Spa…) | 標題: 1936 年七月軍人政變，工人開倉發槍掀開社會革命
+    Slide 03 [PASS] | 中文字: 191/260 (OK, 可視字元:311) | <footer>來源: OK ([03_spanish_civil_war.md, Spanish Revolution…) | 標題: 共和派內部死結：先自治集體化，還是先集中權力贏得戰…
+    Slide 04 [PASS] | 中文字: 204/260 (OK, 可視字元:377) | <footer>來源: OK ([03_spanish_civil_war.md, Course of the war;…) | 標題: 1937 五月事件、蘇聯黃金買軍火與 NKVD／契…
+    Slide 05 [PASS] | 中文字: 207/260 (OK, 可視字元:332) | <footer>來源: OK ([03_spanish_civil_war.md, Combatants; Foreig…) | 標題: 27 國禁運重傷共和國，德義武力與高壓「清理」助佛…
+    Slide 06 [PASS] | 中文字: 226/260 (OK, 可視字元:386) | <footer>來源: OK ([03_spanish_civil_war.md, Death toll; Atroci…) | 標題: 史觀交鋒：共和區暴力是無政府失序，或左翼半組織化執…
+
+=== 獨立簡報驗收：deck_05_yugoslavia.html ===
+  HTML 結構=PASS | 頁數=6 頁（標準 5～8）->PASS | <img>=PASS（1 張） | 跨簡報連結=PASS（13 條）
+    Image 01 [PASS] | 第 2 頁 -> assets/05_yugoslavia.jpg
+    Link  01 [PASS] | 投影片外區域 -> index.html
+    Link  02 [PASS] | 投影片外區域 -> deck_00_framework.html
+    Link  03 [PASS] | 投影片外區域 -> deck_01_russia.html
+    Link  04 [PASS] | 投影片外區域 -> deck_02_germany.html
+    Link  05 [PASS] | 投影片外區域 -> deck_03_china.html
+    Link  06 [PASS] | 投影片外區域 -> deck_04_spain.html
+    Link  07 [PASS] | 投影片外區域 -> deck_05_yugoslavia.html
+    Link  08 [PASS] | 第 3 頁 -> deck_04_spain.html#slide-4（第 4/6 頁）
+    Link  09 [PASS] | 第 3 頁 -> deck_00_framework.html#slide-4（第 4/6 頁）
+    Link  10 [PASS] | 第 5 頁 -> deck_01_russia.html#slide-6（第 6/6 頁）
+    Link  11 [PASS] | 第 5 頁 -> deck_00_framework.html#slide-5（第 5/6 頁）
+    Link  12 [PASS] | 第 6 頁 -> deck_00_framework.html#slide-5（第 5/6 頁）
+    Link  13 [PASS] | 第 6 頁 -> index.html
+    Slide 01 [PASS] | 中文字: 136/260 (OK, 可視字元:241) | <footer>來源: OK ([06_yugoslav_partisans.md, 導言; Background an…) | 標題: 跨民族游擊隊的自主崛起：1941–1948 南斯拉…
+    Slide 02 [PASS] | 中文字: 180/260 (OK, 可視字元:285) | <footer>來源: OK ([06_yugoslav_partisans.md, Background and or…) | 標題: 1941 年軸心國肢解南斯拉夫，百人質報復與清洗逼…
+    Slide 03 [PASS] | 中文字: 224/260 (OK, 可視字元:353) | <footer>來源: OK ([06_yugoslav_partisans.md, Objectives; Backg…) | 標題: 狄托淡化共產口號高喊「兄弟情誼」，西班牙老兵返鄉扛…
+    Slide 04 [PASS] | 中文字: 249/260 (OK, 可視字元:394) | <footer>來源: OK ([06_yugoslav_partisans.md, 導言; Operations; S…) | 標題: 全民動員擴軍逾 80 萬並建海空軍 vs. 保皇切…
+    Slide 05 [PASS] | 中文字: 253/260 (OK, 可視字元:409) | <footer>來源: OK ([06_yugoslav_partisans.md, 導言; Composition; …) | 標題: 1945 自主光復、戰後大清洗爭議與 1947–1…
+    Slide 06 [PASS] | 中文字: 235/260 (OK, 可視字元:304) | <footer>來源: OK ([01_russian_civil_war.md, 導言]; [02_german_re…) | 標題: 全系列收官：帶給五國比較歷史的三個核心洞見
+
+=== 系列驗收總結 ===
+結果：PASS（index.html 總入口與全部 6 份獨立簡報皆通過所有驗收條件）
 ```
-
-### 第 1 輪 → 第 2 輪局部退回與修正動作
-
-僅針對未通過之第 4、9、10、11 頁進行局部精簡（保持其餘 8 頁不變），同步更新 [drafts.md](drafts.md)、[index.html](../index.html) 與 [deck.html](deck.html)：
-1. **Slide 04**：不更動教學短句與原文附註，將頁底冗長子節清單收斂為所屬實際 H2 大節 `[01_russian_civil_war.md, 導言; Background; Warfare]`（由 420 字降至 **310 字**）。
-2. **Slide 09**：精簡導言與流動卡措辭、移除重複之 `(戰上海)`／`(Franco)` 附註及項目數字前綴，並以 `[01_russian_civil_war.md, Background; Aftermath]` 與 `[04_warlord_era_china.md, Armaments]` 精確涵蓋白俄、FT-17 坦克與契卡來源（由 441 字降至 **372 字**）。
-3. **Slide 10**：濃縮頁面標題、核心結論與三項條列短句，並調整為 `[01_russian_civil_war.md, 導言]`、`[02_german_revolution_1918_1919.md, 導言]` 與 `[05_second_united_front.md, After 1945]`（由 456 字降至 **370 字**）。
-4. **Slide 11**：精簡導言及各國短句贅字（保留全部四組史觀對立與 `[資料不足／不確定：未載德無政府派、中共蘇區與八路軍人數]` 原樣提示），由 386 字降至 **372 字**。
-
-### 第 2 輪複驗：`python scripts/verify_slides.py`（全數通過，Exit Code 0）
-
-對根目錄 `index.html` 與備份 `workflow_output/deck.html` 分別執行驗收，均回傳 **Exit Code 0（PASS）**，且經檔案雜湊比對兩份 HTML 完全一致（`True`）：
-
-```text
-=== 教學簡報自動化驗收報告 ===
-檢查目標：index.html
-[條件 4] HTML 結構檢查：<!DOCTYPE html>=PASS, <html>=PASS, </html>=PASS, 無 <img>=PASS
-[條件 1] 投影片總頁數（<section class="slide">）：12 頁（標準：10～14 頁）-> PASS
-
---- 逐頁檢查明細（條件 2：資料來源標註｜條件 3：純文字字數 <= 380）---
-  Slide 01 [PASS] | 字數: 359/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言]; [02_german_revolution_1…) | 標題: 戰火下的路線分歧（1914–1945）
-  Slide 02 [PASS] | 字數: 370/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, Background]; [02_german_revo…) | 標題: 舊秩序垮台：誰填補權力真空？
-  Slide 03 [PASS] | 字數: 351/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言; Background]; [02_german_…) | 標題: 左翼光譜：為何分成四派？
-  Slide 04 [PASS] | 字數: 310/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言; Background; Warfare]) | 標題: 俄國：蘇維埃如何變成一黨專政？
-  Slide 05 [PASS] | 字數: 380/380 (OK) | 來源標註: OK ([02_german_revolution_1918_1919.md, Impact of the Russ…) | 標題: 德國：工兵委員會為何主動交權？
-  Slide 06 [PASS] | 字數: 357/380 (OK) | 來源標註: OK ([04_warlord_era_china.md, 導言; Warlord relations; Warlo…) | 標題: 中國：軍閥割據、民間會社與黨軍移植
-  Slide 07 [PASS] | 字數: 349/380 (OK) | 來源標註: OK ([03_spanish_civil_war.md, 導言; Spanish Revolution; Comb…) | 標題: 西班牙內戰：社會革命與左翼內鬨（1936–1939）
-  Slide 08 [PASS] | 字數: 370/380 (OK) | 來源標註: OK ([05_second_united_front.md, Background; Cooperation du…) | 標題: 二戰敵後：中共與南國游擊隊崛起
-  Slide 09 [PASS] | 字數: 372/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, Background; Aftermath]; [03_…) | 標題: 歐亞跨區流動網
-  Slide 10 [PASS] | 字數: 370/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言]; [02_german_revolution_1…) | 標題: 結局分岔與後方治理
-  Slide 11 [PASS] | 字數: 372/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, Background; Aftermath]; [02_…) | 標題: 史觀交鋒與研究邊界
-  Slide 12 [PASS] | 字數: 364/380 (OK) | 來源標註: OK ([01_russian_civil_war.md, 導言]; [02_german_revolution_1…) | 標題: 總結：帶走三個提問
-
-=== 總結 ===
-結果：PASS（全部 4 項驗收條件及 12 頁投影片皆通過）
-```
-
-> 附註：`python scripts/verify_slides.py workflow_output/deck.html` 亦回傳相同逐頁字數（310～380 字）與 `結果：PASS`（Exit Code 0）。
 
 ---
 
-## 五、最終交付查核結論
+## 六、演進紀錄與合規稽核
 
-- **離線互動與視覺規格**：全檔內嵌 CSS 與 Vanilla JS，零外部相依且無 `<img>` 標籤；支援 `←`／`→`／`PageUp`／`PageDown`／`Space`／`Home`／`End` 鍵盤切換、畫面按鈕、跳頁頁碼方塊與頂部進度條。
-- **硬性規則稽核**：100% 溯源標註、零外部知識、誠實不知標註保留、史觀衝突雙邊並列，且 `raw/` 檔案全程未改動。
+- **舊版 `v1`（單一 12 頁簡報，見 [deck.html](deck.html) 歷史存檔）**：曾以 12 頁、每頁 310～380 字全文字卡片形式通過早期單檔驗收；後因跨國時間軸跳躍不利初學者消化，依策展重構決定退回並重建為現今「1 總入口 ＋ 6 份獨立國家簡報（37 頁）」之圖文策展架構。
+- **硬性規範稽核**：全程未改動 `raw/` 任何原始資料；繁體中文搭配專有名詞首次原文附註；每頁皆附 `[來源檔名, 段落標題]`；對照史家爭議且明確揭示缺漏。

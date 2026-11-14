@@ -1,194 +1,222 @@
 # Node 4 逐頁教學講稿（`drafts.md`）
 
-- **對應大綱**：[outline.md](outline.md)（12 頁，面向無歷史背景之初學者）
-- **證據來源**：[cards.md](cards.md)（`CARD-01`～`CARD-28`）
-- **編寫原則**：白話短句＋專有名詞首次附原文＋單頁純文字嚴控遠低於 380 字＋每頁末尾強制綁定 `來源：[0X_..., 段落標題]`
-- **忠實度審查狀態**：已通過檢查關卡 2（詳見頁尾審查紀錄及後續 [report.md](report.md)）
+- **對應大綱**：[outline.md](outline.md)（15 頁順時序故事線，面向無歷史背景初學者）
+- **證據來源**：[cards.md](cards.md)（`CARD-01`～`CARD-28`）與 [assets/credits.md](../assets/credits.md)
+- **核心主軸（One Big Idea）**：兩次大戰打破舊帝國後，左翼與地方武裝陷入「基層自治」與「集權贏戰」的兩難；最終唯有同時掌握「農村土改、跨群體統戰與後方治安」的勢力，才能從地方游擊蛻變為全國政權。
+- **編寫與驗收控管原則**：
+  - 每頁標題為「一句完整白話論點」，內文採完整自然短句（拒絕電報式縮寫），每頁聚焦單一重點並附「承上啟下過渡句」。
+  - 正文（含標題、敘事、圖說、過渡句，排除頁底 `來源：` 行）嚴控於 **230 個中文字以內**，並為內嵌 `<svg>` 標籤預留充足字元餘裕，確保後續渲染後遠低於 `scripts/verify_slides.py` 之 **280 字**上限。
+  - 每頁末尾保留簡潔 H2 格式之 `<footer>` 出處標註。
 
 ---
 
-## Slide 01：戰火下的路線分歧（1914–1945）
+## Slide 01：大戰打碎了舊帝國，誰能從亂世草莽蛻變為全國政權？
 
-- **綁定卡片**：`CARD-01`, `CARD-02`, `CARD-03`
-- **排版型態**：封面總覽（大標題＋五大區域徽章列＋雙主軸重點卡片）
+- **綁定卡片**：`CARD-01`, `CARD-02`, `CARD-03`, `CARD-27`
+- **視覺與版面配置**：獨立深色全版面封面 ＋ 內嵌極簡歐亞五區時間軸 `<svg>`（正文不放來源清單與密集卡片；底緣保留簡潔 `<footer>` 來源標註）。
 - **簡報內文**：
-  - **標題**：戰火下的路線分歧（1914–1945）
-  - **核心結論**：大戰摧毀舊帝國與中央政府，迫使歐亞左翼與地方武裝在「如何奪權、靠誰作戰」上走向分歧。
-  - **五大舞台**：俄國、德國、西班牙、中國、南斯拉夫，橫跨一戰餘波到二戰結束。
-  - **主軸一（左翼分裂）**：一黨專政、議會改良、無政府自治或抗戰統戰，為何常彼此互打？
-  - **主軸二（地方崛起）**：議會、軍閥與游擊隊如何填補真空、跨區串聯並決定成敗結局？
+  - **標題**：大戰打碎了舊帝國，誰能從亂世草莽蛻變為全國政權？
+  - **白話副標題（點出核心問題）**：1914 至 1945 年，追求改變的左翼與地方武裝陷入「基層自治」與「集權贏戰」的兩難；唯有兼顧農村土改、跨群體統戰與後方治安的勢力，才走到最後。
+  - **承上啟下過渡句**：這段歐亞交織的三十年，就從五大戰場的起點看起。
+  - **SVG 建議標籤（39 字元）**：`1917 俄國` / `1918 德國` / `1916–28 中國` / `1936 西班牙` / `1941–45 中南敵後`
 - **來源**：`[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, 導言]; [04_warlord_era_china.md, 導言]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, 導言]`
+- **字數預估**：中文字 97 字｜正文可視字元 118 字（加 SVG 約 157 字，遠低於 280 字）
 
 ---
 
-## Slide 02：舊秩序垮台：誰填補權力真空？
+## Slide 02：兩次大戰壓垮舊中央，同時在歐亞五大戰場留下權力真空。
 
 - **綁定卡片**：`CARD-01`, `CARD-02`
-- **排版型態**：雙階段時間軸卡片（1916–1918 帝國崩解 vs. 1936–1941 政變與瓜分）
+- **視覺與版面配置**：米白紙色 `#F7F4EB` 全局地圖導覽 ＋ 內嵌 `<svg>` 歐亞五大戰區戰略地圖。
 - **簡報內文**：
-  - **標題**：舊秩序垮台：誰填補權力真空？
-  - **核心結論**：帝國敗亡、政變或遭瓜分使中央癱瘓，基層議會與地方武裝隨即崛起。
-  - **1917 俄**：沙皇退位，臨時政府與工農兵「蘇維埃」（soviets）並立。
-  - **1918 德**：水兵抗命引爆工兵委員會接管城鎮、結束帝制。
-  - **1916 中**：袁世凱（Yuan Shikai）死後北洋軍分裂割據。
-  - **1936 西／1941 南**：西班牙發槍工人抗政變；軸心國（Axis powers）瓜分南國。
-- **來源**：`[01_russian_civil_war.md, Background]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Outcome]; [04_warlord_era_china.md, 導言]; [06_yugoslav_partisans.md, Background and origins]`
+  - **標題**：兩次大戰壓垮舊中央，同時在歐亞五大戰場留下權力真空。
+  - **正文**：戰火先後摧毀沙俄、德意志帝國與袁世凱（Yuan Shikai）死後的中國中央秩序，並在 1936 年西班牙政變與 1941 年軸心國（Axis powers）瓜分南斯拉夫時重演。每當舊政府癱瘓，城鄉基層議會與地方武裝便就地崛起。
+  - **承上啟下過渡句**：然而，同樣想趁亂重塑社會的左翼陣營，為何自己卻先分裂？
+  - **SVG 建議標籤（33 字元）**：`1936 西班牙` / `1918 德國` / `1941 南斯拉夫` / `1917 俄國` / `1916 中國`
+- **來源**：`[01_russian_civil_war.md, Background]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Military coup]; [04_warlord_era_china.md, 導言]; [06_yugoslav_partisans.md, Background and origins]`
+- **字數預估**：中文字 119 字｜正文可視字元 161 字（加 SVG 約 194 字）
 
 ---
 
-## Slide 03：左翼光譜：為何分成四派？
+## Slide 03：同喊社會主義，四條奪權路線的根本衝突讓左翼經常互打。
 
 - **綁定卡片**：`CARD-03`
-- **排版型態**：四象限／四欄譜系對比卡片
+- **視覺與版面配置**：概念預備象限頁 ＋ 內嵌 `<svg>` 左翼四派光譜定位圖。
 - **簡報內文**：
-  - **標題**：左翼光譜：為何分成四派？
-  - **核心結論**：奪權方式與國家觀念分歧，使左翼彼此抗衡。
-  - **1. 一黨集權**：俄布爾什維克（Bolsheviks）、西 PCE 主張集中黨國。
-  - **2. 議會改良**：德 SPD、俄孟什維克（Mensheviks）走憲政代議。
-  - **3. 無政府／極左**：俄烏黑軍、西 CNT-FAI 與 POUM、德 KPD。
-  - **4. 抗戰游擊**：中共與南共 KPJ 轉向農村與統戰。
-- **來源**：`[01_russian_civil_war.md, 導言; Background]; [02_german_revolution_1918_1919.md, Aftermath]; [03_spanish_civil_war.md, Republicans]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, Objectives]`
+  - **標題**：同喊社會主義，四條奪權路線的根本衝突讓左翼經常互打。
+  - **正文**：一黨集權派如布爾什維克（Bolsheviks）主張先鋒黨專政；議會改良派如德國社民黨（SPD）堅持選票與憲政。無政府與極左派追求廢除國家、當下自治；抗戰游擊派則選擇先聯合各階層抗敵、再紮根農村。
+  - **承上啟下過渡句**：這場牽動五國的路線實驗，就從 1917 年俄國揭開序幕。
+  - **SVG 建議標籤（22 字元）**：`一黨集權` / `議會改良` / `無政府自治` / `抗戰游擊` / `分散 ↔ 集權`
+- **來源**：`[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, Background events]; [03_spanish_civil_war.md, Spanish Revolution; Combatants]; [05_second_united_front.md, Cooperation during the Second Sino-Japanese War]; [06_yugoslav_partisans.md, Objectives]`
+- **字數預估**：中文字 118 字｜正文可視字元 149 字（加 SVG 約 171 字）
 
 ---
 
-## Slide 04：俄國：蘇維埃如何變成一黨專政？
+## Slide 04：俄國蘇維埃原是民選議會，卻在敗選解散國會後走向一黨制。
 
-- **綁定卡片**：`CARD-04`, `CARD-05`, `CARD-06`
-- **排版型態**：四方角力矩陣（紅、白、黑、綠）＋ 底部轉折時間條（1918 → 1921）
+- **綁定卡片**：`CARD-01`, `CARD-04`
+- **視覺與版面配置**：文圖左右雙欄歷史雜誌版面 ＋ 本機圖片 `assets/01_russia.jpg`。
 - **簡報內文**：
-  - **標題**：俄國：蘇維埃如何變成一黨專政？
-  - **核心結論**：列寧（Vladimir Lenin）贏得四方混戰，卻透過解散議會與派系禁令固定一黨體制。
-  - **紅軍（Red Army）**：強徵農民、起用 83% 沙俄軍官並設督戰隊（barrier troops）贏內戰。
-  - **白軍（White Army）**：前沙俄保守派主張「統一俄國」，戰敗流亡。
-  - **黑軍與綠軍**：黑軍馬赫諾（Makhno）兩度助紅卻遭圍剿；綠軍農民反徵糧抗紅白兩軍。
-  - **1918 → 1921 轉折**：1918 解散立憲會議；1921 鎮壓喀琅施塔得（Kronstadt）後禁黨內派系，改推新經濟政策（New Economic Policy, NEP）。
-- **來源**：`[01_russian_civil_war.md, 導言; Background; Warfare]`
+  - **標題**：俄國蘇維埃原是民選議會，卻在敗選解散國會後走向一黨制。
+  - **正文**：1917 年二月革命（February Revolution）推翻沙皇後，臨時政府與工農兵「蘇維埃」（soviets）形成雙重政權。列寧（Vladimir Lenin）領導布爾什維克奪權後，因在全俄立憲會議（Russian Constituent Assembly）敗給右翼社會革命黨（Right SRs），於 1918 年 1 月強行解散議會並陸續逐出反對派。
+  - **圖說**：1917 年東線與前沙俄西部疆界變動圖。
+  - **承上啟下過渡句**：此舉雖保住核心權力，卻也將俄國推入四方內戰火海。
+- **來源**：`[01_russian_civil_war.md, Background; Warfare]`
+- **字數預估**：中文字 134 字｜正文可視字元 241 字（無 SVG，安全低於 280 字）
 
 ---
 
-## Slide 05：德國：工兵委員會為何主動交權？
+## Slide 05：列寧靠強徵與 83% 舊軍官打贏內戰，代價是鎖死黨內民主。
 
-- **綁定卡片**：`CARD-01`, `CARD-08`, `CARD-09`, `CARD-10`
-- **排版型態**：俄德路徑分岔對比欄 ＋ 關鍵事件步驟卡
+- **綁定卡片**：`CARD-05`, `CARD-06`
+- **視覺與版面配置**：戰場態勢示意頁 ＋ 內嵌 `<svg>` 紅、白、黑、綠四方角力圖。
 - **簡報內文**：
-  - **標題**：德國：工兵委員會為何主動交權？
-  - **核心結論**：社民黨（SPD）恐懼俄式內戰而與舊軍方、資方妥協，靠自由軍團鎮壓極左保住議會制。
-  - **軍資妥協**：布勞恩（Otto Braun）反對刺刀革命；艾伯特－格勒納密約（Ebert–Groener pact）保留舊軍，資方讓步八小時工時而擱置國有化。
-  - **議會交權**：1918 年 12 月大會以 344 對 98 票決定召開國民議會；聖誕危機後獨立社民黨（USPD）退閣。
-  - **武裝鎮壓**：1919 年自由軍團（Freikorps）殺害李卜克內西（Karl Liebknecht）與盧森堡（Rosa Luxemburg），覆滅地方蘇維埃與 1920 魯爾紅軍（Ruhr Red Army）。
-- **來源**：`[02_german_revolution_1918_1919.md, Impact of the Russian Revolution; The councils; Turn to violence; Aftermath]`
+  - **標題**：列寧靠強徵與 83% 舊軍官打贏內戰，代價是鎖死黨內民主。
+  - **正文**：托洛茨基（Leon Trotsky）憑強制徵兵、督戰隊（barrier troops）與 83% 前沙俄高階軍官組紅軍（Red Army），擊敗白軍（White Army）、綠軍（Green Armies）與馬赫諾（Nestor Makhno）黑軍。工業跌至 1913 年 20% 後，列寧鎮壓喀琅施塔得（Kronstadt）起義並頒派系禁令、推新經濟政策（New Economic Policy, NEP）。
+  - **承上啟下過渡句**：這場血腥代價，隨即動搖德國左翼的抉擇。
+  - **SVG 建議標籤（22 字元）**：`紅軍 83% 舊軍官` / `保守白軍` / `黑軍先盟後剿` / `農民綠軍`
+- **來源**：`[01_russian_civil_war.md, 導言; Background; Warfare; Aftermath]`
+- **字數預估**：中文字 103 字｜正文可視字元 236 字（加 SVG 約 258 字）
 
 ---
 
-## Slide 06：中國：軍閥割據、民間會社與黨軍移植
+## Slide 06：德國社民黨懼怕俄式內戰，寧願聯手舊軍方鎮壓極左保住議會。
 
-- **綁定卡片**：`CARD-12`, `CARD-13`, `CARD-14`
-- **排版型態**：三層結構圖（上層：軍閥均勢；基層：農民秘密結社；轉型軸：1923 列寧式改組）
+- **綁定卡片**：`CARD-01`, `CARD-08`, `CARD-09`, `CARD-10`, `CARD-11`
+- **視覺與版面配置**：左圖右文檔案紀事版面 ＋ 本機圖片 `assets/02_germany.jpg`。
 - **簡報內文**：
-  - **標題**：中國：軍閥割據、民間會社與黨軍移植
-  - **核心結論**：缺乏強大工業政黨的中國陷入軍閥混戰，直到 1923 年跨國引入列寧式組織改組國民黨。
-  - **軍閥均勢**：北洋皖直奉爭北京與海關走私軍火；閻錫山（Yan Xishan）融十派思想、馮玉祥（Feng Yuxiang）左傾兼收鴉片稅。
-  - **農民自衛**：抗拒兵災催生紅槍會（Red Spear Society）、孝衣會，及全女性鐵門會／花籃會。
-  - **1923 列寧式改組**：孫中山（Sun Yat-sen）藉蘇援依民主集中制（democratic centralism）創黃埔聯共北伐；1927 寧漢分裂，1928 後舊軍閥仍被整批收編。
-- **來源**：`[04_warlord_era_china.md, 導言; Warlord relations; Warlord profiles; Armaments; Other forces; South; Aftermath]`
+  - **標題**：德國社民黨懼怕俄式內戰，寧願聯手舊軍方鎮壓極左保住議會。
+  - **正文**：1918 年基爾（Kiel）起義推翻帝制後，工兵委員會以 344 票對 98 票交權給國民議會。艾伯特（Friedrich Ebert）密約保留舊軍官並安撫資方；面對斯巴達克起義（Spartacist uprising），政府動用自由軍團（Freikorps）殺害李卜克內西（Karl Liebknecht）與盧森堡（Rosa Luxemburg），埋下威瑪隱患。
+  - **圖說**：1918–1919 柏林十一月革命街頭路障。
+  - **承上啟下過渡句**：同時期的東亞，中國正陷入無主的軍閥混戰。
+- **來源**：`[02_german_revolution_1918_1919.md, 導言; Background events; Revolution, first stage: fall of the Empire; Revolution, second stage: defeat of the radical Left]`
+- **字數預估**：中文字 129 字｜正文可視字元 242 字（無 SVG，安全低於 280 字）
 
 ---
 
-## Slide 07：西班牙內戰：社會革命與左翼內鬨（1936–1939）
+## Slide 07：失去強中央的中國陷入軍閥混戰，農民只得靠秘密會社武裝自保。
+
+- **綁定卡片**：`CARD-02`, `CARD-12`, `CARD-13`
+- **視覺與版面配置**：形勢圖文雙欄版面 ＋ 本機圖片 `assets/03_china_warlords.png`。
+- **簡報內文**：
+  - **標題**：失去強中央的中國陷入軍閥混戰，農民只得靠秘密會社武裝自保。
+  - **正文**：1916 年北洋軍（Beiyang Army）分裂爭奪北京與海關財源，列強更無視 1919 年禁運走私軍火。閻錫山（Yan Xishan）融合十派主義、馮玉祥（Feng Yuxiang）左傾卻收鴉片稅；多數兵災則逼出農村紅槍會（Red Spear Society）與全女性鐵門會（Iron Gate Society）自衛。
+  - **圖說**：1925 年中國主要軍閥派系割據形勢圖。
+  - **承上啟下過渡句**：看清軍閥不可靠後，孫中山決定引進俄國組織技術。
+- **來源**：`[04_warlord_era_china.md, 導言; Warlord relations; Warlord profiles; Armaments; Other forces]`
+- **字數預估**：中文字 129 字｜正文可視字元 222 字（無 SVG，安全低於 280 字）
+
+---
+
+## Slide 08：孫中山引進列寧式組織改組國民黨，北伐卻因收編軍閥埋下病根。
+
+- **綁定卡片**：`CARD-14`
+- **視覺與版面配置**：水平組織演變流程長廊頁 ＋ 內嵌 `<svg>` 組織演變流程圖。
+- **簡報內文**：
+  - **標題**：孫中山引進列寧式組織改組國民黨，北伐卻因收編軍閥埋下病根。
+  - **正文**：受制軍閥的孫中山（Sun Yat-sen），1923 年藉蘇援依民主集中制（democratic centralism）改組國民黨（KMT），建黃埔軍校（Whampoa Military Academy）與國民革命軍（NRA）並聯手中共（CCP）。蔣介石（Chiang Kai-shek）雖藉北伐（Northern Expedition）掌權，卻整批收編舊軍閥埋下腐敗隱患。
+  - **承上啟下過渡句**：八年後，歐洲西南角的西班牙也捲入左翼內鬨。
+  - **SVG 建議標籤（35 字元）**：`1917 護法受制` → `1923 改組建軍` → `1926 北伐清黨` → `1928 收編軍閥`
+- **來源**：`[04_warlord_era_china.md, 導言; South; Reunification; Aftermath]`
+- **字數預估**：中文字 108 字｜正文可視字元 230 字（加 SVG 約 265 字）
+
+---
+
+## Slide 09：西班牙左翼困在「先革命或先贏戰」，街頭內鬨把共和國推向敗亡。
 
 - **綁定卡片**：`CARD-17`, `CARD-18`, `CARD-19`
-- **排版型態**：左翼路線雙欄對決（社會革命派 vs. 中央贏戰派）＋ 外部不對稱軍援對比條
+- **視覺與版面配置**：紀實影像跨欄雜誌版面 ＋ 本機圖片 `assets/04_spain.jpg`。
 - **簡報內文**：
-  - **標題**：西班牙內戰：社會革命與左翼內鬨（1936–1939）
-  - **核心結論**：共和派內部卡在「先搞自治革命」或「集權靠蘇援贏戰」，終在內耗中敗給德義力挺的佛朗哥。
-  - **革命派（CNT-FAI／POUM）**：1936 年推行農工業集體化與卡特爾（cartels），抗拒民兵正規化。
-  - **贏戰派（PCE 等）**：憑蘇聯軍援（Operation X）反剝奪財產；1937 年五月事件（May Days）後取締 POUM、殺害寧（Nin）。
-  - **外援落差**：27 國禁運重傷共和國並引發三位數通膨；德禿鷹軍團與義 CTV 助佛朗哥（Franco）整合國民軍取勝。
-- **來源**：`[03_spanish_civil_war.md, 導言; Spanish Revolution; Combatants; Foreign involvement; Course of the war > 1937; Financing]`
+  - **標題**：西班牙左翼困在「先革命或先贏戰」，街頭內鬨把共和國推向敗亡。
+  - **正文**：1936 年政變後，無政府工團聯盟（CNT-FAI）與馬克思主義統一工人黨（POUM）推動集體化，西班牙共產黨（PCE）則憑蘇聯「X 行動」（Operation X）主張護產贏戰。兩派於 1937 年五月事件（May Days）街頭互打，加上 27 國禁運引爆通膨，終敗給德義相助的佛朗哥（Francisco Franco）。
+  - **圖說**：1936 年西班牙共和派女民兵訓練實景。
+  - **承上啟下過渡句**：這場城市內耗的敗局，正反襯出敵後游擊隊的出路。
+- **來源**：`[03_spanish_civil_war.md, 導言; Spanish Revolution; Combatants; Foreign involvement; Course of the war; Financing]`
+- **字數預估**：中文字 138 字｜正文可視字元 226 字（無 SVG，安全低於 280 字）
 
 ---
 
-## Slide 08：二戰敵後：中共與南國游擊隊崛起
+## Slide 10：二次合作破裂後，中共轉向貧農土改減稅，把敵後變成擴張基地。
 
-- **綁定卡片**：`CARD-15`, `CARD-16`, `CARD-21`, `CARD-22`, `CARD-23`
-- **排版型態**：中南對比雙主欄（背景動機／策略／對手比較／兵力成長）
+- **綁定卡片**：`CARD-15`, `CARD-16`
+- **視覺與版面配置**：雙軌結構演變對比頁 ＋ 內嵌 `<svg>` 敵後根據地擴張對比圖（依資料邊界不虛構未載年度兵力數字）。
 - **簡報內文**：
-  - **標題**：二戰敵後：中共與南國游擊隊崛起
-  - **核心結論**：中南共黨分靠「貧農減稅分地」與「跨族團結」在敵後由弱轉強。
-  - **中共統戰**：1936 西安事變促成國共合作，毛澤東主「獨立自主」對抗王明。
-  - **中共土改**：1941 皖南事變破裂後推貧農土改減稅，終在 1949 年掌權。
-  - **南國起義**：德軍百人質殺戮與烏斯塔沙（Ustaše）清洗引發全民反抗。
-  - **南國擴軍**：狄托（Tito）淡化共產、高喊「兄弟情誼」擴軍 80 萬（含 10 萬女戰士），完勝通敵切特尼克（Chetniks）。
-- **來源**：`[05_second_united_front.md, Background; Cooperation during the Second Sino-Japanese War; Breakdown and aftermath]; [06_yugoslav_partisans.md, 導言; Objectives; Allied support; Women]`
+  - **標題**：二次合作破裂後，中共轉向貧農土改減稅，把敵後變成擴張基地。
+  - **正文**：1936 年西安事變（Xi'an Incident）促成國共停火並編組八路軍（Eighth Route Army）與新四軍（New Fourth Army），毛澤東（Mao Zedong）則堅持獨立自主與「以空間換時間」。1941 年皖南事變（New Fourth Army Incident）後，中共在敵後推動貧農土改減稅，對比國府貪腐，終藉東北日械於 1949 年建國。
+  - **承上啟下過渡句**：同期的巴爾幹，另一支游擊隊正面臨殘酷存亡戰。
+  - **SVG 建議標籤（30 字元）**：`1936 西安事變合作` / `1941 皖南破裂` / `貧農土改減稅` / `1949 建國`
+- **來源**：`[05_second_united_front.md, 導言; Background; Cooperation during the Second Sino-Japanese War; Breakdown and aftermath]`
+- **字數預估**：中文字 119 字｜正文可視字元 225 字（加 SVG 約 255 字）
 
 ---
 
-## Slide 09：歐亞跨區流動網
+## Slide 11：南斯拉夫游擊隊淡化共產口號並團結各族，自主打下八十萬大軍。
 
-- **綁定卡片**：`CARD-14`, `CARD-15`, `CARD-16`, `CARD-24`, `CARD-25`, `CARD-26`
-- **排版型態**：跨區連動路徑卡片（三條流動鏈結箭頭卡片）
+- **綁定卡片**：`CARD-21`, `CARD-22`, `CARD-23`, `CARD-24`
+- **視覺與版面配置**：右圖左文紀念焦點頁 ＋ 本機圖片 `assets/05_yugoslavia.jpg`。
 - **簡報內文**：
-  - **標題**：歐亞跨區流動網
-  - **核心結論**：人員與軍火跨國流動改寫戰局。
-  - **白俄與坦克**：海參崴 FT-17 坦克與白俄入東北，150–170 人赴西班牙。
-  - **老兵與契卡**：逾千國際縱隊（International Brigades）南國老兵返鄉抗敵；「契卡」（Cheka）外溢為 *checas*。
-  - **蘇聯槓桿**：逼蔣停火，1947–1948 年遭狄托決裂。
-- **來源**：`[01_russian_civil_war.md, Background; Aftermath]; [03_spanish_civil_war.md, Foreign involvement; Atrocities]; [04_warlord_era_china.md, Armaments]; [05_second_united_front.md, Background]; [06_yugoslav_partisans.md, Operations; Post-war]`
+  - **標題**：南斯拉夫游擊隊淡化共產口號並團結各族，自主打下八十萬大軍。
+  - **正文**：1941 年軸心國瓜分南斯拉夫後，德軍殺百名平民報復，烏斯塔沙（Ustaše）亦展開清洗；切特尼克（Chetniks）畏戰通敵並屠殺非塞族，1943 年遭盟軍放棄。南共（KPJ）狄托（Josip Broz Tito）淡化共產口號，以「兄弟情誼與團結」（brotherhood and unity）凝聚各族與十萬女戰士，建成 80 萬大軍自主建國。
+  - **圖說**：南斯拉夫反法西斯游擊隊紀念雕塑。
+  - **承上啟下過渡句**：其實，五國戰場還連著一條跨洲流動網。
+- **來源**：`[06_yugoslav_partisans.md, 導言; Objectives; Background and origins; Operations; Services; Composition; Women; Post-war]`
+- **字數預估**：中文字 144 字｜正文可視字元 228 字（無 SVG，安全低於 280 字）
 
 ---
 
-## Slide 10：結局分岔與後方治理
+## Slide 12：從海參崴坦克到西班牙老兵，一條歐亞流動網改寫了五國戰局。
 
-- **綁定卡片**：`CARD-27`, `CARD-19`, `CARD-22`, `CARD-24`
-- **排版型態**：雙路徑結局矩陣 ＋ 底部塞德曼三國對比條
+- **綁定卡片**：`CARD-25`, `CARD-26`
+- **視覺與版面配置**：跨洲路徑圖解頁 ＋ 內嵌 `<svg>` 歐亞跨國流動路徑圖。
 - **簡報內文**：
-  - **標題**：結局分岔與後方治理
-  - **核心結論**：後方治安與跨群體正當性決定存亡。
-  - **覆滅整編**：俄黑綠、巴斯馬奇（Basmachi）、德委員會、西民兵、切特尼克瓦解。
-  - **獨立執政**：芬蘭波羅的海獨立；中共、南國游擊隊執政。
-  - **塞德曼（Michael Seidman）**：佛朗哥清理（limpieza）穩後方；俄白軍與國府失控。
-- **來源**：`[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution; Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, After 1945]; [06_yugoslav_partisans.md, Post-war]`
+  - **標題**：從海參崴坦克到西班牙老兵，一條歐亞流動網改寫了五國戰局。
+  - **正文**：100 至 200 萬白俄流亡者（White émigrés）跨洲流動：海參崴法製 FT-17（Renault FT-17）坦克與白軍軍火歸張作霖（Zhang Zuolin），白俄兵團在上海阻擊北伐，更有 150 至 170 名赴西助戰。左翼亦然：俄國契卡（Cheka）之名外溢西班牙，國際縱隊（International Brigades）逾千南國老兵返國成為游擊骨幹。
+  - **承上啟下過渡句**：結合跨國流動與各國結局，成敗規律隨之浮現。
+  - **SVG 建議標籤（35 字元）**：`海參崴 FT-17` / `東北・上海白俄` / `西班牙 150–170 白俄` / `千名南國老兵返國`
+- **來源**：`[01_russian_civil_war.md, 導言; Aftermath]; [03_spanish_civil_war.md, Foreign involvement; Atrocities]; [04_warlord_era_china.md, Armaments; Other forces]; [06_yugoslav_partisans.md, Operations; Composition]`
+- **字數預估**：中文字 124 字｜正文可視字元 223 字（加 SVG 約 258 字）
 
 ---
 
-## Slide 11：史觀交鋒與研究邊界
+## Slide 13：地方勢力能否走完奪權最後一哩，取決於土改、統戰與後方治安。
+
+- **綁定卡片**：`CARD-27`
+- **視覺與版面配置**：四象限矩陣分析頁 ＋ 內嵌 `<svg>` 成敗分岔矩陣。
+- **簡報內文**：
+  - **標題**：地方勢力能否走完奪權最後一哩，取決於土改、統戰與後方治安。
+  - **正文**：缺乏穩固基層與後勤的武裝多半瓦解：俄國黑軍綠軍遭剿、德國委員會交權、西班牙共和派敗亡，中國舊軍閥則成被收編的包袱。塞德曼（Michael Seidman）指出，西班牙國民軍靠控糧鎮壓杜絕游擊，俄白軍與國府縱容匪患貪腐盡失民心；唯有掌握土改減稅、跨族統戰與自主軍力的中共與南國游擊隊，成功蛻變為全國政權。
+  - **承上啟下過渡句**：然而對同一段歷史，史家評價卻截然相反。
+  - **SVG 建議標籤（31 字元）**：`基層土改統戰` / `後方治安管控` / `覆滅・整編` / `獨立・掌權（芬／波／中／南）`
+- **來源**：`[01_russian_civil_war.md, 導言; Aftermath]; [02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left]; [03_spanish_civil_war.md, Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]`
+- **字數預估**：中文字 166 字｜正文可視字元 198 字（加 SVG 約 229 字）
+
+---
+
+## Slide 14：鎮壓是防衛還是背叛？史家觀點對立，史料也留有明確空白。
 
 - **綁定卡片**：`CARD-07`, `CARD-11`, `CARD-16`, `CARD-20`, `CARD-24`, `CARD-28`
-- **排版型態**：四大史觀雙欄對照表 ＋ 底部「史料缺漏邊界」警示卡
+- **視覺與版面配置**：報紙雙欄細線對照版面（左欄「觀點 A：防衛與失序論」vs. 右欄「觀點 B：專政與清洗論」，底部附細線研究邊界警示欄；無圖片、無重複色條卡片）。
 - **簡報內文**：
-  - **標題**：史觀交鋒與研究邊界
-  - **核心結論**：同一鎮壓史家看法相反，且須揭示史料盲區。
-  - **俄**：利布曼防衛 vs. 張伯倫專政；紅恐估 5 萬至 200 萬。
-  - **德**：SPD 護民主 vs. 背叛工人／過度妥協。
-  - **西**：失序論 vs. 半組織「契卡」執法。
-  - **中南**：皖南互控先開火；南國 8–10 萬清洗修正爭論。
-  - **研究邊界**：`[資料不足／不確定：未載德無政府派、中共蘇區與八路軍人數]`
-- **來源**：`[01_russian_civil_war.md, Background; Aftermath]; [02_german_revolution_1918_1919.md, Historical research]; [03_spanish_civil_war.md, Atrocities]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]`
+  - **標題**：鎮壓是防衛還是背叛？史家觀點對立，史料也留有明確空白。
+  - **左欄（觀點 A：防衛與失序）**：利布曼（Marcel Liebman）視俄禁黨為戰時防衛；護憲派認德社民黨阻內戰；失序論指西國處決源於崩潰；南國老兵捍衛抗敵記憶。
+  - **右欄（觀點 B：專政與清洗）**：張伯倫（William Henry Chamberlin）批俄專政（紅恐估 5 至 200 萬）；修正派批德妥協過頭；佩恩（Stanley Payne）指西國屬組織清洗；皖南互控先開火，南國 8 至 10 萬清洗引發修正主義。
+  - **研究邊界**：`[資料不足／不確定：未載中共蘇區、1923 後德左翼、八路軍兵力與非蘇聯跨國交流。]`
+  - **承上啟下過渡句**：帶著對證據邊界的清醒，我們收束全場。
+- **來源**：`[01_russian_civil_war.md, Background; Aftermath]; [02_german_revolution_1918_1919.md, Contemporary statements]; [03_spanish_civil_war.md, Atrocities]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war; Partisan legacy]`
+- **字數預估**：中文字 179 字｜正文可視字元 272 字（含雙欄小標、無 SVG，低於 280 字）
 
 ---
 
-## Slide 12：總結：帶走三個提問
+## Slide 15：面對戰火與秩序重組，帶走三個檢視勢力興衰的思考工具。
 
 - **綁定卡片**：`CARD-03`, `CARD-25`, `CARD-26`, `CARD-27`, `CARD-28`
-- **排版型態**：總結收斂頁（核心結論 ＋ 三題初學者思辨提問卡）
+- **視覺與版面配置**：編輯索引三欄收束頁（襯線大序號 `01 / 02 / 03` 與水平細線排版，呼應開篇核心主軸）。
 - **簡報內文**：
-  - **標題**：總結：帶走三個提問
-  - **核心結論**：兩次大戰是決定「民主或集權、地方如何化為政權」的連鎖實驗。
-  - **提問 1（路線兩難）**：生存危機下，基層自治為何常輸給高度集權？
-  - **提問 2（崛起公式）**：武器外援外，土改、跨族統戰與治安為何更關鍵？
-  - **提問 3（史料自覺）**：遇史觀衝突與空白時，如何保持雙重溯源與誠實不知？
+  - **標題**：面對戰火與秩序重組，帶走三個檢視勢力興衰的思考工具。
+  - **正文**：
+    - 第一，看「組織兩難」：追求集權贏戰時，左翼能否避免在內部清洗中自我吞噬？
+    - 第二，看「後方紮根」：武裝靠強徵與貪腐維繫，還是靠土改減稅與跨群體統戰贏得支持？
+    - 第三，看「跨區連動」：別忘了追蹤流亡軍人、外國軍火與禁運如何跨洲重塑本地戰局。
+  - **承上啟下過渡句（全場收束）**：回到核心之問：唯有兼顧基層認同與後方秩序者，才能走到最後。
 - **來源**：`[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]`
-
----
-
-## 檢查關卡 2：AI 忠實度自審暫存紀錄（兩輪局部校對）
-
-- **核對範圍**：逐頁比對 Slide 01～12 與 [cards.md](cards.md) 全部年份、人物、數據、史觀並列、來源標記與預估純文字字數（含標題、結論、內文與底部來源欄，目標預留充足緩衝低於 380 字元）。
-- **第 1 輪審查發現與局部調整（僅修改異常頁）**：
-  - **Slide 08、Slide 11**：將長句拆解為初學者易懂的白話短句，第 11 頁四大史觀改採雙邊並列並顯式保留 `[資料不足／不確定：...]`。
-- **第 2 輪局部複檢發現與精準修正（僅針對 Slide 04、05、06、09、10、11）**：
-  - **Slide 04 / 05 / 06**：補齊 `Vladimir Lenin`、`New Economic Policy`、`Karl Liebknecht`、`Rosa Luxemburg`、`Ruhr Red Army`、`Yan Xishan`、`Feng Yuxiang`、`Red Spear Society` 完整原文附註。
-  - **Slide 09 / 10**：修正白俄人數為 `150–170 名`、蘇南分裂年份為 `1947–1948 年`，將塞德曼（Michael Seidman）對俄白軍與國府之評價精確回「未壓制叛亂、縱容貪腐失正當性」並補入 `Spanish Revolution` 來源。
-  - **Slide 11**：將「5–200 萬」改為明確「5 萬至 200 萬」並點名利布曼與張伯倫，且將「八路軍編制」改為符合 `CARD-28` 的「八路軍兵力數」。
-- **檢查關卡 3 退回局部調整紀錄（Slide 04、09、10、11）**：Node 5 第 1 輪 `verify_slides.py` 檢出該 4 頁超出 380 字元（420 / 441 / 456 / 386），依工作流僅退回修改該 4 頁（精簡頁底章節層級路徑為 H2/H3 實名並濃縮短句、不改動其餘 8 頁及史實精確度），同步渲染後第 2 輪全數以 `<= 372` 字元通過。
-- **結論**：Slide 01～12 全數通過檢查關卡 2 與檢查關卡 3，與 `index.html`、`workflow_output/deck.html` 完全同步。
+- **字數預估**：中文字 147 字｜正文可視字元 170 字（無 SVG，安全低於 280 字）

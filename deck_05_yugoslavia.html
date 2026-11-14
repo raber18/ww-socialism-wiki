@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>05｜南斯拉夫篇（1941–1948）：跨民族游擊隊的自主崛起｜戰火下的路線分歧</title>
+  <style>
+    :root {
+      --paper: #F7F4EB;
+      --paper-alt: #EFECE1;
+      --paper-card: #FBF9F4;
+      --ink: #1C1917;
+      --ink-muted: #57534E;
+      --red: #991B1B;
+      --blue: #1E3A5F;
+      --ochre: #9A6B21;
+      --hairline: #D6CFC2;
+      --serif: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+      --sans: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #EAE4D7;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 固定頂部系列導覽列與進度條 */
+    .series-topbar {
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 1px solid #3A342F;
+      flex-shrink: 0;
+    }
+
+    .series-nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .series-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .series-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #E7E2D6;
+      padding: 4px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.25);
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .series-links a:hover {
+      background: rgba(247, 244, 235, 0.1);
+      border-color: var(--paper);
+    }
+
+    .series-links a.is-current {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .deck-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.85rem;
+      color: #D6CFC2;
+    }
+
+    .slide-counter {
+      font-weight: 700;
+      color: var(--paper);
+      padding: 3px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.35);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 3px;
+      background: #3A342F;
+      flex-shrink: 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 16.67%;
+      background: var(--red);
+      transition: width 0.25s ease;
+    }
+
+    /* 簡報主舞台 */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px 10px;
+      min-height: 0;
+    }
+
+    section.slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 560px;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
+      padding: 34px 44px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+    }
+
+    section.slide.active {
+      display: flex;
+      animation: fadePage 0.2s ease;
+    }
+
+    @keyframes fadePage {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section.slide.slide--cover {
+      background:
+        radial-gradient(circle at 86% 20%, rgba(153, 27, 27, 0.34) 0%, transparent 48%),
+        radial-gradient(circle at 14% 85%, rgba(30, 58, 95, 0.24) 0%, transparent 46%),
+        var(--ink);
+      color: var(--paper);
+      border-color: #3A342F;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide--cover .kicker {
+      color: #E2C799;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      line-height: 1.28;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.3vw, 2.6rem);
+      color: var(--paper);
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 10px;
+    }
+
+    .cover-subtitle {
+      font-size: 1.06rem;
+      line-height: 1.72;
+      color: #E7E2D6;
+      max-width: 62ch;
+    }
+
+    .cover-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cover-tag {
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border: 1px solid rgba(226, 199, 153, 0.45);
+      color: #F7F4EB;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .svg-frame {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      padding: 12px 14px;
+    }
+
+    .slide--cover .svg-frame {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(214, 207, 194, 0.25);
+    }
+
+    .svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Slide 2：文圖雙欄檔案版 */
+    .split-media {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .story-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+    }
+
+    .story-stack p {
+      font-size: 0.97rem;
+      line-height: 1.68;
+      color: var(--ink);
+    }
+
+    figure.archival-fig {
+      border: 1px solid var(--hairline);
+      background: var(--paper-card);
+      padding: 10px;
+    }
+
+    figure.archival-fig img {
+      width: 100%;
+      max-height: 290px;
+      object-fit: cover;
+      display: block;
+      filter: sepia(14%) contrast(1.04);
+    }
+
+    figure.archival-fig figcaption {
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    /* 細線時間軸列與對照雙欄 */
+    .chronology-rows {
+      border-top: 1px solid var(--ink);
+    }
+
+    .chronology-row {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 18px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--hairline);
+      align-items: baseline;
+    }
+
+    .chronology-date {
+      font-family: var(--serif);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .chronology-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .editorial-split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .editorial-col {
+      padding: 12px 20px 12px 0;
+    }
+
+    .editorial-col + .editorial-col {
+      padding: 12px 0 12px 20px;
+      border-left: 1px solid var(--hairline);
+    }
+
+    .editorial-col p {
+      font-size: 0.94rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    .col-label {
+      font-family: var(--serif);
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 5px;
+    }
+
+    .col-label--blue {
+      color: var(--blue);
+    }
+
+    .spillover-band {
+      background: var(--paper-alt);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 11px 16px;
+      font-size: 0.93rem;
+      line-height: 1.58;
+      color: var(--ink);
+    }
+
+    .spillover-band strong {
+      color: var(--blue);
+    }
+
+    /* Slide 6：三欄收官總結 */
+    .takeaways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 16px;
+    }
+
+    .takeaway-cell {
+      border-top: 2px solid var(--red);
+      padding-top: 10px;
+    }
+
+    .takeaway-cell:nth-child(2) {
+      border-top-color: var(--blue);
+    }
+
+    .takeaway-cell:nth-child(3) {
+      border-top-color: var(--ochre);
+    }
+
+    .takeaway-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .takeaway-desc {
+      font-size: 0.92rem;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .cross-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .cross-pill {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--paper-card);
+      border: 1px solid var(--blue);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .cross-pill:hover {
+      background: var(--blue);
+      color: var(--paper);
+    }
+
+    .cta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 6px;
+    }
+
+    .cta-btn {
+      text-decoration: none;
+      background: var(--red);
+      color: var(--paper);
+      border: 1px solid var(--red);
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: background 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background: #7F1D1D;
+    }
+
+    /* 頁底出處欄 */
+    footer.slide-source {
+      border-top: 1px solid var(--hairline);
+      padding-top: 9px;
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--ink-muted);
+      word-break: break-word;
+    }
+
+    .slide--cover footer.slide-source {
+      border-top-color: rgba(214, 207, 194, 0.25);
+      color: #B8B0A4;
+    }
+
+    /* 底部控制列 */
+    .controls {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--hairline);
+      padding: 4px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 860px) {
+      section.slide {
+        padding: 24px 22px 18px;
+      }
+      .split-media,
+      .editorial-split,
+      .takeaways-grid,
+      .chronology-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .editorial-col + .editorial-col {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding: 12px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="series-topbar">
+    <nav class="series-nav" aria-label="全系列簡報導覽列">
+      <div class="series-links">
+        <a href="index.html">策展總覽 index.html</a>
+        <a href="deck_00_framework.html">00 總論</a>
+        <a href="deck_01_russia.html">01 俄國</a>
+        <a href="deck_02_germany.html">02 德國</a>
+        <a href="deck_03_china.html">03 中國</a>
+        <a href="deck_04_spain.html">04 西班牙</a>
+        <a href="deck_05_yugoslavia.html" class="is-current">05 南斯拉夫</a>
+      </div>
+      <div class="deck-status">
+        <span>05｜南斯拉夫篇（1941–1948）</span>
+        <span class="slide-counter" id="slideCounter">01 / 06</span>
+      </div>
+    </nav>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- Slide 1：全版面深色封面 -->
+    <section class="slide slide--cover" id="slide-1">
+      <div class="slide-body">
+        <span class="kicker">DECK 05 · YUGOSLAVIA 1941–1948</span>
+        <h1>跨民族游擊隊的自主崛起：1941–1948 南斯拉夫如何自己建國？</h1>
+        <p class="cover-subtitle">
+          1941 年軸心國肢解南國並發動百人質屠殺與清洗；狄托（Josip Broz Tito）淡化共產口號，憑「兄弟情誼與團結」人民陣線與西班牙老兵從游擊成長為逾 80 萬大軍，自主解放並抗衡蘇聯。
+        </p>
+        <div class="cover-tags">
+          <span class="cover-tag">1941 軸心國瓜分與起義</span>
+          <span class="cover-tag">兄弟情誼與團結</span>
+          <span class="cover-tag">西班牙老兵與女戰士</span>
+          <span class="cover-tag">1947–1948 蘇南決裂</span>
+        </div>
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 92" role="img" aria-label="1941至1948南斯拉夫游擊隊時間軸">
+            <line x1="60" y1="46" x2="900" y2="46" stroke="#D6CFC2" stroke-width="1.5" />
+            <circle cx="120" cy="46" r="6" fill="#E2C799" />
+            <text x="120" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1941.4–7 瓜分與起義</text>
+
+            <circle cx="360" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="360" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1943 盟軍 ULTRA 轉向</text>
+
+            <circle cx="605" cy="46" r="6" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="605" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1945 自主解放與清洗</text>
+
+            <circle cx="840" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="840" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1947–48 狄托史達林決裂</text>
+          </svg>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[06_yugoslav_partisans.md, 導言; Background and origins; Post-war]</footer>
+    </section>
+
+    <!-- Slide 2：文圖雙欄檔案版 -->
+    <section class="slide" id="slide-2">
+      <div class="slide-body">
+        <span class="kicker">01 · AXIS PARTITION &amp; TERROR MOBILIZATION</span>
+        <h2>1941 年軸心國肢解南斯拉夫，百人質報復與清洗逼出反抗</h2>
+
+        <div class="split-media">
+          <div class="story-stack">
+            <p>
+              1941 年 4 月軸心國（Axis powers）閃電肢解南斯拉夫王國：納粹德國在塞爾維亞設歐陸唯一純軍事政權，執行「每殺一德兵處決 100 名平民、傷一兵殺 50 人」之嚴厲報復（克拉列沃 2,000 死、克拉古耶瓦茨 3,000 死）。
+            </p>
+            <p>
+              德國主導的「克羅埃西亞獨立國」（NDH）執政者烏斯塔沙（Ustaše）對塞族展開種族滅絕，卻又割讓北達爾馬提亞給義大利；佔領與清洗暴行迫使各族平民把抵抗當成求生出路，大量克族亦轉投游擊隊。
+            </p>
+          </div>
+          <figure class="archival-fig">
+            <img src="assets/05_yugoslavia.jpg" alt="南斯拉夫反法西斯游擊隊紀念雕塑" />
+            <figcaption>南斯拉夫反法西斯游擊隊紀念雕塑（CC0）</figcaption>
+          </figure>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[06_yugoslav_partisans.md, Background and origins; Operations; Overview by post-war republic; Composition]</footer>
+    </section>
+
+    <!-- Slide 3：跨國連動版 -->
+    <section class="slide" id="slide-3">
+      <div class="slide-body">
+        <span class="kicker">02 · POPULAR FRONT &amp; SPANISH VETERANS</span>
+        <h2>狄托淡化共產口號高喊「兄弟情誼」，西班牙老兵返鄉扛骨幹</h2>
+
+        <div class="chronology-rows">
+          <div class="chronology-row">
+            <span class="chronology-date">6 月 22 日轉折</span>
+            <span class="chronology-text">1941 年 4–6 月南共（KPJ）受《德蘇互不侵犯條約》約束先囤槍未動；德軍發動「巴巴羅薩行動」當天即於錫薩克起義，7 月全面展開武裝反抗。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">淡化共產口號</span>
+            <span class="chronology-text">宣傳刻意「淡化共產主義」（played down communism），藉由聯合陣線 UNOF 與最高代議機構 AVNOJ 高舉「兄弟情誼與團結」（brotherhood and unity）跨越族群藩籬（惟戰初塞族仍佔多數並偶有排外磨擦）。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">西班牙老兵優勢</span>
+            <span class="chronology-text">逾千名曾參與西班牙國際縱隊的南斯拉夫老兵返鄉入列（如斯洛維尼亞前線），帶來境內獨一無二的現代游擊戰經驗與指揮骨幹，成擴軍關鍵。</span>
+          </div>
+        </div>
+
+        <div class="cross-pills">
+          <a class="cross-pill" href="deck_04_spain.html#slide-4">04 西班牙：國際縱隊與整肅起源 ↗</a>
+          <a class="cross-pill" href="deck_00_framework.html#slide-4">00 總論：歐亞六大跨國連動鏈 ↗</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[06_yugoslav_partisans.md, Objectives; Background and origins; Operations; Composition]; [03_spanish_civil_war.md, Foreign involvement]</footer>
+    </section>
+
+    <!-- Slide 4：對手比較圖解版 -->
+    <section class="slide" id="slide-4">
+      <div class="slide-body">
+        <span class="kicker">03 · PARTISANS VS. CHETNIKS</span>
+        <h2>全民動員擴軍逾 80 萬並建海空軍 vs. 保皇切特尼克排他通敵</h2>
+
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 155" role="img" aria-label="南斯拉夫游擊隊與切特尼克動員路線對比圖">
+            <rect x="0" y="0" width="960" height="155" fill="#FBF9F4" />
+            <!-- 左側游擊隊 -->
+            <rect x="28" y="18" width="365" height="84" fill="#F7F4EB" stroke="#991B1B" stroke-width="2" />
+            <text x="210" y="46" text-anchor="middle" font-size="14.5" font-weight="800" fill="#991B1B">游擊隊：跨民族與海空正規軍</text>
+            <text x="210" y="69" text-anchor="middle" font-size="11.5" fill="#1C1917">1941 年 8.1 萬 → 1945 年逾 80 萬（63 師）</text>
+            <text x="210" y="88" text-anchor="middle" font-size="11" fill="#57534E">200 萬 AFŽ 女性・10 萬女戰士・海空兩軍</text>
+
+            <!-- 中央轉折 -->
+            <rect x="415" y="34" width="130" height="52" fill="#1C1917" />
+            <text x="480" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#E2C799">1943 盟軍轉向</text>
+            <text x="480" y="75" text-anchor="middle" font-size="10.5" fill="#F7F4EB">ULTRA 破譯證實通敵</text>
+
+            <!-- 右側切特尼克 -->
+            <rect x="567" y="18" width="365" height="84" fill="#F7F4EB" stroke="#1E3A5F" stroke-width="2" />
+            <text x="750" y="46" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1E3A5F">保皇切特尼克（Chetniks）</text>
+            <text x="750" y="69" text-anchor="middle" font-size="11.5" fill="#1C1917">米哈伊洛維奇・圖建單一「大塞爾維亞」</text>
+            <text x="750" y="88" text-anchor="middle" font-size="11" fill="#57534E">屠殺穆克平民拒他族・畏百人報復轉向妥協</text>
+
+            <!-- 底欄數據 -->
+            <line x1="28" y1="125" x2="932" y2="125" stroke="#D6CFC2" stroke-width="1" />
+            <text x="480" y="143" text-anchor="middle" font-size="11.5" fill="#57534E">游擊隊累計陣亡 245,549 人並於解放區自製軍械；美機組統計 1944 年游擊隊救出 795 名美飛行員、切特尼克仍矛盾救出 356 名</text>
+          </svg>
+        </div>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <p>
+              200 萬女性加入反法西斯婦女陣線（AFŽ）且約 10 萬女戰士（<em>partizanke</em>）上火線；達爾馬提亞漁船組成 3,000 人海軍，1942 年獲駕機投誠建成歐陸罕見抵抗空軍。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <p>
+              切特尼克因大塞族清洗失去非塞族兵源，1943 年英軍目擊德軍搭火車通過其防區加上 ULTRA 截密，促使盟國於德黑蘭會議將軍援全數轉予狄托。
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[06_yugoslav_partisans.md, 導言; Operations; Services; Composition; Casualties; Rescue operations; Women]</footer>
+    </section>
+
+    <!-- Slide 5：戰後與跨國決裂版 -->
+    <section class="slide" id="slide-5">
+      <div class="slide-body">
+        <span class="kicker">04 · SELF-LIBERATION, PURGES &amp; TITO-STALIN SPLIT</span>
+        <h2>1945 自主光復、戰後大清洗爭議與 1947–1948 狄托－史達林分裂</h2>
+
+        <div class="spillover-band">
+          <strong>歐陸唯二自主解放國家：</strong>南斯拉夫軍民戰時犧牲 90–115 萬人，最終靠自身主導光復全境（僅貝爾格勒獲蘇英協同且戰後無外軍駐留），使狄托擁有在 1947–1948 年拒絕對蘇屈服、開創冷戰不結盟外交的底氣。
+        </div>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">布萊堡清洗與反法西斯記憶</div>
+            <p>
+              1944–1945 年游擊隊於布萊堡（Bleiburg）等地無差別處決撤退 NDH、切特尼克及平民，坦納（Marcus Tanner）估約 8 至 10 萬人遇害；戰後 SUBNOR 與左翼持續捍衛反法西斯功績。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">官方禁忌與解體後修正反彈</div>
+            <p>
+              官方直到 1980 年代末皆將清洗列為禁忌；南斯拉夫解體後長期沉默引爆數據操弄與全面否定游擊隊的歷史修正主義反彈（另 1942 年兵力亦有 23.6 萬與 13.5 萬統計落差）。
+            </p>
+          </div>
+        </div>
+
+        <div class="cross-pills">
+          <a class="cross-pill" href="deck_01_russia.html#slide-6">01 俄國：蘇聯體制源頭與歷史爭議 ↗</a>
+          <a class="cross-pill" href="deck_00_framework.html#slide-5">00 總論：比較地方成敗與盲區 ↗</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[06_yugoslav_partisans.md, 導言; Composition; Post-war; Partisan legacy]</footer>
+    </section>
+
+    <!-- Slide 6：全系列收官總結 -->
+    <section class="slide" id="slide-6">
+      <div class="slide-body">
+        <span class="kicker">05 · SERIES SYNTHESIS · 1914–1945</span>
+        <h2>全系列收官：帶給五國比較歷史的三個核心洞見</h2>
+
+        <div class="takeaways-grid">
+          <div class="takeaway-cell">
+            <span class="takeaway-title">01｜戰火製造真空</span>
+            <p class="takeaway-desc">
+              兩次大戰與內戰打碎舊中央後（俄國蘇維埃、德國委員會、中國土自衛與黨軍、西班牙公社、南國解放陣線），地方力量才有機會接管秩序並爭奪全國前途。
+            </p>
+          </div>
+          <div class="takeaway-cell">
+            <span class="takeaway-title">02｜治理勝過空喊</span>
+            <p class="takeaway-desc">
+              單靠革命理想卻缺紀律整合常敗（如馬赫諾與西班牙工團）；反之如俄紅軍起用舊軍官、中共敵後土改減稅或南共跨民族聯合陣線，將基層動員化為實權。
+            </p>
+          </div>
+          <div class="takeaway-cell">
+            <span class="takeaway-title">03｜跨國連鎖與史觀</span>
+            <p class="takeaway-desc">
+              白俄坦克、契卡與西班牙老兵證明歐亞戰場彼此相連；面對紅白恐怖、皖南開火與戰後清洗，須並陳史家對立並誠實面對史料空白。
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-bar">
+          <a class="cross-pill" href="deck_00_framework.html#slide-5">回顧地方成敗與塞德曼公式 ↗</a>
+          <a class="cta-btn" href="index.html">返回系列策展總覽 index.html ↺</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="簡報導覽控制">
+    <div class="btn-group">
+      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+    </div>
+    <div class="dots" id="dotsNav"></div>
+    <span class="hint">支援 ← / → / 空白鍵 / PageUp / PageDown 切換投影片</span>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll("section.slide"));
+      const counter = document.getElementById("slideCounter");
+      const fill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const dotsNav = document.getElementById("dotsNav");
+      const total = slides.length;
+      let current = 0;
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.textContent = String(idx + 1).padStart(2, "0");
+        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
+        dot.addEventListener("click", () => goTo(idx, true));
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+
+      function goTo(index, syncHash) {
+        if (index < 0 || index >= total) return;
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = index;
+        slides[current].classList.add("active");
+        dots[current].classList.add("active");
+        counter.textContent =
+          String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        fill.style.width = (((current + 1) / total) * 100).toFixed(2) + "%";
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+        if (syncHash) {
+          try {
+            history.replaceState(null, "", "#slide-" + (current + 1));
+          } catch (_) {}
+        }
+      }
+
+      function applyHash() {
+        const m = /^#slide-(\d+)$/i.exec(window.location.hash || "");
+        if (!m) return false;
+        const idx = parseInt(m[1], 10) - 1;
+        if (idx >= 0 && idx < total) {
+          goTo(idx, false);
+          return true;
+        }
+        return false;
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1, true));
+      nextBtn.addEventListener("click", () => goTo(current + 1, true));
+      window.addEventListener("hashchange", applyHash);
+
+      document.addEventListener("keydown", (e) => {
+        const tag = e.target && e.target.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+        if (
+          e.key === "ArrowRight" ||
+          e.key === "PageDown" ||
+          e.code === "Space" ||
+          e.key === " "
+        ) {
+          e.preventDefault();
+          goTo(current + 1, true);
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+          e.preventDefault();
+          goTo(current - 1, true);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0, true);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(total - 1, true);
+        }
+      });
+
+      if (!applyHash()) {
+        goTo(0, false);
+      }
+    })();
+  </script>
+</body>
+</html>
