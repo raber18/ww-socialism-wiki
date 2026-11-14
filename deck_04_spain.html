@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>04｜西班牙篇（1936–1939）：社會革命與左翼內鬨｜戰火下的路線分歧</title>
+  <style>
+    :root {
+      --paper: #F7F4EB;
+      --paper-alt: #EFECE1;
+      --paper-card: #FBF9F4;
+      --ink: #1C1917;
+      --ink-muted: #57534E;
+      --red: #991B1B;
+      --blue: #1E3A5F;
+      --ochre: #9A6B21;
+      --hairline: #D6CFC2;
+      --serif: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+      --sans: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #EAE4D7;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 固定頂部系列導覽列與進度條 */
+    .series-topbar {
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 1px solid #3A342F;
+      flex-shrink: 0;
+    }
+
+    .series-nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .series-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .series-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #E7E2D6;
+      padding: 4px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.25);
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .series-links a:hover {
+      background: rgba(247, 244, 235, 0.1);
+      border-color: var(--paper);
+    }
+
+    .series-links a.is-current {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .deck-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.85rem;
+      color: #D6CFC2;
+    }
+
+    .slide-counter {
+      font-weight: 700;
+      color: var(--paper);
+      padding: 3px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.35);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 3px;
+      background: #3A342F;
+      flex-shrink: 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 16.67%;
+      background: var(--red);
+      transition: width 0.25s ease;
+    }
+
+    /* 簡報主舞台 */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px 10px;
+      min-height: 0;
+    }
+
+    section.slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 560px;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
+      padding: 34px 44px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+    }
+
+    section.slide.active {
+      display: flex;
+      animation: fadePage 0.2s ease;
+    }
+
+    @keyframes fadePage {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section.slide.slide--cover {
+      background:
+        radial-gradient(circle at 86% 20%, rgba(153, 27, 27, 0.34) 0%, transparent 48%),
+        radial-gradient(circle at 14% 85%, rgba(30, 58, 95, 0.24) 0%, transparent 46%),
+        var(--ink);
+      color: var(--paper);
+      border-color: #3A342F;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide--cover .kicker {
+      color: #E2C799;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      line-height: 1.28;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.3vw, 2.6rem);
+      color: var(--paper);
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 10px;
+    }
+
+    .cover-subtitle {
+      font-size: 1.06rem;
+      line-height: 1.72;
+      color: #E7E2D6;
+      max-width: 62ch;
+    }
+
+    .cover-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cover-tag {
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border: 1px solid rgba(226, 199, 153, 0.45);
+      color: #F7F4EB;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .svg-frame {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      padding: 12px 14px;
+    }
+
+    .slide--cover .svg-frame {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(214, 207, 194, 0.25);
+    }
+
+    .svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Slide 2：左圖右文檔案版 */
+    .split-media-left {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    figure.archival-fig {
+      border: 1px solid var(--hairline);
+      background: var(--paper-card);
+      padding: 10px;
+    }
+
+    figure.archival-fig img {
+      width: 100%;
+      max-height: 290px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: sepia(16%) contrast(1.03);
+    }
+
+    figure.archival-fig figcaption {
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    .story-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+    }
+
+    .story-stack p {
+      font-size: 0.97rem;
+      line-height: 1.68;
+      color: var(--ink);
+    }
+
+    /* 細線雙欄與時間序列 */
+    .editorial-split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .editorial-col {
+      padding: 13px 20px 13px 0;
+    }
+
+    .editorial-col + .editorial-col {
+      padding: 13px 0 13px 20px;
+      border-left: 1px solid var(--hairline);
+    }
+
+    .editorial-col p {
+      font-size: 0.95rem;
+      line-height: 1.64;
+      color: var(--ink);
+    }
+
+    .col-label {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+
+    .col-label--blue {
+      color: var(--blue);
+    }
+
+    .chronology-rows {
+      border-top: 1px solid var(--ink);
+    }
+
+    .chronology-row {
+      display: grid;
+      grid-template-columns: 145px minmax(0, 1fr);
+      gap: 18px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--hairline);
+      align-items: baseline;
+    }
+
+    .chronology-date {
+      font-family: var(--serif);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .chronology-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .spillover-band {
+      background: var(--paper-alt);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 11px 16px;
+      font-size: 0.93rem;
+      line-height: 1.58;
+      color: var(--ink);
+    }
+
+    .spillover-band strong {
+      color: var(--blue);
+    }
+
+    .cross-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .cross-pill {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--paper-card);
+      border: 1px solid var(--blue);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .cross-pill:hover {
+      background: var(--blue);
+      color: var(--paper);
+    }
+
+    .cta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 6px;
+    }
+
+    .cta-btn {
+      text-decoration: none;
+      background: var(--red);
+      color: var(--paper);
+      border: 1px solid var(--red);
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: background 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background: #7F1D1D;
+    }
+
+    /* 頁底出處欄 */
+    footer.slide-source {
+      border-top: 1px solid var(--hairline);
+      padding-top: 9px;
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--ink-muted);
+      word-break: break-word;
+    }
+
+    .slide--cover footer.slide-source {
+      border-top-color: rgba(214, 207, 194, 0.25);
+      color: #B8B0A4;
+    }
+
+    /* 底部控制列 */
+    .controls {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--hairline);
+      padding: 4px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 860px) {
+      section.slide {
+        padding: 24px 22px 18px;
+      }
+      .split-media-left,
+      .editorial-split,
+      .chronology-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .editorial-col + .editorial-col {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding: 12px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="series-topbar">
+    <nav class="series-nav" aria-label="全系列簡報導覽列">
+      <div class="series-links">
+        <a href="index.html">策展總覽 index.html</a>
+        <a href="deck_00_framework.html">00 總論</a>
+        <a href="deck_01_russia.html">01 俄國</a>
+        <a href="deck_02_germany.html">02 德國</a>
+        <a href="deck_03_china.html">03 中國</a>
+        <a href="deck_04_spain.html" class="is-current">04 西班牙</a>
+        <a href="deck_05_yugoslavia.html">05 南斯拉夫</a>
+      </div>
+      <div class="deck-status">
+        <span>04｜西班牙篇（1936–1939）</span>
+        <span class="slide-counter" id="slideCounter">01 / 06</span>
+      </div>
+    </nav>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- Slide 1：全版面深色封面 -->
+    <section class="slide slide--cover" id="slide-1">
+      <div class="slide-body">
+        <span class="kicker">DECK 04 · SPAIN 1936–1939</span>
+        <h1>社會革命與左翼內鬨：1936–1939 西班牙共和國為何敗亡？</h1>
+        <p class="cover-subtitle">
+          七月政變癱瘓中央後，無政府工團率先展開集體化；但共和派深陷「先革命或先勝戰」的血腥分裂，加上 27 國禁運與德義重兵介入，使這場左翼實驗悲劇落幕。
+        </p>
+        <div class="cover-tags">
+          <span class="cover-tag">1936.7 政變與開倉發槍</span>
+          <span class="cover-tag">CNT-FAI vs. PCE</span>
+          <span class="cover-tag">1937.5 巴塞隆納五月</span>
+          <span class="cover-tag">27 國禁運 vs. 德義</span>
+        </div>
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 92" role="img" aria-label="1936至1939西班牙內戰與社會革命時間軸">
+            <line x1="60" y1="46" x2="900" y2="46" stroke="#D6CFC2" stroke-width="1.5" />
+            <circle cx="120" cy="46" r="6" fill="#E2C799" />
+            <text x="120" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1936.7 集體化與民兵</text>
+
+            <circle cx="360" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="360" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1936.10 蘇援 X 行動</text>
+
+            <circle cx="605" cy="46" r="6" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="605" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1937.5 巴塞隆納內鬨</text>
+
+            <circle cx="840" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="840" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1939 卡薩多政變與敗亡</text>
+          </svg>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, 導言; Military coup; Spanish Revolution; Consequences]</footer>
+    </section>
+
+    <!-- Slide 2：左圖右文檔案版 -->
+    <section class="slide" id="slide-2">
+      <div class="slide-body">
+        <span class="kicker">01 · JULY REVOLUTION &amp; WORKERS' MILITIAS</span>
+        <h2>1936 年七月軍人政變，工人開倉發槍掀開社會革命</h2>
+
+        <div class="split-media-left">
+          <figure class="archival-fig">
+            <img src="assets/04_spain.jpg" alt="1936 年西班牙共和派女民兵訓練實景" />
+            <figcaption>1936 年西班牙共和派女民兵訓練實景（Public domain）</figcaption>
+          </figure>
+          <div class="story-stack">
+            <p>
+              1936 年 7 月軍人政變爆發後，無政府工團主義 CNT-FAI 與社會主義工會 UGT 號召總罷工，新總理希拉爾（José Giral）下令開倉向工人發槍，在馬德里、巴塞隆納與瓦倫西亞擊退叛軍。
+            </p>
+            <p>
+              中央一度癱瘓，亞拉岡（Aragon）與加泰隆尼亞轉由平行地方委員會掌權並推動農業集體化與「工業社會化」（裁併小廠為工人民主卡特爾），吸引歐威爾（George Orwell）等約 3,000 名外籍志願者投入 CNT 與 POUM 民兵。
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, Military coup; Spanish Revolution; Combatants; Foreign involvement]</footer>
+    </section>
+
+    <!-- Slide 3：雙路線對決圖解版 -->
+    <section class="slide" id="slide-3">
+      <div class="slide-body">
+        <span class="kicker">02 · COLLECTIVIZATION VS. CENTRALIZATION</span>
+        <h2>共和派內部死結：先自治集體化，還是先集中權力贏得戰爭？</h2>
+
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 155" role="img" aria-label="西班牙共和派雙路線衝突圖">
+            <rect x="0" y="0" width="960" height="155" fill="#FBF9F4" />
+            <!-- 左路線 -->
+            <rect x="30" y="20" width="350" height="82" fill="#F7F4EB" stroke="#991B1B" stroke-width="2" />
+            <text x="205" y="48" text-anchor="middle" font-size="14.5" font-weight="800" fill="#991B1B">CNT-FAI ／ POUM 路線</text>
+            <text x="205" y="72" text-anchor="middle" font-size="12" fill="#1C1917">先自治集體化・拒民兵正規化</text>
+
+            <!-- 對決標記 -->
+            <line x1="388" y1="61" x2="572" y2="61" stroke="#1C1917" stroke-width="1.5" stroke-dasharray="4 4" />
+            <rect x="444" y="45" width="72" height="32" fill="#1C1917" />
+            <text x="480" y="66" text-anchor="middle" font-size="13" font-weight="800" fill="#F7F4EB">衝突死結</text>
+
+            <!-- 右路線 -->
+            <rect x="580" y="20" width="350" height="82" fill="#F7F4EB" stroke="#1E3A5F" stroke-width="2" />
+            <text x="755" y="48" text-anchor="middle" font-size="14.5" font-weight="800" fill="#1E3A5F">PCE ／ 溫和 PSOE 路線</text>
+            <text x="755" y="72" text-anchor="middle" font-size="12" fill="#1C1917">維護市民財產・先集中權力贏戰</text>
+
+            <!-- 底部整編張力 -->
+            <line x1="30" y1="126" x2="930" y2="126" stroke="#D6CFC2" stroke-width="1" />
+            <text x="480" y="143" text-anchor="middle" font-size="11.5" fill="#57534E">PSOE 卡瓦耶羅組建人民共和軍（EPR 逾 80 萬人）仍難解地方摩擦：加泰隆尼亞軍工接管後反減產、巴斯克 PNV 1937 年投降</text>
+          </svg>
+        </div>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <p>
+              CNT-FAI 與反史達林派馬克思主義統一工人黨（POUM，安德烈斯·寧 Andrés Nin 領導）力護基層公社，拒絕民兵被納入常備軍指揮體系。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <p>
+              西班牙共產黨（PCE）則藉蘇援壯大權力，反對激進沒收財產以維繫中產與英法好感，與巴斯克民族主義黨（PNV）及自治區張力俱增。
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, Spanish Revolution; Combatants; Course of the war; Friction between Republican leadership and Catalonia]</footer>
+    </section>
+
+    <!-- Slide 4：跨國連動版 -->
+    <section class="slide" id="slide-4">
+      <div class="slide-body">
+        <span class="kicker">03 · MAY DAYS, OPERATION X &amp; CHECAS SPILLOVER</span>
+        <h2>1937 五月事件、蘇聯黃金買軍火與 NKVD／契卡機制外溢</h2>
+
+        <div class="chronology-rows">
+          <div class="chronology-row">
+            <span class="chronology-date">蘇聯「X 行動」</span>
+            <span class="chronology-text">西方拒絕售武之際，蘇聯秘密「X 行動」（Operation X）運來 634–806 架戰機與 331–362 輛坦克，但須以共和國黃金儲備償付，急劇放大蘇聯與 PCE 話語權。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">1937.5 巴塞隆納</span>
+            <span class="chronology-text">數千名無政府派與共產黨士兵在五月事件（May Days）街頭交火；POUM 隨後遭誣為「法西斯工具」取締，蘇聯 NKVD 協助謀殺寧並整肅兩派（如歐威爾所紀實）。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">契卡與老兵連鎖</span>
+            <span class="chronology-text">俄國「契卡」（Cheka）名號外溢成共和區法外審查委員會（<em>checas</em>）；53 國約 3.2–4 萬人組國際縱隊雖遭馬蒂（André Marty）整肅約 500 人，卻鍛鍊出逾千名南斯拉夫返國骨幹。</span>
+          </div>
+        </div>
+
+        <div class="cross-pills">
+          <a class="cross-pill" href="deck_01_russia.html#slide-3">01 俄國：契卡（Cheka）起源與清洗 ↗</a>
+          <a class="cross-pill" href="deck_05_yugoslavia.html#slide-3">05 南斯拉夫：千名西班牙老兵返國 ↗</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, Course of the war; Foreign involvement; Atrocities]; [06_yugoslav_partisans.md, Operations]</footer>
+    </section>
+
+    <!-- Slide 5：不對稱外援對比版 -->
+    <section class="slide" id="slide-5">
+      <div class="slide-body">
+        <span class="kicker">04 · EMBARGO, AXIS SUPPORT &amp; LIMPIEZA</span>
+        <h2>27 國禁運重傷共和國，德義武力與高壓「清理」助佛朗哥勝出</h2>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">共和區｜禁運與三位數通膨</div>
+            <p>
+              英法主導 27 國不干涉禁運形同虛設卻重傷共和國（被迫高價向波蘭購劣械並引爆三位數惡性通膨，僅獲墨西哥兩百萬美元與蘇聯售武），1939 年 3 月卡薩多政變更在馬德里引發最後內鬨。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">國民軍｜德義奧援與後方清理</div>
+            <p>
+              義大利派出 5 萬「志願軍團」（CTV）、納粹德國派「禿鷹軍團」（Condor Legion，累計 1.6 萬人並轟炸格爾尼卡）加 150–170 名白俄助戰；佛朗哥強併右翼為 FET y de las JONS，靠紀律「清理」（<em>limpieza</em>）與糧控穩住 41% 溫和通膨及後方治安。
+            </p>
+          </div>
+        </div>
+
+        <div class="cross-pills">
+          <a class="cross-pill" href="deck_02_germany.html#slide-6">02 德國：威瑪隱患後的德軍干預 ↗</a>
+          <a class="cross-pill" href="deck_00_framework.html#slide-5">00 總論：塞德曼後方治安成敗比較 ↗</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, Combatants; Foreign involvement; Course of the war; Financing; Atrocities]</footer>
+    </section>
+
+    <!-- Slide 6：史觀爭議與下章導引 -->
+    <section class="slide" id="slide-6">
+      <div class="slide-body">
+        <span class="kicker">05 · HISTORIOGRAPHY ON TERROR &amp; NEXT DECK</span>
+        <h2>史觀交鋒：共和區暴力是無政府失序，或左翼半組織化執行？</h2>
+
+        <div class="spillover-band">
+          <strong>戰爭代價：</strong>全戰死亡約 25–100 萬人且戰後約 50 萬共和派大撤退流亡；國民軍白色恐怖估處決 13–20 萬人，共和區紅色恐怖估處決 3.8–7 萬人（含約 7,000 名神職人員）。
+        </div>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">觀點 A｜國家瓦解失序論</div>
+            <p>
+              格雷厄姆（Helen Graham）、普雷斯頓（Paul Preston）與比弗主張國民軍屬有紀律的「清理」，共和區多數殺戮源於國家崩潰與無政府失序（多數史家亦視本戰為二戰第一回合）。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">觀點 B｜半組織 <em>checas</em> 執行論</div>
+            <p>
+              佩恩（Stanley Payne）與魯伊斯（Julius Ruiz）反駁，除巴斯克派外多數左翼派系部分成員皆藉 <em>paseos</em> 暗殺隊與 <em>checas</em> 進行「半組織化活動」，佩恩並稱此戰實為一戰危機的終章。
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-bar">
+          <a class="cross-pill" href="deck_00_framework.html#slide-3">00 總論：左翼四派路線回顧 ↗</a>
+          <a class="cta-btn" href="deck_05_yugoslavia.html#slide-1">進入下一章：05 南斯拉夫篇 →</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[03_spanish_civil_war.md, Death toll; Atrocities; Consequences]</footer>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="簡報導覽控制">
+    <div class="btn-group">
+      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+    </div>
+    <div class="dots" id="dotsNav"></div>
+    <span class="hint">支援 ← / → / 空白鍵 / PageUp / PageDown 切換投影片</span>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll("section.slide"));
+      const counter = document.getElementById("slideCounter");
+      const fill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const dotsNav = document.getElementById("dotsNav");
+      const total = slides.length;
+      let current = 0;
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.textContent = String(idx + 1).padStart(2, "0");
+        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
+        dot.addEventListener("click", () => goTo(idx, true));
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+
+      function goTo(index, syncHash) {
+        if (index < 0 || index >= total) return;
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = index;
+        slides[current].classList.add("active");
+        dots[current].classList.add("active");
+        counter.textContent =
+          String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        fill.style.width = (((current + 1) / total) * 100).toFixed(2) + "%";
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+        if (syncHash) {
+          try {
+            history.replaceState(null, "", "#slide-" + (current + 1));
+          } catch (_) {}
+        }
+      }
+
+      function applyHash() {
+        const m = /^#slide-(\d+)$/i.exec(window.location.hash || "");
+        if (!m) return false;
+        const idx = parseInt(m[1], 10) - 1;
+        if (idx >= 0 && idx < total) {
+          goTo(idx, false);
+          return true;
+        }
+        return false;
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1, true));
+      nextBtn.addEventListener("click", () => goTo(current + 1, true));
+      window.addEventListener("hashchange", applyHash);
+
+      document.addEventListener("keydown", (e) => {
+        const tag = e.target && e.target.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+        if (
+          e.key === "ArrowRight" ||
+          e.key === "PageDown" ||
+          e.code === "Space" ||
+          e.key === " "
+        ) {
+          e.preventDefault();
+          goTo(current + 1, true);
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+          e.preventDefault();
+          goTo(current - 1, true);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0, true);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(total - 1, true);
+        }
+      });
+
+      if (!applyHash()) {
+        goTo(0, false);
+      }
+    })();
+  </script>
+</body>
+</html>
