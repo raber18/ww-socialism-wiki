@@ -130,14 +130,14 @@
       display: none;
       width: 100%;
       max-width: 1100px;
-      min-height: 560px;
+      min-height: 500px;
       background: var(--paper);
       border: 1px solid var(--hairline);
       box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
-      padding: 34px 44px 24px;
+      padding: 28px 44px 20px;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
+      gap: 14px;
       position: relative;
     }
 
@@ -166,13 +166,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 18px;
+      gap: 16px;
     }
 
     .kicker {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
       font-weight: 700;
       color: var(--red);
       font-variant-numeric: tabular-nums;
@@ -182,9 +181,14 @@
       color: #E2C799;
     }
 
+    .kicker + h1,
+    .kicker + h2 {
+      margin-top: -8px;
+    }
+
     h1, h2 {
       font-family: var(--serif);
-      line-height: 1.28;
+      line-height: 1.25;
       font-weight: 800;
       color: var(--ink);
     }
@@ -195,9 +199,9 @@
     }
 
     h2 {
-      font-size: clamp(1.42rem, 2.3vw, 1.9rem);
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 10px;
+      font-size: clamp(1.52rem, 2.5vw, 2.02rem);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
     }
 
     .cover-subtitle {
@@ -320,8 +324,7 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
-      border-top: 1px solid var(--hairline);
-      padding-top: 14px;
+      padding-top: 4px;
     }
 
     .flow-col {
@@ -344,8 +347,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      padding-top: 8px;
-      border-top: 1px solid var(--hairline);
+      padding-top: 2px;
     }
 
     .cross-pill {
@@ -370,8 +372,6 @@
     /* Slide 5：公式洞察與史料盲區 */
     .insight-band {
       background: var(--paper-alt);
-      border-top: 2px solid var(--blue);
-      border-bottom: 1px solid var(--hairline);
       padding: 13px 18px;
       font-size: 0.96rem;
       line-height: 1.65;
@@ -392,26 +392,28 @@
       font-weight: 600;
     }
 
-    /* Slide 6：三個思考工具與總結按鈕 */
+    /* Slide 6：三個思考工具與總結按鈕（無頂線雜誌三欄） */
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
+      gap: 32px;
+      padding: 6px 0;
     }
 
     .tool-item {
-      border-top: 2px solid var(--ink);
-      padding-top: 12px;
+      padding-top: 2px;
     }
 
     .tool-num {
       font-family: var(--serif);
-      font-size: 1.55rem;
+      font-size: 2.3rem;
+      line-height: 1;
       font-weight: 800;
+      letter-spacing: -0.02em;
       color: var(--red);
       font-variant-numeric: tabular-nums;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .tool-item h3 {
@@ -578,7 +580,7 @@
   <header class="series-topbar">
     <nav class="series-nav" aria-label="全系列簡報導覽列">
       <div class="series-links">
-        <a href="index.html">策展總覽 index.html</a>
+        <a href="index.html">策展總覽</a>
         <a href="deck_00_framework.html" class="is-current">00 總論</a>
         <a href="deck_01_russia.html">01 俄國</a>
         <a href="deck_02_germany.html">02 德國</a>
@@ -600,7 +602,7 @@
     <!-- Slide 1：全版面深色封面 -->
     <section class="slide slide--cover" id="slide-1">
       <div class="slide-body">
-        <span class="kicker">DECK 00 · SERIES FRAMEWORK · 1914–1945</span>
+        <span class="kicker">總論・歐亞比較框架（1914–1945）</span>
         <h1>大戰打碎舊帝國後，誰能從亂世蛻變為全國政權？</h1>
         <p class="cover-subtitle">
           1914 至 1945 年，兩次大戰與內戰摧毀舊中央。追求變革的左翼與地方武裝陷入「基層自治」與「集權贏戰」的兩難；唯有兼顧農村土改、跨群體統戰與後方治安的勢力，才能走到最後。
@@ -644,7 +646,7 @@
     <!-- Slide 2：權力真空的起點 -->
     <section class="slide" id="slide-2">
       <div class="slide-body">
-        <span class="kicker">01 · ORIGIN OF POWER VACUUM</span>
+        <span class="kicker">總論・權力真空起點</span>
         <h2>兩次大戰打碎舊中央，在歐亞五大戰場留下權力真空</h2>
 
         <div class="editorial-split">
@@ -698,7 +700,7 @@
     <!-- Slide 3：左翼四派光譜 -->
     <section class="slide" id="slide-3">
       <div class="slide-body">
-        <span class="kicker">02 · FOUR LEFTIST SPECTRUMS</span>
+        <span class="kicker">總論・左翼四派光譜</span>
         <h2>同喊社會主義，四條奪權路線的衝突讓左翼經常互打</h2>
 
         <div class="quadrant-layout">
@@ -766,7 +768,7 @@
     <!-- Slide 4：歐亞六大跨國連動網 -->
     <section class="slide" id="slide-4">
       <div class="slide-body">
-        <span class="kicker">03 · TRANSNATIONAL NETWORKS</span>
+        <span class="kicker">總論・跨國連動網絡</span>
         <h2>從海參崴坦克到西班牙老兵，六條跨國鏈改寫五國戰局</h2>
 
         <div class="svg-frame">
@@ -828,7 +830,7 @@
     <!-- Slide 5：地方崛起成敗公式與史料盲區 -->
     <section class="slide" id="slide-5">
       <div class="slide-body">
-        <span class="kicker">04 · FORMULA &amp; EVIDENCE BOUNDARY</span>
+        <span class="kicker">總論・成敗公式與史料邊界</span>
         <h2>地方勢力能否掌權，取決於土改、統戰與後方治安</h2>
 
         <div class="editorial-split">
@@ -860,7 +862,7 @@
     <!-- Slide 6：學習路線與三個思考工具 -->
     <section class="slide" id="slide-6">
       <div class="slide-body">
-        <span class="kicker">05 · READING GUIDE &amp; TOOLS</span>
+        <span class="kicker">總論・閱讀指南</span>
         <h2>帶著三個分析工具，走進歐亞五國的現場時間軸</h2>
 
         <div class="tools-grid">
