@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>02｜德國篇（1918–1919）：工兵委員會為何主動讓權｜戰火下的路線分歧</title>
+  <style>
+    :root {
+      --paper: #F7F4EB;
+      --paper-alt: #EFECE1;
+      --paper-card: #FBF9F4;
+      --ink: #1C1917;
+      --ink-muted: #57534E;
+      --red: #991B1B;
+      --blue: #1E3A5F;
+      --ochre: #9A6B21;
+      --hairline: #D6CFC2;
+      --serif: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+      --sans: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #EAE4D7;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 固定頂部系列導覽列與進度條 */
+    .series-topbar {
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 1px solid #3A342F;
+      flex-shrink: 0;
+    }
+
+    .series-nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .series-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .series-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #E7E2D6;
+      padding: 4px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.25);
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .series-links a:hover {
+      background: rgba(247, 244, 235, 0.1);
+      border-color: var(--paper);
+    }
+
+    .series-links a.is-current {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .deck-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.85rem;
+      color: #D6CFC2;
+    }
+
+    .slide-counter {
+      font-weight: 700;
+      color: var(--paper);
+      padding: 3px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.35);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 3px;
+      background: #3A342F;
+      flex-shrink: 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 16.67%;
+      background: var(--red);
+      transition: width 0.25s ease;
+    }
+
+    /* 簡報主舞台 */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px 10px;
+      min-height: 0;
+    }
+
+    section.slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 560px;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
+      padding: 34px 44px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+    }
+
+    section.slide.active {
+      display: flex;
+      animation: fadePage 0.2s ease;
+    }
+
+    @keyframes fadePage {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section.slide.slide--cover {
+      background:
+        radial-gradient(circle at 86% 20%, rgba(30, 58, 95, 0.38) 0%, transparent 48%),
+        radial-gradient(circle at 14% 85%, rgba(153, 27, 27, 0.28) 0%, transparent 46%),
+        var(--ink);
+      color: var(--paper);
+      border-color: #3A342F;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--blue);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide--cover .kicker {
+      color: #E2C799;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      line-height: 1.28;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.3vw, 2.65rem);
+      color: var(--paper);
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 10px;
+    }
+
+    .cover-subtitle {
+      font-size: 1.08rem;
+      line-height: 1.72;
+      color: #E7E2D6;
+      max-width: 62ch;
+    }
+
+    .cover-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cover-tag {
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border: 1px solid rgba(226, 199, 153, 0.45);
+      color: #F7F4EB;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .svg-frame {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      padding: 12px 14px;
+    }
+
+    .slide--cover .svg-frame {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(214, 207, 194, 0.25);
+    }
+
+    .svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Slide 2：左圖右文檔案版 */
+    .split-media-left {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    figure.archival-fig {
+      border: 1px solid var(--hairline);
+      background: var(--paper-card);
+      padding: 10px;
+    }
+
+    figure.archival-fig img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      display: block;
+      filter: sepia(16%) contrast(1.03);
+    }
+
+    figure.archival-fig figcaption {
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    .story-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+    }
+
+    .story-stack p {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    /* Slide 3：三角圖與跨國對照 */
+    .triangle-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    .cross-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 8px;
+    }
+
+    .cross-pill {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--paper-card);
+      border: 1px solid var(--blue);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .cross-pill:hover {
+      background: var(--blue);
+      color: var(--paper);
+    }
+
+    /* Slide 4：數據焦點版 */
+    .vote-layout {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .vote-hero {
+      border-top: 3px solid var(--blue);
+      border-bottom: 1px solid var(--hairline);
+      padding: 18px 0;
+      text-align: left;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .vote-ratio {
+      font-family: var(--serif);
+      font-size: 2.85rem;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1.1;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .vote-caption {
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .chronology-rows {
+      border-top: 1px solid var(--ink);
+    }
+
+    .chronology-row {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hairline);
+      align-items: baseline;
+    }
+
+    .chronology-date {
+      font-family: var(--serif);
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .chronology-text {
+      font-size: 0.96rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    /* Slide 6：三欄史觀對照 */
+    .debate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .debate-col {
+      padding: 15px 18px 15px 0;
+    }
+
+    .debate-col + .debate-col {
+      padding: 15px 18px;
+      border-left: 1px solid var(--hairline);
+    }
+
+    .debate-col:last-child {
+      padding-right: 0;
+    }
+
+    .col-label {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+
+    .col-label--red {
+      color: var(--red);
+    }
+
+    .debate-col p {
+      font-size: 0.94rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    .cta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 6px;
+    }
+
+    .cta-btn {
+      text-decoration: none;
+      background: var(--red);
+      color: var(--paper);
+      border: 1px solid var(--red);
+      padding: 8px 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: background 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background: #7F1D1D;
+    }
+
+    footer.slide-source {
+      border-top: 1px solid var(--hairline);
+      padding-top: 9px;
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--ink-muted);
+      word-break: break-word;
+    }
+
+    .slide--cover footer.slide-source {
+      border-top-color: rgba(214, 207, 194, 0.25);
+      color: #B8B0A4;
+    }
+
+    .controls {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--hairline);
+      padding: 4px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 860px) {
+      section.slide {
+        padding: 24px 22px 18px;
+      }
+      .split-media-left,
+      .triangle-layout,
+      .vote-layout,
+      .debate-grid,
+      .chronology-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .debate-col + .debate-col {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="series-topbar">
+    <nav class="series-nav" aria-label="全系列簡報導覽列">
+      <div class="series-links">
+        <a href="index.html">策展總覽 index.html</a>
+        <a href="deck_00_framework.html">00 總論</a>
+        <a href="deck_01_russia.html">01 俄國</a>
+        <a href="deck_02_germany.html" class="is-current">02 德國</a>
+        <a href="deck_03_china.html">03 中國</a>
+        <a href="deck_04_spain.html">04 西班牙</a>
+        <a href="deck_05_yugoslavia.html">05 南斯拉夫</a>
+      </div>
+      <div class="deck-status">
+        <span>02｜德國篇（1918–1919）</span>
+        <span class="slide-counter" id="slideCounter">01 / 06</span>
+      </div>
+    </nav>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- Slide 1：全版面深色封面 -->
+    <section class="slide slide--cover" id="slide-1">
+      <div class="slide-body">
+        <span class="kicker">DECK 02 · GERMANY 1918–1919</span>
+        <h1>工兵委員會為何主動讓權：1918–1919 德國革命的分岔</h1>
+        <p class="cover-subtitle">
+          1918 年水兵起義迅速推翻四百年帝制，但溫和社民黨（SPD）因懼怕重演俄式內戰，選擇與舊軍方及資方妥協並鎮壓極左，讓共和國保住議會卻埋下威瑪隱患。
+        </p>
+        <div class="cover-tags">
+          <span class="cover-tag">1918.11 水兵起義與雙重共和</span>
+          <span class="cover-tag">1918.11 軍方資方妥協</span>
+          <span class="cover-tag">1918.12 代表大會 344:98 讓權</span>
+          <span class="cover-tag">1919.01 鎮壓斯巴達克</span>
+        </div>
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 92" role="img" aria-label="1918至1919德國十一月革命時間軸">
+            <line x1="60" y1="46" x2="900" y2="46" stroke="#D6CFC2" stroke-width="1.5" />
+            <circle cx="120" cy="46" r="6" fill="#E2C799" />
+            <text x="120" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">11/03 基爾起義</text>
+
+            <circle cx="360" cy="46" r="6" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="360" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">11/09 雙重宣告</text>
+
+            <circle cx="610" cy="46" r="6" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="610" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">12/16 交權議會</text>
+
+            <circle cx="840" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="840" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">01/15 鎮壓極左</text>
+          </svg>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, 導言; Revolution, first stage: fall of the Empire; Revolution, second stage: defeat of the radical Left]</footer>
+    </section>
+
+    <!-- Slide 2：左圖右文檔案版 -->
+    <section class="slide" id="slide-2">
+      <div class="slide-body">
+        <span class="kicker">01 · NOVEMBER REVOLUTION</span>
+        <h2>1918 年 11 月基爾水兵起義，柏林同日宣告兩個共和國</h2>
+
+        <div class="split-media-left">
+          <figure class="archival-fig">
+            <img src="assets/02_germany.jpg" alt="1918–1919 柏林十一月革命街頭路障" />
+            <figcaption>1918–1919 柏林十一月革命街頭路障（CC BY 3.0）</figcaption>
+          </figure>
+          <div class="story-stack">
+            <p>
+              1918 年 11 月 3 至 4 日基爾（Kiel）水兵抗命起義席捲全德，各地工兵委員會（workers' and soldiers' councils）接管城鎮，各邦君主未流血退位。
+            </p>
+            <p>
+              11 月 9 日柏林同日出現兩場宣告：SPD 菲利普·謝德曼（Philipp Scheidemann）宣告「共和國」，斯巴達克同盟李卜克內西（Karl Liebknecht）宣告「社會主義共和國」，次日威廉二世（Wilhelm II）流亡荷蘭。
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, Revolution, first stage: fall of the Empire]</footer>
+    </section>
+
+    <!-- Slide 3：跨國對照結構版（威瑪妥協三角） -->
+    <section class="slide" id="slide-3">
+      <div class="slide-body">
+        <span class="kicker">02 · COMPROMISE TO AVOID CIVIL WAR</span>
+        <h2>懼怕俄式內戰，SPD 與舊軍方及資方簽下雙重妥協</h2>
+
+        <div class="triangle-layout">
+          <div class="svg-frame">
+            <svg viewBox="0 0 420 275" role="img" aria-label="威瑪妥協三角圖：SPD、舊軍方與資方">
+              <rect x="0" y="0" width="420" height="275" fill="#FBF9F4" />
+              <line x1="210" y1="68" x2="96" y2="195" stroke="#1E3A5F" stroke-width="2.2" />
+              <line x1="210" y1="68" x2="324" y2="195" stroke="#991B1B" stroke-width="2.2" />
+              <line x1="96" y1="212" x2="324" y2="212" stroke="#D6CFC2" stroke-width="1.5" stroke-dasharray="4 3" />
+
+              <!-- 頂點 SPD -->
+              <rect x="115" y="20" width="190" height="48" fill="#1C1917" />
+              <text x="210" y="42" text-anchor="middle" font-size="13.5" font-weight="800" fill="#F7F4EB">SPD 艾伯特政府</text>
+              <text x="210" y="59" text-anchor="middle" font-size="11" fill="#E2C799">Friedrich Ebert</text>
+
+              <!-- 左下 舊軍方 -->
+              <rect x="18" y="192" width="176" height="62" fill="#F7F4EB" stroke="#1E3A5F" stroke-width="2" />
+              <text x="106" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#1E3A5F">舊軍方 OHL</text>
+              <text x="106" y="238" text-anchor="middle" font-size="11" fill="#57534E">格勒納密約：保階級換效忠</text>
+
+              <!-- 右下 資方 -->
+              <rect x="226" y="192" width="176" height="62" fill="#F7F4EB" stroke="#991B1B" stroke-width="2" />
+              <text x="314" y="216" text-anchor="middle" font-size="13" font-weight="800" fill="#991B1B">重工業資方</text>
+              <text x="314" y="238" text-anchor="middle" font-size="11" fill="#57534E">施廷內斯：八時工時換私產</text>
+            </svg>
+          </div>
+
+          <div class="story-stack">
+            <p>
+              俄國內戰爆發後，SPD 領袖奧托·布勞恩（Otto Braun）撰文宣稱「社會主義不能建立在刺刀與機槍上」。
+            </p>
+            <p>
+              11 月 10 日「艾伯特－格勒納密約」（Ebert–Groener pact）保留舊軍官團換取效忠；15 日《施廷內斯－萊吉恩協定》（Stinnes–Legien Agreement）以八小時工時與集體談判權換取承認私營企業，使國有化與文官改革止步。
+            </p>
+            <div class="cross-pills">
+              <a class="cross-pill" href="deck_01_russia.html#slide-4">對照 01 俄國：四方血腥內戰 ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, Background events; Revolution, first stage: fall of the Empire; Revolution, second stage: defeat of the radical Left]</footer>
+    </section>
+
+    <!-- Slide 4：數據焦點版 -->
+    <section class="slide" id="slide-4">
+      <div class="slide-body">
+        <span class="kicker">03 · COUNCIL CONGRESS HANDOVER</span>
+        <h2>344 對 98 票：全德工兵委員會主動交權給國民議會</h2>
+
+        <div class="vote-layout">
+          <div class="vote-hero">
+            <span class="vote-ratio">344 : 98</span>
+            <p class="vote-caption">全德工兵委員會代表大會表決支持儘速召開國民議會</p>
+          </div>
+
+          <div class="chronology-rows">
+            <div class="chronology-row">
+              <span class="chronology-date">溫和多數</span>
+              <span class="chronology-text">全德各地工兵委員會由溫和的 SPD 與主張延後選舉的獨立社民黨（USPD）主導，僅維持糧食與復員治安，幾乎不沒收私產。</span>
+            </div>
+            <div class="chronology-row">
+              <span class="chronology-date">1918 年 12 月</span>
+              <span class="chronology-text">全德代表大會以 344 票對 98 票否決委員會憲政體制；雖通過軍隊民主化《漢堡要點》（Hamburg Points），卻遭軍方抵制落空。</span>
+            </div>
+            <div class="chronology-row">
+              <span class="chronology-date">聖誕危機</span>
+              <span class="chronology-text">政府軍進攻「人民海軍師」（Volksmarinedivision）反遭擊退，USPD 於 29 日退閣，諾斯克（Gustav Noske）擴編自由軍團。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left]</footer>
+    </section>
+
+    <!-- Slide 5：1919 自由軍團鎮壓極左 -->
+    <section class="slide" id="slide-5">
+      <div class="slide-body">
+        <span class="kicker">04 · FREIKORPS CRACKDOWN</span>
+        <h2>自由軍團血腥鎮壓斯巴達克與地方蘇維埃，左翼永久撕裂</h2>
+
+        <div class="chronology-rows">
+          <div class="chronology-row">
+            <span class="chronology-date">1919 年 1 月</span>
+            <span class="chronology-text">斯巴達克派組建德國共產黨（KPD）並反對盧森堡（Rosa Luxemburg）參選綱領；警察局長免職引爆「斯巴達克起義」（約 156 死），自由軍團（Freikorps）平亂並於 15 日殺害李卜克內西與盧森堡。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">1919–1920 年</span>
+            <span class="chronology-text">柏林三月戰鬥（至少 1,200 死）、不來梅與巴伐利亞（約 600 死）蘇維埃共和國，及 1920 年 5 萬人組成的「魯爾紅軍」（Ruhr Red Army）接連遭鎮壓。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">威瑪隱患</span>
+            <span class="chronology-text">SPD 與 KPD 永久分裂削弱 1933 年抗納粹力量，《威瑪憲法》（Weimar Constitution）第 48 條日後成為希特勒（Adolf Hitler）掌權墊腳石。</span>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, 導言; Revolution, second stage: defeat of the radical Left; Aftermath; Impact on the Weimar Republic]</footer>
+    </section>
+
+    <!-- Slide 6：史觀爭議與下章導引 -->
+    <section class="slide" id="slide-6">
+      <div class="slide-body">
+        <span class="kicker">05 · HISTORIOGRAPHY &amp; LEGACY</span>
+        <h2>史觀交鋒：保住議會民主，抑或過度妥協錯失改革？</h2>
+
+        <div class="debate-grid">
+          <div class="debate-col">
+            <div class="col-label">觀點 A｜護民主防衛論</div>
+            <p>
+              1950 年代西德史家埃德曼（Karl Dietrich Erdmann）界定當時面臨「專政或議會」抉擇，為 SPD 聯軍捍衛民主辯護。
+            </p>
+          </div>
+          <div class="debate-col">
+            <div class="col-label col-label--red">觀點 B｜背叛工人論</div>
+            <p>
+              圖霍爾斯基（Kurt Tucholsky）與東德（GDR）史學批 SPD 宛如「想當高級文官的人」，背叛工人階級與社會改革契機。
+            </p>
+          </div>
+          <div class="debate-col">
+            <div class="col-label">觀點 C｜修正派妥協論</div>
+            <p>
+              1960 年代西德修正派（科爾布 Eberhard Kolb、溫克勒 Heinrich August Winkler）指極左威脅被高估，過度保留舊菁英留下結構危機。
+            </p>
+          </div>
+        </div>
+
+        <div class="cta-bar">
+          <a class="cross-pill" href="deck_04_spain.html#slide-5">跨國餘波：德軍日後介入西班牙 ↗</a>
+          <a class="cta-btn" href="deck_03_china.html#slide-1">進入下一章：03 中國篇 →</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, 導言; Impact on the Weimar Republic; Contemporary statements]</footer>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="簡報導覽控制">
+    <div class="btn-group">
+      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+    </div>
+    <div class="dots" id="dotsNav"></div>
+    <span class="hint">支援 ← / → / 空白鍵 / PageUp / PageDown 切換投影片</span>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll("section.slide"));
+      const counter = document.getElementById("slideCounter");
+      const fill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const dotsNav = document.getElementById("dotsNav");
+      const total = slides.length;
+      let current = 0;
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.textContent = String(idx + 1).padStart(2, "0");
+        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
+        dot.addEventListener("click", () => goTo(idx, true));
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+
+      function goTo(index, syncHash) {
+        if (index < 0 || index >= total) return;
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = index;
+        slides[current].classList.add("active");
+        dots[current].classList.add("active");
+        counter.textContent =
+          String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        fill.style.width = (((current + 1) / total) * 100).toFixed(2) + "%";
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+        if (syncHash) {
+          try {
+            history.replaceState(null, "", "#slide-" + (current + 1));
+          } catch (_) {}
+        }
+      }
+
+      function applyHash() {
+        const m = /^#slide-(\d+)$/i.exec(window.location.hash || "");
+        if (!m) return false;
+        const idx = parseInt(m[1], 10) - 1;
+        if (idx >= 0 && idx < total) {
+          goTo(idx, false);
+          return true;
+        }
+        return false;
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1, true));
+      nextBtn.addEventListener("click", () => goTo(current + 1, true));
+      window.addEventListener("hashchange", applyHash);
+
+      document.addEventListener("keydown", (e) => {
+        const tag = e.target && e.target.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+        if (
+          e.key === "ArrowRight" ||
+          e.key === "PageDown" ||
+          e.code === "Space" ||
+          e.key === " "
+        ) {
+          e.preventDefault();
+          goTo(current + 1, true);
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+          e.preventDefault();
+          goTo(current - 1, true);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0, true);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(total - 1, true);
+        }
+      });
+
+      if (!applyHash()) {
+        goTo(0, false);
+      }
+    })();
+  </script>
+</body>
+</html>

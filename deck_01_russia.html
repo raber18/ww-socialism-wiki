@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>01｜俄國篇（1917–1921）：從民選蘇維埃到一黨專政｜戰火下的路線分歧</title>
+  <style>
+    :root {
+      --paper: #F7F4EB;
+      --paper-alt: #EFECE1;
+      --paper-card: #FBF9F4;
+      --ink: #1C1917;
+      --ink-muted: #57534E;
+      --red: #991B1B;
+      --blue: #1E3A5F;
+      --ochre: #9A6B21;
+      --hairline: #D6CFC2;
+      --serif: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+      --sans: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #EAE4D7;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 固定頂部系列導覽列與進度條 */
+    .series-topbar {
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 1px solid #3A342F;
+      flex-shrink: 0;
+    }
+
+    .series-nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .series-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .series-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #E7E2D6;
+      padding: 4px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.25);
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .series-links a:hover {
+      background: rgba(247, 244, 235, 0.1);
+      border-color: var(--paper);
+    }
+
+    .series-links a.is-current {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .deck-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.85rem;
+      color: #D6CFC2;
+    }
+
+    .slide-counter {
+      font-weight: 700;
+      color: var(--paper);
+      padding: 3px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.35);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 3px;
+      background: #3A342F;
+      flex-shrink: 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 16.67%;
+      background: var(--red);
+      transition: width 0.25s ease;
+    }
+
+    /* 簡報主舞台 */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px 10px;
+      min-height: 0;
+    }
+
+    section.slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 560px;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
+      padding: 34px 44px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+    }
+
+    section.slide.active {
+      display: flex;
+      animation: fadePage 0.2s ease;
+    }
+
+    @keyframes fadePage {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section.slide.slide--cover {
+      background:
+        radial-gradient(circle at 86% 20%, rgba(153, 27, 27, 0.34) 0%, transparent 48%),
+        radial-gradient(circle at 14% 85%, rgba(30, 58, 95, 0.24) 0%, transparent 46%),
+        var(--ink);
+      color: var(--paper);
+      border-color: #3A342F;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide--cover .kicker {
+      color: #E2C799;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      line-height: 1.28;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.3vw, 2.65rem);
+      color: var(--paper);
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 2.25vw, 1.88rem);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 10px;
+    }
+
+    .cover-subtitle {
+      font-size: 1.08rem;
+      line-height: 1.72;
+      color: #E7E2D6;
+      max-width: 62ch;
+    }
+
+    .cover-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cover-tag {
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border: 1px solid rgba(226, 199, 153, 0.45);
+      color: #F7F4EB;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .svg-frame {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      padding: 12px 14px;
+    }
+
+    .slide--cover .svg-frame {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(214, 207, 194, 0.25);
+    }
+
+    .svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Slide 2：文圖雙欄檔案版 */
+    .split-media {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .story-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+    }
+
+    .story-stack p {
+      font-size: 0.98rem;
+      line-height: 1.68;
+      color: var(--ink);
+    }
+
+    figure.archival-fig {
+      border: 1px solid var(--hairline);
+      background: var(--paper-card);
+      padding: 10px;
+    }
+
+    figure.archival-fig img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      display: block;
+      filter: sepia(16%) contrast(1.03);
+    }
+
+    figure.archival-fig figcaption {
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px solid var(--hairline);
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.45;
+    }
+
+    /* Slide 3：轉折焦點版 */
+    .quote-lead {
+      font-family: var(--serif);
+      font-size: 1.14rem;
+      line-height: 1.68;
+      color: var(--ink);
+      padding: 14px 20px;
+      background: var(--paper-alt);
+      border-top: 2px solid var(--red);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .chronology-rows {
+      border-top: 1px solid var(--ink);
+    }
+
+    .chronology-row {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 18px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--hairline);
+      align-items: baseline;
+    }
+
+    .chronology-date {
+      font-family: var(--serif);
+      font-weight: 800;
+      font-size: 0.98rem;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .chronology-text {
+      font-size: 0.97rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    /* Slide 4：四方角力圖解版 */
+    .editorial-split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .editorial-col {
+      padding: 13px 20px 13px 0;
+    }
+
+    .editorial-col + .editorial-col {
+      padding: 13px 0 13px 20px;
+      border-left: 1px solid var(--hairline);
+    }
+
+    .editorial-col p {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--ink);
+    }
+
+    /* Slide 5：1921 數據焦點 + 雙欄 */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 14px;
+    }
+
+    .stat-cell {
+      border-top: 2px solid var(--red);
+      padding-top: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--red);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .stat-desc {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .col-label {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+
+    .col-label--blue {
+      color: var(--blue);
+    }
+
+    /* Slide 6：史觀交鋒與跨簡報連動 */
+    .spillover-band {
+      background: var(--paper-alt);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      padding: 11px 16px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .spillover-band strong {
+      color: var(--blue);
+    }
+
+    .cross-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 6px;
+    }
+
+    .cross-pill {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--paper-card);
+      border: 1px solid var(--blue);
+      padding: 6px 14px;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .cross-pill:hover {
+      background: var(--blue);
+      color: var(--paper);
+    }
+
+    .cross-pill--next {
+      color: var(--paper);
+      background: var(--red);
+      border-color: var(--red);
+    }
+
+    .cross-pill--next:hover {
+      background: #7F1D1D;
+    }
+
+    /* 頁底出處欄 */
+    footer.slide-source {
+      border-top: 1px solid var(--hairline);
+      padding-top: 9px;
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--ink-muted);
+      word-break: break-word;
+    }
+
+    .slide--cover footer.slide-source {
+      border-top-color: rgba(214, 207, 194, 0.25);
+      color: #B8B0A4;
+    }
+
+    /* 底部控制列 */
+    .controls {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--hairline);
+      padding: 4px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 860px) {
+      section.slide {
+        padding: 24px 22px 18px;
+      }
+      .split-media,
+      .editorial-split,
+      .stats-strip,
+      .chronology-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .editorial-col + .editorial-col {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding: 12px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="series-topbar">
+    <nav class="series-nav" aria-label="全系列簡報導覽列">
+      <div class="series-links">
+        <a href="index.html">策展總覽 index.html</a>
+        <a href="deck_00_framework.html">00 總論</a>
+        <a href="deck_01_russia.html" class="is-current">01 俄國</a>
+        <a href="deck_02_germany.html">02 德國</a>
+        <a href="deck_03_china.html">03 中國</a>
+        <a href="deck_04_spain.html">04 西班牙</a>
+        <a href="deck_05_yugoslavia.html">05 南斯拉夫</a>
+      </div>
+      <div class="deck-status">
+        <span>01｜俄國篇（1917–1921）</span>
+        <span class="slide-counter" id="slideCounter">01 / 06</span>
+      </div>
+    </nav>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- Slide 1：全版面深色封面 -->
+    <section class="slide slide--cover" id="slide-1">
+      <div class="slide-body">
+        <span class="kicker">DECK 01 · RUSSIA 1917–1921</span>
+        <h1>從民選蘇維埃到一黨專政：1917–1921 俄國的革命與內戰</h1>
+        <p class="cover-subtitle">
+          沙皇垮台後，基層工農兵蘇維埃一度展現多元民主；但在解散國會與四方內戰的存亡壓力下，布爾什維克（Bolsheviks）靠強徵與舊軍官贏得政權，卻也鎖死了黨內民主。
+        </p>
+        <div class="cover-tags">
+          <span class="cover-tag">1917 二月與十月革命</span>
+          <span class="cover-tag">1918 解散立憲會議</span>
+          <span class="cover-tag">1918–1921 四方內戰</span>
+          <span class="cover-tag">1921 喀琅施塔得與 NEP</span>
+        </div>
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 92" role="img" aria-label="1917至1921俄國革命與內戰時間軸">
+            <line x1="60" y1="46" x2="900" y2="46" stroke="#D6CFC2" stroke-width="1.5" />
+            <circle cx="120" cy="46" r="6" fill="#E2C799" />
+            <text x="120" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1917 雙重政權</text>
+
+            <circle cx="360" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="360" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1918 廢國會・內戰</text>
+
+            <circle cx="610" cy="46" r="6" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="610" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1920 破白軍・剿黑軍</text>
+
+            <circle cx="840" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="840" y="75" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1921 喀琅施塔得</text>
+          </svg>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Geography and chronology; Aftermath]</footer>
+    </section>
+
+    <!-- Slide 2：文圖雙欄檔案版 -->
+    <section class="slide" id="slide-2">
+      <div class="slide-body">
+        <span class="kicker">01 · DUAL POWER &amp; OCTOBER</span>
+        <h2>1917 年沙皇退位後，俄國陷入雙重政權並爆發十月奪權</h2>
+
+        <div class="split-media">
+          <div class="story-stack">
+            <p>
+              1914 年俄國加入協約國（Triple Entente）參戰，戰火引發 1917 年二月革命（February Revolution）與尼古拉二世（Nicholas II）退位。
+            </p>
+            <p>
+              全國湧現民選工農兵「蘇維埃」（soviets），與中間派俄國臨時政府（Russian Provisional Government）形成「雙重政權」（dual power）。
+            </p>
+            <p>
+              9 月科爾尼洛夫（Lavr Kornilov）政變破產後，列寧（Vladimir Lenin）領導布爾什維克以「一切權力歸蘇維埃」於 10 月奪權。
+            </p>
+          </div>
+          <figure class="archival-fig">
+            <img src="assets/01_russia.jpg" alt="1917 年東線與前沙俄西部疆界變動圖" />
+            <figcaption>1917 年東線與前沙俄西部疆界變動圖（Public domain）</figcaption>
+          </figure>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Warfare]</footer>
+    </section>
+
+    <!-- Slide 3：轉折焦點版 -->
+    <section class="slide" id="slide-3">
+      <div class="slide-body">
+        <span class="kicker">02 · ONE-PARTY CONSOLIDATION</span>
+        <h2>1918 年敗選後解散立憲會議，接連排除左翼盟友走向一黨制</h2>
+
+        <p class="quote-lead">
+          全俄立憲會議（Russian Constituent Assembly）選舉敗給右翼社會革命黨（Right SRs）後，列寧宣稱形式民主（formal democracy）已無可能。
+        </p>
+
+        <div class="chronology-rows">
+          <div class="chronology-row">
+            <span class="chronology-date">1918 年 1 月</span>
+            <span class="chronology-text">布爾什維克強行解散立憲會議，右翼社會革命黨與孟什維克（Mensheviks）發起「民主反革命」（democratic counter-revolution）。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">1918 年 6 月</span>
+            <span class="chronology-text">將右翼 SR 與孟什維克逐出蘇維埃政府，對方轉赴薩馬拉設憲法會議議員委員會（Komuch）政權。</span>
+          </div>
+          <div class="chronology-row">
+            <span class="chronology-date">1918 年 7–8 月</span>
+            <span class="chronology-text">左翼 SR（Left SRs）因反《布列斯特條約》起義遭肅清；列寧遇襲後，契卡（Cheka）啟動「紅色恐怖」（Red Terror）。</span>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Warfare]</footer>
+    </section>
+
+    <!-- Slide 4：全幅圖解版（四方內戰） -->
+    <section class="slide" id="slide-4">
+      <div class="slide-body">
+        <span class="kicker">03 · FOUR-WAY CIVIL WAR</span>
+        <h2>1918–1921 四方內戰：靠強制徵兵與 83% 舊軍官贏得政權</h2>
+
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 225" role="img" aria-label="俄國內戰紅白黑綠四方角力態勢圖">
+            <rect x="0" y="0" width="960" height="225" fill="#FBF9F4" />
+            <!-- 中央紅軍 -->
+            <rect x="360" y="70" width="240" height="84" fill="#991B1B" />
+            <text x="480" y="104" text-anchor="middle" font-size="16" font-weight="800" fill="#F7F4EB">紅軍（Red Army）</text>
+            <text x="480" y="128" text-anchor="middle" font-size="12" fill="#E7E2D6">強徵・督戰隊・83% 舊軍官</text>
+
+            <!-- 左側白軍 -->
+            <rect x="34" y="70" width="236" height="84" fill="#F7F4EB" stroke="#1E3A5F" stroke-width="2" />
+            <text x="152" y="104" text-anchor="middle" font-size="15" font-weight="800" fill="#1E3A5F">白軍（White Army）</text>
+            <text x="152" y="128" text-anchor="middle" font-size="12" fill="#57534E">13 國干涉・陣亡約 65 萬</text>
+            <line x1="270" y1="112" x2="354" y2="112" stroke="#1E3A5F" stroke-width="2" />
+            <polygon points="358,112 348,107 348,117" fill="#1E3A5F" />
+
+            <!-- 右側綠軍 -->
+            <rect x="690" y="70" width="236" height="84" fill="#F7F4EB" stroke="#9A6B21" stroke-width="2" />
+            <text x="808" y="104" text-anchor="middle" font-size="15" font-weight="800" fill="#9A6B21">綠軍（Green Armies）</text>
+            <text x="808" y="128" text-anchor="middle" font-size="12" fill="#57534E">反徵糧・坦波夫損 24 萬人</text>
+            <line x1="690" y1="112" x2="606" y2="112" stroke="#9A6B21" stroke-width="2" />
+            <polygon points="602,112 612,107 612,117" fill="#9A6B21" />
+
+            <!-- 下方黑軍 -->
+            <rect x="330" y="170" width="300" height="44" fill="#1C1917" />
+            <text x="480" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#F7F4EB">馬赫諾黑軍：兩度助紅破白・1920 遭圍剿</text>
+            <line x1="480" y1="154" x2="480" y2="170" stroke="#1C1917" stroke-width="2" stroke-dasharray="3 2" />
+          </svg>
+        </div>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <p>
+              托洛茨基（Leon Trotsky）憑農村強制徵兵、督戰隊（barrier troops）與佔師級指揮官 83% 的前沙俄「軍事專家」（military specialists）建成紅軍，戰役損失 939,755 人。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <p>
+              紅軍擊退白軍與坦波夫農民起義後，於 1920 年 11 月白軍撤出克里米亞隨即撕毀盟約，藉契卡暗殺與圍剿肅清馬赫諾（Nestor Makhno）黑軍。
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Background; Warfare; Aftermath]</footer>
+    </section>
+
+    <!-- Slide 5：1921 喀琅施塔得與 NEP -->
+    <section class="slide" id="slide-5">
+      <div class="slide-body">
+        <span class="kicker">04 · KRONSTADT &amp; NEP</span>
+        <h2>1921 年喀琅施塔得起義遭鎮壓，派系禁令與新經濟政策定型蘇俄</h2>
+
+        <div class="stats-strip">
+          <div class="stat-cell">
+            <span class="stat-num">20%</span>
+            <span class="stat-desc">1921 年重工業產量跌至 1913 年的 20%</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">約 500 萬</span>
+            <span class="stat-desc">1921–1922 大饑荒奪走性命（估 300 萬至 1,000 萬）</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">約 2,000 死</span>
+            <span class="stat-desc">喀琅施塔得約 1,000 陣亡、隨後數週約 1,000 處決</span>
+          </div>
+        </div>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">水兵與農民抗議</div>
+            <p>
+              1921 年 3 月彼得格勒工人與喀琅施塔得（Kronstadt）水兵聯合起義，要求重選蘇維埃並給農工經濟自由，遭紅軍武力鎮壓。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">十大禁令與路線轉向</div>
+            <p>
+              俄共第十次代表大會頒布禁止黨內派系（ban on factions）令並實施「新經濟政策」（New Economic Policy, NEP）安撫農民，全面取締反對黨轉向「一國社會主義」。
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Warfare; Aftermath]</footer>
+    </section>
+
+    <!-- Slide 6：史觀交鋒與跨國餘波 -->
+    <section class="slide" id="slide-6">
+      <div class="slide-body">
+        <span class="kicker">05 · DEBATE &amp; TRANSNATIONAL SPILLOVER</span>
+        <h2>史觀交鋒：戰時防衛或一黨專政？以及俄國內戰的跨國餘波</h2>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">觀點 A｜戰時防衛論</div>
+            <p>
+              利布曼（Marcel Liebman）主張查禁反對黨源於對手起兵叛亂與巴庫英軍處決布爾什維克，性質不同於後來史達林鎮壓。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">觀點 B｜一黨專政論</div>
+            <p>
+              張伯倫（William Henry Chamberlin）指 1918 年 7 月後即成「純粹共產黨專政」（紅恐處決多估約 10 萬、白恐約 30 萬）。
+            </p>
+          </div>
+        </div>
+
+        <div class="spillover-band">
+          <strong>跨國餘波：</strong>白軍戰敗後 100 至 200 萬「白俄流亡者」（White émigrés）及軍火流向中國東北與西班牙，秘密警察「契卡」（Cheka）名號亦外溢至西班牙。
+        </div>
+
+        <div class="cross-pills">
+          <a class="cross-pill cross-pill--next" href="deck_02_germany.html#slide-3">02 德國：恐懼俄式內戰 →</a>
+          <a class="cross-pill" href="deck_03_china.html#slide-4">03 中國：白俄與列寧式改組 ↗</a>
+          <a class="cross-pill" href="deck_04_spain.html#slide-4">04 西班牙：契卡與白俄外溢 ↗</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Background; Warfare; Aftermath]</footer>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="簡報導覽控制">
+    <div class="btn-group">
+      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+    </div>
+    <div class="dots" id="dotsNav"></div>
+    <span class="hint">支援 ← / → / 空白鍵 / PageUp / PageDown 切換投影片</span>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll("section.slide"));
+      const counter = document.getElementById("slideCounter");
+      const fill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const dotsNav = document.getElementById("dotsNav");
+      const total = slides.length;
+      let current = 0;
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.textContent = String(idx + 1).padStart(2, "0");
+        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
+        dot.addEventListener("click", () => goTo(idx, true));
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+
+      function goTo(index, syncHash) {
+        if (index < 0 || index >= total) return;
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = index;
+        slides[current].classList.add("active");
+        dots[current].classList.add("active");
+        counter.textContent =
+          String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        fill.style.width = (((current + 1) / total) * 100).toFixed(2) + "%";
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+        if (syncHash) {
+          try {
+            history.replaceState(null, "", "#slide-" + (current + 1));
+          } catch (_) {}
+        }
+      }
+
+      function applyHash() {
+        const m = /^#slide-(\d+)$/i.exec(window.location.hash || "");
+        if (!m) return false;
+        const idx = parseInt(m[1], 10) - 1;
+        if (idx >= 0 && idx < total) {
+          goTo(idx, false);
+          return true;
+        }
+        return false;
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1, true));
+      nextBtn.addEventListener("click", () => goTo(current + 1, true));
+      window.addEventListener("hashchange", applyHash);
+
+      document.addEventListener("keydown", (e) => {
+        const tag = e.target && e.target.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+        if (
+          e.key === "ArrowRight" ||
+          e.key === "PageDown" ||
+          e.code === "Space" ||
+          e.key === " "
+        ) {
+          e.preventDefault();
+          goTo(current + 1, true);
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+          e.preventDefault();
+          goTo(current - 1, true);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0, true);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(total - 1, true);
+        }
+      });
+
+      if (!applyHash()) {
+        goTo(0, false);
+      }
+    })();
+  </script>
+</body>
+</html>
