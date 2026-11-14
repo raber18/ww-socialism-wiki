@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>戰火下的路線分歧：1914–1945 歐亞社會主義流派與地方勢力的崛起比較</title>
+  <title>戰火下的路線分歧：1914–1945 歐亞社會主義流派與地方勢力的崛起比較｜系列策展總入口</title>
   <style>
     :root {
-      --bg: #f3efe6;
-      --frame: #16202a;
-      --surface: #ffffff;
-      --surface-alt: #f9f7f2;
-      --ink: #141c24;
-      --ink-muted: #465362;
-      --border: #dcd4c6;
-      --red: #b23a2c;
-      --red-soft: #fdf2f0;
-      --blue: #1f5382;
-      --blue-soft: #eef5fb;
-      --amber: #b46d12;
-      --amber-soft: #fef7ea;
-      --teal: #1d6b57;
-      --teal-soft: #edf8f4;
-      --shadow: 0 18px 48px rgba(20, 28, 36, 0.12);
-      --radius: 16px;
+      --paper: #F7F4EB;
+      --paper-alt: #EFECE1;
+      --paper-card: #FBF9F4;
+      --ink: #1C1917;
+      --ink-muted: #57534E;
+      --red: #991B1B;
+      --red-soft: rgba(153, 27, 27, 0.08);
+      --blue: #1E3A5F;
+      --blue-soft: rgba(30, 58, 95, 0.08);
+      --ochre: #9A6B21;
+      --hairline: #D6CFC2;
+      --serif: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+      --sans: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
     }
 
     * {
@@ -31,716 +27,815 @@
       padding: 0;
     }
 
-    html, body {
-      height: 100%;
-      background: radial-gradient(circle at top right, #ebe4d5 0%, var(--bg) 55%, #e7dfd0 100%);
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
       color: var(--ink);
-      font-family: system-ui, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      font-family: var(--sans);
       -webkit-font-smoothing: antialiased;
     }
 
     body {
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
     }
 
-    /* 外部頂部導覽與進度條（位於 <section class="slide"> 之外） */
-    .topbar {
-      background: var(--frame);
-      color: #f8fafc;
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-shrink: 0;
-    }
-
-    .topbar-title {
-      font-size: 0.92rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      color: #e2e8f0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .topbar-meta {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      flex-shrink: 0;
-    }
-
-    .slide-counter {
-      font-variant-numeric: tabular-nums;
-      font-weight: 700;
-      font-size: 0.95rem;
-      background: rgba(255, 255, 255, 0.12);
-      padding: 4px 12px;
-      border-radius: 999px;
-      color: #ffffff;
-    }
-
-    .progress-track {
-      width: 100%;
-      height: 4px;
-      background: #2b3846;
-      flex-shrink: 0;
-    }
-
-    .progress-fill {
-      height: 100%;
-      width: 8.33%;
-      background: linear-gradient(90deg, #d97706, #e0533c);
-      transition: width 0.25s ease;
-    }
-
-    /* 主簡報舞台 */
-    .stage {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 24px 12px;
-      min-height: 0;
-    }
-
-    section.slide {
-      display: none;
-      width: 100%;
-      max-width: 1080px;
-      min-height: 540px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 34px 42px 26px;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    section.slide::before {
-      content: "";
-      position: absolute;
+    /* 固定頂部系列導覽列 */
+    .series-topbar {
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, var(--red) 0%, var(--amber) 35%, var(--blue) 70%, var(--teal) 100%);
+      z-index: 50;
+      background: rgba(28, 25, 23, 0.96);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #3A342F;
     }
 
-    section.slide.active {
-      display: flex;
-      animation: fadeSlide 0.22s ease;
-    }
-
-    @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .slide-body {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      flex: 1;
-      justify-content: center;
-    }
-
-    h1, h2 {
-      font-size: clamp(1.55rem, 2.5vw, 2.05rem);
-      line-height: 1.28;
-      color: var(--ink);
-      font-weight: 800;
-      letter-spacing: -0.01em;
-    }
-
-    .takeaway {
-      background: var(--frame);
-      color: #f8fafc;
-      padding: 13px 18px;
-      border-radius: 10px;
-      font-size: clamp(1rem, 1.35vw, 1.12rem);
-      line-height: 1.55;
-      font-weight: 500;
-      border-left: 5px solid var(--amber);
-    }
-
-    /* 卡片網格系統 */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .stack {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
-    }
-
-    .card {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 18px;
-      border-left: 5px solid var(--blue);
-    }
-
-    .card.red { background: var(--red-soft); border-left-color: var(--red); }
-    .card.blue { background: var(--blue-soft); border-left-color: var(--blue); }
-    .card.amber { background: var(--amber-soft); border-left-color: var(--amber); }
-    .card.teal { background: var(--teal-soft); border-left-color: var(--teal); }
-    .card.dark { background: #eef1f5; border-left-color: var(--frame); }
-
-    .card h3 {
-      font-size: 1.04rem;
-      font-weight: 800;
-      margin-bottom: 5px;
-      color: var(--ink);
-    }
-
-    .card p {
-      font-size: 0.98rem;
-      line-height: 1.55;
-      color: #25303b;
-    }
-
-    .full-span {
-      grid-column: 1 / -1;
-    }
-
-    /* 英雄封面與特定排版增強 */
-    .hero-panel {
-      background: linear-gradient(135deg, #fdfcf9 0%, #f4efe4 100%);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 20px;
-    }
-
-    .flow-card {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--teal);
-      border-radius: 12px;
-      padding: 14px 18px;
-    }
-
-    .flow-card strong {
-      flex-shrink: 0;
-      color: var(--ink);
-      font-size: 1.02rem;
-    }
-
-    .flow-card span {
-      font-size: 0.98rem;
-      line-height: 1.55;
-      color: #25303b;
-    }
-
-    .gap-alert {
-      background: #fffbeb;
-      border: 1px dashed #d97706;
-      border-left: 5px solid #d97706;
-      border-radius: 10px;
-      padding: 11px 16px;
-      font-size: 0.93rem;
-      line-height: 1.5;
-      color: #78350f;
-      font-weight: 600;
-    }
-
-    .timeline-turn {
-      background: #1e293b;
-      color: #f8fafc;
-      border-radius: 10px;
-      padding: 12px 18px;
-      font-size: 0.96rem;
-      line-height: 1.5;
-    }
-
-    .timeline-turn strong {
-      color: #fbbf24;
-      margin-right: 6px;
-    }
-
-    footer.slide-source {
-      border-top: 1px solid var(--border);
-      padding-top: 10px;
-      font-size: 0.78rem;
-      line-height: 1.45;
-      color: var(--ink-muted);
-      word-break: break-word;
-    }
-
-    /* 底部控制列（位於 <section class="slide"> 之外） */
-    .controls {
-      padding: 10px 24px 16px;
+    .series-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 1128px;
-      width: 100%;
-      margin: 0 auto;
       gap: 12px;
-      flex-shrink: 0;
+      flex-wrap: wrap;
     }
 
-    .btn-group {
+    .series-brand {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      color: #D6CFC2;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .series-links {
       display: flex;
-      gap: 10px;
-    }
-
-    button.nav-btn {
-      background: var(--frame);
-      color: #ffffff;
-      border: none;
-      padding: 9px 18px;
-      border-radius: 8px;
-      font-size: 0.92rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.15s ease, opacity 0.15s ease;
-    }
-
-    button.nav-btn:hover:not(:disabled) {
-      background: #273747;
-    }
-
-    button.nav-btn:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-    }
-
-    .dots {
-      display: flex;
+      align-items: center;
       gap: 6px;
       flex-wrap: wrap;
-      justify-content: center;
     }
 
-    button.dot {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      border: 1px solid #c7beb0;
-      background: #ffffff;
-      color: var(--ink);
-      font-size: 0.78rem;
-      font-weight: 700;
-      cursor: pointer;
+    .series-links a {
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #E7E2D6;
+      padding: 5px 11px;
+      border: 1px solid rgba(214, 207, 194, 0.25);
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
     }
 
-    button.dot.active {
+    .series-links a:hover {
+      background: rgba(247, 244, 235, 0.1);
+      border-color: #F7F4EB;
+      color: #FFFFFF;
+    }
+
+    .series-links a.is-current {
       background: var(--red);
       border-color: var(--red);
-      color: #ffffff;
+      color: #F7F4EB;
     }
 
-    .hint {
-      font-size: 0.8rem;
+    /* 深炭黑與暗紅典藏主視覺區 */
+    .hero {
+      background:
+        radial-gradient(circle at 88% 18%, rgba(153, 27, 27, 0.28) 0%, transparent 46%),
+        radial-gradient(circle at 12% 88%, rgba(30, 58, 95, 0.24) 0%, transparent 45%),
+        var(--ink);
+      color: var(--paper);
+      border-bottom: 4px solid var(--red);
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 24px 48px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.85fr);
+      gap: 40px;
+      align-items: end;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #E2C799;
+      border-bottom: 1px solid rgba(226, 199, 153, 0.45);
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3.6vw, 2.95rem);
+      line-height: 1.24;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--paper);
+      margin-bottom: 20px;
+    }
+
+    .hero-thesis {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #E7E2D6;
+      max-width: 66ch;
+      margin-bottom: 28px;
+    }
+
+    .hero-thesis strong {
+      color: #FDE68A;
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red);
+      color: var(--paper);
+      text-decoration: none;
+      padding: 12px 22px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: 1px solid var(--red);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: #7F1D1D;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--paper);
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid rgba(247, 244, 235, 0.35);
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--paper);
+      background: rgba(247, 244, 235, 0.08);
+    }
+
+    .hero-aside {
+      border-top: 1px solid rgba(214, 207, 194, 0.35);
+      border-bottom: 1px solid rgba(214, 207, 194, 0.35);
+      padding: 20px 0;
+    }
+
+    .hero-aside-label {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      color: #E2C799;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .hero-aside p {
+      font-size: 0.92rem;
+      color: #D6CFC2;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(214, 207, 194, 0.22);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hero-stat-num {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--paper);
+      display: block;
+    }
+
+    .hero-stat-txt {
+      font-size: 0.78rem;
+      color: #B8B0A4;
+    }
+
+    /* 主內容容器 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 44px 24px 64px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
       color: var(--ink-muted);
     }
 
-    @media (max-width: 820px) {
-      .stage { padding: 12px; }
-      section.slide { padding: 24px 20px 18px; min-height: auto; }
-      .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      .controls { flex-direction: column; }
-      .hint { display: none; }
+    /* 策展導覽圖區塊 */
+    .map-panel {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      padding: 20px;
+      margin-bottom: 52px;
+    }
+
+    .map-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .map-legend {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .legend-swatch {
+      width: 22px;
+      height: 3px;
+      display: inline-block;
+    }
+
+    /* 六張策展導覽卡片（雜誌編輯型態，嚴禁粗色條圓角網格） */
+    .deck-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .deck-card {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      border-top: 3px solid var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    .deck-card:hover {
+      border-color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .deck-card--framework {
+      border-top-color: var(--red);
+      background: #F4EFE3;
+    }
+
+    .deck-card-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 150px;
+      gap: 18px;
+      padding: 22px 22px 16px;
+      align-items: start;
+    }
+
+    .deck-card--framework .deck-card-top {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .deck-vol {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .deck-span {
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .deck-card h3 {
+      font-family: var(--serif);
+      font-size: 1.28rem;
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .deck-thumb {
+      width: 150px;
+      height: 112px;
+      object-fit: cover;
+      border: 1px solid var(--hairline);
+      filter: sepia(18%) contrast(1.04);
+      display: block;
+    }
+
+    .deck-question {
+      font-size: 0.94rem;
+      color: var(--ink);
+      margin-bottom: 12px;
+      line-height: 1.62;
+    }
+
+    .deck-linkage {
+      margin: 0 22px 16px;
+      padding: 11px 14px;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      background: rgba(239, 236, 225, 0.55);
+      font-size: 0.86rem;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    .deck-linkage strong {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .deck-card-foot {
+      padding: 12px 22px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .deck-meta {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .deck-enter {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--red);
+      padding: 7px 14px;
+      border: 1px solid var(--red);
+      transition: background 0.15s ease, color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .deck-enter:hover {
+      background: var(--red);
+      color: var(--paper);
+    }
+
+    /* 頁尾策展與溯源聲明 */
+    .hub-footer {
+      margin-top: 52px;
+      padding-top: 22px;
+      border-top: 1px solid var(--ink);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+    }
+
+    .hub-footer strong {
+      color: var(--ink);
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .deck-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .deck-card-top {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .deck-thumb {
+        width: 100%;
+        height: 160px;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-title">1914–1945 歐亞社會主義流派與地方勢力的崛起比較（初學者教學簡報）</div>
-    <div class="topbar-meta">
-      <span class="slide-counter" id="slideCounter">01 / 12</span>
-    </div>
+  <header class="series-topbar">
+    <nav class="series-nav" aria-label="全系列簡報導覽列">
+      <span class="series-brand">1914–1945 歐亞策展系列</span>
+      <div class="series-links">
+        <a href="index.html" class="is-current">策展總覽 index.html</a>
+        <a href="deck_00_framework.html">00 總論</a>
+        <a href="deck_01_russia.html">01 俄國</a>
+        <a href="deck_02_germany.html">02 德國</a>
+        <a href="deck_03_china.html">03 中國</a>
+        <a href="deck_04_spain.html">04 西班牙</a>
+        <a href="deck_05_yugoslavia.html">05 南斯拉夫</a>
+      </div>
+    </nav>
   </header>
-  <div class="progress-track" aria-hidden="true">
-    <div class="progress-fill" id="progressFill"></div>
-  </div>
 
-  <main class="stage">
-    <!-- Slide 01 -->
-    <section class="slide active" data-index="0">
-      <div class="slide-body">
-        <h1>戰火下的路線分歧（1914–1945）</h1>
-        <p class="takeaway">大戰摧毀舊帝國與中央政府，迫使歐亞左翼與地方武裝在「如何奪權、靠誰作戰」上走向分歧。</p>
-        <div class="hero-panel">
-          <h3>五大舞台</h3>
-          <p>俄國、德國、西班牙、中國、南斯拉夫，橫跨一戰餘波到二戰結束。</p>
-        </div>
-        <div class="grid-2">
-          <div class="card red">
-            <h3>主軸一（左翼分裂）</h3>
-            <p>一黨專政、議會改良、無政府自治或抗戰統戰，為何常彼此互打？</p>
-          </div>
-          <div class="card blue">
-            <h3>主軸二（地方崛起）</h3>
-            <p>議會、軍閥與游擊隊如何填補真空、跨區串聯並決定成敗結局？</p>
-          </div>
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-kicker">CURATED EXHIBITION SERIES · 1914–1945 · 1 總入口 ＋ 6 份獨立簡報</span>
+        <h1>戰火下的路線分歧：<br />1914–1945 歐亞社會主義流派與地方勢力的崛起比較</h1>
+        <p class="hero-thesis">
+          兩次世界大戰打碎舊帝國與中央秩序後，各地左翼與地方武裝陷入「基層自治」與「集權贏戰」的深刻兩難。縱觀歐亞五大戰場，最終唯有同時掌握<strong>農村土改、跨群體統戰與後方治安</strong>的勢力，才能從地方游擊蛻變為全國政權。
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="deck_00_framework.html">從 00 總論與公式篇開始 →</a>
+          <a class="btn-outline" href="#series-map">先看歐亞五大戰區連動圖 ↓</a>
         </div>
       </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, 導言]; [04_warlord_era_china.md, 導言]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, 導言]</footer>
-    </section>
 
-    <!-- Slide 02 -->
-    <section class="slide" data-index="1">
-      <div class="slide-body">
-        <h2>舊秩序垮台：誰填補權力真空？</h2>
-        <p class="takeaway">帝國敗亡、政變或遭瓜分使中央癱瘓，基層議會與地方武裝隨即崛起。</p>
-        <div class="grid-2">
-          <div class="card red">
-            <h3>1917 俄國</h3>
-            <p>沙皇退位，臨時政府與工農兵「蘇維埃」（soviets）並立。</p>
+      <aside class="hero-aside" aria-label="策展閱讀動線說明">
+        <div class="hero-aside-label">策展閱讀設計：單國完整時間軸 × 跨國跳轉</div>
+        <p>
+          為避免在 1928 年中國與 1936 年西班牙之間來回跳切，本系列將總論與五國故事拆為 6 份獨立簡報。每國保有從起點到戰後結局的連續時間線，並透過「跨國連動膠囊」一鍵跳往相關國家頁碼。
+        </p>
+        <div class="hero-stats">
+          <div>
+            <span class="hero-stat-num">5 戰區</span>
+            <span class="hero-stat-txt">俄・德・中・西・南</span>
           </div>
-          <div class="card blue">
-            <h3>1918 德國</h3>
-            <p>水兵抗命引爆工兵委員會接管城鎮、結束帝制。</p>
+          <div>
+            <span class="hero-stat-num">6 冊</span>
+            <span class="hero-stat-txt">每冊 5–8 頁深讀</span>
           </div>
-          <div class="card amber">
-            <h3>1916 中國</h3>
-            <p>袁世凱（Yuan Shikai）死後北洋軍分裂割據。</p>
-          </div>
-          <div class="card teal">
-            <h3>1936 西／1941 南</h3>
-            <p>西班牙發槍工人抗政變；軸心國（Axis powers）瓜分南國。</p>
+          <div>
+            <span class="hero-stat-num">6 篇</span>
+            <span class="hero-stat-txt">100% 原始來源溯源</span>
           </div>
         </div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, Background]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Outcome]; [04_warlord_era_china.md, 導言]; [06_yugoslav_partisans.md, Background and origins]</footer>
-    </section>
-
-    <!-- Slide 03 -->
-    <section class="slide" data-index="2">
-      <div class="slide-body">
-        <h2>左翼光譜：為何分成四派？</h2>
-        <p class="takeaway">奪權方式與國家觀念分歧，使左翼彼此抗衡。</p>
-        <div class="grid-2">
-          <div class="card red">
-            <h3>1. 一黨集權</h3>
-            <p>俄布爾什維克（Bolsheviks）、西 PCE 主張集中黨國。</p>
-          </div>
-          <div class="card blue">
-            <h3>2. 議會改良</h3>
-            <p>德 SPD、俄孟什維克（Mensheviks）走憲政代議。</p>
-          </div>
-          <div class="card amber">
-            <h3>3. 無政府／極左</h3>
-            <p>俄烏黑軍、西 CNT-FAI 與 POUM、德 KPD。</p>
-          </div>
-          <div class="card teal">
-            <h3>4. 抗戰游擊</h3>
-            <p>中共與南共 KPJ 轉向農村與統戰。</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Background]; [02_german_revolution_1918_1919.md, Aftermath]; [03_spanish_civil_war.md, Republicans]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, Objectives]</footer>
-    </section>
-
-    <!-- Slide 04 -->
-    <section class="slide" data-index="3">
-      <div class="slide-body">
-        <h2>俄國：蘇維埃如何變成一黨專政？</h2>
-        <p class="takeaway">列寧（Vladimir Lenin）贏得四方混戰，卻透過解散議會與派系禁令固定一黨體制。</p>
-        <div class="grid-2">
-          <div class="card red">
-            <h3>紅軍（Red Army）</h3>
-            <p>強徵農民、起用 83% 沙俄軍官並設督戰隊（barrier troops）贏內戰。</p>
-          </div>
-          <div class="card dark">
-            <h3>白軍（White Army）</h3>
-            <p>前沙俄保守派主張「統一俄國」，戰敗流亡。</p>
-          </div>
-          <div class="card amber full-span">
-            <h3>黑軍與綠軍</h3>
-            <p>黑軍馬赫諾（Makhno）兩度助紅卻遭圍剿；綠軍農民反徵糧抗紅白兩軍。</p>
-          </div>
-        </div>
-        <div class="timeline-turn">
-          <strong>1918 → 1921</strong>1918 解散立憲會議；1921 鎮壓喀琅施塔得（Kronstadt）後禁黨內派系，改推新經濟政策（New Economic Policy, NEP）。
-        </div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Background; Warfare]</footer>
-    </section>
-
-    <!-- Slide 05 -->
-    <section class="slide" data-index="4">
-      <div class="slide-body">
-        <h2>德國：工兵委員會為何主動交權？</h2>
-        <p class="takeaway">社民黨（SPD）恐懼俄式內戰而與舊軍方、資方妥協，靠自由軍團鎮壓極左保住議會制。</p>
-        <div class="stack">
-          <div class="card blue">
-            <h3>軍資妥協</h3>
-            <p>布勞恩（Otto Braun）反對刺刀革命；艾伯特－格勒納密約（Ebert–Groener pact）保留舊軍，資方讓步八小時工時而擱置國有化。</p>
-          </div>
-          <div class="card amber">
-            <h3>議會交權</h3>
-            <p>1918 年 12 月大會以 344 對 98 票決定召開國民議會；聖誕危機後獨立社民黨（USPD）退閣。</p>
-          </div>
-          <div class="card red">
-            <h3>武裝鎮壓</h3>
-            <p>1919 年自由軍團（Freikorps）殺害李卜克內西（Karl Liebknecht）與盧森堡（Rosa Luxemburg），覆滅地方蘇維埃與 1920 魯爾紅軍（Ruhr Red Army）。</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[02_german_revolution_1918_1919.md, Impact of the Russian Revolution; The councils; Turn to violence; Aftermath]</footer>
-    </section>
-
-    <!-- Slide 06 -->
-    <section class="slide" data-index="5">
-      <div class="slide-body">
-        <h2>中國：軍閥割據、民間會社與黨軍移植</h2>
-        <p class="takeaway">缺乏強大工業政黨的中國陷入軍閥混戰，直到 1923 年跨國引入列寧式組織改組國民黨。</p>
-        <div class="stack">
-          <div class="card dark">
-            <h3>軍閥均勢</h3>
-            <p>北洋皖直奉爭北京與海關走私軍火；閻錫山（Yan Xishan）融十派思想、馮玉祥（Feng Yuxiang）左傾兼收鴉片稅。</p>
-          </div>
-          <div class="card amber">
-            <h3>農民自衛</h3>
-            <p>抗拒兵災催生紅槍會（Red Spear Society）、孝衣會，及全女性鐵門會／花籃會。</p>
-          </div>
-          <div class="card red">
-            <h3>1923 列寧式改組</h3>
-            <p>孫中山（Sun Yat-sen）藉蘇援依民主集中制（democratic centralism）創黃埔聯共北伐；1927 寧漢分裂，1928 後舊軍閥仍被整批收編。</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[04_warlord_era_china.md, 導言; Warlord relations; Warlord profiles; Armaments; Other forces; South; Aftermath]</footer>
-    </section>
-
-    <!-- Slide 07 -->
-    <section class="slide" data-index="6">
-      <div class="slide-body">
-        <h2>西班牙內戰：社會革命與左翼內鬨（1936–1939）</h2>
-        <p class="takeaway">共和派內部卡在「先搞自治革命」或「集權靠蘇援贏戰」，終在內耗中敗給德義力挺的佛朗哥。</p>
-        <div class="grid-2">
-          <div class="card amber">
-            <h3>革命派（CNT-FAI／POUM）</h3>
-            <p>1936 年推行農工業集體化與卡特爾（cartels），抗拒民兵正規化。</p>
-          </div>
-          <div class="card red">
-            <h3>贏戰派（PCE 等）</h3>
-            <p>憑蘇聯軍援（Operation X）反剝奪財產；1937 年五月事件（May Days）後取締 POUM、殺害寧（Nin）。</p>
-          </div>
-          <div class="card blue full-span">
-            <h3>外援落差</h3>
-            <p>27 國禁運重傷共和國並引發三位數通膨；德禿鷹軍團與義 CTV 助佛朗哥（Franco）整合國民軍取勝。</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[03_spanish_civil_war.md, 導言; Spanish Revolution; Combatants; Foreign involvement; Course of the war &gt; 1937; Financing]</footer>
-    </section>
-
-    <!-- Slide 08 -->
-    <section class="slide" data-index="7">
-      <div class="slide-body">
-        <h2>二戰敵後：中共與南國游擊隊崛起</h2>
-        <p class="takeaway">中南共黨分靠「貧農減稅分地」與「跨族團結」在敵後由弱轉強。</p>
-        <div class="grid-2">
-          <div class="card red">
-            <h3>中共統戰</h3>
-            <p>1936 西安事變促成國共合作，毛澤東主「獨立自主」對抗王明。</p>
-          </div>
-          <div class="card teal">
-            <h3>南國起義</h3>
-            <p>德軍百人質殺戮與烏斯塔沙（Ustaše）清洗引發全民反抗。</p>
-          </div>
-          <div class="card red">
-            <h3>中共土改</h3>
-            <p>1941 皖南事變破裂後推貧農土改減稅，終在 1949 年掌權。</p>
-          </div>
-          <div class="card teal">
-            <h3>南國擴軍</h3>
-            <p>狄托（Tito）淡化共產、高喊「兄弟情誼」擴軍 80 萬（含 10 萬女戰士），完勝通敵切特尼克（Chetniks）。</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[05_second_united_front.md, Background; Cooperation during the Second Sino-Japanese War; Breakdown and aftermath]; [06_yugoslav_partisans.md, 導言; Objectives; Allied support; Women]</footer>
-    </section>
-
-    <!-- Slide 09 -->
-    <section class="slide" data-index="8">
-      <div class="slide-body">
-        <h2>歐亞跨區流動網</h2>
-        <p class="takeaway">人員與軍火跨國流動改寫戰局。</p>
-        <div class="stack">
-          <div class="flow-card">
-            <strong>白俄與坦克</strong>
-            <span>海參崴 FT-17 坦克與白俄入東北，150–170 人赴西班牙。</span>
-          </div>
-          <div class="flow-card">
-            <strong>老兵與契卡</strong>
-            <span>逾千國際縱隊（International Brigades）南國老兵返鄉抗敵；「契卡」（Cheka）外溢為 <em>checas</em>。</span>
-          </div>
-          <div class="flow-card">
-            <strong>蘇聯槓桿</strong>
-            <span>逼蔣停火，1947–1948 年遭狄托決裂。</span>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Aftermath]; [03_spanish_civil_war.md, Foreign involvement; Atrocities]; [04_warlord_era_china.md, Armaments]; [05_second_united_front.md, Background]; [06_yugoslav_partisans.md, Operations; Post-war]</footer>
-    </section>
-
-    <!-- Slide 10 -->
-    <section class="slide" data-index="9">
-      <div class="slide-body">
-        <h2>結局分岔與後方治理</h2>
-        <p class="takeaway">後方治安與跨群體正當性決定存亡。</p>
-        <div class="grid-2">
-          <div class="card dark">
-            <h3>覆滅整編</h3>
-            <p>俄黑綠、巴斯馬奇（Basmachi）、德委員會、西民兵、切特尼克瓦解。</p>
-          </div>
-          <div class="card teal">
-            <h3>獨立執政</h3>
-            <p>芬蘭波羅的海獨立；中共、南國游擊隊執政。</p>
-          </div>
-          <div class="card amber full-span">
-            <h3>塞德曼（Michael Seidman）</h3>
-            <p>佛朗哥清理（limpieza）穩後方；俄白軍與國府失控。</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution; Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, After 1945]; [06_yugoslav_partisans.md, Post-war]</footer>
-    </section>
-
-    <!-- Slide 11 -->
-    <section class="slide" data-index="10">
-      <div class="slide-body">
-        <h2>史觀交鋒與研究邊界</h2>
-        <p class="takeaway">同一鎮壓史家看法相反，且須揭示史料盲區。</p>
-        <div class="grid-2">
-          <div class="card red">
-            <h3>俄</h3>
-            <p>利布曼防衛 vs. 張伯倫專政；紅恐估 5 萬至 200 萬。</p>
-          </div>
-          <div class="card blue">
-            <h3>德</h3>
-            <p>SPD 護民主 vs. 背叛工人／過度妥協。</p>
-          </div>
-          <div class="card amber">
-            <h3>西</h3>
-            <p>失序論 vs. 半組織「契卡」執法。</p>
-          </div>
-          <div class="card teal">
-            <h3>中南</h3>
-            <p>皖南互控先開火；南國 8–10 萬清洗修正爭論。</p>
-          </div>
-        </div>
-        <div class="gap-alert">[資料不足／不確定：未載德無政府派、中共蘇區與八路軍人數]</div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, Background; Aftermath]; [02_german_revolution_1918_1919.md, Historical research]; [03_spanish_civil_war.md, Atrocities]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
-    </section>
-
-    <!-- Slide 12 -->
-    <section class="slide" data-index="11">
-      <div class="slide-body">
-        <h2>總結：帶走三個提問</h2>
-        <p class="takeaway">兩次大戰是決定「民主或集權、地方如何化為政權」的連鎖實驗。</p>
-        <div class="grid-3">
-          <div class="card red">
-            <h3>提問 1：路線兩難</h3>
-            <p>生存危機下，基層自治為何常輸給高度集權？</p>
-          </div>
-          <div class="card teal">
-            <h3>提問 2：崛起公式</h3>
-            <p>武器外援外，土改、跨族統戰與治安為何更關鍵？</p>
-          </div>
-          <div class="card blue">
-            <h3>提問 3：史料自覺</h3>
-            <p>遇史觀衝突與空白時，如何保持雙重溯源與誠實不知？</p>
-          </div>
-        </div>
-      </div>
-      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
-    </section>
-  </main>
-
-  <nav class="controls" aria-label="簡報導覽控制">
-    <div class="btn-group">
-      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
-      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+      </aside>
     </div>
-    <div class="dots" id="dotsNav"></div>
-    <span class="hint">支援 ← / → / 空白鍵 切換投影片</span>
-  </nav>
+  </section>
 
-  <script>
-    (function () {
-      const slides = Array.from(document.querySelectorAll("section.slide"));
-      const counter = document.getElementById("slideCounter");
-      const fill = document.getElementById("progressFill");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-      const dotsNav = document.getElementById("dotsNav");
-      const total = slides.length;
-      let current = 0;
+  <main class="container">
+    <section id="series-map" aria-labelledby="map-heading">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">MAP &amp; CHRONOLOGY</div>
+          <h2 id="map-heading">歐亞五大戰區座標與 1914–1945 跨國連動導覽圖</h2>
+        </div>
+        <span class="section-sub">橫跨兩次世界大戰的權力真空、人員流亡與軍火輸出網絡</span>
+      </div>
 
-      slides.forEach((_, idx) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = "dot" + (idx === 0 ? " active" : "");
-        dot.textContent = String(idx + 1).padStart(2, "0");
-        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
-        dot.addEventListener("click", () => goTo(idx));
-        dotsNav.appendChild(dot);
-      });
+      <div class="map-panel">
+        <svg class="map-svg" viewBox="0 0 1120 430" role="img" aria-label="歐亞五大戰區與1914至1945年跨國連動時間軸圖">
+          <rect x="0" y="0" width="1120" height="430" fill="#FBF9F4" />
+          <!-- 上半部：歐亞地理與跨國連動 -->
+          <rect x="20" y="18" width="1080" height="218" fill="#F7F4EB" stroke="#D6CFC2" stroke-width="1" />
+          <text x="38" y="42" font-size="12" font-weight="700" fill="#57534E" letter-spacing="1.5">EURASIA TRANSNATIONAL NETWORKS · 五大戰場空間連動</text>
 
-      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+          <!-- 大陸簡筆底輪廓（示意地理相對方位） -->
+          <path d="M 65,135 Q 115,82 220,90 Q 330,72 470,84 Q 650,62 840,76 Q 975,88 1038,145 Q 1005,205 900,210 Q 775,212 670,185 Q 520,206 390,192 Q 255,215 110,195 Z" fill="#EFECE1" stroke="#D6CFC2" stroke-width="1" />
 
-      function goTo(index) {
-        if (index < 0 || index >= total) return;
-        slides[current].classList.remove("active");
-        dots[current].classList.remove("active");
-        current = index;
-        slides[current].classList.add("active");
-        dots[current].classList.add("active");
-        counter.textContent = String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
-        fill.style.width = ((current + 1) / total * 100).toFixed(2) + "%";
-        prevBtn.disabled = current === 0;
-        nextBtn.disabled = current === total - 1;
-      }
+          <!-- 跨國流動弧線 -->
+          <!-- 1. 俄 -> 中 (FT-17 坦克、白俄軍團、列寧民主集中制) -->
+          <path d="M 620,115 Q 785,68 925,148" fill="none" stroke="#1E3A5F" stroke-width="2.4" stroke-dasharray="6 4" />
+          <polygon points="928,150 917,149 922,140" fill="#1E3A5F" />
+          <rect x="708" y="69" width="166" height="22" fill="#FBF9F4" stroke="#1E3A5F" stroke-width="1" />
+          <text x="791" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">白俄流亡・FT-17 坦克・民主集中制</text>
 
-      prevBtn.addEventListener("click", () => goTo(current - 1));
-      nextBtn.addEventListener("click", () => goTo(current + 1));
+          <!-- 2. 俄 -> 西 (150-170 白俄、X行動、checas) -->
+          <path d="M 565,118 Q 345,56 125,152" fill="none" stroke="#991B1B" stroke-width="2.2" />
+          <polygon points="122,154 132,155 128,146" fill="#991B1B" />
+          <rect x="276" y="64" width="174" height="22" fill="#FBF9F4" stroke="#991B1B" stroke-width="1" />
+          <text x="363" y="79" text-anchor="middle" font-size="11" font-weight="700" fill="#991B1B">X 行動軍援・契卡 checas・白俄參戰</text>
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === "ArrowDown" || e.code === "Space" || e.key === " ") {
-          e.preventDefault();
-          goTo(current + 1);
-        } else if (e.key === "ArrowLeft" || e.key === "PageUp" || e.key === "ArrowUp") {
-          e.preventDefault();
-          goTo(current - 1);
-        } else if (e.key === "Home") {
-          e.preventDefault();
-          goTo(0);
-        } else if (e.key === "End") {
-          e.preventDefault();
-          goTo(total - 1);
-        }
-      });
+          <!-- 3. 俄 -> 德 (革命震盪) -->
+          <path d="M 555,124 Q 445,105 320,115" fill="none" stroke="#57534E" stroke-width="1.6" stroke-dasharray="3 3" />
+          <text x="445" y="106" text-anchor="middle" font-size="10.5" fill="#57534E">1917 革命示範與內戰警訊</text>
 
-      goTo(0);
-    })();
-  </script>
+          <!-- 4. 西 -> 南 (逾千國際縱隊老兵) -->
+          <path d="M 140,174 Q 285,212 435,172" fill="none" stroke="#9A6B21" stroke-width="2.4" />
+          <polygon points="438,171 428,169 431,178" fill="#9A6B21" />
+          <rect x="200" y="191" width="178" height="22" fill="#FBF9F4" stroke="#9A6B21" stroke-width="1" />
+          <text x="289" y="206" text-anchor="middle" font-size="11" font-weight="700" fill="#9A6B21">逾千國際縱隊老兵返國成游擊骨幹</text>
+
+          <!-- 五大戰場節點 -->
+          <!-- 西班牙 -->
+          <circle cx="118" cy="164" r="9" fill="#991B1B" stroke="#F7F4EB" stroke-width="2" />
+          <text x="118" y="146" text-anchor="middle" font-size="13" font-weight="800" fill="#1C1917">04 西班牙</text>
+          <text x="118" y="187" text-anchor="middle" font-size="10.5" fill="#57534E">1931–1939</text>
+
+          <!-- 德國 -->
+          <circle cx="305" cy="116" r="9" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="2" />
+          <text x="305" y="99" text-anchor="middle" font-size="13" font-weight="800" fill="#1C1917">02 德國</text>
+          <text x="305" y="138" text-anchor="middle" font-size="10.5" fill="#57534E">1918–1923</text>
+
+          <!-- 南斯拉夫 -->
+          <circle cx="448" cy="166" r="9" fill="#9A6B21" stroke="#F7F4EB" stroke-width="2" />
+          <text x="448" y="149" text-anchor="middle" font-size="13" font-weight="800" fill="#1C1917">05 南斯拉夫</text>
+          <text x="448" y="189" text-anchor="middle" font-size="10.5" fill="#57534E">1941–1948</text>
+
+          <!-- 俄國 -->
+          <circle cx="592" cy="122" r="10" fill="#991B1B" stroke="#F7F4EB" stroke-width="2" />
+          <text x="592" y="103" text-anchor="middle" font-size="13" font-weight="800" fill="#1C1917">01 俄國</text>
+          <text x="592" y="145" text-anchor="middle" font-size="10.5" fill="#57534E">1917–1923（餘波至 1934）</text>
+
+          <!-- 中國 -->
+          <circle cx="942" cy="156" r="10" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="2" />
+          <text x="942" y="137" text-anchor="middle" font-size="13" font-weight="800" fill="#1C1917">03 中國</text>
+          <text x="942" y="179" text-anchor="middle" font-size="10.5" fill="#57534E">1916–1949 完整三十年</text>
+
+          <!-- 下半部：1914-1945 五國平行時間軸 -->
+          <rect x="20" y="250" width="1080" height="162" fill="#F7F4EB" stroke="#D6CFC2" stroke-width="1" />
+          <text x="38" y="272" font-size="12" font-weight="700" fill="#57534E" letter-spacing="1.5">SYNCHRONIZED TIMELINE · 1914–1949 五國並置時間軸（對齊 1914／1918／1928／1936／1941／1945）</text>
+
+          <!-- 年份垂直基準線：1914 (x=150) 到 1949 (x=1060)，每 5 年 130px -->
+          <line x1="150" y1="286" x2="150" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="150" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1914</text>
+
+          <line x1="254" y1="286" x2="254" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="254" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1918</text>
+
+          <line x1="384" y1="286" x2="384" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="384" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1923</text>
+
+          <line x1="514" y1="286" x2="514" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="514" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1928</text>
+
+          <line x1="722" y1="286" x2="722" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="722" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1936</text>
+
+          <line x1="852" y1="286" x2="852" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="852" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1941</text>
+
+          <line x1="956" y1="286" x2="956" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="956" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1945</text>
+
+          <line x1="1060" y1="286" x2="1060" y2="398" stroke="#D6CFC2" stroke-width="1" />
+          <text x="1060" y="410" text-anchor="middle" font-size="10.5" fill="#57534E">1949</text>
+
+          <!-- Row 1: 俄國 -->
+          <text x="38" y="302" font-size="11.5" font-weight="700" fill="#1C1917">01 俄國</text>
+          <rect x="228" y="291" width="156" height="14" fill="#991B1B" />
+          <line x1="384" y1="298" x2="670" y2="298" stroke="#991B1B" stroke-width="2" stroke-dasharray="4 3" />
+          <text x="410" y="302" font-size="10" fill="#991B1B">中亞巴斯馬奇抵抗至 1934</text>
+
+          <!-- Row 2: 德國 -->
+          <text x="38" y="324" font-size="11.5" font-weight="700" fill="#1C1917">02 德國</text>
+          <rect x="254" y="313" width="130" height="14" fill="#1E3A5F" />
+          <text x="394" y="324" font-size="10" fill="#1E3A5F">1918–1923 革命、鎮壓與威瑪危機</text>
+
+          <!-- Row 3: 中國 -->
+          <text x="38" y="346" font-size="11.5" font-weight="700" fill="#1C1917">03 中國</text>
+          <rect x="202" y="335" width="312" height="14" fill="#1E3A5F" opacity="0.72" />
+          <rect x="514" y="335" width="208" height="14" fill="#57534E" opacity="0.45" />
+          <rect x="722" y="335" width="338" height="14" fill="#991B1B" />
+          <text x="358" y="345" text-anchor="middle" font-size="9.5" fill="#F7F4EB">1916–28 軍閥・黨軍</text>
+          <text x="891" y="345" text-anchor="middle" font-size="9.5" fill="#F7F4EB">1936–49 西安事變・皖南・土改建國</text>
+
+          <!-- Row 4: 西班牙 -->
+          <text x="38" y="368" font-size="11.5" font-weight="700" fill="#1C1917">04 西班牙</text>
+          <rect x="592" y="357" width="130" height="14" fill="#57534E" opacity="0.5" />
+          <rect x="722" y="357" width="78" height="14" fill="#991B1B" />
+          <text x="810" y="368" font-size="10" fill="#991B1B">1931–36 極化 → 1936–39 內戰與革命</text>
+
+          <!-- Row 5: 南斯拉夫 -->
+          <text x="38" y="390" font-size="11.5" font-weight="700" fill="#1C1917">05 南斯拉夫</text>
+          <rect x="852" y="379" width="104" height="14" fill="#9A6B21" />
+          <rect x="956" y="379" width="78" height="14" fill="#1C1917" />
+          <text x="844" y="390" text-anchor="end" font-size="10" fill="#9A6B21">1941–45 游擊解放 → 1948 蘇南分裂</text>
+        </svg>
+        <div class="map-legend">
+          <span class="legend-item"><span class="legend-swatch" style="background:#991B1B"></span>蘇援、X 行動與契卡外溢</span>
+          <span class="legend-item"><span class="legend-swatch" style="border-top:2px dashed #1E3A5F"></span>白俄流亡與海參崴 FT-17 坦克流向</span>
+          <span class="legend-item"><span class="legend-swatch" style="background:#9A6B21"></span>西班牙國際縱隊南國老兵返國線</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="deck-catalog" aria-labelledby="catalog-heading">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">CURATED DECKS · 00 TO 05</div>
+          <h2 id="catalog-heading">六冊獨立策展簡報目錄</h2>
+        </div>
+        <span class="section-sub">建議先讀 00 總論建立四派座標，再按時間或興趣挑選五國專冊</span>
+      </div>
+
+      <div class="deck-grid">
+        <!-- 00 總論 -->
+        <article class="deck-card deck-card--framework">
+          <div class="deck-card-top">
+            <div>
+              <div class="deck-vol">
+                <span>VOL. 00｜總論與公式篇</span>
+                <span class="deck-span">1914–1945 全歐亞框架</span>
+              </div>
+              <h3>路線兩難、歐亞連動網與地方崛起公式</h3>
+              <p class="deck-question">
+                <strong>核心問題：</strong>兩次大戰如何製造權力真空？同喊社會主義的四派為何互打？地方勢力靠什麼走完奪權最後一哩？
+              </p>
+            </div>
+          </div>
+          <div class="deck-linkage">
+            <strong>跨國連動亮點：</strong>一圖掌握白俄流亡者、FT-17 坦克、契卡機制與西班牙老兵的跨洲串聯，並收錄邁克爾·塞德曼（Michael Seidman）後方治安比較與史料邊界清單。
+          </div>
+          <div class="deck-card-foot">
+            <span class="deck-meta">共 6 頁｜含 4 幅內嵌圖解與跨冊跳轉錨點</span>
+            <a class="deck-enter" href="deck_00_framework.html">進入 00 總論 →</a>
+          </div>
+        </article>
+
+        <!-- 01 俄國 -->
+        <article class="deck-card">
+          <div class="deck-card-top">
+            <div>
+              <div class="deck-vol">
+                <span>VOL. 01｜俄國篇</span>
+                <span class="deck-span">1917–1923（餘波至 1934）</span>
+              </div>
+              <h3>從民選蘇維埃到一黨專政與四方內戰</h3>
+              <p class="deck-question">
+                <strong>核心問題：</strong>工農兵「蘇維埃」（soviets）為何在解散立憲會議後走向一黨制？紅軍如何靠強徵與 83% 舊軍官取勝？
+              </p>
+            </div>
+            <img class="deck-thumb" src="assets/01_russia.jpg" alt="1917 年東線與前沙俄西部疆界變動圖" />
+          </div>
+          <div class="deck-linkage">
+            <strong>跨國連動亮點：</strong>100 至 200 萬白俄流亡者與海參崴坦克外溢中國與西班牙；「契卡」（Cheka）與列寧主義民主集中制向歐亞輸出。
+          </div>
+          <div class="deck-card-foot">
+            <span class="deck-meta">來源：01_russian_civil_war.md</span>
+            <a class="deck-enter" href="deck_01_russia.html">進入 01 俄國 →</a>
+          </div>
+        </article>
+
+        <!-- 02 德國 -->
+        <article class="deck-card">
+          <div class="deck-card-top">
+            <div>
+              <div class="deck-vol">
+                <span>VOL. 02｜德國篇</span>
+                <span class="deck-span">1918–1923（威瑪結構遺緒）</span>
+              </div>
+              <h3>工兵委員會讓權、議會妥協與極左鎮壓</h3>
+              <p class="deck-question">
+                <strong>核心問題：</strong>水兵起義推翻帝制後，多數派社民黨（SPD）為何懼怕俄式內戰，寧願聯手舊軍方與資方鎮壓斯巴達克起義？
+              </p>
+            </div>
+            <img class="deck-thumb" src="assets/02_germany.jpg" alt="1919 年 1 月柏林十一月革命街頭路障歷史照片" />
+          </div>
+          <div class="deck-linkage">
+            <strong>跨國連動亮點：</strong>直接受 1917 俄國革命與《布列斯特條約》衝擊；保留下來的德國軍方勢力日後轉而介入西班牙內戰與肢解南斯拉夫。
+          </div>
+          <div class="deck-card-foot">
+            <span class="deck-meta">來源：02_german_revolution_1918_1919.md</span>
+            <a class="deck-enter" href="deck_02_germany.html">進入 02 德國 →</a>
+          </div>
+        </article>
+
+        <!-- 03 中國 -->
+        <article class="deck-card">
+          <div class="deck-card-top">
+            <div>
+              <div class="deck-vol">
+                <span>VOL. 03｜中國篇</span>
+                <span class="deck-span">1916–1949 完整時間軸</span>
+              </div>
+              <h3>北洋割據、黨軍移植與敵後貧農土改翻盤</h3>
+              <p class="deck-question">
+                <strong>核心問題：</strong>中央崩潰如何催生軍閥與農民自衛會社？國民黨移植列寧式黨軍後為何因「整批收編」埋下病根，讓中共藉敵後土改勝出？
+              </p>
+            </div>
+            <img class="deck-thumb" src="assets/03_china_warlords.png" alt="1925 年中國主要軍閥派系割據形勢圖" />
+          </div>
+          <div class="deck-linkage">
+            <strong>跨國連動亮點：</strong>奉系接收俄國白軍軍火與法製 FT-17 坦克；孫中山藉蘇聯改組建軍；1945 年後蘇聯默許東北日械流入中共。
+          </div>
+          <div class="deck-card-foot">
+            <span class="deck-meta">來源：04_warlord_era_china.md、05_second_united_front.md</span>
+            <a class="deck-enter" href="deck_03_china.html">進入 03 中國 →</a>
+          </div>
+        </article>
+
+        <!-- 04 西班牙 -->
+        <article class="deck-card">
+          <div class="deck-card-top">
+            <div>
+              <div class="deck-vol">
+                <span>VOL. 04｜西班牙篇</span>
+                <span class="deck-span">1931–1939（戰後餘波）</span>
+              </div>
+              <h3>「先革命或先贏戰」的共和區街頭內鬨</h3>
+              <p class="deck-question">
+                <strong>核心問題：</strong>為何 1936 年工人武裝擋下軍事政變並推動集體化，卻在巴塞隆納「五月事件」街頭火拚與 27 國禁運下敗給佛朗哥？
+              </p>
+            </div>
+            <img class="deck-thumb" src="assets/04_spain.jpg" alt="1936 年 8 月西班牙共和派女民兵訓練實景" />
+          </div>
+          <div class="deck-linkage">
+            <strong>跨國連動亮點：</strong>集結俄國「契卡」外溢的 <em>checas</em>、蘇聯「X 行動」、150–170 名白俄、德義干涉軍與返國助戰的南斯拉夫老兵。
+          </div>
+          <div class="deck-card-foot">
+            <span class="deck-meta">來源：03_spanish_civil_war.md</span>
+            <a class="deck-enter" href="deck_04_spain.html">進入 04 西班牙 →</a>
+          </div>
+        </article>
+
+        <!-- 05 南斯拉夫 -->
+        <article class="deck-card">
+          <div class="deck-card-top">
+            <div>
+              <div class="deck-vol">
+                <span>VOL. 05｜南斯拉夫篇</span>
+                <span class="deck-span">1941–1948（蘇南分裂）</span>
+              </div>
+              <h3>跨民族游擊自主建國、清洗禁忌與蘇南決裂</h3>
+              <p class="deck-question">
+                <strong>核心問題：</strong>在德軍百人質屠殺與烏斯塔沙暴行夾擊下，狄托游擊隊如何從 8.1 萬打成 80 萬正規軍，並成為戰後敢與史達林分裂的政權？
+              </p>
+            </div>
+            <img class="deck-thumb" src="assets/05_yugoslavia.jpg" alt="南斯拉夫反法西斯游擊隊紀念雕塑" />
+          </div>
+          <div class="deck-linkage">
+            <strong>跨國連動亮點：</strong>逾千名西班牙國際縱隊南國老兵返國建立現代游擊指揮骨幹；對照切特尼克畏戰通敵，促成 1943 年盟軍轉向。
+          </div>
+          <div class="deck-card-foot">
+            <span class="deck-meta">來源：06_yugoslav_partisans.md</span>
+            <a class="deck-enter" href="deck_05_yugoslavia.html">進入 05 南斯拉夫 →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="hub-footer">
+      <div>
+        <strong>嚴格溯源原則：</strong>本系列所有歷史年分、數據與史觀論述皆嚴格溯源於專案 <code>raw/01</code>～<code>06</code> 原始資料與 <code>wiki/</code> 知識庫（詳見 <code>workflow_output/cards.md</code>）。
+      </div>
+      <div>
+        <strong>影像授權：</strong>歷史縮圖均已驗證並儲存於本機 <code>assets/</code>（來源與公開授權見 <code>assets/credits.md</code>）。
+      </div>
+    </footer>
+  </main>
 </body>
 </html>

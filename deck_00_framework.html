@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>00｜總論與公式篇：1914–1945 歐亞路線分歧與地方崛起｜戰火下的路線分歧</title>
+  <style>
+    :root {
+      --paper: #F7F4EB;
+      --paper-alt: #EFECE1;
+      --paper-card: #FBF9F4;
+      --ink: #1C1917;
+      --ink-muted: #57534E;
+      --red: #991B1B;
+      --blue: #1E3A5F;
+      --ochre: #9A6B21;
+      --hairline: #D6CFC2;
+      --serif: "Noto Serif TC", "Source Han Serif TC", Georgia, serif;
+      --sans: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      background: #EAE4D7;
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 固定頂部系列導覽列與進度條（置於 <section class="slide"> 之外） */
+    .series-topbar {
+      background: var(--ink);
+      color: var(--paper);
+      border-bottom: 1px solid #3A342F;
+      flex-shrink: 0;
+    }
+
+    .series-nav {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 9px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .series-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .series-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #E7E2D6;
+      padding: 4px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.25);
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .series-links a:hover {
+      background: rgba(247, 244, 235, 0.1);
+      border-color: var(--paper);
+    }
+
+    .series-links a.is-current {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .deck-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+      font-size: 0.85rem;
+      color: #D6CFC2;
+    }
+
+    .slide-counter {
+      font-weight: 700;
+      color: var(--paper);
+      padding: 3px 10px;
+      border: 1px solid rgba(214, 207, 194, 0.35);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 3px;
+      background: #3A342F;
+      flex-shrink: 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 16.67%;
+      background: var(--red);
+      transition: width 0.25s ease;
+    }
+
+    /* 簡報主舞台 */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px 10px;
+      min-height: 0;
+    }
+
+    section.slide {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 560px;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      box-shadow: 0 18px 44px rgba(28, 25, 23, 0.12);
+      padding: 34px 44px 24px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      position: relative;
+    }
+
+    section.slide.active {
+      display: flex;
+      animation: fadePage 0.2s ease;
+    }
+
+    @keyframes fadePage {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 全版面深色封面 */
+    section.slide.slide--cover {
+      background:
+        radial-gradient(circle at 86% 20%, rgba(153, 27, 27, 0.3) 0%, transparent 48%),
+        radial-gradient(circle at 14% 85%, rgba(30, 58, 95, 0.28) 0%, transparent 46%),
+        var(--ink);
+      color: var(--paper);
+      border-color: #3A342F;
+    }
+
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide--cover .kicker {
+      color: #E2C799;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      line-height: 1.28;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3.3vw, 2.65rem);
+      color: var(--paper);
+    }
+
+    h2 {
+      font-size: clamp(1.42rem, 2.3vw, 1.9rem);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 10px;
+    }
+
+    .cover-subtitle {
+      font-size: 1.08rem;
+      line-height: 1.72;
+      color: #E7E2D6;
+      max-width: 62ch;
+    }
+
+    .cover-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cover-tag {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border: 1px solid rgba(226, 199, 153, 0.45);
+      color: #F7F4EB;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .svg-frame {
+      background: var(--paper-card);
+      border: 1px solid var(--hairline);
+      padding: 12px 14px;
+    }
+
+    .slide--cover .svg-frame {
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(214, 207, 194, 0.25);
+    }
+
+    .svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 雜誌編輯排版元件（不使用左側粗色條圓角網格） */
+    .editorial-split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .editorial-col {
+      padding: 16px 22px 16px 0;
+    }
+
+    .editorial-col + .editorial-col {
+      padding: 16px 0 16px 22px;
+      border-left: 1px solid var(--hairline);
+    }
+
+    .col-label {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+
+    .col-label--blue {
+      color: var(--blue);
+    }
+
+    .editorial-col p,
+    .prose {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    /* Slide 3：象限與四派細線表格 */
+    .quadrant-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.15fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .spectrum-list {
+      border-top: 1px solid var(--ink);
+    }
+
+    .spectrum-row {
+      padding: 11px 0;
+      border-bottom: 1px solid var(--hairline);
+      display: grid;
+      grid-template-columns: 108px minmax(0, 1fr);
+      gap: 14px;
+      align-items: baseline;
+    }
+
+    .spectrum-name {
+      font-family: var(--serif);
+      font-weight: 800;
+      font-size: 0.98rem;
+      color: var(--red);
+    }
+
+    .spectrum-name--blue {
+      color: var(--blue);
+    }
+
+    .spectrum-desc {
+      font-size: 0.94rem;
+      line-height: 1.58;
+      color: var(--ink);
+    }
+
+    /* Slide 4：三欄連線摘要與跳轉膠囊 */
+    .flow-columns {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+    }
+
+    .flow-col {
+      font-size: 0.93rem;
+      line-height: 1.62;
+    }
+
+    .flow-num {
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--blue);
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cross-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--hairline);
+    }
+
+    .cross-pill {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--paper-card);
+      border: 1px solid var(--blue);
+      padding: 5px 14px;
+      border-radius: 999px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .cross-pill:hover {
+      background: var(--blue);
+      color: var(--paper);
+    }
+
+    /* Slide 5：公式洞察與史料盲區 */
+    .insight-band {
+      background: var(--paper-alt);
+      border-top: 2px solid var(--blue);
+      border-bottom: 1px solid var(--hairline);
+      padding: 13px 18px;
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    .insight-band strong {
+      font-family: var(--serif);
+      color: var(--blue);
+    }
+
+    .gap-note {
+      border: 1px dashed var(--ochre);
+      background: rgba(154, 107, 33, 0.07);
+      padding: 10px 16px;
+      font-size: 0.89rem;
+      line-height: 1.55;
+      color: #5E3F0D;
+      font-weight: 600;
+    }
+
+    /* Slide 6：三個思考工具與總結按鈕 */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .tool-item {
+      border-top: 2px solid var(--ink);
+      padding-top: 12px;
+    }
+
+    .tool-num {
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--red);
+      font-variant-numeric: tabular-nums;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .tool-item h3 {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .tool-item p {
+      font-size: 0.94rem;
+      line-height: 1.62;
+      color: var(--ink);
+    }
+
+    .route-bar {
+      border-top: 1px solid var(--hairline);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .route-text {
+      font-size: 0.95rem;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      text-decoration: none;
+      background: var(--red);
+      color: var(--paper);
+      border: 1px solid var(--red);
+      padding: 9px 18px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: background 0.15s ease;
+    }
+
+    .cta-btn:hover {
+      background: #7F1D1D;
+    }
+
+    .ghost-btn {
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 9px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.15s ease;
+    }
+
+    .ghost-btn:hover {
+      background: var(--paper-alt);
+    }
+
+    /* 頁底出處欄 */
+    footer.slide-source {
+      border-top: 1px solid var(--hairline);
+      padding-top: 9px;
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--ink-muted);
+      word-break: break-word;
+    }
+
+    .slide--cover footer.slide-source {
+      border-top-color: rgba(214, 207, 194, 0.25);
+      color: #B8B0A4;
+    }
+
+    /* 底部控制列（置於 <section class="slide"> 之外） */
+    .controls {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 8px 20px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .dot {
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--hairline);
+      padding: 4px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--paper);
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 860px) {
+      section.slide {
+        padding: 24px 22px 18px;
+      }
+      .editorial-split,
+      .quadrant-layout,
+      .flow-columns,
+      .tools-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .editorial-col + .editorial-col {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        padding: 14px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="series-topbar">
+    <nav class="series-nav" aria-label="全系列簡報導覽列">
+      <div class="series-links">
+        <a href="index.html">策展總覽 index.html</a>
+        <a href="deck_00_framework.html" class="is-current">00 總論</a>
+        <a href="deck_01_russia.html">01 俄國</a>
+        <a href="deck_02_germany.html">02 德國</a>
+        <a href="deck_03_china.html">03 中國</a>
+        <a href="deck_04_spain.html">04 西班牙</a>
+        <a href="deck_05_yugoslavia.html">05 南斯拉夫</a>
+      </div>
+      <div class="deck-status">
+        <span>00｜總論與公式篇</span>
+        <span class="slide-counter" id="slideCounter">01 / 06</span>
+      </div>
+    </nav>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <!-- Slide 1：全版面深色封面 -->
+    <section class="slide slide--cover" id="slide-1">
+      <div class="slide-body">
+        <span class="kicker">DECK 00 · SERIES FRAMEWORK · 1914–1945</span>
+        <h1>大戰打碎舊帝國後，誰能從亂世蛻變為全國政權？</h1>
+        <p class="cover-subtitle">
+          1914 至 1945 年，兩次大戰與內戰摧毀舊中央。追求變革的左翼與地方武裝陷入「基層自治」與「集權贏戰」的兩難；唯有兼顧農村土改、跨群體統戰與後方治安的勢力，才能走到最後。
+        </p>
+        <div class="cover-tags">
+          <span class="cover-tag">1917 俄國</span>
+          <span class="cover-tag">1918 德國</span>
+          <span class="cover-tag">1916–49 中國</span>
+          <span class="cover-tag">1936 西班牙</span>
+          <span class="cover-tag">1941–48 南斯拉夫</span>
+        </div>
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 96" role="img" aria-label="1914至1945歐亞五大舞台極簡時間線">
+            <line x1="48" y1="46" x2="912" y2="46" stroke="#D6CFC2" stroke-width="1.5" />
+            <circle cx="70" cy="46" r="5" fill="#E2C799" />
+            <text x="70" y="28" text-anchor="middle" font-size="12" fill="#E2C799">1914 一戰</text>
+
+            <circle cx="235" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="235" y="76" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1916–49 中</text>
+
+            <circle cx="375" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="375" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1917 俄</text>
+
+            <circle cx="505" cy="46" r="6" fill="#1E3A5F" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="505" y="76" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1918 德</text>
+
+            <circle cx="670" cy="46" r="6" fill="#991B1B" stroke="#F7F4EB" stroke-width="1.5" />
+            <text x="670" y="28" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1936 西</text>
+
+            <circle cx="825" cy="46" r="6" fill="#E2C799" stroke="#1C1917" stroke-width="1.5" />
+            <text x="825" y="76" text-anchor="middle" font-size="12.5" font-weight="700" fill="#F7F4EB">1941–48 南</text>
+
+            <circle cx="905" cy="46" r="5" fill="#E2C799" />
+            <text x="905" y="28" text-anchor="middle" font-size="12" fill="#E2C799">1945 終戰</text>
+          </svg>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, 導言]; [04_warlord_era_china.md, 導言]; [05_second_united_front.md, 導言]; [06_yugoslav_partisans.md, 導言]</footer>
+    </section>
+
+    <!-- Slide 2：權力真空的起點 -->
+    <section class="slide" id="slide-2">
+      <div class="slide-body">
+        <span class="kicker">01 · ORIGIN OF POWER VACUUM</span>
+        <h2>兩次大戰打碎舊中央，在歐亞五大戰場留下權力真空</h2>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">一戰衝擊：俄德帝國瓦解</div>
+            <p>
+              1917 年二月革命（February Revolution）推翻沙皇，俄國陷入臨時政府與民選「蘇維埃」（soviets）的雙重政權。1918 年基爾（Kiel）水兵起義推翻德帝國，各地工兵委員會（workers' and soldiers' councils）接管城鎮。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">裂解重演：中、西、南戰場</div>
+            <p>
+              1916 年袁世凱（Yuan Shikai）死後中國分裂為南北軍閥；1936 年西班牙政變癱瘓中央；1941 年軸心國（Axis powers）瓜分南斯拉夫。舊秩序空洞化，迫使地方武裝與基層組織就地崛起。
+            </p>
+          </div>
+        </div>
+
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 128" role="img" aria-label="1916至1941年五大戰場權力真空時間軸">
+            <line x1="60" y1="62" x2="900" y2="62" stroke="#1C1917" stroke-width="2" />
+            <!-- 1916 中國 -->
+            <circle cx="110" cy="62" r="7" fill="#1E3A5F" />
+            <text x="110" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="#1E3A5F">1916 中國分裂</text>
+            <text x="110" y="94" text-anchor="middle" font-size="11.5" fill="#57534E">袁逝北洋割據</text>
+
+            <!-- 1917 俄國 -->
+            <circle cx="290" cy="62" r="7" fill="#991B1B" />
+            <text x="290" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="#991B1B">1917 俄國革命</text>
+            <text x="290" y="94" text-anchor="middle" font-size="11.5" fill="#57534E">沙皇退位雙政權</text>
+
+            <!-- 1918 德國 -->
+            <circle cx="470" cy="62" r="7" fill="#1E3A5F" />
+            <text x="470" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="#1E3A5F">1918 德國起義</text>
+            <text x="470" y="94" text-anchor="middle" font-size="11.5" fill="#57534E">王朝垮台委員會</text>
+
+            <!-- 1936 西班牙 -->
+            <circle cx="660" cy="62" r="7" fill="#991B1B" />
+            <text x="660" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="#991B1B">1936 西班牙政變</text>
+            <text x="660" y="94" text-anchor="middle" font-size="11.5" fill="#57534E">開倉發槍民兵起</text>
+
+            <!-- 1941 南斯拉夫 -->
+            <circle cx="850" cy="62" r="7" fill="#9A6B21" />
+            <text x="850" y="34" text-anchor="middle" font-size="13" font-weight="800" fill="#9A6B21">1941 南國瓜分</text>
+            <text x="850" y="94" text-anchor="middle" font-size="11.5" fill="#57534E">軸心入侵肢解</text>
+          </svg>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Background]; [02_german_revolution_1918_1919.md, Revolution, first stage: fall of the Empire]; [03_spanish_civil_war.md, Military coup]; [04_warlord_era_china.md, 導言]; [06_yugoslav_partisans.md, Background and origins]</footer>
+    </section>
+
+    <!-- Slide 3：左翼四派光譜 -->
+    <section class="slide" id="slide-3">
+      <div class="slide-body">
+        <span class="kicker">02 · FOUR LEFTIST SPECTRUMS</span>
+        <h2>同喊社會主義，四條奪權路線的衝突讓左翼經常互打</h2>
+
+        <div class="quadrant-layout">
+          <div class="svg-frame">
+            <svg viewBox="0 0 420 310" role="img" aria-label="社會主義四派奪權路線四象限光譜圖">
+              <rect x="0" y="0" width="420" height="310" fill="#FBF9F4" />
+              <!-- 象限底色 -->
+              <rect x="44" y="34" width="166" height="121" fill="rgba(154,107,33,0.08)" />
+              <rect x="210" y="34" width="166" height="121" fill="rgba(153,27,27,0.09)" />
+              <rect x="44" y="155" width="166" height="121" fill="rgba(30,58,95,0.08)" />
+              <rect x="210" y="155" width="166" height="121" fill="rgba(28,25,23,0.06)" />
+
+              <!-- 十字座標軸 -->
+              <line x1="210" y1="26" x2="210" y2="286" stroke="#1C1917" stroke-width="1.5" />
+              <line x1="34" y1="155" x2="386" y2="155" stroke="#1C1917" stroke-width="1.5" />
+
+              <!-- 軸標籤 -->
+              <text x="210" y="18" text-anchor="middle" font-size="12" font-weight="800" fill="#991B1B">立即革命</text>
+              <text x="210" y="302" text-anchor="middle" font-size="12" font-weight="800" fill="#1E3A5F">漸進統戰</text>
+              <text x="12" y="159" font-size="11.5" font-weight="800" fill="#57534E">分散</text>
+              <text x="392" y="159" font-size="11.5" font-weight="800" fill="#57534E">集權</text>
+
+              <!-- 四象限標記 -->
+              <circle cx="127" cy="86" r="6" fill="#9A6B21" />
+              <text x="127" y="110" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1C1917">無政府自治</text>
+              <text x="127" y="129" text-anchor="middle" font-size="11" fill="#57534E">Makhno / CNT-FAI</text>
+
+              <circle cx="293" cy="86" r="6" fill="#991B1B" />
+              <text x="293" y="110" text-anchor="middle" font-size="13.5" font-weight="800" fill="#991B1B">一黨集權</text>
+              <text x="293" y="129" text-anchor="middle" font-size="11" fill="#57534E">Bolsheviks / PCE</text>
+
+              <circle cx="127" cy="212" r="6" fill="#1E3A5F" />
+              <text x="127" y="236" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1E3A5F">議會改良</text>
+              <text x="127" y="255" text-anchor="middle" font-size="11" fill="#57534E">SPD / Mensheviks</text>
+
+              <circle cx="293" cy="212" r="6" fill="#1C1917" />
+              <text x="293" y="236" text-anchor="middle" font-size="13.5" font-weight="800" fill="#1C1917">抗戰游擊</text>
+              <text x="293" y="255" text-anchor="middle" font-size="11" fill="#57534E">CCP / KPJ</text>
+            </svg>
+          </div>
+
+          <div class="spectrum-list">
+            <div class="spectrum-row">
+              <span class="spectrum-name">一黨集權</span>
+              <span class="spectrum-desc">布爾什維克（Bolsheviks）建一黨制，輸出民主集中制至中國與西班牙共產黨（PCE）。</span>
+            </div>
+            <div class="spectrum-row">
+              <span class="spectrum-name spectrum-name--blue">議會改良</span>
+              <span class="spectrum-desc">德國社民黨（SPD）與俄國孟什維克（Mensheviks）拒斥專政，堅守國會選票與憲政妥協。</span>
+            </div>
+            <div class="spectrum-row">
+              <span class="spectrum-name">無政府自治</span>
+              <span class="spectrum-desc">馬赫諾運動（Makhnovshchina）與西班牙 CNT-FAI 反國家集權，當下推行基層集體化。</span>
+            </div>
+            <div class="spectrum-row">
+              <span class="spectrum-name spectrum-name--blue">抗戰游擊</span>
+              <span class="spectrum-desc">中共（CCP）與南共（KPJ）淡化激進口號，以統一戰線與農村動員優先抗敵。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, Background events]; [03_spanish_civil_war.md, Spanish Revolution]; [04_warlord_era_china.md, South]; [05_second_united_front.md, Cooperation during the Second Sino-Japanese War]; [06_yugoslav_partisans.md, Objectives]</footer>
+    </section>
+
+    <!-- Slide 4：歐亞六大跨國連動網 -->
+    <section class="slide" id="slide-4">
+      <div class="slide-body">
+        <span class="kicker">03 · TRANSNATIONAL NETWORKS</span>
+        <h2>從海參崴坦克到西班牙老兵，六條跨國鏈改寫五國戰局</h2>
+
+        <div class="svg-frame">
+          <svg viewBox="0 0 960 154" role="img" aria-label="白俄、FT-17坦克、契卡與西班牙老兵跨國連動路徑圖">
+            <rect x="0" y="0" width="960" height="154" fill="#FBF9F4" />
+            <!-- 節點 -->
+            <rect x="34" y="88" width="120" height="42" fill="#991B1B" />
+            <text x="94" y="114" text-anchor="middle" font-size="13" font-weight="800" fill="#F7F4EB">西班牙</text>
+
+            <rect x="275" y="96" width="132" height="42" fill="#9A6B21" />
+            <text x="341" y="122" text-anchor="middle" font-size="13" font-weight="800" fill="#F7F4EB">南斯拉夫</text>
+
+            <rect x="445" y="22" width="126" height="42" fill="#1C1917" />
+            <text x="508" y="48" text-anchor="middle" font-size="13" font-weight="800" fill="#F7F4EB">俄國・海參崴</text>
+
+            <rect x="780" y="88" width="144" height="42" fill="#1E3A5F" />
+            <text x="852" y="114" text-anchor="middle" font-size="13" font-weight="800" fill="#F7F4EB">中國東北・上海</text>
+
+            <!-- 路徑弧線 -->
+            <path d="M 445,44 Q 240,28 112,86" fill="none" stroke="#991B1B" stroke-width="2.2" />
+            <polygon points="109,88 118,86 113,78" fill="#991B1B" />
+            <text x="248" y="34" text-anchor="middle" font-size="11.5" font-weight="700" fill="#991B1B">150–170 白俄・X行動・checas</text>
+
+            <path d="M 571,44 Q 740,28 836,86" fill="none" stroke="#1E3A5F" stroke-width="2.2" stroke-dasharray="6 4" />
+            <polygon points="839,88 830,86 835,78" fill="#1E3A5F" />
+            <text x="735" y="34" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1E3A5F">白俄軍火・FT-17・民主集中</text>
+
+            <path d="M 154,114 Q 215,134 273,118" fill="none" stroke="#9A6B21" stroke-width="2.2" />
+            <polygon points="275,117 265,115 268,124" fill="#9A6B21" />
+            <text x="214" y="144" text-anchor="middle" font-size="11.5" font-weight="700" fill="#9A6B21">千名老兵返國</text>
+          </svg>
+        </div>
+
+        <div class="flow-columns">
+          <div class="flow-col">
+            <span class="flow-num">01–03｜白俄與坦克流</span>
+            百萬白俄流亡者（White émigrés）將俄軍軍火、海參崴法製 FT-17（Renault FT-17）坦克與雇傭兵團帶入中國東北及上海，更有 150 至 170 名赴西助戰。
+          </div>
+          <div class="flow-col">
+            <span class="flow-num">04–05｜蘇援與契卡</span>
+            蘇俄民主集中制與「X 行動」（Operation X）軍援跨國輸出國共與西班牙，「契卡」（Cheka）更衍生西班牙法外審查委員會（<em>checas</em>）。
+          </div>
+          <div class="flow-col">
+            <span class="flow-num">06｜國際縱隊骨幹</span>
+            西班牙國際縱隊（International Brigades）逾千名南斯拉夫老兵返國，成為二戰游擊隊無可取代的現代戰術骨幹。
+          </div>
+        </div>
+
+        <div class="cross-pills" aria-label="跨簡報深入閱讀跳轉">
+          <a class="cross-pill" href="deck_01_russia.html#slide-6">俄國白軍流亡 ↗</a>
+          <a class="cross-pill" href="deck_03_china.html#slide-4">東北 FT-17 與蘇援 ↗</a>
+          <a class="cross-pill" href="deck_04_spain.html#slide-4">西班牙縱隊與 checas ↗</a>
+          <a class="cross-pill" href="deck_05_yugoslavia.html#slide-3">南國老兵返國 ↗</a>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, Aftermath]; [03_spanish_civil_war.md, Foreign involvement; Atrocities]; [04_warlord_era_china.md, Armaments; Other forces]; [06_yugoslav_partisans.md, Operations; Composition]</footer>
+    </section>
+
+    <!-- Slide 5：地方崛起成敗公式與史料盲區 -->
+    <section class="slide" id="slide-5">
+      <div class="slide-body">
+        <span class="kicker">04 · FORMULA &amp; EVIDENCE BOUNDARY</span>
+        <h2>地方勢力能否掌權，取決於土改、統戰與後方治安</h2>
+
+        <div class="editorial-split">
+          <div class="editorial-col">
+            <div class="col-label">瓦解組：遭消滅、整編或交權</div>
+            <p>
+              俄黑軍綠軍、德國委員會、西班牙民兵與中國舊軍閥多遭消滅整編；唯芬蘭與波羅的海三國趁亂獨立。
+            </p>
+          </div>
+          <div class="editorial-col">
+            <div class="col-label col-label--blue">掌權組：土改、統戰與自主軍力</div>
+            <p>
+              中共藉貧農土改減稅建政；南國游擊隊憑跨民族「兄弟情誼與團結」擴至 80 萬大軍自主建國。
+            </p>
+          </div>
+        </div>
+
+        <div class="insight-band">
+          <strong>塞德曼（Michael Seidman）後方治安洞見：</strong>西班牙國民軍藉控糧與清理（<em>limpieza</em>）遏止游擊；俄白軍未平叛亂、中國國府縱容軍閥貪腐，雙雙腐蝕政權。
+        </div>
+
+        <div class="gap-note">
+          [資料不足／不確定：未載中共蘇區與八路軍年度兵力、1923 後德國左翼及自由軍團／切特尼克（Chetniks）總兵力。]
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言; Aftermath]; [02_german_revolution_1918_1919.md, Aftermath]; [03_spanish_civil_war.md, Atrocities]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, 導言; Post-war]</footer>
+    </section>
+
+    <!-- Slide 6：學習路線與三個思考工具 -->
+    <section class="slide" id="slide-6">
+      <div class="slide-body">
+        <span class="kicker">05 · READING GUIDE &amp; TOOLS</span>
+        <h2>帶著三個分析工具，走進歐亞五國的現場時間軸</h2>
+
+        <div class="tools-grid">
+          <article class="tool-item">
+            <span class="tool-num">01</span>
+            <h3>組織兩難</h3>
+            <p>在生存危機下，追求集權贏戰的黨軍為何常回過頭清洗自治盟友？</p>
+          </article>
+          <article class="tool-item">
+            <span class="tool-num">02</span>
+            <h3>後方紮根</h3>
+            <p>武裝政權依靠強徵與軍閥妥協，還是貧農土改、減稅與跨群體統戰維繫正當性？</p>
+          </article>
+          <article class="tool-item">
+            <span class="tool-num">03</span>
+            <h3>跨區與證據邊界</h3>
+            <p>追蹤流亡部隊與禁運軍火如何改寫本地戰局，並對史觀衝突與資料缺口保持自覺。</p>
+          </article>
+        </div>
+
+        <div class="route-bar">
+          <p class="route-text">
+            建議路線：先看俄、德一戰分岔，再讀中國完整三十年、西班牙內耗，最後看南斯拉夫翻盤。
+          </p>
+          <div class="cta-group">
+            <a class="ghost-btn" href="index.html">返回策展總覽</a>
+            <a class="cta-btn" href="deck_01_russia.html">進入第一章：俄國篇 →</a>
+          </div>
+        </div>
+      </div>
+      <footer class="slide-source">來源：[01_russian_civil_war.md, 導言]; [02_german_revolution_1918_1919.md, 導言]; [03_spanish_civil_war.md, Spanish Revolution]; [04_warlord_era_china.md, Aftermath]; [05_second_united_front.md, Breakdown and aftermath]; [06_yugoslav_partisans.md, Post-war]</footer>
+    </section>
+  </main>
+
+  <nav class="controls" aria-label="簡報導覽控制">
+    <div class="btn-group">
+      <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+      <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+    </div>
+    <div class="dots" id="dotsNav"></div>
+    <span class="hint">支援 ← / → / 空白鍵 / PageUp / PageDown 切換投影片</span>
+  </nav>
+
+  <script>
+    (function () {
+      const slides = Array.from(document.querySelectorAll("section.slide"));
+      const counter = document.getElementById("slideCounter");
+      const fill = document.getElementById("progressFill");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const dotsNav = document.getElementById("dotsNav");
+      const total = slides.length;
+      let current = 0;
+
+      slides.forEach((_, idx) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "dot" + (idx === 0 ? " active" : "");
+        dot.textContent = String(idx + 1).padStart(2, "0");
+        dot.setAttribute("aria-label", "前往第 " + (idx + 1) + " 頁");
+        dot.addEventListener("click", () => goTo(idx, true));
+        dotsNav.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsNav.querySelectorAll("button.dot"));
+
+      function goTo(index, syncHash) {
+        if (index < 0 || index >= total) return;
+        slides[current].classList.remove("active");
+        dots[current].classList.remove("active");
+        current = index;
+        slides[current].classList.add("active");
+        dots[current].classList.add("active");
+        counter.textContent =
+          String(current + 1).padStart(2, "0") + " / " + String(total).padStart(2, "0");
+        fill.style.width = (((current + 1) / total) * 100).toFixed(2) + "%";
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+        if (syncHash) {
+          try {
+            history.replaceState(null, "", "#slide-" + (current + 1));
+          } catch (_) {}
+        }
+      }
+
+      function applyHash() {
+        const m = /^#slide-(\d+)$/i.exec(window.location.hash || "");
+        if (!m) return false;
+        const idx = parseInt(m[1], 10) - 1;
+        if (idx >= 0 && idx < total) {
+          goTo(idx, false);
+          return true;
+        }
+        return false;
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1, true));
+      nextBtn.addEventListener("click", () => goTo(current + 1, true));
+      window.addEventListener("hashchange", applyHash);
+
+      document.addEventListener("keydown", (e) => {
+        const tag = e.target && e.target.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+        if (
+          e.key === "ArrowRight" ||
+          e.key === "PageDown" ||
+          e.code === "Space" ||
+          e.key === " "
+        ) {
+          e.preventDefault();
+          goTo(current + 1, true);
+        } else if (e.key === "ArrowLeft" || e.key === "PageUp") {
+          e.preventDefault();
+          goTo(current - 1, true);
+        } else if (e.key === "Home") {
+          e.preventDefault();
+          goTo(0, true);
+        } else if (e.key === "End") {
+          e.preventDefault();
+          goTo(total - 1, true);
+        }
+      });
+
+      if (!applyHash()) {
+        goTo(0, false);
+      }
+    })();
+  </script>
+</body>
+</html>
