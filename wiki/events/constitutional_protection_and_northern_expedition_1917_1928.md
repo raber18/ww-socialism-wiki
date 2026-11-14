@@ -26,4 +26,4 @@
 
 - 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]
 - 政治路線與勢力：[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[beiyang_warlord_cliques|北洋軍閥派系]]、[[guominjun_shanxi_and_northwest_warlords|國民軍、晉系與西北軍閥]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]
-- 前後事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]
+- 前後事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]、[[xian_incident_and_second_united_front_1936_1945|西安事變與第二次國共合作]]

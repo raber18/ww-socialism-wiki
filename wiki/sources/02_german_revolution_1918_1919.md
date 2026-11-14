@@ -42,3 +42,4 @@
 
 - 相關事件：[[01_russian_civil_war|俄國內戰]]、[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[spartacist_uprising_and_1919_revolts|斯巴達克起義與1919年各地暴動]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]
 - 相關流派與勢力：[[german_social_democracy|德國多數派社會民主黨]]、[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]、[[german_conservatism_and_far_right|德國帝制保守派、軍方與極右翼思潮]]、[[german_workers_and_soldiers_councils|德國工兵委員會與左翼武裝]]、[[freikorps_and_german_military|自由軍團與德國軍方]]、[[bolshevism|布爾什維克主義]]
+- 跨區綜合比較：[[socialism_branches_comparison|歐亞社會主義流派跨區比較]]、[[local_factions_and_war_dynamics|大戰衝擊下的地方勢力與戰爭動態比較]]

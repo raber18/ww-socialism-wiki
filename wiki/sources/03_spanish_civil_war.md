@@ -43,4 +43,5 @@
 
 - 相關流派：[[anarchism|無政府主義]]、[[spanish_anarcho_syndicalism_cnt_fai|西班牙無政府工團主義（CNT-FAI）]]、[[spanish_socialism_psoe_ugt|西班牙社會主義派（PSOE-UGT）]]、[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）與POUM]]、[[spanish_falangism_and_nationalist_right|西班牙長槍黨與右翼思潮]]、[[bolshevism|布爾什維克主義]]、[[german_conservatism_and_far_right|德國帝制保守派與極右翼思潮]]
 - 相關勢力：[[spanish_popular_front_and_republicans|西班牙人民陣線與共和派]]、[[cnt_fai_and_left_militias|CNT-FAI與左翼民兵]]、[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[international_brigades|國際縱隊]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]、[[white_movement|白衛運動與白軍]]
-- 相關事件：[[spanish_second_republic_and_polarization_1931_1936|西班牙第二共和國與1931–1936年政治極化]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]、[[spanish_revolution_and_may_days_1937|西班牙社會革命與1937年五月事件]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]
+- 相關事件與後續延伸：[[spanish_second_republic_and_polarization_1931_1936|西班牙第二共和國與1931–1936年政治極化]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]、[[spanish_revolution_and_may_days_1937|西班牙社會革命與1937年五月事件]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]、[[06_yugoslav_partisans|06_yugoslav_partisans（南斯拉夫志願老兵跨戰場延續）]]
+- 跨區綜合比較：[[socialism_branches_comparison|歐亞社會主義流派跨區比較]]、[[local_factions_and_war_dynamics|大戰衝擊下的地方勢力與戰爭動態比較]]

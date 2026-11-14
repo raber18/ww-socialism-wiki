@@ -85,3 +85,54 @@
   - `wiki/factions/czechoslovak_legion_and_foreign_interventions.md`（補充海參崴法軍遺留雷諾 FT-17 坦克流入奉系張作霖軍中與跨區連結，來源數升至 3）
   - `wiki/events/red_terror_and_left_sr_uprising_1918.md`（補充西班牙內戰共和區「checas」仿效蘇聯契卡命名之詞源延續，來源數升至 2）
 - **更新索引**：`wiki/index.md`（總頁面增至 55 頁）
+
+
+## [2026-11-14] ingest | 05_second_united_front.md, 06_yugoslav_partisans.md
+
+- **操作時間**：2026-11-14 16:48 (+08:00)
+- **處理來源**：`raw/05_second_united_front.md`、`raw/06_yugoslav_partisans.md`（暨跨區域綜合比較 6 篇全來源）
+- **新增頁面清單（共 16 頁）**：
+  - `wiki/sources/` (2)：
+    - `wiki/sources/05_second_united_front.md`
+    - `wiki/sources/06_yugoslav_partisans.md`
+  - `wiki/ideologies/` (3)：
+    - `wiki/ideologies/chinese_communism_and_united_front.md`
+    - `wiki/ideologies/yugoslav_communism_and_titoism.md`
+    - `wiki/ideologies/yugoslav_ethnic_nationalisms_chetniks_and_ustase.md`
+  - `wiki/factions/` (4)：
+    - `wiki/factions/ccp_eighth_route_and_new_fourth_armies.md`
+    - `wiki/factions/yugoslav_partisans.md`
+    - `wiki/factions/chetniks.md`
+    - `wiki/factions/ustase_ndh_and_axis_occupiers_yugoslavia.md`
+  - `wiki/events/` (5)：
+    - `wiki/events/xian_incident_and_second_united_front_1936_1945.md`
+    - `wiki/events/wannan_incident_and_kmt_ccp_breakdown_1938_1949.md`
+    - `wiki/events/yugoslav_axis_invasion_and_1941_uprising.md`
+    - `wiki/events/yugoslav_liberation_war_and_allied_shift_1942_1945.md`
+    - `wiki/events/yugoslav_postwar_purges_and_tito_stalin_split.md`
+  - `wiki/syntheses/` (2)：
+    - `wiki/syntheses/socialism_branches_comparison.md`
+    - `wiki/syntheses/local_factions_and_war_dynamics.md`
+- **更新既有頁面清單（共 13 頁）**：
+  - `wiki/ideologies/bolshevism.md`（補充蘇聯促使1935年中蘇國共接觸、1945東北日械默許、1941《德蘇條約》影響與1947–1948蘇南分裂，來源數升至 6）
+  - `wiki/ideologies/chinese_nationalism_kmt_and_ccp.md`（補充第二次國共合作、皖南事變與抗戰內戰結局，來源數升至 2）
+  - `wiki/ideologies/german_conservatism_and_far_right.md`（補充納粹德國1941–1945年肢解南斯拉夫、歐洲唯一軍事佔領區及百人質報復屠殺，來源數升至 3）
+  - `wiki/factions/kmt_nra_and_ccp.md`（補充第二次國共合作、八路軍新四軍改編、太原武漢會戰、河北摩擦與皖南事變後軍事封鎖，來源數升至 3）
+  - `wiki/factions/beiyang_warlord_cliques.md`（補充張學良東北軍1936年秘密停火、山城堡按兵不動與西安事變，來源數升至 2）
+  - `wiki/factions/guominjun_shanxi_and_northwest_warlords.md`（補充閻錫山1936秘密協定、寧夏戰役回族騎兵及楊虎城西北軍，來源數升至 2）
+  - `wiki/factions/international_brigades.md`（補充西班牙內戰南斯拉夫志願老兵成為二戰南斯拉夫游擊隊現代戰爭核心幹部，來源數升至 2）
+  - `wiki/events/post_1928_warlord_conflicts_and_nanjing_decade.md`（補充1936年西安事變經過、抗戰國共破裂及1949年軍閥倒戈背景，來源數升至 3）
+  - `wiki/events/constitutional_protection_and_northern_expedition_1917_1928.md`（補齊通往西安事變與第二次國共合作雙向連結）
+  - `wiki/sources/01_russian_civil_war.md`、`02_german_revolution_1918_1919.md`、`03_spanish_civil_war.md`、`04_warlord_era_china.md`（補齊跨區比較頁面與後續跨戰場來源雙向連結）
+- **更新索引**：`wiki/index.md`（總頁面增至 71 頁）
+
+
+## [2026-11-14] lint | 全庫連結、索引與溯源計數健檢
+
+- **操作時間**：2026-11-14 16:49 (+08:00)
+- **健檢項目與結果**：
+  - 全庫內容頁統計：共 71 頁（`sources/` 6 頁、`ideologies/` 17 頁、`factions/` 24 頁、`events/` 22 頁、`syntheses/` 2 頁）。
+  - 索引收錄檢查：`wiki/index.md` 100% 收錄全部 71 頁，0 遺漏、0 斷鏈。
+  - 雙向連結與孤島檢查：全庫 `[[...]]` 內部連結 0 個斷鏈、0 個孤島頁面（全部 71 頁皆具備至少 1 個入站連結）。
+  - 來源計數與缺漏校正：核對各頁正文實際 `[0X_..., ...]` 溯源引用，校正 `wiki/index.md` 中 `factions/czechoslovak_legion_and_foreign_interventions.md` 之來源數標記（由 3 修正為 2，對應 `01` 與 `04` 實際內文引用；`02` 僅列於關聯缺漏提示），並確認所有 `[資料不足／不確定：...]` 標記無混入 `raw/` 以外外部知識。
+  - `raw/` 唯讀檢查：`raw/` 目錄 6 個檔案完全未遭修改。

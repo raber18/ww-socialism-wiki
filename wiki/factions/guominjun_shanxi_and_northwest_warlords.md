@@ -11,21 +11,23 @@
 ## 二、閻錫山與晉系（Shanxi Clique）
 
 - **「模範督軍」與自主軍工交通**：閻錫山（Yan Xishan）被稱為山西「模範督軍」（Model Governor），宣稱融合民主、社會主義、共產主義、[[anarchism|無政府主義]]與儒家家長制等十餘種思潮的折衷信條（見[[warlordism_and_regional_political_experiments|軍閥折衷信條專頁]]） `[04_warlord_era_china.md, Warlord profiles]`。為防禦外敵入侵山西，他刻意維持與全國不同軌距的鐵路（儘管這同時阻礙了山西煤炭與鐵礦出口） `[04_warlord_era_china.md, Warlord profiles]`；1923年將太原兵工廠（Taiyuan Arsenal）自維修廠擴建為軍工廠，每月為晉軍生產1,500支步槍與500支手槍，並於1926年逆向仿製M1921湯普森衝鋒槍（.45 ACP 口徑）及據此生產同口徑毛瑟C96仿製品「山西十七式」（Shanxi Type 17） `[04_warlord_era_china.md, Armaments > Domestic production]`。
-- **北伐與中原大戰**：1926–1928年北伐中閻錫山與國民軍共同聯蔣攻奉，並於1928年張作霖死後代表國民政府進佔北平；但其後於1929–1930年與馮玉祥、[[southern_warlord_cliques|桂系李宗仁]]聯兵發動中原大戰反蔣 `[04_warlord_era_china.md, 導言; Reunification; Aftermath]`。
+- **北伐、中原大戰與1936年西北抗日秘約**：1926–1928年北伐中閻錫山與國民軍共同聯蔣攻奉，並於1928年張作霖死後代表國民政府進佔北平；但其後於1929–1930年與馮玉祥、[[southern_warlord_cliques|桂系李宗仁]]聯兵發動中原大戰反蔣 `[04_warlord_era_china.md, 導言; Reunification; Aftermath]`。1936年國共西北對峙期間，閻錫山亦與[[ccp_eighth_route_and_new_fourth_armies|中共]]簽訂秘密協定，雖立場不如[[beiyang_warlord_cliques|張學良]]與楊虎城緊密，仍參與以「演出假戰」掩護並力圖說服蔣介石領導抗日的西北秘密同盟 `[05_second_united_front.md, Background]`。
 
-## 三、西北地方勢力：馬家軍與新疆系
+## 三、西北地方勢力：馬家軍／回族騎兵、楊虎城西北軍與新疆系
 
-- **馬家軍（Ma clique）**：列入北方派系名單之中，長期控制甘肅（Gansu）、寧夏（Ningxia）與青海（Qinghai）三省 `[04_warlord_era_china.md, 導言; Factions > Northern factions]`。
+- **馬家軍（Ma clique）與1936年寧夏戰役回族騎兵**：馬家軍列入北方派系名單之中，長期控制甘肅（Gansu）、寧夏（Ningxia）與青海（Qinghai）三省 `[04_warlord_era_china.md, 導言; Factions > Northern factions]`。在1936年10月中下旬的寧夏戰役（Ningxia campaign）中，效忠國民政府的回族騎兵（Hui cavalry）在黃河沿岸切斷並擊潰了北進擬領取蘇聯空投蒙古物資的紅軍第二、第四軍（`05_second_united_front.md` 未明確將該回族騎兵標註為「馬家軍」，惟地點位於寧夏） `[05_second_united_front.md, Background]`。
+- **楊虎城與西北軍（Northwestern Army）**：在1936年圍剿紅軍期間，西北軍領袖楊虎城（Yang Hucheng）因不滿蔣介石重內戰輕抗日而與中共秘密停火，並參與張學良與閻錫山（Yan Xishan）的西北秘約；1936年12月張學良採納楊虎城建議，兩人共同策動[[xian_incident_and_second_united_front_1936_1945|西安事變]]（Xi'an Incident）扣押蔣介石，促成第二次國共合作 `[05_second_united_front.md, Background]`。
 - **新疆系與盛世才（Xinjiang clique / Sheng Shicai）**：盛世才在新疆（Xinjiang）掌權；名義統一後的1931年至1937年間，西北新疆爆發一系列內戰（wars in Xinjiang），顯示南京政府對邊疆軍閥控制有限 `[04_warlord_era_china.md, 導言; Factions > Northern factions; Aftermath]`。
 
 ## 四、資料缺漏標記
 
 - `[資料不足／不確定：04_warlord_era_china.md 僅列舉馬家軍（Ma clique）控制甘肅、寧夏與青海及盛世才統治新疆並於1931–1937年發生新疆戰事，未記載馬家軍具體首領人名與派系譜系，亦未說明盛世才上台過程及1931–1937年新疆戰事的交戰各方與蘇聯角色]`
+- `[資料不足／不確定：05_second_united_front.md 稱楊虎城為「西北軍」（Northwestern Army）領袖，並提及1936年10月寧夏戰役的「回族騎兵」（Hui cavalry），但未說明楊虎城西北軍與04_warlord_era_china.md 所述馮玉祥國民軍之間是否有組織延續，亦未明確標記該支回族騎兵是否隸屬馬家軍]`
 - `[資料不足／不確定：04_warlord_era_china.md 未記載蘇聯支援馮玉祥國民軍的具體時間起訖、物資數額與顧問名單，亦未詳述1929–1930年中原大戰的勝負結果]`
 
 ## 五、關聯頁面
 
-- 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]
-- 政治文化與思想：[[warlordism_and_regional_political_experiments|中國軍閥主義與地方政治實驗]]、[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[bolshevism|布爾什維克主義]]、[[anarchism|無政府主義]]
-- 相關中國勢力：[[beiyang_warlord_cliques|北洋軍閥派系]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]
-- 關鍵事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]
+- 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]、[[05_second_united_front|05_second_united_front]]
+- 政治文化與思想：[[warlordism_and_regional_political_experiments|中國軍閥主義與地方政治實驗]]、[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[chinese_communism_and_united_front|中共抗戰統一戰線路線]]、[[bolshevism|布爾什維克主義]]、[[anarchism|無政府主義]]
+- 相關中國勢力：[[beiyang_warlord_cliques|北洋軍閥派系]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[ccp_eighth_route_and_new_fourth_armies|中共抗戰武裝：八路軍、新四軍與邊區]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]
+- 關鍵事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]、[[xian_incident_and_second_united_front_1936_1945|西安事變與第二次國共合作]]

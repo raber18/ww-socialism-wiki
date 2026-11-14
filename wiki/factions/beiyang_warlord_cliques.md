@@ -23,14 +23,15 @@
 - **領袖、資源與對日關係**：由綠林出身的「老帥」張作霖（Zhang Zuolin，1911年起任奉天督軍、1916年稱雄東北）領導，控制中國3%人口與高達90%重工業；在[[chinese_peasant_militias_and_foreign_powers|日本]]公開扶持與穩定投資環境的要求下，成為實力最強且少數兼顧經濟成長的軍閥 `[04_warlord_era_china.md, 導言; Warlord profiles]`。山東「狗肉將軍」張宗昌（Zhang Zongchang）亦為其關鍵盟友／部屬，以虐殺俘虜（「敲西瓜」）與濫印鈔票（以150萬銀準備印製5,500萬銀圓）惡名昭彰 `[04_warlord_era_china.md, Warlord profiles; Warlord armies > Finances]`。
 - **軍事裝備與外籍軍團**：奉系為中國首個使用坦克的軍閥勢力——張作霖於1919年自海參崴購得[[czechoslovak_legion_and_foreign_interventions|協約國干涉俄國內戰]]遺留的法製雷諾 FT-17 坦克並擴充36輛（1928年北伐時有6輛遭國軍擊毀），1922年11月又接收或買下撤入吉林與長春的[[white_movement|俄國白軍]]幾乎全數武器 `[04_warlord_era_china.md, Armaments > Armor; Usage]`；張宗昌則擁有7列由哈爾濱俄人設計的裝甲列車，奉系並僱用[[white_movement|俄國白衛流亡者]]涅恰耶夫（Konstantin Petrovich Nechaev）指揮外籍軍團（最多達1,200名俄兵，曾與日兵及華兵協同作戰） `[04_warlord_era_china.md, Infrastructure; Other forces > Foreign mercenaries]`。
 - **內外危機與易幟（1925–1928年）**：1925年張作霖歲入僅2,300萬美元而軍費達5,100萬美元，1922–1928年間提高田賦12%並濫發紙幣（甚至為平抑通膨在奉天隨機槍決5名商人）；1925年11月部將郭松齡（Guo Songling）與馮玉祥密謀倒戈幾近推翻張氏，敗後與妻遭公開槍決懸屍三日 `[04_warlord_era_china.md, Warlord relations; Warlord armies > Finances]`。1926年奉系進入山海關佔領北京，1927年張作霖自任大元帥，但1928年6月遭北伐軍逼退並於同年遭日本暗殺；其子張學良（Zhang Xueliang）於1928年12月29日接受南京國民政府領導 `[04_warlord_era_china.md, 導言; North > Guominjun and Zhang Zuolin (1924–1928); Reunification]`。
+- **1936年東北軍在西北的秘約與西安事變**：由張學良率領的東北軍（Northeastern Army）在1936年奉命於中國西北圍剿[[ccp_eighth_route_and_new_fourth_armies|中共紅軍]]，但張學良因不滿蔣介石重內戰而輕抗日，暗中與中共簽署秘密停火協議並聯同[[guominjun_shanxi_and_northwest_warlords|楊虎城西北軍]]及閻錫山（Yan Xishan）策劃說服蔣領銜抗戰（中共曾提議在蘇聯支持下於西北五省建立由張指揮的抗日反蔣基地，並與張等演出假作戰掩人耳目） `[05_second_united_front.md, Background]`。1936年11月底山城堡之戰中，東北軍按兵不動使紅軍得以重創胡宗南（Hu Zongnan）第78團；最終張學良採納楊虎城建議，於1936年12月12日發動[[xian_incident_and_second_united_front_1936_1945|西安事變]]（Xi'an Incident）扣押蔣介石，迫成國共停戰與[[05_second_united_front|第二次國共合作]] `[05_second_united_front.md, Background]`。
 
 ## 四、資料缺漏標記
 
-- `[資料不足／不確定：04_warlord_era_china.md 未明確敘述皖系、直系與奉系各自具體的軍隊總編制人數，未詳述1928年張作霖遭日本暗殺的地點與起因，亦未完整交代張宗昌加入或效忠奉系的具體起始年份]`
+- `[資料不足／不確定：04_warlord_era_china.md 未明確敘述皖系、直系與奉系各自具體的軍隊總編制人數，未詳述1928年張作霖遭日本暗殺的地點與起因，亦未完整交代張宗昌加入或效忠奉系的具體起始年份；05_second_united_front.md 則未說明東北軍在1931–1936年間自東北移駐西北的經過及張學良於西安事變後的軟禁細節]`
 
 ## 五、關聯頁面
 
-- 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]
+- 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]、[[05_second_united_front|05_second_united_front]]
 - 所屬政治文化：[[warlordism_and_regional_political_experiments|中國軍閥主義與地方政治實驗]]
-- 其他中國勢力：[[guominjun_shanxi_and_northwest_warlords|國民軍、晉系與西北軍閥]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]
-- 跨區與事件關聯：[[white_movement|白衛運動與白軍]]、[[czechoslovak_legion_and_foreign_interventions|俄國內戰外國干涉]]、[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]
+- 其他中國勢力：[[guominjun_shanxi_and_northwest_warlords|國民軍、晉系與西北軍閥]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[ccp_eighth_route_and_new_fourth_armies|中共抗戰武裝：八路軍、新四軍與邊區]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]
+- 跨區與事件關聯：[[white_movement|白衛運動與白軍]]、[[czechoslovak_legion_and_foreign_interventions|俄國內戰外國干涉]]、[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[xian_incident_and_second_united_front_1936_1945|西安事變與第二次國共合作]]

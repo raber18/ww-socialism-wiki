@@ -15,13 +15,14 @@
 
 - **軍事意義 vs. 士氣象徵**：來源評估指出，國際縱隊對共和派「在士氣上意義重大，但在軍事上並不十分顯著」；在1936年底抵達後，至1937–1938年間新湧入的國際縱隊成員（interbrigadistas）已無法彌補前線消耗，各軍人數增長主要改由本國強制徵兵支撐 `[03_spanish_civil_war.md, Combatants; Combatants > Republicans]`。
 - **共產黨內部清洗（「阿爾巴塞特屠夫」安德烈·馬蒂）**：在親蘇共產黨與蘇聯NKVD整肅共和後方異議分子的背景下，共產黨人安德烈·馬蒂（André Marty）因對約500名國際縱隊成員之死負有責任而被稱為「阿爾巴塞特屠夫」（Butcher of Albacete） `[03_spanish_civil_war.md, Atrocities > Republicans]`。
+- **跨戰場遺產：二戰南斯拉夫游擊隊的現代戰爭骨幹**：逾千名在西班牙內戰作戰的南斯拉夫志願者（Yugoslav volunteers）戰後成為關鍵幹部——在[[06_yugoslav_partisans|二戰南斯拉夫]]戰場上，這批人數雖少卻極具價值的「西班牙內戰南斯拉夫老兵」成為[[yugoslav_partisans|南斯拉夫游擊隊]]（包含斯洛維尼亞前線）相較於本土其他武裝的兩大決定性優勢之一，因為當時南斯拉夫境內再無他人擁有在極為相似環境中進行現代游擊戰的實戰經驗 `[06_yugoslav_partisans.md, Operations > Resistance and retaliation; Composition > Slovenia]`。
 
 ## 三、資料缺漏標記
 
-- `[資料不足／不確定：03_spanish_civil_war.md 提及國際縱隊人數同時出現「約32,000人」與「粗估40,000人」兩組數字，且未敘述1938年秋季國際縱隊自西班牙撤編遣散的過程及外籍志願者總陣亡人數（僅死亡統計章節載明「外國人戰鬥與相關死亡」估計為3,000至25,000人，未區分共和派與國民軍外籍參戰者）]`
+- `[資料不足／不確定：03_spanish_civil_war.md 提及國際縱隊人數同時出現「約32,000人」與「粗估40,000人」兩組數字，且未敘述1938年秋季國際縱隊自西班牙撤編遣散的過程及外籍志願者總陣亡人數（僅死亡統計章節載明「外國人戰鬥與相關死亡」估計為3,000至25,000人，未區分共和派與國民軍外籍參戰者）；06_yugoslav_partisans.md 亦未列出南斯拉夫西班牙老兵的具體人名與確切返國人數]`
 
 ## 四、關聯頁面
 
-- 來源摘要：[[03_spanish_civil_war|03_spanish_civil_war]]
-- 支援陣營與流派：[[spanish_popular_front_and_republicans|西班牙人民陣線與共和派]]、[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）與POUM]]、[[cnt_fai_and_left_militias|CNT-FAI與左翼民兵]]、[[bolshevism|布爾什維克主義]]
-- 相關干涉與事件：[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]、[[spanish_revolution_and_may_days_1937|西班牙社會革命與1937年五月事件]]
+- 來源摘要：[[03_spanish_civil_war|03_spanish_civil_war]]、[[06_yugoslav_partisans|06_yugoslav_partisans]]
+- 支援陣營與流派：[[spanish_popular_front_and_republicans|西班牙人民陣線與共和派]]、[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）與POUM]]、[[cnt_fai_and_left_militias|CNT-FAI與左翼民兵]]、[[yugoslav_partisans|南斯拉夫人民解放軍與游擊隊]]、[[yugoslav_communism_and_titoism|南斯拉夫共產黨與狄托主義]]、[[bolshevism|布爾什維克主義]]
+- 相關干涉與事件：[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]、[[spanish_revolution_and_may_days_1937|西班牙社會革命與1937年五月事件]]、[[yugoslav_axis_invasion_and_1941_uprising|軸心國入侵與1941年南斯拉夫起義]]

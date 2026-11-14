@@ -22,13 +22,18 @@
 - **思潮類比與右翼效法**：歷史學家胡利安·卡薩諾瓦（Julián Casanova）將西班牙第二共和國初期反共和右翼的政治文化定性為「原法西斯主義」（proto-fascist），並與德國的「民族民粹運動」（Völkisch movement）及義大利前法西斯主義相類比 `[03_spanish_civil_war.md, Background > Second Republic > Constituent Cortes and left-wing government (1931–1933)]`；西班牙[[spanish_falangism_and_nationalist_right|CEDA]]領袖希爾-羅布萊斯（Gil Robles）在1933年後亦公開讚揚阿道夫·希特勒（Adolf Hitler）與納粹德國體制 `[03_spanish_civil_war.md, Background > Second Republic > Right-wing government (1933–1935)]`。
 - **軍事干涉[[03_spanish_civil_war|西班牙內戰]]**：納粹德國在1936年9月簽署不干涉協議後仍派遣陸空部隊「禿鷹軍團」（Condor Legion）及海軍「烏蘇拉行動」（Operation Ursula）支援佛朗哥[[spanish_nationalists_and_falange|國民軍]]，不僅於1936年空運非洲軍團至本土、1937年4月26日轟炸格爾尼卡（Guernica，約200–300名平民死亡），全戰程共有約16,000名德國人參戰並訓練56,000名國民軍士兵（援額約4,300萬英鎊），藉此在中歐戰略之外牽制法國並試驗裝甲與空戰戰術，戰後更取得西班牙礦產開採權償債（詳見[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]） `[03_spanish_civil_war.md, Military coup > Outcome; Foreign involvement > Support for the Nationalists; Consequences]`。
 
-## 五、資料缺漏標記
+## 五、二戰時期對南斯拉夫的入侵、軍事佔領與報復鎮壓（1941–1945年）
+
+- **肢解南斯拉夫與歐洲唯一的軍事佔領政權**：在[[06_yugoslav_partisans|南斯拉夫戰場]]上，納粹德國於1941年4月6日主導軸心國入侵並違反國際法肢解南斯拉夫王國，不僅直接併吞斯洛維尼亞（德拉瓦省）北部、主導成立由[[ustase_ndh_and_axis_occupiers_yugoslavia|烏斯塔沙]]執政的「克羅埃西亞獨立國」（NDH），並在塞爾維亞本土建立由「塞爾維亞軍事司令官管轄區」（Territory of the Military Commander in Serbia）運作的體制——這是納粹佔領歐洲中唯一由軍方直接實施軍事政權的案例（並輔以米蘭·內迪奇 Milan Nedić 傀儡政府） `[06_yugoslav_partisans.md, Background and origins; Overview by post-war republic > Serbia; Composition > Slovenia]`。
+- **人質集體報復與反游擊隊清剿**：為鎮壓[[yugoslav_partisans|南斯拉夫游擊隊]]領導的共產黨反抗運動，德軍在塞爾維亞嚴格執行「每有一名德兵被殺即處決100名當地平民（含婦孺與老人）、每傷一兵處決50名人質」的極端報復命令（至1943年2月減半、同年秋廢除），先後在克拉列沃（Kraljevo）屠殺2,000名平民、克拉古耶瓦茨（Kragujevac）屠殺3,000名平民 `[06_yugoslav_partisans.md, Background and origins]`。至1944年底，德軍僅在克羅埃西亞境內仍駐有34萬名兵力，並在1941–1944年間發動「七次敵軍攻勢」（含1944年企圖狙殺狄托的「騎士跳躍行動」Operation Rösselsprung），最終於1945年5月波利亞納戰役（Battle of Poljana）等戰事中敗北 `[06_yugoslav_partisans.md, Operations > Resistance and retaliation; Activities increase (1943–1945); Composition > Croatia]`。
+
+## 六、資料缺漏標記
 
 - `[資料不足／不確定：02_german_revolution_1918_1919.md 未詳述德國祖國黨在1918年11月後的解散或轉型過程，亦未詳細交代執政官組織（Organisation Consul）的組織架構及納粹黨1924年至1933年間選舉動員的具體細節]`
 
-## 六、關聯頁面
+## 七、關聯頁面
 
-- 來源摘要：[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]、[[03_spanish_civil_war|03_spanish_civil_war]]
-- 相關武裝與勢力：[[freikorps_and_german_military|自由軍團與德國軍方]]、[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]
-- 相關與對立流派：[[spanish_falangism_and_nationalist_right|西班牙長槍黨與右翼思潮]]、[[german_social_democracy|德國多數派社會民主黨]]、[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]
-- 關鍵事件：[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]
+- 來源摘要：[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]、[[03_spanish_civil_war|03_spanish_civil_war]]、[[06_yugoslav_partisans|06_yugoslav_partisans]]
+- 相關武裝與勢力：[[freikorps_and_german_military|自由軍團與德國軍方]]、[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]、[[ustase_ndh_and_axis_occupiers_yugoslavia|烏斯塔沙、NDH與軸心國佔領政權]]
+- 相關與對立流派：[[spanish_falangism_and_nationalist_right|西班牙長槍黨與右翼思潮]]、[[yugoslav_ethnic_nationalisms_chetniks_and_ustase|大塞爾維亞保皇派與烏斯塔沙極端民族主義]]、[[german_social_democracy|德國多數派社會民主黨]]、[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]
+- 關鍵事件：[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]、[[yugoslav_axis_invasion_and_1941_uprising|軸心國入侵與1941年南斯拉夫起義]]、[[yugoslav_liberation_war_and_allied_shift_1942_1945|南斯拉夫解放戰爭與盟軍承認轉向]]

@@ -13,19 +13,19 @@
 - **早期參與與聯共體制**：來源在南方派系中單列「中國共產黨」，並指出1923年國民黨改組同時與中共締結「第一次國共合作」 `[04_warlord_era_china.md, Factions > Southern factions; South > Reorganization]`。在北方，中共共同創始人李大釗（Li Dazhao）曾參與1926年3月18日北京反列強侵權示威並在段祺瑞軍警開火的三一八慘案中負傷（逾200人受傷、47人死亡） `[04_warlord_era_china.md, North > Duan Qirui's return to power (1924–1926)]`。北伐期間，KMT與CCP部隊曾一同在上海閘北區對抗奉系俄國雇傭兵 `[04_warlord_era_china.md, Other forces > Foreign mercenaries]`。
 - **1927年上海清黨與寧漢分裂**：1927年4月NRA總司令蔣介石發動「上海清黨」（Shanghai massacre）血腥清洗左翼與共產黨人，遭到汪精衛（Wang Jingwei）主持、主張繼續聯共的武漢國民政府反對；蔣遂於4月18日另立南京國民政府（Nanjing-Wuhan Split） `[04_warlord_era_china.md, South > Nanjing-Wuhan Split (1927)]`。不久汪精衛屈服，同樣清洗中共黨員並遷府南京合流（Nanjing-Wuhan Reconciliation），標誌第一次國共合作正式終結 `[04_warlord_era_china.md, South > Nanjing-Wuhan Split (1927); Reunification]`。
 
-## 三、南京十年、軍閥收編與1949年變局
+## 三、第二次國共合作、抗戰摩擦與1949年變局（1935–1949年）
 
-- 蔣介石雖於1928年完成形式統一並在南京建立獨裁統治，但許多省級領導人僅是在北伐期間「整批收編」入黨的舊軍閥及其幕僚，使南京政權長期面臨黨內派系與地方軍閥（如1929–1930年中原大戰）的挑戰 `[04_warlord_era_china.md, Aftermath]`。
-- 邁克爾·塞德曼（Michael Seidman）在跨國比較時指出，中國國民黨在國共內戰期間未能制止後方土匪橫行，嚴重損害其政權正當性 `[03_spanish_civil_war.md, Atrocities > Nationalists]`；`04_warlord_era_china.md` 亦指出蔣雖痛恨國民黨貪腐將民眾推向共產黨，仍持續縱容無能腐敗的軍閥並壓制過強部屬以維繫表面團結，最終在抗日戰爭與國共內戰後導致許多原軍閥（如雲南盧漢）於1949年倒戈投向中共，助推共產黨取得最後勝利 `[04_warlord_era_china.md, 導言; Aftermath]`。
+- **西安事變迫和與合作框架（1935–1938年）**：1935年底蔣介石（Chiang Kai-shek）為尋求蘇聯（Soviet Union）對日援助展開秘密談判，蘇方以國共停火為先決條件，然蔣在1936年10月寧夏戰役紅軍遭回族騎兵擊敗後仍籌備第六次圍剿，並於11月令陳立夫（Chen Lifu）向中共潘漢年（Pan Hannian）提出嚴苛條件、調胡宗南（Hu Zongnan）右路軍進攻中共首府保安（第78團於山城堡之戰遭伏擊幾近全殲） `[05_second_united_front.md, Background]`。1936年12月12日[[xian_incident_and_second_united_front_1936_1945|西安事變]]後雙方被迫停火建立[[05_second_united_front|第二次國共合作]]：[[ccp_eighth_route_and_new_fourth_armies|中共紅軍]]名義上改編為隸屬國民革命軍的第八路軍與新四軍、設立陝甘寧與晉察冀邊區並領取國民政府部分撥款；毛澤東等入選國民參政會（People's Political Council）、郭沫若（Guo Moruo）入職軍委會政治部，中央宣傳部長邵力子（Shao Lizi）亦於1937年8月底與周恩來協議開放中共出版《新華日報》與《群眾》週刊；國共軍隊更於太原會戰及1938年武漢會戰（合作高峰）協同抗日 `[05_second_united_front.md, Cooperation during the Second Sino-Japanese War]`。
+- **軍事摩擦、皖南事變與敵後封鎖（1938–1945年）**：實務上中共始終獨立行動且自1938年底起在「自由中國」與敵後吸收或消滅地方武裝（如1939年6月賀龍在河北殲滅張蔭梧民團一旅），終至1941年1月爆發[[wannan_incident_and_kmt_ccp_breakdown_1938_1949|新四軍事件／皖南事變]]，徹底終結國共實質合作 `[05_second_united_front.md, Cooperation during the Second Sino-Japanese War; Breakdown and aftermath]`。此後敵後國共游擊隊相互廝殺（部分國民黨游擊隊遭消滅、吸收或被迫投靠偽軍 Collaborationist Chinese Army），國民黨則抽調大量正規師對中共根據地實施軍事封鎖直至1945年 `[05_second_united_front.md, Breakdown and aftermath]`。
+- **南京十年軍閥結構與1949年崩潰**：蔣介石雖於1928年完成形式統一並在南京建立獨裁統治，但許多省級領導人僅是在北伐期間「整批收編」入黨的舊軍閥及其幕僚，使南京政權長期面臨黨內派系與地方軍閥（如1929–1930年中原大戰）的挑戰 `[04_warlord_era_china.md, Aftermath]`。邁克爾·塞德曼（Michael Seidman）在跨國比較時指出，中國國民黨在國共內戰期間未能制止後方土匪橫行，嚴重損害其政權正當性 `[03_spanish_civil_war.md, Atrocities > Nationalists]`；`04_warlord_era_china.md` 亦指出蔣雖痛恨國民黨貪腐將民眾推向共產黨，仍持續縱容無能腐敗的軍閥並壓制過強部屬以維繫表面團結，最終在抗戰結束、1946年全面內戰再起與中共獲東北日軍武器後，導致許多原軍閥（如雲南盧漢）於1949年倒戈投向中共，同年10月中共宣告成立中華人民共和國而蔣介石退守台灣 `[04_warlord_era_china.md, 導言; Aftermath; 05_second_united_front.md, Breakdown and aftermath > After 1945]`。
 
 ## 四、資料缺漏標記
 
-- `[資料不足／不確定：04_warlord_era_china.md 未記載中國共產黨的建黨時間、黨員規模、黨組織運作或除李大釗以外的早期領袖姓名，亦未詳細交代1927年後中共武裝力量在土地革命與國共內戰中的具體演進過程]`
-- `[資料不足／不確定：04_warlord_era_china.md 未詳述「中山艦事件」（Zhongshan incident）與「濟南慘案」（Jinan incident）的具體衝突細節]`
+- `[資料不足／不確定：04_warlord_era_china.md 與 05_second_united_front.md 未記載中國共產黨的建黨時間與組織細節、1927–1935年土地革命與五次圍剿戰史，亦未詳述「中山艦事件」（Zhongshan incident）、「濟南慘案」（Jinan incident）與1941年皖南事變誰先開火及雙方傷亡兵力細節]`
 
 ## 五、關聯頁面
 
-- 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]、[[03_spanish_civil_war|03_spanish_civil_war]]
-- 所屬政治路線：[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[bolshevism|布爾什維克主義]]
-- 相關與對手勢力：[[beiyang_warlord_cliques|北洋軍閥派系]]、[[guominjun_shanxi_and_northwest_warlords|國民軍、晉系與西北軍閥]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]、[[white_movement|白衛運動與白軍]]
-- 關鍵事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]
+- 來源摘要：[[04_warlord_era_china|04_warlord_era_china]]、[[05_second_united_front|05_second_united_front]]、[[03_spanish_civil_war|03_spanish_civil_war]]
+- 所屬政治路線：[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[chinese_communism_and_united_front|中共抗戰統一戰線路線]]、[[bolshevism|布爾什維克主義]]
+- 相關與對手勢力：[[ccp_eighth_route_and_new_fourth_armies|中共抗戰武裝：八路軍、新四軍與邊區]]、[[beiyang_warlord_cliques|北洋軍閥派系]]、[[guominjun_shanxi_and_northwest_warlords|國民軍、晉系與西北軍閥]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]、[[white_movement|白衛運動與白軍]]
+- 關鍵事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]、[[xian_incident_and_second_united_front_1936_1945|西安事變與第二次國共合作]]、[[wannan_incident_and_kmt_ccp_breakdown_1938_1949|抗戰國共摩擦、皖南事變與內戰爆發]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]

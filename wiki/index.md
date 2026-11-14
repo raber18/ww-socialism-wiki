@@ -6,23 +6,28 @@
 - [02_german_revolution_1918_1919（1918–1919年德國革命）](sources/02_german_revolution_1918_1919.md)：概述1918–1919年德國十一月革命自水兵起義推翻帝制至工兵委員會讓權、左右翼流血衝突、威瑪制憲及史學界對「背叛／錯失機會」之爭辯。（來源數：1）
 - [03_spanish_civil_war（西班牙內戰）](sources/03_spanish_civil_war.md)：總述1931–1936年第二共和國政治極化、1936年七月政變與西班牙社會革命、人民陣線與國民軍陣營、國際縱隊與德義蘇外國干涉、1936–1939年戰役演進及紅白恐怖與史觀爭議。（來源數：1）
 - [04_warlord_era_china（中國軍閥時代）](sources/04_warlord_era_china.md)：總述1916年袁世凱逝世至1928年北伐統一期間北洋皖直奉系、國民軍與晉系、西南華南地方軍閥、國民黨列寧式改組與第一次國共合作、農民秘密結社武裝及1928年後餘波。（來源數：1）
+- [05_second_united_front（第二次國共合作）](sources/05_second_united_front.md)：概述1935年底中蘇密談與西北秘密停火、1936年西安事變促成第二次國共合作、1937–1938年軍政合作與毛王路線分歧、1941年皖南事變破裂至1946–1949年全面內戰結局。（來源數：1）
+- [06_yugoslav_partisans（南斯拉夫游擊隊／人民解放軍）](sources/06_yugoslav_partisans.md)：詳述1941年軸心國肢解南斯拉夫後狄托領導游擊隊發起反法西斯起義、挺過七次敵軍攻勢、1943年獲盟軍承認、民族女性動員與海空軍建制、1944–1945年解放全境及戰後清洗與蘇南分裂爭議。（來源數：1）
 
 ## 社會主義流派 (`wiki/ideologies/`)
 
-- [布爾什維克主義與俄國共產黨（Bolshevism / Russian Communist Party）](ideologies/bolshevism.md)：列寧領導的革命社會主義與一黨執政路線，歷經十月奪權、解散立憲會議、戰時共產主義、十大派系禁令與轉向「一國社會主義」，並深刻影響1920年代中國國民黨改組與1930年代西班牙內戰的史達林主義策略。（來源數：4）
+- [布爾什維克主義與俄國共產黨（Bolshevism / Russian Communist Party）](ideologies/bolshevism.md)：列寧領導的革命社會主義與一黨執政路線，歷經十月奪權、解散立憲會議、戰時共產主義、十大派系禁令與轉向「一國社會主義」，深刻影響1920–1940年代中國國共合作與東北武器取得、西班牙內戰史達林主義策略及南斯拉夫抗戰與1947–1948年蘇南分裂。（來源數：6）
 - [社會革命黨與左翼社會革命黨（Socialist Revolutionary Party / Left & Right SRs）](ideologies/socialist_revolutionaries.md)：於1917年後分裂為反布爾什維克、主張重開立憲會議的右翼SR，以及先與列寧聯合執政後因反對《布列斯特條約》起義遭肅清的左翼SR。（來源數：1）
 - [孟什維克（Mensheviks）](ideologies/menshevism.md)：內部分為國際派與右翼、1918年6月遭逐出蘇俄政府後與右翼SR參與「民主反革命」及反白軍「第三勢力」並在邊疆尋求英軍支援的社會主義流派。（來源數：1）
 - [無政府主義與馬赫諾運動（Anarchism & Makhnovshchina）](ideologies/anarchism.md)：主張激進民主與反對一黨專政的無政府主義傳統，歷經俄烏馬赫諾運動與蘇俄鎮壓後，於1936年西班牙內戰透過CNT-FAI實踐大規模社會革命，亦曾見於中國山西軍閥閻錫山的折衷信條。（來源數：3）
 - [德國多數派社會民主黨路線（SPD / MSPD）](ideologies/german_social_democracy.md)：艾伯特與謝德曼領導的溫和改良社會民主黨，反對俄式布爾什維主義並與舊軍方及資方妥協，主導威瑪制憲並動用自由軍團鎮壓激進左翼。（來源數：1）
 - [德國獨立社會民主黨路線（USPD）](ideologies/uspd.md)：1917年因反戰自SPD分裂成立、主張深化民主與延後國會選舉以鞏固革命的社會主義政黨，在1918年底聯合執政破裂後邊緣化並參與後續抗爭。（來源數：1）
 - [斯巴達克同盟與德國共產黨路線（Spartacus League & KPD）](ideologies/spartacists_and_kpd.md)：李卜克內西與盧森堡等人領導的革命共產主義流派，追求無產階級專政與委員會共和國，於1918年底建黨並在1919–1921年多次起義中遭鎮壓。（來源數：1）
-- [德國帝制保守派、軍方與極右翼思潮](ideologies/german_conservatism_and_far_right.md)：涵蓋最高陸軍指揮部（OHL）、德國祖國黨、留任帝國官僚、執政官組織與納粹黨，藉由「背後捅刀神話」削弱威瑪共和國、終結共和並於1936–1939年出兵干涉西班牙內戰。（來源數：2）
+- [德國帝制保守派、軍方與極右翼思潮](ideologies/german_conservatism_and_far_right.md)：涵蓋最高陸軍指揮部（OHL）、德國祖國黨、留任帝國官僚、執政官組織與納粹黨，藉由「背後捅刀神話」削弱威瑪共和國、終結共和、干涉1936–1939年西班牙內戰並於1941–1945年肢解與軍事佔領南斯拉夫。（來源數：3）
 - [西班牙無政府工團主義（CNT-FAI / Spanish Anarcho-Syndicalism）](ideologies/spanish_anarcho_syndicalism_cnt_fai.md)：承襲19世紀反君主傳統的西班牙無政府工團主義核心，在第二共和國屢遭鎮壓後於1936年主導亞拉岡與加泰隆尼亞農業集體化與工業社會化，並於1937年五月事件與史達林派共產黨正面衝突。（來源數：1）
 - [西班牙社會主義派：PSOE 與 UGT（Spanish Socialism: PSOE & UGT）](ideologies/spanish_socialism_psoe_ugt.md)：西班牙第二共和國主要社會主義政黨與工會，於1933年敗選後分化為拉爾戈·卡瓦耶羅的革命馬克思主義派（尋求過渡國家與發動1934年革命）與主張恢復議會政府權威的溫和派。（來源數：1）
 - [西班牙共產黨與馬克思主義統一工人黨（PCE & POUM）](ideologies/spanish_communism_pce_and_poum.md)：西班牙共和區共產主義的兩條對立路線——依附蘇聯軍援反對激進集體化的史達林派PCE，與參與七月革命卻遭取締、領袖安德烈斯·寧被NKVD謀殺的反史達林派POUM。（來源數：1）
 - [西班牙國民軍右翼思潮、長槍黨與天主教傳統主義（Falangism, CEDA & Carlist Traditionalism）](ideologies/spanish_falangism_and_nationalist_right.md)：涵蓋CEDA、阿方索派、卡洛斯派與長槍黨（Falange）的反共反共和光譜，戰中由革命性國家工團主義與「共和國獨裁」構想轉向天主教民族主義與佛朗哥收編的FET y de las JONS體制。（來源數：1）
-- [中國國民黨列寧式改組、第一次國共合作與早期中國共產主義（KMT Leninist Reorganization & First United Front）](ideologies/chinese_nationalism_kmt_and_ccp.md)：孫中山於1923年藉蘇聯援助依列寧主義民主集中制改組國民黨並與中共建立第一次國共合作，歷經北伐與1927年寧漢分裂後因軍閥妥協與貪腐而影響1949年政局。（來源數：1）
+- [中國國民黨列寧式改組、第一次國共合作與早期中國共產主義（KMT Leninist Reorganization & First United Front）](ideologies/chinese_nationalism_kmt_and_ccp.md)：孫中山於1923年藉蘇聯援助依列寧主義民主集中制改組國民黨並與中共建立第一次國共合作，歷經北伐與1927年寧漢分裂、1936年西安事變及第二次國共合作破裂後因軍閥妥協與貪腐而於1949年敗北。（來源數：2）
 - [中國軍閥主義、政治折衷信條與地方政治實驗（Warlordism & Regional Political Experiments）](ideologies/warlordism_and_regional_political_experiments.md)：分析自晚清勇營演變而來的「軍閥／督軍」靜態割據邏輯、閻錫山十合一信條與馮玉祥左傾民族主義等思想彈性，以及湖南普選憲政與農民復明千禧年信仰。（來源數：1）
+- [中國共產黨抗戰統一戰線與敵後農村動員路線（CCP Wartime United Front & Rural Mobilization Line）](ideologies/chinese_communism_and_united_front.md)：剖析抗戰前後中共自「國防政府」與西北聯防到第二次國共合作中的毛澤東「獨立自主／以空間換時間」與王明「一切經過統一戰線」之路線分歧，以及1941年後敵後貧農土改與減稅擴張策略（並對比西班牙PCE與南共KPJ路線）。（來源數：4）
+- [南斯拉夫共產黨、「兄弟情誼與團結」人民陣線與狄托主義路線（Yugoslav Communism, Popular Front & Titoism）](ideologies/yugoslav_communism_and_titoism.md)：探討南共（KPJ）從戰間期地下時期、《德蘇條約》克制到巴巴羅薩起義，以淡化共產主義的跨民族「兄弟情誼與團結」人民陣線、AFŽ婦女動員與多黨合作建立聯邦，以及1947–1948年蘇南分裂與史觀修正爭議。（來源數：1）
+- [大塞爾維亞保皇民族主義與克羅埃西亞烏斯塔沙極端民族主義（Greater Serbian Royalism & Ustaše Ethno-Nationalism）](ideologies/yugoslav_ethnic_nationalisms_chetniks_and_ustase.md)：對比二戰南斯拉夫兩股排他性民族主義思潮——主張君主復辟與種族清洗非塞族以建「大塞爾維亞」的切特尼克路線，以及NDH烏斯塔沙對塞族實施種族滅絕與強迫改宗的極端民族主義。（來源數：1）
 
 ## 地方勢力與武裝組織 (`wiki/factions/`)
 
@@ -31,7 +36,7 @@
 - [黑軍／烏克蘭無政府主義起義軍（Makhnovshchina / Insurgent Army）](factions/black_army_makhnovshchina.md)：內斯特·馬赫諾領導的烏克蘭無政府主義地方武裝，曾兩度與紅軍結盟擊敗鄧尼金與弗蘭格爾，1920年底遭紅軍背棄圍剿。（來源數：1）
 - [綠軍與農民反抗武裝（Green Armies & Peasant Resistance）](factions/green_armies.md)：同時對抗布爾什維克、白軍與外國干涉者的「非意識形態綠軍」，以及歐俄因反對「糧食獨裁」徵糧而爆發的坦波夫等農民起義。（來源數：1）
 - [「民主反革命」勢力與憲法會議議員委員會（Komuch & Ufa Directory）](factions/democratic_counter_revolution.md)：1918年由右翼SR與孟什維克在伏爾加與西伯利亞建立的議會派反布爾什維克政權，遭科爾查克政變推翻後轉為伊爾庫茨克「政治中心」等反白軍力量。（來源數：1）
-- [捷克斯洛伐克軍團與外國武裝干涉（Czechoslovak Legion & Foreign Interventions）](factions/czechoslovak_legion_and_foreign_interventions.md)：1918年5月捷克斯洛伐克軍團控制西伯利亞鐵路引發內戰全面化、協約國與同盟國合計13國干涉俄國內戰，其遺留海參崴之法製坦克日後亦流入中國奉系張作霖軍中。（來源數：3）
+- [捷克斯洛伐克軍團與外國武裝干涉（Czechoslovak Legion & Foreign Interventions）](factions/czechoslovak_legion_and_foreign_interventions.md)：1918年5月捷克斯洛伐克軍團控制西伯利亞鐵路引發內戰全面化、協約國與同盟國合計13國干涉俄國內戰，其遺留海參崴之法製坦克日後亦流入中國奉系張作霖軍中。（來源數：2）
 - [邊疆民族武裝與中亞巴斯馬奇運動（Borderland Movements & Basmachi）](factions/borderland_and_central_asian_factions.md)：芬蘭、波羅的海三國、波蘭、烏克蘭、白俄羅斯與高加索的民族獨立角力，以及中亞浩罕自治政府與持續抵抗至1934年的穆斯林巴斯馬奇游擊隊。（來源數：1）
 - [俄國工農兵蘇維埃（Russian Soviets）](factions/russian_soviets.md)：1917年二月革命湧現的民選工農兵議會，歷經雙重政權與十月奪權後逐步排除孟什維克與社會革命黨，最終官僚化為黨國控制機構。（來源數：1）
 - [德國工兵委員會、革命代表、人民海軍師與魯爾紅軍（German Workers' and Soldiers' Councils）](factions/german_workers_and_soldiers_councils.md)：席捲全德的基層工兵委員會（多屬SPD／USPD）、柏林革命代表、人民海軍師、地方蘇維埃共和國與1920年魯爾紅軍等自治與左翼武裝勢力。（來源數：1）
@@ -39,13 +44,17 @@
 - [西班牙人民陣線、共和政府軍與地方民族主義勢力（Spanish Popular Front, EPR & Regional Nationalists）](factions/spanish_popular_front_and_republicans.md)：由左翼共和派、社會黨、共產黨、無政府主義者與加泰隆尼亞／巴斯克自治派組成的共和陣營，整編人民共和軍（EPR）作戰但飽受地方自治摩擦與1939年卡薩多政變困擾。（來源數：1）
 - [CNT-FAI與左翼革命民兵（CNT-FAI & Revolutionary Militias）](factions/cnt_fai_and_left_militias.md)：1936年7月透過總罷工與開倉發槍挫敗主要工業城市政變的CNT-FAI、UGT與POUM工人武裝（含杜魯蒂縱隊與約3,000名外籍志願者），其後在抗拒正規軍整合與1937年五月事件中遭壓制。（來源數：1）
 - [西班牙國民軍、長槍黨聯合陣線與摩洛哥殖民軍（Spanish Nationalists, FET y de las JONS & Army of Africa）](factions/spanish_nationalists_and_falange.md)：以「非洲派」軍官團與35,000名非洲軍團為先鋒、凝聚長槍黨、卡洛斯派與天主教會的右翼武裝聯盟，1937年整編為FET y de las JONS並藉「回收」戰俘與後方高壓肅清贏得內戰。（來源數：1）
-- [國際縱隊與反法西斯外籍志願者（International Brigades）](factions/international_brigades.md)：由共產國際號召來自53國約3.2萬至4萬名志願者組成（含台爾曼營、加里波第營與亞伯拉罕·林肯旅），大幅提振共和區士氣惟亦遭安德烈·馬蒂等史達林派整肅。（來源數：1）
+- [國際縱隊與反法西斯外籍志願者（International Brigades）](factions/international_brigades.md)：由共產國際號召來自53國約3.2萬至4萬名志願者組成（含台爾曼營、加里波第營與亞伯拉罕·林肯旅），提振共和區士氣惟亦遭安德烈·馬蒂等整肅，其中逾千名南斯拉夫志願者更成為二戰南斯拉夫游擊隊的現代戰爭骨幹。（來源數：2）
 - [西班牙內戰外國干涉與不干涉體制（Foreign Interventions & Non-Intervention in Spain）](factions/spanish_civil_war_foreign_interventions.md)：解析英法美27國不干涉武器禁運的失效與對共和國採購的致命衝擊，以及義、德、葡援國民軍與蘇、墨、波（商業售武）、法援共和派的角力。（來源數：1）
-- [北洋軍閥派系：皖系、直系與奉系（Beiyang Warlord Cliques: Anhui, Zhili & Fengtian）](factions/beiyang_warlord_cliques.md)：袁世凱死後分裂爭奪北京政權承認的三大北洋軍事集團，涵蓋段祺瑞皖系、馮國璋／曹錕／吳佩孚／孫傳芳直系與張作霖／張宗昌奉系，最終在1926–1928年北伐中瓦解或易幟。（來源數：1）
-- [國民軍、晉系與西北地方軍閥（Guominjun, Shanxi, Ma & Xinjiang Cliques）](factions/guominjun_shanxi_and_northwest_warlords.md)：1924年北京政變後崛起的馮玉祥國民軍（曾獲蘇聯支援）、自主經營軍工與異軌鐵路的閻錫山晉系，以及甘寧青馬家軍與盛世才新疆系。（來源數：1）
+- [北洋軍閥派系：皖系、直系與奉系（Beiyang Warlord Cliques: Anhui, Zhili & Fengtian）](factions/beiyang_warlord_cliques.md)：袁世凱死後分裂爭奪北京政權承認的三大北洋軍事集團，涵蓋段祺瑞皖系、馮國璋／曹錕／吳佩孚／孫傳芳直系與張作霖／張宗昌／張學良奉系，1928年易幟後張學良東北軍復於1936年秘聯中共並發動西安事變。（來源數：2）
+- [國民軍、晉系與西北地方軍閥（Guominjun, Shanxi, Ma & Xinjiang Cliques）](factions/guominjun_shanxi_and_northwest_warlords.md)：馮玉祥國民軍、自主經營軍工與異軌鐵路的閻錫山晉系（1936年曾秘聯中共）、甘寧青馬家軍／寧夏戰役回族騎兵、1936年策動西安事變的楊虎城西北軍及盛世才新疆系。（來源數：2）
 - [西南與華南地方軍閥派系（Southern Warlord Cliques）](factions/southern_warlord_cliques.md)：涵蓋滇系（唐繼堯、龍雲、盧漢）、舊／新桂系（陸榮廷、李宗仁）、粵系（陳炯明）、川系（劉文輝、劉湘）、湘系（張敬堯）與黔系，長期與廣州／南京政府既合作又傾軋。（來源數：1）
-- [中國國民黨、國民革命軍與中國共產黨（Kuomintang, NRA & CCP）](factions/kmt_nra_and_ccp.md)：1923年改組並建立黃埔軍校、國民革命軍與第一次國共合作的兩大革命政黨，經歷1926年北伐、1927年上海清黨與寧漢分裂，並在1928年後因收編軍閥而影響國共內戰結局。（來源數：2）
+- [中國國民黨、國民革命軍與中國共產黨（Kuomintang, NRA & CCP）](factions/kmt_nra_and_ccp.md)：1923年改組並建立黃埔軍校、國民革命軍與第一次國共合作，經歷北伐、1927年清黨與寧漢分裂、1937–1941年第二次國共合作與軍事封鎖，終因軍閥貪腐掣肘而在1946–1949年內戰敗退台灣。（來源數：3）
 - [中國農民秘密結社武裝、外國雇傭兵與列強／海關勢力（Chinese Peasant Militias, Mercenaries & Foreign Powers）](factions/chinese_peasant_militias_and_foreign_powers.md)：涵蓋紅槍會、孝衣會與全女性鐵門會／花籃會等農村自衛結社、涅恰耶夫俄國白衛雇傭軍團與薩頓顧問，以及左右中國政財命脈的海關總稅務司與軍火走私列強。（來源數：1）
+- [抗戰時期中共武裝：八路軍、新四軍與抗日邊區（CCP Wartime Armed Forces: Eighth Route Army, New Fourth Army & Border Regions）](factions/ccp_eighth_route_and_new_fourth_armies.md)：1937年紅軍改編為名義隸屬NRA的八路軍與新四軍並建陝甘寧、晉察冀邊區，歷經山城堡伏擊與1941年皖南事變後，藉敵後游擊收編、貧農土改減稅及戰後東北日械於1949年建政。（來源數：2）
+- [南斯拉夫人民解放軍與游擊隊（Yugoslav Partisans / NOV i POJ & AVNOJ）](factions/yugoslav_partisans.md)：狄托與南共領導的反法西斯抵抗主力，經NOPOJ至NOV i POJ演變為逾80萬人的正規南斯拉夫軍（含罕見海空軍與10萬名女戰士），依托人民委員會、跨民族陣線與盟軍轉向解放全境。（來源數：1）
+- [切特尼克運動（Chetniks）](factions/chetniks.md)：德拉扎·米哈伊洛維奇領導的塞爾維亞保皇準軍事組織，旨在復辟君主與透過種族清洗建立「大塞爾維亞」，1941年秋與游擊隊決裂後因畏避德軍報復與對德義通敵（惟1944年仍救出356名美軍飛行員）而遭盟軍拋棄並瓦解。（來源數：1）
+- [克羅埃西亞獨立國烏斯塔沙與軸心國佔領政權（Ustaše, NDH & Axis Occupation Regimes in Yugoslavia）](factions/ustase_ndh_and_axis_occupiers_yugoslavia.md)：1941年4月肢解南斯拉夫王國的軸心國佔領網，涵蓋推行塞族種族滅絕的NDH烏斯塔沙政權、歐洲唯一的德國塞爾維亞軍事政權（及內迪奇傀儡政府）、義佔達爾馬提亞與斯洛維尼亞及匈保併吞區。（來源數：1）
 
 ## 關鍵事件與轉折點 (`wiki/events/`)
 
@@ -65,8 +74,14 @@
 - [西班牙內戰的紅色與白色恐怖、戰爭融資與戰後餘波（Terror, Financing & Postwar Aftermath）](events/spanish_civil_war_terror_and_aftermath.md)：剖析紅白恐怖傷亡與組織性史觀爭議、38.9億美元戰時貨幣融資與禁運影響、3萬餘兒童撤離、50萬人大撤退及「二戰序幕 vs. 一戰危機延續」定位之爭。（來源數：1）
 - [袁世凱之死、北洋分裂與北方軍閥混戰（1916–1926）](events/beiyang_split_and_warlord_wars_1916_1926.md)：追蹤1916年袁逝世後至1926年間張勳復辟、直皖戰爭、兩次直奉戰爭、北京政變、三一八慘案與反奉戰爭的北京政權爭奪史。（來源數：1）
 - [護法運動、第一次國共合作、北伐與寧漢分裂（1917–1928）](events/constitutional_protection_and_northern_expedition_1917_1928.md)：敘述廣州護法政權挫敗、1923年聯俄容共改組、1926–1928年北伐摧毀直皖並迫張學良歸順，以及1927年上海清黨與寧漢分裂合流。（來源數：1）
-- [1928年後的軍閥衝突、南京十年與1949年餘波（1928–1949）](events/post_1928_warlord_conflicts_and_nanjing_decade.md)：剖析南京國民政府對舊軍閥「整批吸收」的權力侷限、中原大戰、新疆戰事、西安事變以及戰時地方軍閥腐敗倒戈對1949年中共勝出的影響。（來源數：2）
+- [1928年後的軍閥衝突、南京十年與1949年餘波（1928–1949）](events/post_1928_warlord_conflicts_and_nanjing_decade.md)：剖析南京國民政府對舊軍閥「整批吸收」的權力侷限、中原大戰、新疆戰事、1936年西安事變與第二次國共合作破裂，以及戰時地方軍閥腐敗倒戈對1949年中共勝出的影響。（來源數：3）
+- [西安事變與第二次國共合作的建立（1935–1938）](events/xian_incident_and_second_united_front_1936_1945.md)：記錄1935年中蘇接觸、1936年西北停火秘約、寧夏戰役與山城堡之戰、12月12日張楊兵諫扣蔣，以及1937–1938年軍隊改編、邊區設立、言論開放與武漢會戰合作高峰。（來源數：2）
+- [抗戰國共摩擦、皖南事變與戰後全面內戰（1938–1949）](events/wannan_incident_and_kmt_ccp_breakdown_1938_1949.md)：追蹤1938年底後國共地盤競爭、河北殲滅張蔭梧旅、1941年1月皖南事變（並列雙方先開火互控）、敵後土改與封鎖對峙，以及1946–1949年全面內戰至中共建國。（來源數：3）
+- [軸心國入侵瓜分南斯拉夫與1941年反法西斯起義（Axis Invasion of Yugoslavia & 1941 Uprisings）](events/yugoslav_axis_invasion_and_1941_uprising.md)：記述1941年4月軸心國肢解南斯拉夫、德軍百人質償一德兵與烏斯塔沙暴行、巴巴羅薩行動後的錫薩克與塞爾維亞起義、烏日策共和國覆滅、與切特尼克決裂及第一無產階級旅成立。（來源數：1）
+- [南斯拉夫解放戰爭七次攻勢、盟軍承認轉向與全國解放（1942–1945）](events/yugoslav_liberation_war_and_allied_shift_1942_1945.md)：詳述1942–1944年第二至七次敵軍攻勢（含內雷特瓦與蘇捷斯卡戰役）、Deakin與ULTRA證實切特尼克通敵促成德黑蘭承認、1944年貝爾格勒攻勢與1945年搶佔的里雅斯特暨波利亞納歐戰終戰。（來源數：1）
+- [南斯拉夫戰末及戰後大清洗、布萊堡事件與蘇南分裂（1944–1956）](events/yugoslav_postwar_purges_and_tito_stalin_split.md)：剖析戰末戰後約8萬至10萬人喪生的布萊堡遣返屠殺、福伊貝坑洞與巴奇卡等大清洗、1947–1948年「狄托－史達林分裂」與不結盟轉向，以及1980年代後禁忌打破引發的修正主義爭論。（來源數：1）
 
 ## 跨區域與跨流派比較 (`wiki/syntheses/`)
 
-（暫無頁面）
+- [跨區域比較：1914–1945年歐亞社會主義與左翼流派的路線差異、策略與內部衝突](syntheses/socialism_branches_comparison.md)：綜合比較俄國、德國、西班牙、中國與南斯拉夫社會主義與左翼流派在奪權體制構想、一戰反戰／二戰統一戰線策略、左翼內部清洗、蘇聯角色及史觀爭議上的異同。（來源數：6）
+- [跨區域比較：1914–1945年大戰衝擊下的地方勢力、民族武裝與戰爭動態](syntheses/local_factions_and_war_dynamics.md)：比較兩次大戰衝擊下歐亞地方軍閥、民族獨立武裝、工兵蘇維埃、民間會社民兵與游擊隊的興起條件、兵財治理、軍火與白俄／西班牙志願者跨國流動及權力消長結局。（來源數：6）

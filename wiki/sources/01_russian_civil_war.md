@@ -38,3 +38,4 @@
 
 - 相關事件：[[02_german_revolution_1918_1919|1918–1919年德國革命]]、[[february_and_october_revolutions_1917|1917年二月與十月革命]]、[[dissolution_of_constituent_assembly_1918|解散全俄立憲會議]]、[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[red_terror_and_left_sr_uprising_1918|左翼社會革命黨起義與紅色恐怖]]、[[russian_civil_war_campaigns_1918_1923|俄國內戰主要戰役]]、[[kronstadt_and_tambov_rebellions_1921|喀琅施塔得起義與農民反抗]]
 - 相關流派與勢力：[[bolshevism|布爾什維克主義]]、[[socialist_revolutionaries|社會革命黨]]、[[menshevism|孟什維克]]、[[anarchism|無政府主義]]、[[red_army|紅軍]]、[[white_movement|白衛運動與白軍]]、[[black_army_makhnovshchina|黑軍／馬赫諾運動]]、[[green_armies|綠軍與農民反抗]]、[[democratic_counter_revolution|民主反革命與憲法會議議員委員會]]、[[czechoslovak_legion_and_foreign_interventions|捷克斯洛伐克軍團與外國干涉]]、[[borderland_and_central_asian_factions|邊疆民族勢力與巴斯馬奇運動]]、[[russian_soviets|俄國蘇維埃]]
+- 跨區綜合比較：[[socialism_branches_comparison|歐亞社會主義流派跨區比較]]、[[local_factions_and_war_dynamics|大戰衝擊下的地方勢力與戰爭動態比較]]

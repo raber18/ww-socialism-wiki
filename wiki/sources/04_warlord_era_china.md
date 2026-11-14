@@ -40,4 +40,5 @@
 
 - 相關流派：[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[warlordism_and_regional_political_experiments|中國軍閥主義與地方政治實驗]]、[[bolshevism|布爾什維克主義]]、[[anarchism|無政府主義]]
 - 相關勢力：[[beiyang_warlord_cliques|北洋軍閥派系]]、[[guominjun_shanxi_and_northwest_warlords|國民軍、晉系與西北軍閥]]、[[southern_warlord_cliques|西南與華南地方軍閥]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]、[[white_movement|白衛運動與白軍]]、[[czechoslovak_legion_and_foreign_interventions|捷克斯洛伐克軍團與外國干涉]]
-- 相關事件：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]
+- 相關事件與後續延伸：[[beiyang_split_and_warlord_wars_1916_1926|袁世凱之死與北洋軍閥混戰]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]、[[post_1928_warlord_conflicts_and_nanjing_decade|1928年後軍閥衝突與南京十年]]、[[05_second_united_front|05_second_united_front（第二次國共合作）]]
+- 跨區綜合比較：[[socialism_branches_comparison|歐亞社會主義流派跨區比較]]、[[local_factions_and_war_dynamics|大戰衝擊下的地方勢力與戰爭動態比較]]
