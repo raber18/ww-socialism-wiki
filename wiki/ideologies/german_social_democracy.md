@@ -1,0 +1,28 @@
+# 德國多數派社會民主黨路線（SPD / MSPD）
+
+德國社會民主黨（Social Democratic Party, SPD）為德意志帝國最大政黨，於1912年最後一次帝國國會選舉中獲得35%全國選票與110席；因第一次世界大戰期間黨內分裂，開除反戰派後曾正式更名為德國多數派社會民主黨（Majority Social Democratic Party of Germany, MSPD），但史料與一般稱呼仍多簡稱為SPD `[02_german_revolution_1918_1919.md, Background events > World War I]`。
+
+## 一、大戰期間的立場轉折與黨內分裂
+
+- **「城內和平」與1917年分裂**：1914年開戰時，SPD與各政黨一同在「城內和平」政策（Burgfriedenspolitik）下支持被政府描繪為防衛性的戰爭；隨著戰事膠著與黨內反戰衝突加劇，由弗里德里希·艾伯特（Friedrich Ebert）領導的SPD中央於1917年1月開除反戰派黨員（含斯巴達克派），後者於同年4月6日另立[[uspd|德國獨立社會民主黨]]（USPD） `[02_german_revolution_1918_1919.md, Background events > World War I]`。1917年SPD曾在國會與中間派政黨合作並促成7月無兼併和平決議案 `[02_german_revolution_1918_1919.md, Background events > World War I; Revolution, first stage: fall of the Empire > Reaction in Berlin]`。
+- **與[[bolshevism|布爾什維克]]劃清界線**：1917年俄國十月革命後，SPD溫和派領導層恐懼德國爆發俄式血腥內戰，因而遠離革命社會主義的正式立場；黨內領袖奧托·布勞恩（Otto Braun）於1918年2月15日在黨報《前進報》（Vorwärts）發表〈布爾什維克與我們〉（Die Bolschewiki und Wir），強調「社會主義不能建立在刺刀與機槍上」，必須以民主手段實現 `[02_german_revolution_1918_1919.md, Background events > End of the war > Impact of the Russian Revolution]`。
+
+## 二、1918–1919年革命中的溫和改良路線
+
+1. **追求議會君主制、反對社會革命**：1918年10月兩名SPD成員加入巴登的馬克斯親王（Prince Max of Baden）內閣；10月28日國會通過憲政改革將德國轉變為議會君主制，滿足SPD所有重要憲政目標，艾伯特遂視之為德國民主誕生並認為革命已無必要 `[02_german_revolution_1918_1919.md, Background events > End of the war > Political response]`。至11月初，艾伯特仍力圖保全君主立憲制，甚至對馬克斯親王表示若皇帝不退位，社會革命將不可避免，「但我不要它，事實上我像痛恨罪惡一樣痛恨它」 `[02_german_revolution_1918_1919.md, Revolution, first stage: fall of the Empire > Reaction in Berlin]`。
+2. **宣告共和國與主導過渡政府**：11月9日馬克斯親王將總理職位交予艾伯特；同日SPD副主席菲利普·謝德曼（Philipp Scheidemann）因得知卡爾·李卜克內西（Karl Liebknecht）擬宣告社會主義共和國，遂於國會大廈窗前搶先宣告共和國成立（艾伯特為此勃然大怒，認為應由民選國民議會決定國體） `[02_german_revolution_1918_1919.md, Revolution, first stage: fall of the Empire > Abdication and proclamations of a republic]`。11月9–10日奧托·威爾斯（Otto Wels）運用黨機器贏得大部分士兵委員會支持，使SPD在[[german_workers_and_soldiers_councils|工兵委員會]]與[[ebert_groener_pact_and_council_congress_1918|人民代表委員會]]（艾伯特、謝德曼、奧托·蘭茨貝格 Otto Landsberg，後於12月29日由古斯塔夫·諾斯克 Gustav Noske 與魯道夫·維塞爾 Rudolf Wissell 遞補USPD席次）中掌握主導權 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > The councils > Establishment, pact with the military and armistice; Turn to violence > Christmas crisis]`。
+3. **與舊體制、軍方及資方妥協**：為維持糧食供給、復員與秩序，艾伯特於11月10日晚與最高陸軍指揮部（OHL）的威廉·格勒納（Wilhelm Groener）達成秘密的「艾伯特－格勒納密約」（Ebert–Groener pact），承諾不更動軍隊階級與指揮架構；同時保留大多數帝國時期文官、司法與教育體系，未觸動東易北河貴族（East Elbian nobility）或大型地產所有權 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > The councils > Establishment, pact with the military and armistice; Interim government]`。在經濟面，SPD工會領袖卡爾·萊吉恩（Carl Legien）於11月15日與重工業代表胡戈·施廷內斯（Hugo Stinnes）簽署《施廷內斯－萊吉恩協定》（Stinnes–Legien Agreement），換取八小時工時與集體談判權，同時承認私營企業並削弱委員會地位，使生產資料國有化更難實現 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > The councils > Nationalisation and labour unions]`。
+4. **推動國民議會制憲與武力鎮壓激進左翼**：SPD力主儘速選舉制憲國民議會，並在1918年12月全德工兵委員會代表大會上促使多數代表表決支持國民議會而非委員會制 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > The councils > Interim government; Turn to violence > Reich Congress of Workers' and Soldiers' Councils]`。1919年1月19日國民議會選舉中SPD獲38%選票（居首），與天主教中央黨（Centre Party）及德國民主黨（German Democratic Party）組成威瑪聯盟（Weimar Coalition），艾伯特當選臨時總統、謝德曼任部長主席（6月因拒簽《凡爾賽條約》辭職，由SPD的古斯塔夫·鮑爾 Gustav Bauer 繼任） `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > National Assembly and new Reich constitution]`。面對左翼暴動，艾伯特與諾斯克依賴正規軍及擴編[[freikorps_and_german_military|自由軍團]]（Freikorps）鎮壓[[spartacist_uprising_and_1919_revolts|斯巴達克起義]]、柏林三月戰鬥及各地蘇維埃共和國 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > Turn to violence > Christmas crisis; Final revolts]`。
+
+## 三、史觀衝突
+
+- **觀點 A（反布爾什維克防衛說）**：1950年代冷戰高峰期的西德史學（以卡爾·迪特里希·埃德曼 Karl Dietrich Erdmann 為代表）將1918/19年界定為「無產階級專政」與「議會共和國」的抉擇，認為大多數社民黨人是被迫與軍官團等舊保守勢力結盟，以成功防衛民主制度、抵禦迫在眉睫的布爾什維克委員會專政 `[02_german_revolution_1918_1919.md, Contemporary statements > Historical research]`。
+- **觀點 B（背叛革命與工人階級說）**：1928年記者庫爾特·圖霍爾斯基（Kurt Tucholsky）指責艾伯特與謝德曼如同「想當高級文官的人」，背叛了改革聯邦邦國、分配土地、社會化工業與整頓司法行政人員的革命契機 `[02_german_revolution_1918_1919.md, Contemporary statements]`；[[spartacists_and_kpd|KPD]]與戰後東德（GDR）馬克思主義史學亦指控SPD「背叛工人階級」與工人運動理想 `[02_german_revolution_1918_1919.md, Impact on the Weimar Republic; Contemporary statements > Historical research]`。
+- **觀點 C（錯失民主改造契機／過度妥協論）**：阿圖爾·羅森貝格（Arthur Rosenberg）認為SPD的錯誤決策與極左派冒進共同導致民主工人的機會破滅；1960年代西德史家烏爾里希·克盧格（Ulrich Kluge）、埃伯哈德·科爾布（Eberhard Kolb）與萊因哈德·呂魯普（Reinhard Rürup）指出當時布爾什維主義並無真實威脅，SPD因過度信任舊菁英忠誠並疑懼自發群眾與溫和委員會，才迫使委員會激進化並使許多左翼民主派與SPD疏離 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > Turn to violence > Final revolts; Contemporary statements > Historical research]`。埃克哈德·耶塞（Eckhard Jesse）與亨寧·科勒（Henning Köhler）亦否定回到1950年代立場，指MSPD政策並非處處值得稱讚；海因里希·奧古斯特·溫克勒（Heinrich August Winkler）折衷評述，社民黨雖有限度依賴舊菁英，但「若有更多政治意志力，本可改變更多、保留更少」，且現代學界普遍認為SPD與舊菁英結盟為威瑪共和國留下重大結構性隱患 `[02_german_revolution_1918_1919.md, Contemporary statements > Historical research]`。
+
+## 四、關聯頁面
+
+- 來源摘要：[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]
+- 相關流派：[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]、[[bolshevism|布爾什維克主義]]、[[german_conservatism_and_far_right|德國帝制保守派、軍方與極右翼思潮]]
+- 相關勢力：[[german_workers_and_soldiers_councils|德國工兵委員會與左翼武裝]]、[[freikorps_and_german_military|自由軍團與德國軍方]]
+- 關鍵事件：[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[spartacist_uprising_and_1919_revolts|斯巴達克起義與1919年各地暴動]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]

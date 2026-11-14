@@ -1,0 +1,29 @@
+# 德國帝制保守派、軍方與極右翼思潮
+
+在1918–1919年德國革命及其後的威瑪共和國（Weimar Republic）初期，德國帝制菁英、軍方高層與新興極右翼民族主義者形成強大的反革命與反民主政治光譜，並成為終結威瑪共和國的主要力量 `[02_german_revolution_1918_1919.md, 導言; Impact on the Weimar Republic]`。
+
+## 一、大戰期間的軍方統治與右翼動員
+
+- **替代君主制與合併狂熱**：1916年起，最高陸軍指揮部（OHL）的保羅·馮·興登堡（Paul von Hindenburg）與埃里希·魯登道夫（Erich Ludendorff）形同建立「替代君主制」（ersatz monarchy），於1917年7月迫使主張政治改革的總理特奧巴爾德·馮·貝特曼·霍爾維格（Theobald von Bethmann Hollweg）下台，改立保守派格奧爾格·米夏埃利斯（Georg Michaelis），並拒絕國會的無兼併和平決議 `[02_german_revolution_1918_1919.md, Background events > World War I]`。1917年9月成立的民粹主義主戰運動「德國祖國黨」（German Fatherland Party）至1918年7月宣稱擁有逾百萬成員，在俄國退出戰爭後助長保守菁英對東方領土的「合併狂熱」（annexationist fever） `[02_german_revolution_1918_1919.md, Background events > World War I]`。
+- **反猶情緒與社會裂痕**：大戰造成饑荒與黑市猖獗之際，泛德意志派（Pan-Germans）與其他右翼分子開始將經濟困頓歸咎於猶太人；路德宗牧師布魯諾·多林（Bruno Doehring）更指控1918年1月大罷工工人「從背後襲擊前線士兵」，預示了「背後捅刀神話」（stab-in-the-back myth） `[02_german_revolution_1918_1919.md, Background events > World War I]`。
+
+## 二、「背後捅刀神話」與對共和國的敵視
+
+1. **將投降責任轉嫁民主派**：1918年9月29日魯登道夫承認軍事局勢絕望並要求立即停火與政府民主化，意在保住帝國陸軍名譽而將投降後果歸咎於國會民主政黨；10月1日他對參謀軍官指稱應讓「主要應對我們走到這一步的圈子」去締造和平、自食其果，標誌著「背後捅刀神話」的誕生，宣稱革命社會主義者與共和派政治人物背叛了未曾戰敗的軍隊 `[02_german_revolution_1918_1919.md, Background events > End of the war > Military collapse]`。極右翼記者保羅·貝克爾（Paul Baecker）於11月10日在《德意志日報》（Deutsche Tageszeitung）發文指控社會主義者舉白旗乃不可饒恕的叛國罪 `[02_german_revolution_1918_1919.md, Contemporary statements]`。
+2. **「十一月罪犯」標籤與舊體制留任**：極右翼利用「背後捅刀神話」將共產黨人、社會主義者與猶太人描繪為戰敗陰謀者，並將甚至極力阻止革命的[[german_social_democracy|艾伯特]]等人污名為「十一月罪犯」（November criminals） `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > The councils > Interim government; Impact on the Weimar Republic]`。同時，革命並未剝奪東易北河貴族（East Elbian nobility）地產，且大量帝國官僚、司法、教育與軍官留任，其中許多君主派分子始終不願接受共和國並持續在體制內加以削弱 `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > The councils > Interim government; Impact on the Weimar Republic]`。
+
+## 三、威瑪時期的右翼政變、暗殺與納粹掌權
+
+- **政變與政治暗殺（1920–1923）**：1920年3月沃爾夫岡·卡普（Wolfgang Kapp）發動「卡普政變」（Kapp Putsch）企圖推翻共和國，因總罷工與公務員拒從而在數日內瓦解 `[02_german_revolution_1918_1919.md, Aftermath]`。極端民族主義組織「執政官組織」（Organisation Consul）於1921年刺殺前財政部長馬蒂亞斯·埃爾茨貝格爾（Matthias Erzberger），並於1922年刺殺外交部長瓦爾特·拉特瑙（Walther Rathenau） `[02_german_revolution_1918_1919.md, Aftermath]`。
+- **納粹黨（Nazi Party / National Socialist Party）的崛起**：阿道夫·希特勒（Adolf Hitler）領導的納粹黨於1923年11月9日在慕尼黑發動啤酒館政變（Beer Hall Putsch）未遂被捕（判刑五年、未滿一年獲釋） `[02_german_revolution_1918_1919.md, Aftermath]`。納粹黨日後補償曾因殺害卡爾·李卜克內西與羅莎·盧森堡而受審入獄的少數人員，並將[[freikorps_and_german_military|自由軍團]]近衛騎兵師（Garde-Kavallerie）併入衝鋒隊（SA，德文：Sturmabteilung） `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > Turn to violence > Murder of Karl Liebknecht and Rosa Luxemburg]`。1925年艾伯特逝世後興登堡當選第二任暨末任總統，其動用《[[weimar_constitution_and_post_1919_aftermath|威瑪憲法]]》第48條的緊急權力，為希特勒於1933年上台並終結威瑪共和國鋪平道路 `[02_german_revolution_1918_1919.md, 導言; Revolution, second stage: defeat of the radical Left > National Assembly and new Reich constitution; Impact on the Weimar Republic]`。
+
+## 四、資料缺漏標記
+
+- `[資料不足／不確定：02_german_revolution_1918_1919.md 未詳述德國祖國黨在1918年11月後的解散或轉型過程，亦未詳細交代執政官組織（Organisation Consul）的組織架構及納粹黨1924年至1933年間選舉動員的具體細節]`
+
+## 五、關聯頁面
+
+- 來源摘要：[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]
+- 相關武裝與勢力：[[freikorps_and_german_military|自由軍團與德國軍方]]
+- 對立流派：[[german_social_democracy|德國多數派社會民主黨]]、[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]
+- 關鍵事件：[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]
