@@ -12,7 +12,7 @@
 
 - **動機與目標**：西方協約國主要目標在於重建第一次世界大戰東線戰場，並憂慮俄德結盟、布爾什維克兌現拒付沙俄巨額外債的威脅、共產主義革命思想擴散，以及協約國先前運往俄國的龐大戰爭物資落入德軍手中（溫斯頓·邱吉爾 Winston Churchill 宣稱必須將布爾什維主義「扼殺在搖籃中」 strangled in its cradle） `[01_russian_civil_war.md, 導言; Background > White movement and foreign interventions > Allied intervention]`。
 - **英國**：在北俄佔領摩爾曼斯克與阿爾漢格爾斯克（後於1919/20年冬前撤軍），並向尤登尼奇（Yudenich）西北軍提供援助與6輛坦克（尤登尼奇仍抱怨支援不足）、向鄧尼金（Denikin）南俄武裝力量提供大量軍火、資金、糧食、顧問及由尤恩·卡梅倫·布魯斯少校（Major Ewen Cameron Bruce）指揮參與1919年6月察里津戰役的英國坦克任務 `[01_russian_civil_war.md, Warfare > Estonia, Latvia and Petrograd; Northern Russia (1919); South Russia (1919)]`。在中亞與高加索，英國派出弗雷德里克·馬什曼·貝利中校（Lt. Col. Frederick Marshman Baile）赴塔什干、威爾弗里德·馬勒森將軍（General Wilfrid Malleson）以小規模英印部隊在阿什哈巴德協助[[menshevism|孟什維克]]，以及鄧斯特維爾少將（Major General Dunsterville）於1918年8月進駐（抵步僅一個月後即遭中亞／當地布爾什維克驅逐），英軍於1919年2月撤離中亞 `[01_russian_civil_war.md, Warfare > Ukraine, South Russia, and Caucasus (1918); Central Asia (1918); Central Asia (1919)]`。
-- **法國**：於1918年12月18日登陸敖德薩與克里米亞，但於1919年4月6日撤出敖德薩、4月底撤出克里米亞；史家張伯倫（William Henry Chamberlin）評稱法國對白軍的實際援助遠少於英國，且在敖德薩的獨立干涉行動「以徹底的慘敗告終」 `[01_russian_civil_war.md, Warfare > South Russia (1919)]`。
+- **法國**：於1918年12月18日登陸敖德薩與克里米亞，但於1919年4月6日撤出敖德薩、4月底撤出克里米亞；史家張伯倫（William Henry Chamberlin）評稱法國對白軍的實際援助遠少於英國，且在敖德薩的獨立干涉行動「以徹底的慘敗告終」 `[01_russian_civil_war.md, Warfare > South Russia (1919)]`。另據[[04_warlord_era_china|中國軍閥時代]]史料，奉系軍閥張作霖（Zhang Zuolin）於1919年自海參崴購得曾由參與協約國干涉俄國內戰法軍使用的雷諾 FT-17（Renault FT-17）坦克，成為中國首位動用坦克的軍閥 `[04_warlord_era_china.md, Armaments > Armor]`。
 - **美國與日本**：美軍與英軍共同進駐北俄阿爾漢格爾斯克 `[01_russian_civil_war.md, Warfare > Northern Russia (1919)]`；日本軍隊則在西伯利亞與遠東支援格里戈里·謝苗諾夫（Grigory Semenov）控制赤塔並意圖吞併阿穆爾邊疆區（Amur Krai），1922年6月至10月日軍撤出濱海州（Priamurye）後當地白軍政權隨即覆滅，而堪察加與北庫頁島（Northern Sakhalin）則持續受日軍佔領至1925年日蘇簽約後方撤軍 `[01_russian_civil_war.md, Warfare > Siberia and the Far East (1920–1923); Aftermath > Ensuing rebellion]`。
 
 ## 三、同盟國干涉（Central Powers Intervention）
@@ -30,6 +30,6 @@
 
 ## 五、關聯頁面
 
-- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]、[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]
-- 相關勢力：[[red_army|紅軍]]、[[white_movement|白衛運動與白軍]]、[[democratic_counter_revolution|民主反革命與憲法會議議員委員會]]、[[borderland_and_central_asian_factions|邊疆民族勢力與巴斯馬奇運動]]
+- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]、[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]、[[04_warlord_era_china|04_warlord_era_china]]
+- 相關勢力：[[red_army|紅軍]]、[[white_movement|白衛運動與白軍]]、[[democratic_counter_revolution|民主反革命與憲法會議議員委員會]]、[[borderland_and_central_asian_factions|邊疆民族勢力與巴斯馬奇運動]]、[[beiyang_warlord_cliques|北洋軍閥派系]]、[[chinese_peasant_militias_and_foreign_powers|農民結社與外國勢力]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]
 - 關鍵事件：[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[russian_civil_war_campaigns_1918_1923|俄國內戰主要戰役]]

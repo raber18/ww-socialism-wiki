@@ -24,8 +24,12 @@
    - 羅伯特·康奎斯特（Robert Conquest）估計1917–1922年共140,000人遭槍決，但喬納森·斯梅爾（Jonathan D. Smele）認為實際人數遠低於此，「或許不到一半」 `[01_russian_civil_war.md, Aftermath > Casualties > Civilian casualties]`。
    - 瓦季姆·埃爾利赫曼（Vadim Erlikhman）調查估計紅色恐怖受害者至少1,200,000人；1924年民眾社會主義者謝爾蓋·梅爾古諾夫（Sergei Melgunov）引述查爾斯·薩羅萊亞（Charles Saroléa）教授的1,766,188人死亡估計（梅爾古諾夫質疑該數字精確度但認同其對恐怖之定性）；當代史家謝爾蓋·沃爾科夫（Sergei Volkov）將整個內戰期間（1917–1922）布爾什維克鎮壓政策計入紅色恐怖，估計直接死亡人數達200萬人（惟條目註明沃爾科夫的計算未獲其他主要學者證實） `[01_russian_civil_war.md, Aftermath > Casualties > Civilian casualties]`。
 
-## 四、關聯頁面
+## 四、跨國詞源延續：西班牙內戰的「契卡」（Checas）
 
-- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]
+- 蘇聯秘密警察契卡（Cheka）的名稱日後亦外溢至[[03_spanish_civil_war|西班牙內戰]]期間的共和派控制區：在左翼審查與法外處決行動中，用以進行「偽正義」審訊的秘密審查委員會即仿效蘇聯契卡命名為「*checas*」（詳見[[spanish_civil_war_terror_and_aftermath|西班牙內戰的紅色與白色恐怖]]） `[03_spanish_civil_war.md, Atrocities > Republicans]`。
+
+## 五、關聯頁面
+
+- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]、[[03_spanish_civil_war|03_spanish_civil_war]]
 - 相關流派與組織：[[bolshevism|布爾什維克主義]]、[[socialist_revolutionaries|社會革命黨]]、[[anarchism|無政府主義]]、[[red_army|紅軍]]、[[russian_soviets|俄國蘇維埃]]
-- 相關事件：[[dissolution_of_constituent_assembly_1918|解散全俄立憲會議]]、[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[kronstadt_and_tambov_rebellions_1921|喀琅施塔得起義與農民反抗]]
+- 相關事件：[[dissolution_of_constituent_assembly_1918|解散全俄立憲會議]]、[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[kronstadt_and_tambov_rebellions_1921|喀琅施塔得起義與農民反抗]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]

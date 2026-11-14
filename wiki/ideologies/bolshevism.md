@@ -24,13 +24,23 @@
 ### 3. 列寧的鎮壓指示與執行落差
 - 條目指出，在[[red_terror_and_left_sr_uprising_1918|紅色恐怖]]（Red Terror）正式啟動前，列寧在電報與演說中曾下達嚴酷言辭（如奔薩「絞刑令」電報要求公開絞死至少100名富農 kulaks、富豪與吸血鬼，及1920年提議偽裝成[[green_armies|綠軍]]越境處決富農、教士與地主），但這類指示往往並非實際命令或未照此執行（奔薩僅逮捕13名主謀、1920年政府改採外交照會） `[01_russian_civil_war.md, Background > Opposition and repression in Soviet Russia > Repression]`；然而1918年8月遇刺事件後，政府採納菲利克斯·捷爾任斯基（Felix Dzerzhinsky）主張，全面展開大規模紅色恐怖 `[01_russian_civil_war.md, Background > Opposition and repression in Soviet Russia > Repression]`。
 
-## 三、資料缺漏標記
+## 三、1920–1930年代的跨國輸出：中國與西班牙內戰
+
+1. **對中國國民黨與地方軍閥的蘇聯援助（1920年代）**：
+   - 在[[04_warlord_era_china|中國軍閥時代]]，1923年孫中山（Sun Yat-sen）為擺脫對南方軍閥的依附而接受蘇聯援助，依**列寧主義民主集中制**（Leninist democratic centralism）改組[[kmt_nra_and_ccp|中國國民黨]]（KMT）、創辦黃埔軍校與國民革命軍，並促使KMT與中國共產黨（CCP）締結「第一次國共合作」（至1927年蔣介石清黨與寧漢分裂而告終） `[04_warlord_era_china.md, 導言; South > Reorganization of the Guangzhou junta (1923–1925); Nanjing-Wuhan Split (1927)]`（詳見[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組專頁]]）。
+   - 此外，蘇聯亦因北方軍閥[[guominjun_shanxi_and_northwest_warlords|馮玉祥]]（Feng Yuxiang）結合基督教衛理公會與模糊的左傾中國民族主義而一度對其提供支持 `[04_warlord_era_china.md, Warlord profiles]`。
+2. **西班牙內戰中的史達林主義策略與NKVD清洗（1936–1939年）**：
+   - 在[[03_spanish_civil_war|西班牙內戰]]中，蘇共總書記史達林（Joseph Stalin）違反不干涉協議透過秘密的「X行動」（Operation X）成為[[spanish_popular_front_and_republicans|西班牙共和派]]唯一重大武器來源，同時藉共產國際號召組建[[international_brigades|國際縱隊]]；全球右翼與天主教徒支持國民軍正是為了遏止布爾什維主義擴散 `[03_spanish_civil_war.md, Foreign involvement; Foreign involvement > Support for the Republicans]`。
+   - 然而，遵循史達林主義的[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）]]在西班牙採取溫和防衛策略，反對[[spanish_anarcho_syndicalism_cnt_fai|CNT-FAI]]與反史達林派POUM推行激進社會重組與剝奪私有財產權，並憑藉蘇聯軍火控制權推動中央集權正規軍 `[03_spanish_civil_war.md, Spanish Revolution]`。蘇聯在共和區後方部署內務人民委員部（NKVD），在1937年巴塞隆納[[spanish_revolution_and_may_days_1937|五月事件]]後取締POUM、謀殺POUM領袖安德烈斯·寧（Andrés Nin）並整肅無政府主義者與部分國際縱隊成員（共和區亦有仿效蘇聯契卡命名的審查委員會 *checas*） `[03_spanish_civil_war.md, Spanish Revolution; Foreign involvement > Support for the Republicans; Atrocities > Republicans]`。1939年二戰爆發時納粹德國與蘇聯聯手進攻波蘭，史學家史丹利·佩恩（Stanley Payne）亦據此質疑將西班牙內戰簡單視為二戰陣線序幕的觀點 `[03_spanish_civil_war.md, Consequences]`。
+
+## 四、資料缺漏標記
 
 - `[資料不足／不確定：現有來源未系統說明布爾什維克1917年以前之意識形態形成史、政治局（politburo）內部決策機制細節，亦未詳述新經濟政策（NEP）的具體條文與實施細節]`
+- `[資料不足／不確定：04_warlord_era_china.md 未記載蘇聯協助中國國民黨改組及援助馮玉祥的具體顧問名單與軍械細目]`
 
-## 四、關聯頁面
+## 五、關聯頁面
 
-- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]、[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]
-- 相關武裝與組織：[[red_army|紅軍]]、[[russian_soviets|俄國蘇維埃]]
-- 對立與競爭流派：[[socialist_revolutionaries|社會革命黨]]、[[menshevism|孟什維克]]、[[anarchism|無政府主義]]、[[german_social_democracy|德國多數派社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]
-- 關鍵事件：[[february_and_october_revolutions_1917|二月與十月革命]]、[[dissolution_of_constituent_assembly_1918|解散全俄立憲會議]]、[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[red_terror_and_left_sr_uprising_1918|左翼社會革命黨起義與紅色恐怖]]、[[kronstadt_and_tambov_rebellions_1921|喀琅施塔得起義與農民反抗]]
+- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]、[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]、[[03_spanish_civil_war|03_spanish_civil_war]]、[[04_warlord_era_china|04_warlord_era_china]]
+- 相關武裝與組織：[[red_army|紅軍]]、[[russian_soviets|俄國蘇維埃]]、[[kmt_nra_and_ccp|國民黨、國民革命軍與中共]]、[[international_brigades|國際縱隊]]、[[spanish_popular_front_and_republicans|西班牙人民陣線與共和派]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]、[[chinese_peasant_militias_and_foreign_powers|農民秘密結社武裝與外國勢力]]
+- 衍生、合作與對立流派：[[socialist_revolutionaries|社會革命黨]]、[[menshevism|孟什維克]]、[[anarchism|無政府主義]]、[[german_social_democracy|德國多數派社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]、[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）與POUM]]、[[spanish_anarcho_syndicalism_cnt_fai|西班牙無政府工團主義（CNT-FAI）]]、[[chinese_nationalism_kmt_and_ccp|國民黨列寧式改組與第一次國共合作]]、[[warlordism_and_regional_political_experiments|中國軍閥主義與地方政治實驗]]
+- 關鍵事件：[[february_and_october_revolutions_1917|二月與十月革命]]、[[dissolution_of_constituent_assembly_1918|解散全俄立憲會議]]、[[treaty_of_brest_litovsk_1918|《布列斯特-立托夫斯克條約》]]、[[red_terror_and_left_sr_uprising_1918|左翼社會革命黨起義與紅色恐怖]]、[[kronstadt_and_tambov_rebellions_1921|喀琅施塔得起義與農民反抗]]、[[spanish_revolution_and_may_days_1937|西班牙社會革命與1937年五月事件]]、[[constitutional_protection_and_northern_expedition_1917_1928|護法運動、第一次國共合作與北伐]]

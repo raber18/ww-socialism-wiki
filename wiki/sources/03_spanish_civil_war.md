@@ -1,0 +1,46 @@
+# 03_spanish_civil_war（西班牙內戰）單篇資料摘要
+
+- **原始檔案**：`raw/03_spanish_civil_war.md`
+- **來源網址**：https://en.wikipedia.org/wiki/Spanish_Civil_War
+- **抓取日期**：2026-11-14
+
+## 一、背景與基本概要
+
+西班牙內戰（Spanish Civil War，西班牙文：guerra civil española）爆發於1936年至1939年間，由忠於西班牙第二共和國（Second Spanish Republic）左傾人民陣線（Popular Front）政府的共和派（Republicans）對抗右翼叛軍國民軍（Nationalists / Nacionales） `[03_spanish_civil_war.md, 導言; Military coup > Outcome]`。共和派獲得蘇聯（Soviet Union）與墨西哥（Mexico）支援，國民軍則由法西斯義大利（Fascist Italy）大規模軍事干涉與納粹德國（Nazi Germany）派遣禿鷹軍團（Condor Legion）直接支援 `[03_spanish_civil_war.md, 導言]`。多數學術記述以1939年4月1日佛朗哥（Francisco Franco）宣布勝利為終點（其政權延續至1975年11月佛朗哥逝世），惟部分學者認為戰後西班牙游擊隊（Spanish Maquis）持續至1950年代的武裝抗爭屬「非常規內戰」，主張內戰延續至1952年 `[03_spanish_civil_war.md, 導言; Course of the war > 1939]`。
+
+19世紀後期至1931年，西班牙歷經1868年伊莎貝拉二世（Isabella II）被推翻、1873–1874年短命的第一共和國（First Spanish Republic）、波旁王朝復辟、1909年悲劇週（Tragic Week），以及1923–1930年米格爾·普里莫·德·里維拉（Miguel Primo de Rivera）軍事獨裁；西班牙在第一次世界大戰期間保持中立，戰後社會對共產主義威脅的恐懼明顯升高 `[03_spanish_civil_war.md, Background > First Republic and restoration; Dictatorship of Primo de Rivera]`。1931年4月12日市政選舉左翼於多數省會勝選，國王阿方索十三世（Alfonso XIII）流亡，第二共和國宣告成立 `[03_spanish_civil_war.md, Background > Dictatorship of Primo de Rivera]`。
+
+1931–1936年間共和國內部極化急劇升高：1931–1933年左翼與共和派執政推動世俗化憲法（第24與26條解散耶穌會 Society of Jesus）與有限土地改革，同時面臨1932年桑胡爾霍政變（Sanjurjada）與卡薩斯維耶哈斯（Casas Viejas）無政府主義起事屠殺 `[03_spanish_civil_war.md, Background > Second Republic > Constituent Cortes and left-wing government (1931–1933)]`。1933年11月右翼與激進共和黨（Radical Republican Party, RRP）聯盟勝選後進入「黑色兩年」（black biennium），土地改革倒退引發農村剝削與1934年10月阿斯圖里亞斯礦工革命（Asturian Revolution of 1934），遭海軍與佛朗哥調度的摩洛哥殖民軍殘酷鎮壓 `[03_spanish_civil_war.md, Background > Second Republic > Right-wing government (1933–1935); Combatants > Nationalists]`。1936年人民陣線以微弱優勢贏得大選後，非法佔地（至開戰前達40萬至100萬公頃）、罷工、焚燒教堂與左右翼暴力（2月至7月間300至400人死於政治暴力）不斷升級；7月12日長槍黨徒刺殺突擊警衛隊（Guardia de Asalto）中尉何塞·卡斯蒂略（José Castillo），7月13日社會黨民兵與突擊警衛隊報復性處決君主派保守派領袖何塞·卡爾沃·索特洛（José Calvo Sotelo），成為引爆內戰的直接催化劑 `[03_spanish_civil_war.md, Background > Second Republic > Popular Front's victory and escalation 1936; Military coup > Background]`。相關頁面：[[spanish_second_republic_and_polarization_1931_1936|西班牙第二共和國與1931–1936年政治極化]]。
+
+## 二、主要陣營、流派與外國干涉
+
+1. **共和派與西班牙革命（Republicans & Spanish Revolution）**：包含中央溫和共和派（曼努埃爾·阿薩尼亞 Manuel Azaña、何塞·希拉爾 José Giral、聖地亞哥·卡薩雷斯·基羅加 Santiago Casares Quiroga）、西班牙社會主義工人黨（PSOE）與勞動者總聯盟（UGT，內部分為弗朗西斯科·拉爾戈·卡瓦耶羅 Francisco Largo Caballero 的革命馬克思主義派與因達萊西奧·普列托 Indalecio Prieto、胡利安·貝斯特羅 Julián Besteiro 等溫和派）、[[bolshevism|史達林派]]西班牙共產黨（Communist Party of Spain）、反史達林共產黨馬克思主義統一工人黨（POUM，安德烈斯·寧 Andrés Nin 領導）、無政府工團主義者全國勞工聯盟－伊比利亞無政府主義聯盟（CNT-FAI，布埃納文圖拉·杜魯蒂 Buenaventura Durruti 等），以及加泰隆尼亞（Catalan）與巴斯克民族主義黨（PNV）等地方勢力 `[03_spanish_civil_war.md, 導言; Spanish Revolution; Combatants > Republicans; Other factions]`。1936年7月政府發放武器組成民兵後，亞拉岡（Aragon）與加泰隆尼亞展開大規模農工業集體化與社會化，形成與議會政府並行的地方委員會體制，史稱「西班牙革命」（Spanish Revolution / July Revolution） `[03_spanish_civil_war.md, Spanish Revolution]`；其後共產黨依賴蘇聯軍援推動正規化為人民共和軍（Ejército Popular Republicano, EPR）並取締POUM，於1937年5月爆發巴塞隆納[[spanish_revolution_and_may_days_1937|五月事件]] `[03_spanish_civil_war.md, Spanish Revolution; Course of the war > 1937]`。相關頁面：[[spanish_popular_front_and_republicans|西班牙人民陣線與共和派]]、[[spanish_anarcho_syndicalism_cnt_fai|西班牙無政府工團主義（CNT-FAI）]]、[[cnt_fai_and_left_militias|CNT-FAI與左翼民兵]]、[[spanish_socialism_psoe_ugt|西班牙社會主義派（PSOE-UGT）]]、[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）與POUM]]。
+2. **國民軍與長槍黨聯合陣線（Nationalists & FET y de las JONS）**：以反共為核心凝聚力，整合軍事將領（埃米利奧·莫拉 Emilio Mola、何塞·桑胡爾霍 José Sanjurjo、佛朗哥）、CEDA（西班牙自治右翼聯盟，何塞·瑪麗亞·希爾-羅布萊斯 José María Gil-Robles）、阿方索派（Alfonsists）、卡洛斯派（Carlists，傳統主義共融黨與 Requeté 民兵）、法西斯長槍黨（Falange Española de las JONS，何塞·安東尼奧·普里莫·德·里維拉 José Antonio Primo de Rivera 創立）、天主教會教士與大地主 `[03_spanish_civil_war.md, 導言; Background > Second Republic; Combatants > Nationalists]`。軍官團中支持政變者多為曾在北非作戰的「非洲派」（africanistas），留守本土者（peninsulares）則較多效忠共和國 `[03_spanish_civil_war.md, Combatants > Nationalists]`。1936年10月1日佛朗哥成為國家與軍隊元首，1937年強制將各右翼派系合併為執政黨「傳統主義西班牙長槍黨與國家工團主義進攻委員會」（FET y de las JONS） `[03_spanish_civil_war.md, 導言; Combatants > Nationalists; Course of the war > 1936]`。相關頁面：[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[spanish_falangism_and_nationalist_right|西班牙長槍黨與右翼思潮]]。
+3. **不干涉政策與外國參戰**：英法主導27國簽署不干涉協議並實施武器禁運（美國亦採非官方不干涉），但德、義、蘇均違反之 `[03_spanish_civil_war.md, Foreign involvement]`。支持國民軍者包括義大利志願兵團（CTV，5萬人）與空軍海軍、[[german_conservatism_and_far_right|納粹德國]]禿鷹軍團（約1.6萬名德國人員參戰，訓練5.6萬名國民軍，軍援約4,300萬英鎊）與烏蘇拉行動（Operation Ursula）、葡萄牙（8,000至2萬名 Viriatos 志願者與邊境補給）、愛爾蘭旅（約600人）、150至170名[[white_movement|白俄]]志願者及羅馬尼亞鐵衛團（Iron Guard） `[03_spanish_civil_war.md, Foreign involvement > Support for the Nationalists]`。支持共和派者包括共產國際（Communist International）號召組成的[[international_brigades|國際縱隊]]（約3.2萬至4萬名外國志願者，來自53國，同時在場不超過1.8萬人）、約3,000名加入CNT與POUM民兵的外籍志願者（含喬治·歐威爾 George Orwell）、蘇聯「X行動」（Operation X，提供634–806架飛機、331–362輛坦克、2,000–3,000名顧問及內務人民委員部 NKVD 人員）、墨西哥（200萬美元援助與收容5萬難民）、純粹出於商業利益售武的波蘭（4,000萬美元）及法國（1936年12月前秘密援機） `[03_spanish_civil_war.md, Foreign involvement > Support for the Republicans]`。相關頁面：[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]。
+
+## 三、戰事演進與戰後餘波（1936–1939）
+
+- **1936年7月政變與馬德里攻防**：政變原定7月17日17時01分發動，改為18日晨在摩洛哥先行、19日本土響應；因計劃在西屬摩洛哥提前暴露而立即發難，但在馬德里、巴塞隆納與瓦倫西亞等工業大城遭武裝工人擊敗，形成全國對峙（國民軍控約1,100萬人口，總人口2,500萬） `[03_spanish_civil_war.md, Military coup > Beginning of the coup; Outcome]`。桑胡爾霍（7月20日）與莫拉（1937年6月3日）先後墜機身亡，佛朗哥於9月解圍托萊多阿爾卡薩（Alcázar in Toledo）並自稱領袖（Caudillo） `[03_spanish_civil_war.md, Course of the war > 1936; 1937]`。11月國民軍進攻馬德里受第五團（Fifth Regiment）與國際縱隊阻擊，開啟長達三年的馬德里圍城戰 `[03_spanish_civil_war.md, Course of the war > 1936]`。
+- **1937–1939年轉折與共和國覆亡**：1937年3月瓜達拉哈拉戰役（Battle of Guadalajara）共和軍重創義軍，但國民軍隨即展開北方戰役，4月26日禿鷹軍團轟炸格爾尼卡（Guernica，約200–300名平民喪生），10月前佔領畢爾包（Bilbao）、桑坦德（Santander）與希洪（Gijón） `[03_spanish_civil_war.md, Course of the war > 1937]`。1938年2月國民軍奪回特魯埃爾（Teruel），3–4月亞拉岡攻勢直抵地中海將共和國領土攔腰斬斷；共和軍7–11月孤注一擲發動埃布羅河戰役（Battle of the Ebro），因《慕尼黑協定》（Munich Agreement）斷絕西方結盟希望而潰敗 `[03_spanish_civil_war.md, Course of the war > 1938]`。1939年1–2月加泰隆尼亞陷落，2月27日英法承認佛朗哥政權；3月5日塞希斯蒙多·卡薩多上校（Segismundo Casado）與貝斯特羅發動政變推翻胡安·內格林（Juan Negrín）政府以求議和並與馬德里共產黨軍隊內鬨，惟佛朗哥堅持無條件投降，於3月28日佔領馬德里、4月1日宣告勝利 `[03_spanish_civil_war.md, 導言; Course of the war > 1939]`。相關頁面：[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]。
+- **財政、撤離兒童與戰後鎮壓**：雙方軍費合計約38.9億美元（國民軍20.4億、共和派18.5億），皆以國內貨幣發行（導致共和區三位數通膨、國民區41%通膨）與外來資金為主（國民軍靠德義信貸，共和派向蘇聯與法國出售黃金儲備） `[03_spanish_civil_war.md, Financing]`。共和派向海外撤離3萬至3.5萬名兒童 `[03_spanish_civil_war.md, Evacuation of children]`；戰末約50萬名共和派人士在「大撤退」（La Retirada）中逃往法國遭關押於集中營，其後部分人在維琪法國時期被遣送至德國毛特豪森集中營（Mauthausen，4,427名西班牙人喪生）；戰後西班牙境內至少3萬人（他估5萬至20萬人）遭處決 `[03_spanish_civil_war.md, Course of the war > 1939]`。相關頁面：[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]。
+
+## 四、死亡統計與史觀爭議
+
+1. **死亡總數與紅白恐怖比較**：學者對內戰死亡總數估計從約15萬至200萬人不等（常見總計為25萬至100萬，人口學者計算1936–1939年超額死亡34.6萬、1936–1942年54萬） `[03_spanish_civil_war.md, Death toll]`。安東尼·比弗（Antony Beevor）估計白色恐怖殺害20萬人、紅色恐怖殺害3.8萬人；胡利烏斯·魯伊斯（Julius Ruiz）估計共和區至少處決37,843人、國民區最多處決15萬人（含戰後5萬）；邁克爾·塞德曼（Michael Seidman）估計國民軍殺害約13萬人、共和派約5萬人；保羅·普雷斯頓（Paul Preston）估計叛軍處決至少13萬人 `[03_spanish_civil_war.md, Atrocities; Atrocities > Nationalists; Republicans]`。共和區另確認殺害6,832名天主教神職人員（安東尼奧·蒙特羅·莫雷諾 Antonio Montero Moreno 統計；另一處約數為7,000人） `[03_spanish_civil_war.md, Combatants > Nationalists; Atrocities > Republicans]`。
+2. **共和區暴力的組織性質爭議**：
+   - **觀點 A（國家失序／自發混亂論）**：海倫·格雷厄姆（Helen Graham）、保羅·普雷斯頓、安東尼·比弗、加布里埃爾·傑克森（Gabriel Jackson）與休·托馬斯（Hugh Thomas）認為國民軍的大規模處決是當局有組織的「清理」（limpieza）政策，而共和區處決主要源自國家瓦解與無政府狀態下的失序（儘管部分城市政黨曾縱容） `[03_spanish_civil_war.md, Atrocities]`。
+   - **觀點 B（左翼半組織化暴力論）**：史丹利·佩恩（Stanley Payne）、胡利烏斯·魯伊斯與何塞·桑切斯（José Sánchez）反駁稱共和區政治暴力並非單純街頭自發仇恨，而是除巴斯克民族主義者以外幾乎所有左翼派系部分組織參與的「半組織化活動」，並透過 *paseos*（即興暗殺隊）與仿效蘇聯契卡的 *checas*（秘密審查處）執行 `[03_spanish_civil_war.md, Atrocities; Atrocities > Republicans]`。
+3. **內戰與第二次世界大戰的歷史定位爭議**：
+   - **觀點 A（二戰序幕論）**：史學界常將西班牙內戰描述為第二次世界大戰的「前奏」（prelude）或「開端回合」（opening round） `[03_spanish_civil_war.md, Consequences]`。
+   - **觀點 B（一戰革命危機最終章論）**：史丹利·佩恩反對此說，指出二戰初期因《德蘇互不侵犯條約》共產與法西斯強權曾站在同一陣線瓜分波蘭，因此西班牙內戰並非二戰陣線的預演，而是一場壁壘分明的左右翼革命與反革命鬥爭，實為「第一次世界大戰所引發的革命危機中的最後一場」 `[03_spanish_civil_war.md, Consequences]`。
+4. **共和國經濟失敗歸因**：近期研究駁斥早期指責共和區資源管理不善的理論，指出雙方總支出相近，共和國無法將資源轉化為勝利主要源於國際不干涉禁運迫使其以高於市價購買劣質武器，加上戰局縮小導致稅基萎縮 `[03_spanish_civil_war.md, Financing]`。
+
+## 五、資料缺漏標記
+
+- `[資料不足／不確定：03_spanish_civil_war.md 未詳述胡安·內格林（Juan Negrín）於何時及經由何種政局變動接替拉爾戈·卡瓦耶羅出任共和國總理，亦未列出1936年人民陣線（Popular Front）選舉聯盟的完整組成政黨名單及何塞·安東尼奧·普里莫·德·里維拉遭處決的具體日期]`
+
+## 六、關聯頁面
+
+- 相關流派：[[anarchism|無政府主義]]、[[spanish_anarcho_syndicalism_cnt_fai|西班牙無政府工團主義（CNT-FAI）]]、[[spanish_socialism_psoe_ugt|西班牙社會主義派（PSOE-UGT）]]、[[spanish_communism_pce_and_poum|西班牙共產黨（PCE）與POUM]]、[[spanish_falangism_and_nationalist_right|西班牙長槍黨與右翼思潮]]、[[bolshevism|布爾什維克主義]]、[[german_conservatism_and_far_right|德國帝制保守派與極右翼思潮]]
+- 相關勢力：[[spanish_popular_front_and_republicans|西班牙人民陣線與共和派]]、[[cnt_fai_and_left_militias|CNT-FAI與左翼民兵]]、[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[international_brigades|國際縱隊]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]、[[white_movement|白衛運動與白軍]]
+- 相關事件：[[spanish_second_republic_and_polarization_1931_1936|西班牙第二共和國與1931–1936年政治極化]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]、[[spanish_revolution_and_may_days_1937|西班牙社會革命與1937年五月事件]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]

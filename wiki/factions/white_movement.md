@@ -26,10 +26,13 @@
    - 葉夫根尼·米勒（Yevgeny Miller）在北俄（摩爾曼斯克與阿爾漢格爾斯克）的白軍於1920年2月在英美撤軍後撤離 `[01_russian_civil_war.md, Warfare > Northern Russia (1919)]`。
    - 烏拉爾軍（Ural Army，1920年冬約1.5萬人沿裡海南撤，僅數百人抵達波斯）與奧倫堡獨立軍（Orenburg Independent Army，1919–1920年「飢餓行軍」半數喪生，1920年3月殘部越境進入中國西北）在草原地區敗退 `[01_russian_civil_war.md, Warfare > Central Asia (1919)]`。
 
-## 四、外國支援、戰損與流亡
+## 四、外國支援、戰損與跨國流亡去向
 
 - 白軍在戰術上承襲一次大戰經驗並沿用臨時政府時期俄軍編制 `[01_russian_civil_war.md, Background > White movement and foreign interventions > From "democratic counter-revolution" to the White movement]`，獲得[[czechoslovak_legion_and_foreign_interventions|協約國與同盟國等外國勢力]]的軍火、資金與派兵支援（如英國在1919年察里津戰役中派遣布魯斯少校 Ewen Cameron Bruce 的坦克任務，以及大量軍需援助） `[01_russian_civil_war.md, Background > Allied intervention; Central Powers anti-Bolshevik intervention; Warfare > South Russia (1919)]`。
 - 白軍總計陣亡約650,000人 `[01_russian_civil_war.md, Aftermath > Casualties]`，戰敗後約100萬至200萬名「白俄流亡者」（White émigrés）經克里米亞、遠東或波羅的海國家逃離俄國，其中包含大量俄國受教育與技術階層 `[01_russian_civil_war.md, Aftermath > Evacuations]`。
+- **跨區域武裝去向與武器遺留（中國與西班牙）**：
+  - **[[04_warlord_era_china|中國軍閥時代]]（1922–1928年）**：1922年11月俄國白軍撤離海參崴越過中俄邊境時遭到繳械，東北奉系軍閥張作霖（Zhang Zuolin）在吉林與長春無償接收或買下幾乎全部白軍步槍、機槍、子彈、手榴彈與火砲 `[04_warlord_era_china.md, Armaments > Usage]`。此外，大批白衛退伍軍人移居中國受僱於軍閥，最著名者為效力奉系的康斯坦丁·彼得羅維奇·涅恰耶夫（Konstantin Petrovich Nechaev）部隊（自1924年8月150人擴編為「奉系外籍軍團」至1925年3月達1,200名俄兵），曾在北伐期間保衛上海閘北區對抗[[kmt_nra_and_ccp|國民黨與中共]]部隊 `[04_warlord_era_china.md, Other forces > Foreign mercenaries]`（見[[chinese_peasant_militias_and_foreign_powers|農民結社與外國雇傭兵]]）。
+  - **[[03_spanish_civil_war|西班牙內戰]]（1936–1939年）**：約150至170名白俄（White Russians）前往西班牙為佛朗哥的[[spanish_nationalists_and_falange|國民軍]]作戰 `[03_spanish_civil_war.md, Foreign involvement > Support for the Nationalists]`。歷史學家邁克爾·塞德曼（Michael Seidman）亦比較兩場內戰指出，俄國白軍在內戰中未能壓制後方農民叛亂、土匪與軍閥主義，與西班牙國民軍藉高壓恐怖與糧食管控維持後方無游擊隊之局面形成強烈對比 `[03_spanish_civil_war.md, Atrocities > Nationalists]`。
 
 ## 五、資料缺漏標記
 
@@ -37,6 +40,6 @@
 
 ## 六、關聯頁面
 
-- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]
-- 對立與關聯勢力：[[red_army|紅軍]]、[[black_army_makhnovshchina|黑軍／馬赫諾運動]]、[[green_armies|綠軍與農民反抗]]、[[democratic_counter_revolution|民主反革命與憲法會議議員委員會]]、[[czechoslovak_legion_and_foreign_interventions|捷克斯洛伐克軍團與外國干涉]]、[[borderland_and_central_asian_factions|邊疆民族勢力與巴斯馬奇運動]]
-- 關鍵事件：[[february_and_october_revolutions_1917|二月與十月革命]]、[[russian_civil_war_campaigns_1918_1923|俄國內戰主要戰役]]
+- 來源摘要：[[01_russian_civil_war|01_russian_civil_war]]、[[03_spanish_civil_war|03_spanish_civil_war]]、[[04_warlord_era_china|04_warlord_era_china]]
+- 對立與關聯勢力：[[red_army|紅軍]]、[[black_army_makhnovshchina|黑軍／馬赫諾運動]]、[[green_armies|綠軍與農民反抗]]、[[democratic_counter_revolution|民主反革命與憲法會議議員委員會]]、[[czechoslovak_legion_and_foreign_interventions|捷克斯洛伐克軍團與外國干涉]]、[[borderland_and_central_asian_factions|邊疆民族勢力與巴斯馬奇運動]]、[[beiyang_warlord_cliques|北洋軍閥派系]]、[[chinese_peasant_militias_and_foreign_powers|農民結社與外國雇傭兵]]、[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]
+- 關鍵事件：[[february_and_october_revolutions_1917|二月與十月革命]]、[[russian_civil_war_campaigns_1918_1923|俄國內戰主要戰役]]、[[spanish_civil_war_terror_and_aftermath|西班牙內戰恐怖鎮壓、財政與戰後餘波]]

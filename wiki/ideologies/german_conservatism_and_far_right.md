@@ -17,13 +17,18 @@
 - **政變與政治暗殺（1920–1923）**：1920年3月沃爾夫岡·卡普（Wolfgang Kapp）發動「卡普政變」（Kapp Putsch）企圖推翻共和國，因總罷工與公務員拒從而在數日內瓦解 `[02_german_revolution_1918_1919.md, Aftermath]`。極端民族主義組織「執政官組織」（Organisation Consul）於1921年刺殺前財政部長馬蒂亞斯·埃爾茨貝格爾（Matthias Erzberger），並於1922年刺殺外交部長瓦爾特·拉特瑙（Walther Rathenau） `[02_german_revolution_1918_1919.md, Aftermath]`。
 - **納粹黨（Nazi Party / National Socialist Party）的崛起**：阿道夫·希特勒（Adolf Hitler）領導的納粹黨於1923年11月9日在慕尼黑發動啤酒館政變（Beer Hall Putsch）未遂被捕（判刑五年、未滿一年獲釋） `[02_german_revolution_1918_1919.md, Aftermath]`。納粹黨日後補償曾因殺害卡爾·李卜克內西與羅莎·盧森堡而受審入獄的少數人員，並將[[freikorps_and_german_military|自由軍團]]近衛騎兵師（Garde-Kavallerie）併入衝鋒隊（SA，德文：Sturmabteilung） `[02_german_revolution_1918_1919.md, Revolution, second stage: defeat of the radical Left > Turn to violence > Murder of Karl Liebknecht and Rosa Luxemburg]`。1925年艾伯特逝世後興登堡當選第二任暨末任總統，其動用《[[weimar_constitution_and_post_1919_aftermath|威瑪憲法]]》第48條的緊急權力，為希特勒於1933年上台並終結威瑪共和國鋪平道路 `[02_german_revolution_1918_1919.md, 導言; Revolution, second stage: defeat of the radical Left > National Assembly and new Reich constitution; Impact on the Weimar Republic]`。
 
-## 四、資料缺漏標記
+## 四、1930年代納粹掌權後的跨國影響與西班牙內戰干涉
+
+- **思潮類比與右翼效法**：歷史學家胡利安·卡薩諾瓦（Julián Casanova）將西班牙第二共和國初期反共和右翼的政治文化定性為「原法西斯主義」（proto-fascist），並與德國的「民族民粹運動」（Völkisch movement）及義大利前法西斯主義相類比 `[03_spanish_civil_war.md, Background > Second Republic > Constituent Cortes and left-wing government (1931–1933)]`；西班牙[[spanish_falangism_and_nationalist_right|CEDA]]領袖希爾-羅布萊斯（Gil Robles）在1933年後亦公開讚揚阿道夫·希特勒（Adolf Hitler）與納粹德國體制 `[03_spanish_civil_war.md, Background > Second Republic > Right-wing government (1933–1935)]`。
+- **軍事干涉[[03_spanish_civil_war|西班牙內戰]]**：納粹德國在1936年9月簽署不干涉協議後仍派遣陸空部隊「禿鷹軍團」（Condor Legion）及海軍「烏蘇拉行動」（Operation Ursula）支援佛朗哥[[spanish_nationalists_and_falange|國民軍]]，不僅於1936年空運非洲軍團至本土、1937年4月26日轟炸格爾尼卡（Guernica，約200–300名平民死亡），全戰程共有約16,000名德國人參戰並訓練56,000名國民軍士兵（援額約4,300萬英鎊），藉此在中歐戰略之外牽制法國並試驗裝甲與空戰戰術，戰後更取得西班牙礦產開採權償債（詳見[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]） `[03_spanish_civil_war.md, Military coup > Outcome; Foreign involvement > Support for the Nationalists; Consequences]`。
+
+## 五、資料缺漏標記
 
 - `[資料不足／不確定：02_german_revolution_1918_1919.md 未詳述德國祖國黨在1918年11月後的解散或轉型過程，亦未詳細交代執政官組織（Organisation Consul）的組織架構及納粹黨1924年至1933年間選舉動員的具體細節]`
 
-## 五、關聯頁面
+## 六、關聯頁面
 
-- 來源摘要：[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]
-- 相關武裝與勢力：[[freikorps_and_german_military|自由軍團與德國軍方]]
-- 對立流派：[[german_social_democracy|德國多數派社會民主黨]]、[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]
-- 關鍵事件：[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]
+- 來源摘要：[[02_german_revolution_1918_1919|02_german_revolution_1918_1919]]、[[03_spanish_civil_war|03_spanish_civil_war]]
+- 相關武裝與勢力：[[freikorps_and_german_military|自由軍團與德國軍方]]、[[spanish_nationalists_and_falange|西班牙國民軍與長槍黨]]、[[spanish_civil_war_foreign_interventions|西班牙內戰外國干涉]]
+- 相關與對立流派：[[spanish_falangism_and_nationalist_right|西班牙長槍黨與右翼思潮]]、[[german_social_democracy|德國多數派社會民主黨]]、[[uspd|德國獨立社會民主黨]]、[[spartacists_and_kpd|斯巴達克同盟與德國共產黨]]
+- 關鍵事件：[[kiel_mutiny_and_november_9_1918|基爾水兵起義與十一月九日共和國宣告]]、[[ebert_groener_pact_and_council_congress_1918|艾伯特－格勒納密約與全德工兵委員會代表大會]]、[[weimar_constitution_and_post_1919_aftermath|威瑪憲法與戰後衝突]]、[[july_1936_military_coup_and_spanish_civil_war_campaigns|1936年七月政變與西班牙內戰戰役]]
